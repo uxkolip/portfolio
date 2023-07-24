@@ -1,6 +1,12 @@
 function checkiftooltip() {
     $(window).width() > 768 ? ($('[data-toggle="tooltip"]').tooltip(), 
     $('[data-toggle="tooltip"]').tooltip("enable")) : $('[data-toggle="tooltip"]').tooltip("disable")
+
+    $("[data-toggle='tooltip']").tooltip();
+
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+
 }
 
 $(document).ready(function() {
@@ -36,7 +42,7 @@ const panelTimeline = gsap.timeline({
     trigger: '.cardsContainer', 
     pin: true,
     start: 'top 15%', 
-    end: 'bottom 100%', 
+    end: '1000px', 
     markers: false, 
     scrub: true, 
   },
@@ -114,6 +120,15 @@ cards.forEach((card, index) => {
     animateCards();
 
 }); 
+
+$(window).scroll(function() {
+    $(this).scrollTop() > 3800 ? $("#toTop").fadeIn("fast", function() {}) : $("#toTop").fadeOut("fast", function() {})
+    }), $("#toTop").click(function() {
+        return $("html, body").animate({
+            scrollTop: 0
+        }, 800)
+
+});
 
 
 var animation = bodymovin.loadAnimation({

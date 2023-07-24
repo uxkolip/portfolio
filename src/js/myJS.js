@@ -1,6 +1,12 @@
 function checkiftooltip() {
     $(window).width() > 768 ? ($('[data-toggle="tooltip"]').tooltip(), 
     $('[data-toggle="tooltip"]').tooltip("enable")) : $('[data-toggle="tooltip"]').tooltip("disable")
+
+    $("[data-toggle='tooltip']").tooltip();
+
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+
 }
 
 $(document).ready(function() {
@@ -39,7 +45,7 @@ const panelTimeline = gsap.timeline({
     trigger: '.cardsContainer', // The wrapper element that contains the panels
     pin: true,
     start: 'top 15%', // The animation starts when the top of the wrapper is 75% from the top of the viewport
-    end: 'bottom 100%', // The animation ends when the bottom of the wrapper is 25% from the top of the viewport
+    end: '1000px', // The animation ends when the bottom of the wrapper is 25% from the top of the viewport
     markers: false, // Add markers to help visualize the trigger area (for testing purposes)
     scrub: true, // Enable "scrubbing" so that the animations are smoothly reversed as the user scrolls back up
   },
@@ -123,6 +129,15 @@ cards.forEach((card, index) => {
     animateCards();
 
 }); 
+
+$(window).scroll(function() {
+    $(this).scrollTop() > 3800 ? $("#toTop").fadeIn("fast", function() {}) : $("#toTop").fadeOut("fast", function() {})
+    }), $("#toTop").click(function() {
+        return $("html, body").animate({
+            scrollTop: 0
+        }, 800)
+
+});
 
 
 //lottie homepage test
