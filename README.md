@@ -3,12 +3,13 @@
 Vasilis Kolip's Portfolio
 
 GitHub public page:
-
 https://icemangoa.github.io/Vasilis-Kolip-Portfolio/dist/
 
-Figma prototype: https://www.figma.com/proto/KvZro6YLHayaTX4nbXqdSc/Portfolio?node-id=1-2&starting-point-node-id=1%3A2&mode=design&t=NcGpUp2yPC2itAo6-1
+Figma prototype:
+https://www.figma.com/proto/KvZro6YLHayaTX4nbXqdSc/Portfolio?node-id=1-2&starting-point-node-id=1%3A2&mode=design&t=NcGpUp2yPC2itAo6-1
 
-Figma original file: https://www.figma.com/file/KvZro6YLHayaTX4nbXqdSc/Portfolio?type=design&node-id=1%3A2&mode=design&t=aCUx1eqt0fE6XwC8-1
+Figma original file:
+https://www.figma.com/file/KvZro6YLHayaTX4nbXqdSc/Portfolio?type=design&node-id=1%3A2&mode=design&t=aCUx1eqt0fE6XwC8-1
 
 Uses:
 
