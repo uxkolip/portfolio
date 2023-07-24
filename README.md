@@ -4,7 +4,7 @@ Vasilis Kolip's Portfolio
 
 GitHub public page:
 
-https://icemangoa.github.io/Vasilis-Kolip-Portfolio/
+https://icemangoa.github.io/Vasilis-Kolip-Portfolio/dist/
 
 Uses:
 

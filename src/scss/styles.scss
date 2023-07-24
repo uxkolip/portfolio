@@ -1,0 +1,451 @@
+$primary: #3A2D52;
+$secondary: #FDF3E7;
+$success: #00C9A5;
+$danger: #FF415C;
+$info: #007BFF;
+$light: #D3CBD3;
+
+
+@import 'bootstrap/bootstrap.scss';
+/*@import 'fontawesome/fontawesome.scss';*/
+
+@font-face {
+    font-family: 'Noe Display';
+    src: url('../fonts/NoeDisplay-Black.eot');
+    src: url('../fonts/NoeDisplay-Black.eot?#iefix') format('embedded-opentype'), url('../fonts/NoeDisplay-Black.woff') format('woff'), url('../fonts/NoeDisplay-Black.ttf') format('truetype'), url('../fonts/NoeDisplay-Black.svg#NoeDisplay-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Apercu-light';
+    src: url('../fonts/Apercu-Light.eot');
+    src: url('../fonts/Apercu-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/Apercu-Light.woff') format('woff'), url('../fonts/Apercu-Light.ttf') format('truetype'), url('../fonts/Apercu-Light.svg#Apercu-Light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Apercu';
+    src: url('../fonts/Apercu-Regular.eot');
+    src: url('../fonts/Apercu-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Apercu-Regular.woff') format('woff'), url('../fonts/Apercu-Regular.ttf') format('truetype'), url('../fonts/Apercu-Regular.svg#Apercu-Regular') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/fa-solid-900.eot');
+  src: url('../fonts/fa-solid-900.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/fa-solid-900.woff2') format('woff2'),
+  url('../fonts/fa-solid-900.woff') format('woff'),
+  url('../fonts/fa-solid-900.ttf') format('truetype'),
+  url('../fonts/fa-solid-900.svg#fontawesome') format('svg');
+}
+
+@font-face {
+    font-family: 'amerigo_bt_roman';
+    src: url('../fonts/amerigo_bt_roman.woff2') format('woff2'),
+         url('../fonts/amerigo_bt_roman.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'amerigo_bt_medium';
+    src: url('../fonts/amerigo_bt_medium.woff2') format('woff2'),
+         url('../fonts/amerigo_bt_medium.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family:'gt_america_extended_bold';
+    src:url('../fonts/gt_america_extended_bold.woff2') format('woff2'),
+    url('../fonts/gt_america_extended_bold.woff') format('woff');
+    font-style:normal;
+    font-weight:700;
+}
+
+@font-face {
+  font-family:'gt_america_extended_regular';
+  src:url('../fonts/gt_america_extended_regular.woff2') format('woff2'),
+  url('../fonts/gt_america_extended_regular.woff') format('woff');
+  font-style:normal;
+  font-weight:400;
+}
+
+.fa,
+.fas {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'Font Awesome 5 Brands';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/fa-brands-400.eot');
+  src: url('../fonts/fa-brands-400.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/fa-brands-400.woff2') format('woff2'),
+  url('../fonts/fa-brands-400.woff') format('woff'),
+  url('../fonts/fa-brands-400.ttf') format('truetype'),
+  url('../fonts/fa-brands-400.svg#fontawesome') format('svg');
+}
+
+.fab {
+  font-family: 'Font Awesome 5 Brands';
+}
+
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/fa-regular-400.eot');
+  src: url('../fonts/fa-regular-400.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/fa-regular-400.woff2') format('woff2'),
+  url('../fonts/fa-regular-400.woff') format('woff'),
+  url('../fonts/fa-regular-400.ttf') format('truetype'),
+  url('../fonts/fa-regular-400.svg#fontawesome') format('svg');
+}
+
+.far {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 400;
+}
+
+body {
+  background: #FFFBF5;
+  font-family: 'gt_america_extended_regular', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #16013E;
+}
+
+h1, h2 {
+  font-family:'gt_america_extended_bold';
+}
+
+.font-weight-bold {
+  font-family: gt_america_extended_bold; 
+}
+
+section {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+section.horizontal {
+  overflow-x: hidden;
+}
+
+section.horizontal .pin-wrap,
+section.horizontal .animation-wrap {
+    display: flex;
+    position: relative;
+    z-index: 1;  
+    height: 100vh;
+}
+
+section.horizontal .item {
+    position: relative;
+    padding: 150px 80px;
+    flex: 0 0 1280px;
+    height: calc(100vh - 300px);
+    display: flex;
+    align-items: center;
+    line-height: 1.7;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-right: 1px solid rgba(0, 0, 0, 0.06);
+    background-color: transparent;
+}
+
+section.horizontal .item:before {
+    position: absolute;
+    font-size: 100px;
+    opacity: .13;
+    font-weight: bold;    
+    z-index: -1;
+    -webkit-transform: translate(-30px, -50px);
+    transform: translate(-30px, -50px);
+    line-height: 1;
+}
+
+section.horizontal .animation-wrap.to-right {
+    counter-reset: item;
+    float: left;
+}
+
+section.horizontal .animation-wrap.to-left {
+    counter-reset: item 11;
+    float: right; 
+}
+
+section.horizontal .animation-wrap.to-right .item:before {
+    counter-increment: item;
+    content: counter(item);
+}
+
+section.horizontal .animation-wrap.to-left .item:before {
+    counter-increment: item -1;
+    content: counter(item);
+}
+
+section.horizontal .animation-wrap .item:nth-child(2n+2) {
+    align-items: flex-start;
+}
+
+section.horizontal .animation-wrap .item:nth-child(4n+4) {
+    align-items: flex-end;
+}
+
+.tooltip {
+    font-family: 'gt_america_extended_regular', sans-serif;
+}
+
+.sticky-top {
+    top: 50px;
+}
+
+#toTop {
+  right: 100px; 
+  bottom: -5px; 
+  z-index: 3; 
+  display: none;
+}
+
+.noUnderline {
+  text-decoration: none !important;
+}
+
+.text-dark {
+  color: #212529 !important;
+}
+
+.top-10 {
+  top: 20px;
+}
+
+.minHeight30vh {
+  min-height: 30vh;
+}
+
+.minHeight45vh {
+  min-height: 45vh;
+}
+
+.minHeight55vh {
+  min-height: 55vh;
+}
+
+.minHeight60vh {
+  min-height: 60vh;
+}
+
+.minHeight75vh {
+  min-height: 75vh;
+}
+
+.minHeight90vh {
+  min-height: 90vh;
+}
+
+.minHeight100vh {
+  min-height: 100vh;
+}
+
+.right-0 {
+    right: 0;
+}
+
+a:hover, button:hover {
+  cursor: url(../img/misc/hand.png),pointer !important;
+}
+
+@include media-breakpoint-up(xs) {
+    html, body {
+        font-size: 1rem !important;
+    }
+    .display-1 {
+        font-size: 2rem;
+    }
+    .bigger-1 {
+        font-size: 1.1rem !important;
+    }
+    .bigger-2 {
+        font-size: 1.2rem !important;
+    }
+    .bigger-3 {
+        font-size: 1.3rem !important;
+    }
+    .bigger-4 {
+        font-size: 1.4rem !important;
+    }
+    .bigger-5 {
+        font-size: 1.5rem !important;
+    }
+    .bigger-6 {
+        font-size: 1.6rem !important;
+    }
+    .smaller-1 {
+        font-size: .9rem !important;
+    }
+    .smaller-2 {
+        font-size: .8rem !important;
+    }
+    .smaller-3 {
+        font-size: .7rem !important;
+    }
+    .smaller-4 {
+        font-size: .6rem !important;
+    }
+    .smaller-5 {
+        font-size: .5rem !important;
+    }
+    .minHeight75vh {
+        min-height: 59vh;
+    }
+    .profileCarousel {
+        min-height: 365px;
+    }
+}
+
+
+@include media-breakpoint-up(sm) {
+    html {
+        font-size: 1.2rem;
+    }
+    .display-1 {
+        font-size: 5rem;
+    }
+    .bigger-1 {
+        font-size: 1.2rem !important;
+    }
+    .bigger-2 {
+        font-size: 1.4rem !important;
+    }
+    .bigger-3 {
+        font-size: 1.6rem !important;
+    }
+    .bigger-4 {
+        font-size: 1.8rem !important;
+    }
+    .bigger-5 {
+        font-size: 2rem !important;
+    }
+    .bigger-6 {
+        font-size: 2.5rem !important;
+    }
+    .smaller-1 {
+        font-size: 1rem !important;
+    }
+    .smaller-2 {
+        font-size: 1rem !important;
+    }
+    .smaller-3 {
+        font-size: 1rem !important;
+    }
+    .smaller-4 {
+        font-size: 1rem !important;
+    }
+    .smaller-5 {
+        font-size: .5rem !important;
+    }
+    .minHeight75vh {
+        min-height: 75vh;
+    }
+
+}
+
+@include media-breakpoint-up(md) {
+    html, body {
+        font-size: 1rem !important;
+    }
+    .display-1 {
+        font-size: 6rem;
+    }
+    .bigger-1 {
+        font-size: 1rem !important;
+    }
+    .bigger-2 {
+        font-size: 1.2rem !important;
+    }
+    .bigger-3 {
+        font-size: 1.4rem !important;
+    }
+    .bigger-4 {
+        font-size: 1.5rem !important;
+    }
+    .bigger-5 {
+        font-size: 1.6rem !important;
+    }
+    .bigger-6 {
+        font-size: 1.8rem !important;
+    }
+    .smaller-1 {
+        font-size: 1rem !important;
+    }
+    .smaller-2 {
+        font-size: 1rem !important;
+    }
+    .smaller-3 {
+        font-size: 1rem !important;
+    }
+    .smaller-4 {
+        font-size: 1rem !important;
+    }
+    .smaller-5 {
+        font-size: .5rem !important;
+    }
+    .profileCarousel {
+        min-height: 265px;
+    }
+
+}
+
+@include media-breakpoint-up(lg) {
+    html, body {
+        font-size: 1rem !important;
+    }
+    .bigger-1 {
+        font-size: 1.2rem !important;
+    }
+    .bigger-2 {
+        font-size: 1.4rem !important;
+    }
+    .bigger-3 {
+        font-size: 1.6rem !important;
+    }
+    .bigger-4 {
+        font-size: 1.8rem !important;
+    }
+    .bigger-5 {
+        font-size: 2rem !important;
+    }
+    .bigger-6 {
+        font-size: 2.5rem !important;
+    }
+    .smaller-1 {
+        font-size: 1rem !important;
+    }
+    .smaller-2 {
+        font-size: .9rem !important;
+    }
+    .smaller-3 {
+        font-size: .8rem !important;
+    }
+    .smaller-4 {
+        font-size: .7rem !important;
+    }
+    .smaller-5 {
+        font-size: .6rem !important;
+    }
+
+}
