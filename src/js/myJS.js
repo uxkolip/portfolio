@@ -9,6 +9,21 @@ $(document).ready(function() {
     });
 }); 
 
+//smooth scroll
+const lenis = new Lenis()
+
+lenis.on('scroll', (e) => {
+  console.log(e)
+})
+
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)
+
+
 // Select the panels and set their initial position and opacity
 const panels = document.querySelectorAll('.panel');
 panels.forEach((panel, index) => {

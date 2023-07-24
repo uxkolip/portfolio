@@ -9,6 +9,20 @@ $(document).ready(function() {
     });
 }); 
 
+const lenis = new Lenis()
+
+lenis.on('scroll', (e) => {
+  console.log(e)
+})
+
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)
+
+
 const panels = document.querySelectorAll('.panel');
 panels.forEach((panel, index) => {
         gsap.set(panel, {
