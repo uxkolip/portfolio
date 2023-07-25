@@ -52,44 +52,46 @@
   </head>
   <body>
     <section class="container">
-      <nav class="navbar navbar-expand-lg navbar-light mt-2">
-        <div class="col-1 me-2 mt-1 rounded-circle" style="max-width: 45px; min-height: 45px;">
-          <img src="img/misc/moi-thumb.png" alt="Vasilis Kolip portrait thumbnail" class="img-fluid">
-        </div>
-        <div class="col-2">
-          <div class="row">
-            <p class="mb-0"><a class="text-dark font-weight-bold noUnderline" href="index.html" title="Homepage">Vasilis Kolip</a></p>
-            <p class="mb-0">UX/Product designer</p>
+      <div class="position-fixed w-100 main-navbar" style="z-index: 9;">
+        <nav class="navbar navbar-expand-lg navbar-light container bg-background position-relative border-radius" style="z-index: 9;">
+          <div class="col-1 me-2 mt-1 rounded-circle" style="max-width: 45px; min-height: 45px;">
+            <img src="img/misc/moi-thumb.png" alt="Vasilis Kolip portrait thumbnail" class="img-fluid">
           </div>
-        </div>
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item px-2 active">
-              <div class="dropdown">
-                  <button class="nav-link smaller-2 text-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                   Home
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Voicemod</a></li>
-                    <li><a class="dropdown-item" href="#">Meta</a></li>
-                    <li><a class="dropdown-item" href="#">Microsoft</a></li>
-                  </ul>
-            </li>
-            <li class="nav-item px-2">
-              <a class="nav-link smaller-2 mb-0" href="profile.html" title="Click to check out my profile and my previous work experiences">About
-              </a>
-            </li>
-            <li class="nav-item px-2">
-              <a class="nav-link smaller-2 mb-0" href="Vasilis-Kolip-Sr-Product-Designer.pdf" target="_blank" title="Click to dowload my CV in pdf format">Résumé
-              </a>
-            </li>
-            <li class="nav-item px-2">
-              <a class="nav-link smaller-2 mb-0 typeform-share button" href="https://billk1.typeform.com/to/xNOJ6W" data-mode="drawer_right" data-submit-close-delay="5" target="_blank" title="Click to get in touch">Contact
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+          <div class="col-2">
+            <div class="row">
+              <p class="mb-0"><a class="text-dark font-weight-bold noUnderline" href="index.html" title="Homepage">Vasilis Kolip</a></p>
+              <p class="mb-0">UX/Product designer</p>
+            </div>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item px-2 active">
+                <div class="dropdown">
+                    <button class="nav-link smaller-2 text-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                     Home
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item smaller-2" href="voicemod.html" target="_blank">Voicemod</a></li>
+                      <li><a class="dropdown-item smaller-2" href="meta.html" target="_blank">Meta</a></li>
+                      <li><a class="dropdown-item smaller-2" href="microsoft.html" target="_blank">Microsoft</a></li>
+                    </ul>
+              </li>
+              <li class="nav-item px-2">
+                <a class="nav-link smaller-2 mb-0" href="profile.html" title="Click to check out my profile and my previous work experiences">About
+                </a>
+              </li>
+              <li class="nav-item px-2">
+                <a class="nav-link smaller-2 mb-0" href="Vasilis-Kolip-Sr-Product-Designer.pdf" target="_blank" title="Click to dowload my CV in pdf format">Résumé
+                </a>
+              </li>
+              <li class="nav-item px-2">
+                <a class="nav-link smaller-2 mb-0 typeform-share button" href="https://billk1.typeform.com/to/xNOJ6W" data-mode="drawer_right" data-submit-close-delay="5" target="_blank" title="Click to get in touch">Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </section>
     
     <section>
@@ -383,11 +385,11 @@
 
 
     <section class="design-process">
-      <div class="row-fluid">
+      <div class="row-fluid mt-5 pt-5">
 
         <div class="col-12 px-md-5 py-3">
           
-          <div class="design-cards">
+          <div class="design-cards mt-5 pt-5">
             
             <div class="design-card d-flex col-12 col-md-8 col-lg-4 p-5 large-shadow border-radius flex-wrap bg-accent">
               <img src="img/misc/illustrations/research-and-discovery.svg" alt="Resarch and discovery illustration" class="img-fluid align-self-start" style="height: 260px" />
@@ -435,59 +437,66 @@
 
 
     <section class="horizontal feedback">
-       <div class="container">
+       <div class="container mt-5 pt-5">
           <div class="col-12 mt-5 bg-secondary border-radius p-5">
             <div class="row">
-              <div class="col-12 col-md-4">
+              <div class="col-12 col-md-4 bg-secondary border-radius p-4" style="z-index: 1000;">
                 <h3 class="font-weight-bold section-title">“Talk of the town”</h3>
                 <p class="mt-4">Acknowledgment and validation from my peers in recognition of my efforts.</p>
                 <button class="btn btn-outline-primary py-2 px-3 bg-background text-dark rounded-pill mt-3">Read all on LinkedIn<img src="img/misc/shapes/diagonal-arrow.svg" alt="Diagonal arrow" class="img-fluid ms-2 mb-1"/></button>
               </div>
 
-              <div class="col-12 col-md-8">
+              <div class="col-12 col-md-8 py-2">
                 <div class="pin-wrap">
                   <div class="animation-wrap to-right">
                     
-                    <div class="d-flex align-content-around flex-wrap text-center position-relative item col-12 col-md-4 col-lg-3 me-4 bg-background border-radius the-border large-shadow p-4 ">
-                      <img src="img/misc/testimonials/valia-lekka-thumb.png" alt="Valia Lekka testimonial" class="img-fluid"/>
+                    <div class="d-flex justify-content-center flex-wrap text-center position-relative item col-12 col-md-4 col-lg-3 me-4 bg-background border-radius the-border large-shadow p-4">
+                      <img src="img/misc/testimonials/valia-lekka-thumb.png" alt="Valia Lekka testimonial" class="img-fluid mt-3" style="height: 55px" />
+                      <img src="img/misc/logos/meta-logo-testimonial.svg" alt="Meta logo" class="img-fluid mt-3" style="height: 55px" />
                       <p class="mt-4">“Vasilis is first and foremost a wonderful person.”</p>
-                      <p class="mt-5">Valia Lekka <strong>— Manager</strong></p>
+                      <p class="mt-5 smaller-2">Valia Lekka <strong>— Manager</strong></p>
                     </div>
 
-                    <div class="d-flex align-content-around flex-wrap text-center position-relative item col-12 col-md-4 col-lg-3 me-4 bg-background border-radius the-border large-shadow p-4">
-                      <img src="img/misc/testimonials/maria-kourousi-thumb.png" alt="Maria Kourousi testimonial" class="img-fluid"/>
+                    <div class="d-flex justify-content-center flex-wrap text-center position-relative item col-12 col-md-4 col-lg-3 me-4 bg-background border-radius the-border large-shadow p-4">
+                      <img src="img/misc/testimonials/maria-kourousi-thumb.png" alt="Maria Kourousi testimonial" class="img-fluid mt-3" style="height: 55px"/>
+                      <img src="img/misc/logos/meta-logo-testimonial.svg" alt="Meta logo" class="img-fluid mt-3" style="height: 55px" />
                       <p class="mt-4">“Vasilis is a talented and skilled designer.”</p>
-                      <p class="mt-5">Maria Kourous <strong>— Software Engineer</strong></p>
+                      <p class="mt-5 smaller-2">Maria Kourousi <strong>— Software Engineer</strong></p>
                     </div>
 
-                    <div class="d-flex align-content-around flex-wrap text-center position-relative item col-12 col-md-4 col-lg-3 me-4 bg-background border-radius the-border large-shadow p-4">
-                      <img src="img/misc/testimonials/chara-konstantakopoulou-thumb.png" alt="Chara Konstantakopoulou testimonial" class="img-fluid"/>
+                    <div class="d-flex justify-content-center flex-wrap text-center position-relative item col-12 col-md-4 col-lg-3 me-4 bg-background border-radius the-border large-shadow p-4">
+                      <img src="img/misc/testimonials/chara-konstantakopoulou-thumb.png" alt="Chara Konstantakopoulou testimonial" class="img-fluid mt-3" style="height: 55px"/>
+                      <img src="img/misc/logos/gateio-logo-testimonial.png" alt="Meta logo" class="img-fluid mt-3" style="height: 55px" />
                       <p class="mt-4">“Amazing designer, talented in breaking down complex ideas.”</p>
-                      <p class="mt-5">Chara Konstantakopoulou <strong>— Multidisciplinary designer</strong></p>
+                      <p class="mt-5 smaller-2">Chara Konstantakopoulou <strong>— Multidisciplinary designer</strong></p>
                     </div>
 
-                    <div class="d-flex align-content-around flex-wrap text-center position-relative item col-12 col-md-4 col-lg-3 me-4 bg-background border-radius the-border large-shadow p-4">
-                      <img src="img/misc/testimonials/haris-renieris-thumb.png" alt="Haris Renieris testimonial" class="img-fluid"/>
-                      <p class="mt-4">“Very smart and talented professional.”</p>
-                      <p class="mt-5">Haris Renieris <strong>— Software Engineer</strong></p>
+                    <div class="d-flex justify-content-center flex-wrap text-center position-relative item col-12 col-md-4 col-lg-3 me-4 bg-background border-radius the-border large-shadow p-4">
+                      <img src="img/misc/testimonials/haris-renieris-thumb.png" alt="Haris Renieris testimonial" class="img-fluid mt-3" style="height: 55px"/>
+                      <img src="img/misc/logos/meta-logo-testimonial.svg" alt="Meta logo" class="img-fluid mt-3" style="height: 55px" />
+                      <p class="mt-4">Very smart and talented professional.”</p>
+                      <p class="mt-5 smaller-2">Haris Renieris <strong>— Software Engineer</strong></p>
                     </div>
 
-                    <div class="d-flex align-content-around flex-wrap text-center position-relative item col-12 col-md-4 col-lg-3 me-4 bg-background border-radius the-border large-shadow p-4">
-                      <img src="img/misc/testimonials/alkisti-katsantoni-thumb.png" alt="Alkistis Katsantoni testimonial" class="img-fluid"/>
-                      <p class="mt-4">“One of the most creative and cooperative people I have worked with.”</p>
-                      <p class="mt-5">Alkistis Katsantoni <strong>— Manager</strong></p>
+                    <div class="d-flex justify-content-center flex-wrap text-center position-relative item col-12 col-md-4 col-lg-3 me-4 bg-background border-radius the-border large-shadow p-4">
+                      <img src="img/misc/testimonials/alkisti-katsantoni-thumb.png" alt="Alkistis Katsantoni testimonial" class="img-fluid mt-3" style="height: 55px"/>
+                      <img src="img/misc/logos/meta-logo-testimonial.svg" alt="Meta logo" class="img-fluid mt-3" style="height: 55px" />
+                      <p class="mt-4">One of the most creative and cooperative people I have worked with.”</p>
+                      <p class="mt-5 smaller-2">Alkistis Katsantoni <strong>— Manager</strong></p>
                     </div>
 
-                    <div class="d-flex align-content-around flex-wrap text-center position-relative item col-12 col-md-4 col-lg-3 me-4 bg-background border-radius the-border large-shadow p-4">
-                      <img src="img/misc/testimonials/stelios-bournous-thumb.png" alt="Stelios Bournous testimonial" class="img-fluid"/>
-                      <p class="mt-4">“An exceptional designer and teammate.”</p>
-                      <p class="mt-5">Stelios Bournous <strong>— Manager</strong></p>
+                    <div class="d-flex justify-content-center flex-wrap text-center position-relative item col-12 col-md-4 col-lg-3 me-4 bg-background border-radius the-border large-shadow p-4">
+                      <img src="img/misc/testimonials/stelios-bournous-thumb.png" alt="Stelios Bournous testimonial" class="img-fluid mt-3" style="height: 55px"/>
+                      <img src="img/misc/logos/meta-logo-testimonial.svg" alt="Meta logo" class="img-fluid mt-3" style="height: 55px" />
+                      <p class="mt-4">An exceptional designer and teammate.”</p>
+                      <p class="mt-5 smaller-2">Stelios Bournous <strong>— Manager</strong></p>
                     </div>
 
-                    <div class="d-flex align-content-around flex-wrap text-center position-relative item col-12 col-md-4 col-lg-3 me-4 bg-background border-radius the-border large-shadow p-4">
-                      <img src="img/misc/testimonials/frini-paschou-thumb.png" alt="Frini Paschou testimonial" class="img-fluid"/>
+                    <div class="d-flex justify-content-center flex-wrap text-center position-relative item col-12 col-md-4 col-lg-3 me-4 bg-background border-radius the-border large-shadow p-4">
+                      <img src="img/misc/testimonials/frini-paschou-thumb.png" alt="Frini Paschou testimonial" class="img-fluid mt-3" style="height: 55px"/>
+                      <img src="img/misc/logos/meta-logo-testimonial.svg" alt="Meta logo" class="img-fluid mt-3" style="height: 55px" />
                       <p class="mt-4">“Vasilis made UX workflows development less intimidating.”</p>
-                      <p class="mt-5">Frini Paschou <strong>— Software Engineer</strong></p>
+                      <p class="mt-5 smaller-2">Frini Paschou <strong>— Software Engineer</strong></p>
                     </div>
                
                   </div>
@@ -498,10 +507,13 @@
     </section>
 
 
+    <div class="minHeight20vh"></div>
+
+
     <section class="about-me my-5 py-5">
       <div class="container">
         <div class="row mt-5">
-          <div class="col-12 col-md-6 mb-3">
+          <div class="col-12 col-lg-6 mb-3">
             <h2 class="font-weight-bold section-title">
               About me
             </h2>
@@ -510,11 +522,11 @@
             <p>I've got an academic background in animation and interactive media as well as artificial intelligence and computer science.</p>
             <p>What sets me apart is my extensive product design and user research experience on a vast array of successful projects with diverse cross-functional teams.</p>
 
-            <div class="d-flex flex-nowrap"><button class="btn btn-primary py-2 px-3 rounded-pill me-3">View profile</button><button class="btn btn-outline-primary py-2 px-3 bg-secondary text-dark rounded-pill">Connect on LinkedIn<img src="img/misc/shapes/diagonal-arrow.svg" alt="Diagonal arrow" class="img-fluid ms-2 mb-1"/></button></div>
+            <div class="d-flex flex-nowrap mt-5"><button class="btn btn-primary py-2 px-3 rounded-pill me-3">View profile</button><button class="btn btn-outline-primary py-2 px-3 bg-secondary text-dark rounded-pill">Connect on LinkedIn<img src="img/misc/shapes/diagonal-arrow.svg" alt="Diagonal arrow" class="img-fluid ms-2 mb-1"/></button></div>
           </div>
 
-          <div class="col-12 col-md-6 mb-3">
-            <video width="624" height="618" autoplay loop muted style="object-fit: cover;" class="border-radius large-shadow the-border">
+          <div class="col-12 col-lg-6 mb-3 text-center">
+            <video width="100%" height="618" autoplay loop muted style="object-fit: cover;" class="border-radius large-shadow the-border">
               <source src="video/vasilis-kolip-profile-video-compressed-no-subs.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video> 
@@ -524,20 +536,20 @@
     </section>
 
 
-
+<div class="minHeight10vh"></div>
 
     <section class="about-me my-5 py-5">
       <div class="container">
         <div class="row mt-5">
 
-          <div class="col-12 col-md-6 mb-3">
-            <video width="624" height="618" autoplay loop muted style="object-fit: cover;" class="border-radius large-shadow the-border">
-              <source src="video/vasilis-kolip-profile-video-compressed.mp4" type="video/mp4">
+          <div class="col-12 col-lg-6 mb-3 text-center">
+            <video width="100%" height="740" autoplay loop muted style="object-fit: cover;" class="border-radius large-shadow the-border">
+              <source src="video/faq-uni.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video> 
           </div>
 
-          <div class="col-12 col-md-6 mb-3">
+          <div class="col-12 col-lg-6 mb-3">
             <h2 class="font-weight-bold section-title">
               Questions I'm asked
             </h2>
@@ -545,7 +557,7 @@
               
               <div class="accordion-item bg-background">
                 <h2 class="accordion-header">
-                  <button class="accordion-button bg-background" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
+                  <button class="accordion-button ps-0 bg-background" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
                     <strong>What's is your background and experience in product design?</strong>
                   </button>
                 </h2>
@@ -559,8 +571,8 @@
               
               <div class="accordion-item bg-background">
                 <h2 class="accordion-header">
-                  <button class="accordion-button collapsed bg-background" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                    How do you stay up-to-date with industry trends and incorporate them into your designs?
+                  <button class="accordion-button ps-0 collapsed bg-background" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    <strong>How do you stay up-to-date with industry trends and incorporate them into your designs?</strong>
                   </button>
                 </h2>
                 <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
@@ -573,8 +585,8 @@
               
               <div class="accordion-item bg-background">
                 <h2 class="accordion-header">
-                  <button class="accordion-button collapsed bg-background" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                    What tools and software do you use in your design work?
+                  <button class="accordion-button ps-0 collapsed bg-background" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    <strong>What tools and software do you use in your design work?</strong>
                   </button>
                 </h2>
                 <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
@@ -586,8 +598,8 @@
               
               <div class="accordion-item bg-background">
                 <h2 class="accordion-header">
-                  <button class="accordion-button collapsed bg-background" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-                    What are you looking for in a company?
+                  <button class="accordion-button ps-0 collapsed bg-background" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                    <strong>What are you looking for in a company?</strong>
                   </button>
                 </h2>
                 <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
@@ -601,8 +613,8 @@
               
               <div class="accordion-item bg-background">
                 <h2 class="accordion-header">
-                  <button class="accordion-button collapsed bg-background" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-                    How do you collaborate with cross-functional teams, such as developers and product managers?
+                  <button class="accordion-button ps-0 collapsed bg-background" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                    <strong>How do you collaborate with cross-functional teams, such as developers and product managers?</strong>
                   </button>
                 </h2>
                 <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
@@ -615,12 +627,12 @@
               </div>
 
             </div>
-          </div>
-          
+          </div>          
         </div>
       </div>
     </section>
 
+<div class="minHeight10vh"></div>
     
     <footer class="mt-5 pt-5">
       <div class="container bg-secondary rounded py-3">
@@ -639,7 +651,7 @@
             <div class="col-4">
               <div class="row">
                 <div class="col ms-auto text-end">
-                  <img src="img/misc/linkedin-64.png" alt="LinkedIn icon" class="img-fluid" style="max-width: 30px">
+                  <img src="img/misc/icons/linkedin-64.png" alt="LinkedIn icon" class="img-fluid" style="max-width: 30px">
                 </div>
               </div>
             </div>
@@ -648,6 +660,7 @@
       </div>
     </footer>
     <div class="position-fixed" id="toTop">
+      <progress max="100" value="0"></progress>
       <a class="btn btn-secondary rounded" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Go to top">
         <img src="img/misc/shapes/arrow-up.svg" alt="Arrow up" class="img-fluid" style="max-height: 18px">
       </a>

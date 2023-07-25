@@ -73,7 +73,6 @@ gsap.set(cards, {position: 'absolute'})
 gsap.to(".design-card", {
     yPercent: -150,
     rotation: -20,
-    display: "none",
     stagger: 0.8,
     scrollTrigger: {
     trigger: ".design-cards",
@@ -94,16 +93,15 @@ horizontalSections.forEach(function (sec, i) {
 
           var getToValue = () => -(thisAnimWrap.scrollWidth - window.innerWidth); 
 
-    gsap.fromTo(thisAnimWrap, { 
-        x: () => thisAnimWrap.classList.contains('to-right') ? 0 : getToValue() 
-    }, { 
-    x: () => thisAnimWrap.classList.contains('to-right') ? getToValue() : 0, 
+    gsap.fromTo(thisAnimWrap, 
+        { x: () => thisAnimWrap.classList.contains('to-right') ? 0 : getToValue() * 2.05 },
+        { x: () => thisAnimWrap.classList.contains('to-right') ? getToValue() * 2.05 : 0, 
     ease: "none",
     scrollTrigger: {
             trigger: sec,     
             start: "top top",
-            end: () => "+=" + (thisAnimWrap.scrollWidth - window.innerWidth),
-            pin: thisPinWrap,
+            end: "+=1500px",
+            pin: true,
             invalidateOnRefresh: true,
             scrub: true
         }
@@ -113,11 +111,31 @@ horizontalSections.forEach(function (sec, i) {
 
 }); 
 
+const showAnim = gsap.from('.main-navbar', { 
+    yPercent: -100,
+    paused: true,
+    duration: 0.2
+}).progress(1);
 
+ScrollTrigger.create({
+    start: "top top",
+    end: 99999,
+    onUpdate: (self) => {
+        self.direction === -1 ? showAnim.play() : showAnim.reverse()
+    }
+});
+
+
+gsap.registerPlugin(ScrollTrigger);
+gsap.to('progress', {
+  value: 100,
+  ease: 'none',
+  scrollTrigger: { scrub: 0.3 }
+});
 
 
 $(window).scroll(function() {
-    $(this).scrollTop() > 3800 ? $("#toTop").fadeIn("fast", function() {}) : $("#toTop").fadeOut("fast", function() {})
+    $(this).scrollTop() > 800 ? $("#toTop").fadeIn("fast", function() {}) : $("#toTop").fadeOut("fast", function() {})
     }), $("#toTop").click(function() {
         return $("html, body").animate({
             scrollTop: 0

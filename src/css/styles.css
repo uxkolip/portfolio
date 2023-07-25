@@ -11369,7 +11369,8 @@ body {
   font-family: 'gt_america_extended_regular', sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #16013E; }
+  color: #16013E;
+  overflow-x: hidden; }
 
 h1, .h1 {
   font-family: 'gt_america_extended_bold';
@@ -11449,6 +11450,14 @@ section.horizontal .animation-wrap {
 a:hover, button:hover {
   cursor: url(../img/misc/hand.png), pointer !important; }
 
+.main-navbar {
+  height: 90px;
+  left: 0;
+  top: 0;
+  transition: ease 0.4s; }
+  .main-navbar--scrolled {
+    height: 40px; }
+
 .tooltip {
   font-family: 'gt_america_extended_regular', sans-serif; }
 
@@ -11461,11 +11470,40 @@ a:hover, button:hover {
   z-index: 3;
   display: none; }
 
+progress {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  width: 100%;
+  height: 4px;
+  border: none;
+  background: transparent; }
+
+progress::-webkit-progress-bar {
+  background: transparent; }
+
+progress::-webkit-progress-value {
+  background: linear-gradient(to left, #db38b5, #01b3e3, #25ce7b, #fdc741, #ff6b01, #fc4236);
+  background-attachment: fixed; }
+
+progress::-moz-progress-bar {
+  background: linear-gradient(to left, #db38b5, #01b3e3, #25ce7b, #fdc741, #ff6b01, #fc4236);
+  background-attachment: fixed; }
+
 .noUnderline {
   text-decoration: none !important; }
 
 .top-10 {
   top: 20px; }
+
+.minHeight10vh {
+  min-height: 10vh; }
+
+.minHeight20vh {
+  min-height: 20vh; }
 
 .minHeight30vh {
   min-height: 30vh; }
