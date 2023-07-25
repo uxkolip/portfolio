@@ -82,19 +82,16 @@ const cards = document.querySelectorAll(".design-card");
 gsap.set(cards, {position: 'absolute'})
 
 gsap.to(".design-card", {
-  yPercent: -200,
-  stagger: 0.7,
-  scrollTrigger: {
+    yPercent: -150,
+    rotation: -20,
+    display: "none",
+    stagger: 0.8,
+    scrollTrigger: {
     trigger: ".design-cards",
     pin: true,
     scrub: 1,
     start: "top top",
-    end: "+=1000px",
-    snap: {
-        //snapTo: 0.33,
-        duration: {min: 0.5, max: 1},
-        ease: "power1.inOut"
-      }
+    end: "+=1500px",
   }
 });
 //homepage design process gsock end
