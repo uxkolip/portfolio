@@ -13,6 +13,11 @@ $(document).ready(function() {
     $(window).resize(function() {
         checkiftooltip()
     });
+
+    const scrollSpy = new bootstrap.ScrollSpy(document.body, {
+      target: "#portfolio"
+    })
+
 }); 
 
 const lenis = new Lenis()
@@ -54,7 +59,7 @@ const panelTimeline = gsap.timeline({
   scrollTrigger: {
     trigger: '.cardsContainer', 
     pin: true,
-    start: 'top 15%', 
+    start: 'top 20%', 
     end: '1000px', 
     scrub: true 
   },
@@ -67,7 +72,7 @@ panels.forEach((panel, index) => {
     y: -(index * panel.offsetHeight - index * 50), 
     opacity: 1, 
     duration: 5.5, 
-    delay: index * 1, 
+    delay: index * 2, 
     ease: 'circ.out', 
     onComplete: () => {
 
@@ -87,16 +92,16 @@ const cards = document.querySelectorAll(".design-card");
 gsap.set(cards, {position: 'absolute'})
 
 gsap.to(".design-card", {
-    yPercent: -150,
-    rotation: -20,
+    yPercent: -180,
+    rotation: -23,
     stagger: 0.8,
     scrollTrigger: {
-    trigger: ".design-cards",
-    pin: true,
-    scrub: 1,
-    start: "top top",
-    end: "+=1500px",
-  }
+        trigger: ".design-cards",
+        pin: true,
+        scrub: 1,
+        start: "-20%",
+        end: "+=1500px",
+    }
 });
 
 
@@ -110,12 +115,12 @@ horizontalSections.forEach(function (sec, i) {
           var getToValue = () => -(thisAnimWrap.scrollWidth - window.innerWidth); 
 
     gsap.fromTo(thisAnimWrap, 
-        { x: () => thisAnimWrap.classList.contains('to-right') ? 0 : getToValue() * 4.05 },
-        { x: () => thisAnimWrap.classList.contains('to-right') ? getToValue() * 4.05 : 0, 
+        { x: () => thisAnimWrap.classList.contains('to-right') ? 0 : getToValue() * 1.50 },
+        { x: () => thisAnimWrap.classList.contains('to-right') ? getToValue() * 1.50 : 0, 
     ease: "none",
     scrollTrigger: {
-            trigger: sec,     
-            start: "top top",
+            trigger: sec,
+            start: "-50%",
             end: "+=1500px",
             display: "none",
             pin: true,
@@ -127,7 +132,6 @@ horizontalSections.forEach(function (sec, i) {
     gsap.registerPlugin(ScrollTrigger);
 
 }); 
-
 
 
 
@@ -150,11 +154,3 @@ $(window).scroll(function() {
 
 
 
-var animation = bodymovin.loadAnimation({
-  container: document.getElementById('lottie'), 
-  path: 'js/takes-export.json', 
-  renderer: 'svg', 
-  loop: true, 
-  autoplay: true, 
-  name: "Hero animation", 
-});

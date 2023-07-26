@@ -11468,8 +11468,8 @@ a:hover, button:hover {
   top: 50px; }
 
 #toTop {
-  right: 100px;
-  bottom: -5px;
+  left: 40px;
+  bottom: 40px;
   z-index: 3;
   display: none; }
 
@@ -11481,7 +11481,7 @@ progress {
   -moz-appearance: none;
        appearance: none;
   width: 100%;
-  height: 4px;
+  height: 8px;
   border: none;
   background: transparent; }
 
@@ -11499,7 +11499,13 @@ progress::-moz-progress-bar {
 .noUnderline {
   text-decoration: none !important; }
 
-.top-10 {
+.top12vh {
+  top: 12vh; }
+
+.top10px {
+  top: 10px; }
+
+.top20px {
   top: 20px; }
 
 .minHeight10vh {

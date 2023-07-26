@@ -13,6 +13,11 @@ $(document).ready(function() {
     $(window).resize(function() {
         checkiftooltip()
     });
+
+    const scrollSpy = new bootstrap.ScrollSpy(document.body, {
+      target: "#portfolio"
+    })
+
 }); 
 
 //smooth scroll
@@ -62,7 +67,7 @@ const panelTimeline = gsap.timeline({
   scrollTrigger: {
     trigger: '.cardsContainer', // The wrapper element that contains the panels
     pin: true,
-    start: 'top 15%', // The animation starts when the top of the wrapper is 75% from the top of the viewport
+    start: 'top 20%', // The animation starts when the top of the wrapper is 75% from the top of the viewport
     end: '1000px', // The animation ends when the bottom of the wrapper is 25% from the top of the viewport
     scrub: true // Enable "scrubbing" so that the animations are smoothly reversed as the user scrolls back up
   },
@@ -76,7 +81,7 @@ panels.forEach((panel, index) => {
     y: -(index * panel.offsetHeight - index * 50), // Move the panel up to its final position
     opacity: 1, // Fade the panel in
     duration: 5.5, // Set the duration of the animation to 2 second
-    delay: index * 1, // Delay the animation by 0.5 seconds per panel
+    delay: index * 2, // Delay the animation by 0.5 seconds per panel
     ease: 'circ.out', // Add some easing to the motion
     onComplete: () => {
     //console.log(`Panel ${index + 1} timeline completed`);
@@ -99,16 +104,16 @@ const cards = document.querySelectorAll(".design-card");
 gsap.set(cards, {position: 'absolute'})
 
 gsap.to(".design-card", {
-    yPercent: -150,
-    rotation: -20,
+    yPercent: -180,
+    rotation: -23,
     stagger: 0.8,
     scrollTrigger: {
-    trigger: ".design-cards",
-    pin: true,
-    scrub: 1,
-    start: "top top",
-    end: "+=1500px",
-  }
+        trigger: ".design-cards",
+        pin: true,
+        scrub: 1,
+        start: "-20%",
+        end: "+=1500px",
+    }
 });
 //homepage design process gsock end
 
@@ -124,12 +129,12 @@ horizontalSections.forEach(function (sec, i) {
     var getToValue = () => -(thisAnimWrap.scrollWidth - window.innerWidth); 
 
     gsap.fromTo(thisAnimWrap, 
-        { x: () => thisAnimWrap.classList.contains('to-right') ? 0 : getToValue() * 4.05 },
-        { x: () => thisAnimWrap.classList.contains('to-right') ? getToValue() * 4.05 : 0, 
+        { x: () => thisAnimWrap.classList.contains('to-right') ? 0 : getToValue() * 1.50 },
+        { x: () => thisAnimWrap.classList.contains('to-right') ? getToValue() * 1.50 : 0, 
     ease: "none",
     scrollTrigger: {
-            trigger: sec,     
-            start: "top top",
+            trigger: sec,
+            start: "-50%",
             end: "+=1500px",
             display: "none",
             pin: true,
@@ -142,7 +147,6 @@ horizontalSections.forEach(function (sec, i) {
 
 }); 
 //homepage testimonials end
-
 
 
 
@@ -170,12 +174,12 @@ $(window).scroll(function() {
 
 
 //lottie homepage test
-var animation = bodymovin.loadAnimation({
+/*var animation = bodymovin.loadAnimation({
   container: document.getElementById('lottie'), // Required
   path: 'js/takes-export.json', // Required
   renderer: 'svg', // Required
   loop: true, // Optional
   autoplay: true, // Optional
   name: "Hero animation", // Name for future reference. Optional.
-});
+});*/
 //lottie homepage test end
