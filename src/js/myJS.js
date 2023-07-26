@@ -48,8 +48,7 @@ const panelTimeline = gsap.timeline({
     pin: true,
     start: 'top 15%', // The animation starts when the top of the wrapper is 75% from the top of the viewport
     end: '1000px', // The animation ends when the bottom of the wrapper is 25% from the top of the viewport
-    markers: false, // Add markers to help visualize the trigger area (for testing purposes)
-    scrub: true, // Enable "scrubbing" so that the animations are smoothly reversed as the user scrolls back up
+    scrub: true // Enable "scrubbing" so that the animations are smoothly reversed as the user scrolls back up
   },
 });
 
@@ -68,7 +67,9 @@ panels.forEach((panel, index) => {
     
     },
     onReverseComplete: () => {
-    //console.log(`Panel ${index + 1} timeline reversed`);
+    console.log(`Panel ${index + 1} timeline reversed`);
+    
+    $(index.panel).remove();
     },
   });
 });
@@ -114,6 +115,7 @@ horizontalSections.forEach(function (sec, i) {
             trigger: sec,     
             start: "top top",
             end: "+=1500px",
+            display: "none",
             pin: true,
             invalidateOnRefresh: true,
             scrub: true
