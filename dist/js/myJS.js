@@ -42,8 +42,7 @@ const panelTimeline = gsap.timeline({
     pin: true,
     start: 'top 15%', 
     end: '1000px', 
-    markers: false, 
-    scrub: true, 
+    scrub: true 
   },
 });
 
@@ -60,6 +59,9 @@ panels.forEach((panel, index) => {
 
         },
     onReverseComplete: () => {
+    console.log(`Panel ${index + 1} timeline reversed`);
+
+        $(index.panel).remove();
     },
   });
 });
@@ -101,6 +103,7 @@ horizontalSections.forEach(function (sec, i) {
             trigger: sec,     
             start: "top top",
             end: "+=1500px",
+            display: "none",
             pin: true,
             invalidateOnRefresh: true,
             scrub: true
