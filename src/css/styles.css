@@ -11389,6 +11389,9 @@ p {
 strong {
   font-family: 'gt_america_extended_bold'; }
 
+.bg-secondary-gradient {
+  background: linear-gradient(180deg, #FFFBF5 0%, #FDF3E7 46.62%); }
+
 .body-bold {
   font-family: 'gt_america_extended_bold';
   font-size: 1rem;
@@ -11519,6 +11522,9 @@ progress::-moz-progress-bar {
 
 .minHeight75vh {
   min-height: 75vh; }
+
+.minHeight80vh {
+  min-height: 80vh; }
 
 .minHeight90vh {
   min-height: 90vh; }
