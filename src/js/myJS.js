@@ -31,6 +31,22 @@ requestAnimationFrame(raf)
 //smooth scroll end
 
 
+//navbar show on scroll up
+const showAnim = gsap.from('.main-navbar', { 
+    yPercent: -100,
+    paused: true,
+    duration: 0.2
+}).progress(1);
+
+ScrollTrigger.create({
+    start: "top top",
+    end: 99999,
+    onUpdate: (self) => {
+        self.direction === -1 ? showAnim.play() : showAnim.reverse()
+    }
+});
+//navbar show on scroll up end
+
 // homepage selected work gsock
 // Select the panels and set their initial position and opacity
 const panels = document.querySelectorAll('.panel');
@@ -108,8 +124,8 @@ horizontalSections.forEach(function (sec, i) {
     var getToValue = () => -(thisAnimWrap.scrollWidth - window.innerWidth); 
 
     gsap.fromTo(thisAnimWrap, 
-        { x: () => thisAnimWrap.classList.contains('to-right') ? 0 : getToValue() * 2.05 },
-        { x: () => thisAnimWrap.classList.contains('to-right') ? getToValue() * 2.05 : 0, 
+        { x: () => thisAnimWrap.classList.contains('to-right') ? 0 : getToValue() * 4.05 },
+        { x: () => thisAnimWrap.classList.contains('to-right') ? getToValue() * 4.05 : 0, 
     ease: "none",
     scrollTrigger: {
             trigger: sec,     
@@ -127,21 +143,7 @@ horizontalSections.forEach(function (sec, i) {
 }); 
 //homepage testimonials end
 
-//navbar show on scroll up
-const showAnim = gsap.from('.main-navbar', { 
-    yPercent: -100,
-    paused: true,
-    duration: 0.2
-}).progress(1);
 
-ScrollTrigger.create({
-    start: "top top",
-    end: 99999,
-    onUpdate: (self) => {
-        self.direction === -1 ? showAnim.play() : showAnim.reverse()
-    }
-});
-//navbar show on scroll up end
 
 
 // page progress
