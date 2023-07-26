@@ -94,13 +94,14 @@ gsap.set(cards, {position: 'absolute'})
 gsap.to(".design-card", {
     yPercent: -180,
     rotation: -23,
-    stagger: 0.8,
+    stagger: 3,
+    duration: 3.5,
     scrollTrigger: {
         trigger: ".design-cards",
         pin: true,
-        scrub: 1,
+        scrub: true,
         start: "-20%",
-        end: "+=1500px",
+        end: "+=2000px",
     }
 });
 
