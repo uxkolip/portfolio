@@ -131,7 +131,7 @@ $theme-colors: map-merge($custom-theme-colors, $theme-colors);
     src:url('../fonts/gt_america_extended_bold.woff2') format('woff2'),
         url('../fonts/gt_america_extended_bold.woff') format('woff');
     font-style:normal;
-    font-weight:700;
+    font-weight: 00;
 }
 
 @font-face {
@@ -139,7 +139,7 @@ $theme-colors: map-merge($custom-theme-colors, $theme-colors);
   src:url('../fonts/gt_america_extended_regular.woff2') format('woff2'),
       url('../fonts/gt_america_extended_regular.woff') format('woff');
   font-style:normal;
-  font-weight:400;
+  font-weight: 400;
 }
 
 body {
@@ -234,9 +234,9 @@ section.horizontal {
 
 section.horizontal .pin-wrap,
 section.horizontal .animation-wrap {
-    display: flex;
-    position: relative;
-    z-index: 1;
+  display: flex;
+  position: relative;
+  z-index: 1;
 }
 
 a:hover, button:hover, .pointer {
@@ -247,18 +247,18 @@ a:hover, button:hover, .pointer {
   height: 90px;
   left: 0;
   top: 0;
-  transition: ease 0.4s;
+  transition: ease .4s;
   &--scrolled {
     height: 40px;
   }
 }
 
 .tooltip {
-    font-family: 'gt_america_extended_regular', sans-serif;
+  font-family: 'gt_america_extended_regular', sans-serif;
 }
 
 .sticky-top {
-    top: 50px;
+  top: 50px;
 }
 
 #toTop {

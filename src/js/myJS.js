@@ -100,8 +100,8 @@ panels.forEach((panel, index) => {
             $("[data-target='#msftPanel']").addClass('btn-primary').removeClass('btn-outline-primary');
             setTimeout(function() {
                 $(".selectedWork").css('opacity', 0);
-            }, 500);
-            $(".pin-spacer").css('zIndex', 9999);
+            }, 300);
+            $(".pin-spacer").css('zIndex', 9);
             break;
           default:
             //console.log("Unknown panel");

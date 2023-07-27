@@ -11356,7 +11356,7 @@ textarea.form-control-lg {
   font-family: 'gt_america_extended_bold';
   src: url("../fonts/gt_america_extended_bold.woff2") format("woff2"), url("../fonts/gt_america_extended_bold.woff") format("woff");
   font-style: normal;
-  font-weight: 700; }
+  font-weight: 00; }
 
 @font-face {
   font-family: 'gt_america_extended_regular';
@@ -11457,7 +11457,7 @@ a:hover, button:hover, .pointer {
   height: 90px;
   left: 0;
   top: 0;
-  transition: ease 0.4s; }
+  transition: ease .4s; }
   .main-navbar--scrolled {
     height: 40px; }
 
