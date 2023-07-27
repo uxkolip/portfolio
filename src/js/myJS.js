@@ -14,10 +14,6 @@ $(document).ready(function() {
         checkiftooltip()
     });
 
-    const scrollSpy = new bootstrap.ScrollSpy(document.body, {
-      target: "#portfolio"
-    })
-
 }); 
 
 //smooth scroll
@@ -46,6 +42,7 @@ const showAnim = gsap.from('.main-navbar', {
 ScrollTrigger.create({
     start: "top top",
     end: 99999,
+    addClass: "the-border",
     onUpdate: (self) => {
         self.direction === -1 ? showAnim.play() : showAnim.reverse()
     }
@@ -105,7 +102,7 @@ gsap.set(cards, {position: 'absolute'})
 
 gsap.to(".design-card", {
     yPercent: -180,
-    rotation: -23,
+    rotation: 23,
     stagger: 3,
     duration: 3.5,
     scrollTrigger: {
@@ -113,7 +110,7 @@ gsap.to(".design-card", {
         pin: true,
         scrub: true,
         start: "-20%",
-        end: "+=2000px",
+        end: "1000px",
     }
 });
 //homepage design process gsock end
@@ -124,18 +121,20 @@ const horizontalSections = gsap.utils.toArray('section.horizontal')
 
 horizontalSections.forEach(function (sec, i) {  
 
+
     var thisPinWrap = sec.querySelector('.pin-wrap');
     var thisAnimWrap = thisPinWrap.querySelector('.animation-wrap');
-      
-    var getToValue = () => -(thisAnimWrap.scrollWidth - window.innerWidth); 
+    var getToValue = () => -(thisAnimWrap.scrollWidth - window.innerWidth);
+
+    gsap.set(horizontalSections, {marginTop: '-350px'})
 
     gsap.fromTo(thisAnimWrap, 
-        { x: () => thisAnimWrap.classList.contains('to-right') ? 0 : getToValue() * 1.50 },
-        { x: () => thisAnimWrap.classList.contains('to-right') ? getToValue() * 1.50 : 0, 
+        { x: () => thisAnimWrap.classList.contains('to-right') ? 0 : getToValue() * 2 },
+        { x: () => thisAnimWrap.classList.contains('to-right') ? getToValue() * 2 : 0, 
     ease: "none",
     scrollTrigger: {
             trigger: sec,
-            start: "-50%",
+            start: "-40%",
             end: "+=1500px",
             display: "none",
             pin: true,
