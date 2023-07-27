@@ -98,9 +98,6 @@ panels.forEach((panel, index) => {
             $("#metaPanel").css('scale', '.94').css('marginTop', "-55px");
             $("[data-target='#metaPanel']").addClass('btn-outline-primary').removeClass('btn-primary');
             $("[data-target='#msftPanel']").addClass('btn-primary').removeClass('btn-outline-primary');
-            setTimeout(function() {
-                $(".selectedWork").css('opacity', 0);
-            }, 300);
             $(".pin-spacer").css('zIndex', 99999);
             break;
           default:
@@ -122,7 +119,6 @@ panels.forEach((panel, index) => {
           case "3":
             //console.log("msft panel is reverse-complete");
             $("#metaPanel").css('scale', '1').css('marginTop', "0px");
-            $(".selectedWork").css('opacity', 1);
             $("[data-target='#metaPanel']").addClass('btn-primary').removeClass('btn-outline-primary');
             $("[data-target='#msftPanel']").addClass('btn-outline-primary').removeClass('btn-primary');
             $(".pin-spacer").css('zIndex', 'auto');
