@@ -239,7 +239,7 @@ section.horizontal .animation-wrap {
     z-index: 1;
 }
 
-a:hover, button:hover {
+a:hover, button:hover, .pointer {
   cursor: url(../img/misc/hand.png),pointer !important;
 }
 
@@ -270,6 +270,11 @@ a:hover, button:hover {
 
 .panel {
   opacity: 0;
+  transition: .3s all;
+}
+
+.selectedWork {
+  transition: .3s all; 
 }
 
 progress {

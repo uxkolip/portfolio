@@ -65,18 +65,52 @@ const panelTimeline = gsap.timeline({
 let completedIndexCount = 0;
 
 panels.forEach((panel, index) => {
-  panelTimeline.to(panel, {
-    y: -(index * panel.offsetHeight - index * 50), 
+    var currentPanel = `${index + 1}`;
+    panelTimeline.to(panel, {
+    y: -(index * panel.offsetHeight - index * 114), 
     duration: 5.5, 
     delay: index * 2, 
     ease: 'circ.out', 
     onComplete: () => {
-
-        },
+        switch (currentPanel) {
+          case "1":
+            break;
+          case "2":
+            $("#voicemodPanel").css('scale', '.94');
+            $("[data-target='#voicemodPanel']").addClass('btn-outline-primary').removeClass('btn-primary');
+            $("[data-target='#metaPanel']").addClass('btn-primary').removeClass('btn-outline-primary');
+            break;
+          case "3":
+            $("#voicemodPanel").css('scale', '.86');
+            $("#metaPanel").css('scale', '.94').css('marginTop', "-58px");
+            $("[data-target='#metaPanel']").addClass('btn-outline-primary').removeClass('btn-primary');
+            $("[data-target='#msftPanel']").addClass('btn-primary').removeClass('btn-outline-primary');
+            setTimeout(function() {
+                $(".selectedWork").css('opacity', 0);
+            }, 500);
+            $(".pin-spacer").css('zIndex', 9999);
+            break;
+          default:
+        }
+    },
     onReverseComplete: () => {
-    console.log(`Panel ${index + 1} timeline reversed`);
-
-        $(index.panel).remove();
+        switch (currentPanel) {
+          case "1":
+            break;
+          case "2":
+            $("#voicemodPanel").css('scale', '1');
+            $("[data-target='#voicemodPanel']").addClass('btn-primary').removeClass('btn-outline-primary');
+            $("[data-target='#metaPanel']").addClass('btn-outline-primary').removeClass('btn-primary');
+            break;
+          case "3":
+            $("#metaPanel").css('scale', '1').css('marginTop', "0px");
+            $(".selectedWork").css('opacity', 1);
+            $("[data-target='#metaPanel']").addClass('btn-primary').removeClass('btn-outline-primary');
+            $("[data-target='#msftPanel']").addClass('btn-outline-primary').removeClass('btn-primary');
+            $(".pin-spacer").css('zIndex', 'auto');
+            break;
+          default:
+        }
     },
   });
 });
@@ -121,7 +155,6 @@ horizontalSections.forEach(function (sec, i) {
             trigger: sec,
             start: "-40%",
             end: "+=1500px",
-            display: "none",
             pin: true,
             invalidateOnRefresh: true,
             scrub: true

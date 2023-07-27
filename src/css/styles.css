@@ -11450,7 +11450,7 @@ section.horizontal .animation-wrap {
   position: relative;
   z-index: 1; }
 
-a:hover, button:hover {
+a:hover, button:hover, .pointer {
   cursor: url(../img/misc/hand.png), pointer !important; }
 
 .main-navbar {
@@ -11474,7 +11474,11 @@ a:hover, button:hover {
   display: none; }
 
 .panel {
-  opacity: 0; }
+  opacity: 0;
+  transition: .3s all; }
+
+.selectedWork {
+  transition: .3s all; }
 
 progress {
   position: fixed;

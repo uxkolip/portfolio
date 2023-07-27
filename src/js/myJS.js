@@ -74,19 +74,62 @@ let completedIndexCount = 0;
 
 // Add animations for each panel to the timeline, with a delay before each animation begins
 panels.forEach((panel, index) => {
-  panelTimeline.to(panel, {
-    y: -(index * panel.offsetHeight - index * 50), // Move the panel up to its final position
-    duration: 5.5, // Set the duration of the animation to 2 second
-    delay: index * 2, // Delay the animation by 0.5 seconds per panel
+    var currentPanel = `${index + 1}`;
+    panelTimeline.to(panel, {
+    y: -(index * panel.offsetHeight - index * 114), // Move the panel up to its final position
+    duration: 5.5, // Set the duration of the animation to 5 second
+    delay: index * 2, // Delay the animation by 2 seconds per panel
     ease: 'circ.out', // Add some easing to the motion
     onComplete: () => {
-    //console.log(`Panel ${index + 1} timeline completed`);
-    
+        //console.log(`Panel ${index + 1} timeline completed`);
+        switch (currentPanel) {
+          case "1":
+            //console.log("voicemod panel is complete");
+            break;
+          case "2":
+            //console.log("meta panel is complete");
+            $("#voicemodPanel").css('scale', '.94');
+            $("[data-target='#voicemodPanel']").addClass('btn-outline-primary').removeClass('btn-primary');
+            $("[data-target='#metaPanel']").addClass('btn-primary').removeClass('btn-outline-primary');
+            break;
+          case "3":
+            //console.log("msft panel is complete");
+            $("#voicemodPanel").css('scale', '.86');
+            $("#metaPanel").css('scale', '.94').css('marginTop', "-58px");
+            $("[data-target='#metaPanel']").addClass('btn-outline-primary').removeClass('btn-primary');
+            $("[data-target='#msftPanel']").addClass('btn-primary').removeClass('btn-outline-primary');
+            setTimeout(function() {
+                $(".selectedWork").css('opacity', 0);
+            }, 500);
+            $(".pin-spacer").css('zIndex', 9999);
+            break;
+          default:
+            //console.log("Unknown panel");
+        }
     },
     onReverseComplete: () => {
-    console.log(`Panel ${index + 1} timeline reversed`);
-    
-    $(index.panel).remove();
+        //console.log(`Panel ${index + 1} timeline reversed`);
+        switch (currentPanel) {
+          case "1":
+            //console.log("voicemod panel is reverse-complete");
+            break;
+          case "2":
+            //console.log("meta panel is reverse-complete");
+            $("#voicemodPanel").css('scale', '1');
+            $("[data-target='#voicemodPanel']").addClass('btn-primary').removeClass('btn-outline-primary');
+            $("[data-target='#metaPanel']").addClass('btn-outline-primary').removeClass('btn-primary');
+            break;
+          case "3":
+            //console.log("msft panel is reverse-complete");
+            $("#metaPanel").css('scale', '1').css('marginTop', "0px");
+            $(".selectedWork").css('opacity', 1);
+            $("[data-target='#metaPanel']").addClass('btn-primary').removeClass('btn-outline-primary');
+            $("[data-target='#msftPanel']").addClass('btn-outline-primary').removeClass('btn-primary');
+            $(".pin-spacer").css('zIndex', 'auto');
+            break;
+          default:
+            //console.log("Unknown panel");
+        }
     },
   });
 });
@@ -135,7 +178,6 @@ horizontalSections.forEach(function (sec, i) {
             trigger: sec,
             start: "-40%",
             end: "+=1500px",
-            display: "none",
             pin: true,
             invalidateOnRefresh: true,
             scrub: true

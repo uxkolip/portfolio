@@ -276,12 +276,14 @@
         </div>
       </div>
     </div>
+
+    
     
     <section class="portfolio pt-5 mt-5 pb-3">
       <div class="container mt-5">
         <div class="col-12 mt-5">
           <div class="row">
-            <div class="col-12 mt-5 sticky-top pb-2 top12vh" style="z-index: -1;">
+            <div class="col-12 mt-5 sticky-top pb-5 top12vh selectedWork">
               <div class="row">
                   
                   <div class="col-12 col-md-4 mb-3 mb-lg-0">
@@ -289,9 +291,9 @@
                   </div>
                   
                   <div class="col-12 col-md-8 d-flex justify-content-end">
-                    <button class="btn btn-outline-primary py-2 px-3 rounded-pill btnPanel bg-secondary text-dark">Voicemod</button>
-                    <button class="btn btn-link noUnderline rounded-pill btnPanel text-dark mx-5">Meta</button>
-                    <button class="btn btn-link noUnderline rounded-pill btnPanel text-dark">Microsoft</button>
+                    <button class="btn btn-primary py-2 px-3 rounded-pill" data-target="#voicemodPanel">Voicemod</button>
+                    <button class="btn btn-outline-primary py-2 px-3 rounded-pill mx-3" data-target="#metaPanel">Meta</button>
+                    <button class="btn btn-outline-primary py-2 px-3 rounded-pill" data-target="#msftPanel">Microsoft</button>
                   </div>
                 </div>
               
@@ -299,7 +301,7 @@
 
             <div class="cardsContainer col-12">
 
-              <div class="col-12 panel bg-secondary one large-shadow border-radius the-border" style="min-height: 400px;">
+              <div id="voicemodPanel" class="col-12 panel panel-1 bg-secondary one large-shadow border-radius the-border" style="min-height: 400px;">
                 <a href="voicemod.html" class="noUnderline text-dark" title="Click to view project page">
                   <div class="row p-5">
                     <div class="col-12 col-lg-6">
@@ -343,7 +345,7 @@
                 </a>
               </div>
 
-              <div class="col-12 panel bg-secondary two large-shadow border-radius the-border" style="min-height: 400px;">
+              <div id="metaPanel" class="col-12 panel panel-2 bg-secondary two large-shadow border-radius the-border" style="min-height: 400px;">
                 <a href="meta.html" class="noUnderline text-dark" title="Click to view project page">
                   <div class="row p-5">
                     <div class="col-12 col-lg-6">
@@ -402,7 +404,7 @@
                 </a>
               </div>
 
-              <div class="col-12 panel bg-secondary three large-shadow border-radius the-border" style="min-height: 400px;">
+              <div id="msftPanel" class="col-12 panel panel-3 bg-secondary three large-shadow border-radius the-border" style="min-height: 400px;">
                 <a href="microsoft.html" class="noUnderline text-dark" title="Click to view project page">
                   <div class="row p-5">
                     <div class="col-12 col-lg-6">
