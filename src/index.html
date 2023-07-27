@@ -52,20 +52,26 @@
   </head>
   <body>
     <section class="container">
-      <div class="position-fixed w-100 main-navbar top20px" style="z-index: 9;">
-        <nav class="navbar navbar-expand-lg navbar-light container bg-background position-relative px-3 rounded-pill" style="z-index: 9;">
-          <div class="col-1 me-2 mt-n2 rounded-circle" style="max-width: 45px; min-height: 45px;">
-            <img src="img/misc/moi-thumb.png" alt="Vasilis Kolip portrait thumbnail" class="img-fluid">
-          </div>
-          <div class="col-6 col-lg-2">
+      <div class="position-fixed w-100 main-navbar top20px" style="z-index: 99999;">
+        <nav class="navbar navbar-expand-lg navbar-light container bg-background position-relative px-3 px-md-0 rounded-pill" style="z-index: 9;">
+          <div class="container-fluid">
             <div class="row">
-              <p class="mb-0 lh-1"><a class="text-dark font-weight-bold noUnderline" href="index.html" title="Homepage">Vasilis Kolip</a></p>
-              <p class="mb-0">UX/Product designer</p>
+              <div class="col-2 me-1 rounded-circle">
+                <img src="img/misc/moi-thumb.png" alt="Vasilis Kolip portrait thumbnail" class="img-fluid">
+              </div>
+              <div class="col-6 ps-1">
+                <div class="row">
+                  <p class="mb-0 lh-1"><a class="text-dark font-weight-bold noUnderline" href="index.html" title="Homepage">Vasilis Kolip</a></p>
+                  <p class="mb-0">UX/Product designer</p>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item px-3 active">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul class="navbar-nav ms-auto mt-3 mt-md-0">
+              <li class="nav-item px-lg-3 active">
                 <div class="dropdown">
                     <button class="nav-link text-dark font-weight-bold dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                      Home
@@ -76,19 +82,20 @@
                       <li><a class="dropdown-item smaller-2" href="microsoft.html" target="_blank">Microsoft</a></li>
                     </ul>
               </li>
-              <li class="nav-item px-3">
+              <li class="nav-item px-lg-3">
                 <a class="nav-link mb-0" href="profile.html" title="Click to check out my profile and my previous work experiences">About
                 </a>
               </li>
-              <li class="nav-item px-3">
+              <li class="nav-item px-lg-3">
                 <a class="nav-link mb-0" href="Vasilis-Kolip-Sr-Product-Designer.pdf" target="_blank" title="Click to dowload my CV in pdf format">Résumé
                 </a>
               </li>
-              <li class="nav-item px-3">
+              <li class="nav-item px-lg-3">
                 <a class="nav-link mb-0 typeform-share button" href="https://billk1.typeform.com/to/xNOJ6W" data-mode="drawer_right" data-submit-close-delay="5" target="_blank" title="Click to get in touch">Contact
                 </a>
               </li>
             </ul>
+            </div>
           </div>
         </nav>
       </div>
@@ -102,7 +109,7 @@
             <div class="col-12 col-lg-8 col-xxl-6 mx-auto text-center">
               <h1 class="display-4">Designing products with user insights.
               </h1>
-              <p class="pt-3">Let's dive into the needs, preferences and behaviors of your audience. Let's create beautiful products that not only meet people's needs but exceed their expectations too.
+              <p class="pt-3">Let's dive into the needs, preferences and behaviours of your audience. Let's create beautiful products that not only meet people's needs but exceed their expectations too.
               </p>
             </div>
           </div>
@@ -121,7 +128,7 @@
                     <h2 class="section-title">Selected work</h2>
                   </div>
                   
-                  <div class="col-12 col-lg-8 d-flex justify-content-end">
+                  <div class="col-12 col-lg-8 d-none d-lg-flex justify-content-end">
                     <button class="btn smaller-2 btn-primary py-2 px-3 rounded-pill" data-target="#voicemodPanel">Voicemod</button>
                     <button class="btn smaller-2 btn-outline-primary py-2 px-3 rounded-pill mx-3" data-target="#metaPanel">Meta</button>
                     <button class="btn smaller-2 btn-outline-primary py-2 px-3 rounded-pill" data-target="#msftPanel">Microsoft</button>
@@ -147,20 +154,20 @@
                       </p>
                     </div>
 
-                    <div class="d-none d-lg-block col-2 p-3 bg-primary position-absolute right-0 border-radius large-shadow me-4 top20px" style="max-width: 148px;">
+                    <div class="d-none d-xl-block col-2 p-3 bg-primary position-absolute right-0 border-radius large-shadow me-4 top20px" style="max-width: 148px;">
                       <p class="font-weight-bold text-uppercase text-white mb-0 lh-sm">Uninstall rate reduced by 80%</p>
                     </div>
 
-                    <div class="d-none d-lg-block col-2 bg-light-purple position-absolute border-radius top20px right-0 me-5 large-shadow text-center p-0" style="margin-right: 350px !important; margin-top: 94px; max-width: 170px;">
+                    <div class="d-none d-xl-block col-2 bg-light-purple position-absolute border-radius top20px right-0 me-5 large-shadow text-center p-0" style="margin-right: 350px !important; margin-top: 94px; max-width: 170px;">
                       <p class="mb-0 p-1 bg-background border-radius mx-4 mt-3 position-absolute w-75">Streamer</p>
                       <img src="img/misc/elements/streamer-mic-element.png" alt="Streamer mic element" style="height: 100%; width: 100%;" class="img-fluid">
                     </div>
 
-                    <div class="d-none d-lg-block col-2 bg-background large-shadow text-center position-absolute py-2 border-radius top20px right-0 me-5" style="margin-right: 350px !important; margin-top: 284px; max-width: 170px;">
+                    <div class="d-none d-xl-block col-2 bg-background large-shadow text-center position-absolute py-2 border-radius top20px right-0 me-5" style="margin-right: 350px !important; margin-top: 284px; max-width: 170px;">
                       <img src="img/misc/icons/streamer-icons.png" alt="Streamer icons" style="width: 104px;" class="img-fluid">
                     </div>
 
-                    <div class="d-none d-lg-block col-2 position-absolute top20px right-0 me-5" style="margin-right: 280px !important; margin-top: 384px;">
+                    <div class="d-none d-xl-block col-2 position-absolute top20px right-0 me-5" style="margin-right: 280px !important; margin-top: 384px;">
                      <img src="img/misc/shapes/user-persona-arrow.svg" alt="User person arrow apps element" style="height: 100%; width: 100%; margin-left: -100px; margin-top: -1vh" class="img-fluid">
                     </div>                      
 
@@ -192,22 +199,22 @@
                     </div>
 
 
-                    <div class="d-none d-lg-block col-12 p-2 bg-white position-absolute rounded-circle large-shadow me-5 top20px text-center" style="width: 52px; right: 230px; height: 52px;">
+                    <div class="d-none d-xl-block col-12 p-2 bg-white position-absolute rounded-circle large-shadow me-5 top20px text-center" style="width: 52px; right: 230px; height: 52px;">
                       <p class="font-weight-bold mb-0 lh-sm">
                          <img src="img/misc/icons/icons8-lightning-64.png" alt="Lightning bolt icon" style="height: 28px; width: 28px;" class="img-fluid mt-1">
                       </p>
                     </div>
 
-                    <div class="d-none d-lg-block col-12 p-3 bg-green position-absolute right-0 border-radius large-shadow me-4 top20px text-center" style="max-width: 245px;">
+                    <div class="d-none d-xl-block col-12 p-3 bg-green position-absolute right-0 border-radius large-shadow me-4 top20px text-center" style="max-width: 245px;">
                       <p class="font-weight-bold text-white mb-0 lh-sm">Lightning fast 1st cuts</p>
                     </div>
 
-                    <div class="d-none d-lg-block col-2 bg-background position-absolute top20px right-0 me-5 border-radius py-2 px-3 large-shadow" style="margin-right: 350px !important; margin-top: 94px;">
+                    <div class="d-none d-xl-block col-2 bg-background position-absolute top20px right-0 me-5 border-radius py-2 px-3 large-shadow" style="margin-right: 350px !important; margin-top: 94px;">
                       <p class="mb-1 smaller-1">Footage duration</p>
                       <p class="mb-1 text-green bigger-5 font-weight-bold align-bottom lh-1"><img src="img/misc/icons/icons8-documentary-64.png" alt="Camera icon" style="height: 28px;" class="me-2 img-fluid align-bottom">869m.</p>
                     </div>
 
-                    <div class="d-none d-lg-block col-2 bg-background position-absolute top20px right-0 me-5 border-radius p-3 large-shadow" style="margin-right: 350px !important; margin-top: 190px;">
+                    <div class="d-none d-xl-block col-2 bg-background position-absolute top20px right-0 me-5 border-radius p-3 large-shadow" style="margin-right: 350px !important; margin-top: 190px;">
                       <p class="text-green bigger-1 lh-1 font-weight-bold my-2"><img src="img/misc/icons/icons8-user-64.png" alt="User icon" style="height: 18px;" class="me-2 img-fluid align-bottom">Requirements</p>
                       <ul class="list-unstyled mt-3 mb-0">
                         <li class="smaller-3 bg-secondary border-radius p-2 mt-1">Combine footage</li>
@@ -217,7 +224,7 @@
                     </div>
 
 
-                    <div class="d-none d-lg-block col-2 bg-background position-absolute top20px right-0 me-5 border-radius p-3 large-shadow" style="margin-right: 30px !important; margin-top: 244px;">
+                    <div class="d-none d-xl-block col-2 bg-background position-absolute top20px right-0 me-5 border-radius p-3 large-shadow" style="margin-right: 30px !important; margin-top: 244px;">
                       <p class="text-dark bigger-1 lh-1 my-2"><img src="img/misc/elements/channel_avatar.png" alt="YouTube channel avatar" style="height: 18px;" class="me-2 img-fluid align-bottom">@Channel</p>
                       <img src="img/misc/shapes/dummy-lines-meta-card.svg" alt="Dummy lines icon" class="img-fluid w-100 mt-2">
                     </div>
@@ -250,19 +257,19 @@
                       </p>
                     </div>
 
-                    <div class="d-none d-lg-block col-2 bg-background position-absolute top20px right-0 me-5 border-radius p-3 large-shadow" style="margin-right: 350px !important; margin-top: 70px;">
+                    <div class="d-none d-xl-block col-2 bg-background position-absolute top20px right-0 me-5 border-radius p-3 large-shadow" style="margin-right: 350px !important; margin-top: 70px;">
                       <p class="lh-base mb-0">Process automation made <strong>easy</strong>.</p>
                     </div>
 
-                    <div class="d-none d-lg-block col-2 bg-background position-absolute top20px right-0 me-5 border-radius p-3 large-shadow" style="margin-right: 350px !important; margin-top: 160px;">
+                    <div class="d-none d-xl-block col-2 bg-background position-absolute top20px right-0 me-5 border-radius p-3 large-shadow" style="margin-right: 350px !important; margin-top: 160px;">
                       <p class="lh-base mb-0 smaller-2"><img src="img/misc/icons/icons8-clock-64.png" alt="Clock icon" style="height: 24px;" class="me-2 img-fluid align-bottom"/>...Process running</p>
                     </div>
 
-                    <div class="d-none d-lg-block col-2 p-3 bg-primary position-absolute right-0 border-radius large-shadow me-4 top20px" style="max-width: 148px; margin-top: 150px">
+                    <div class="d-none d-xl-block col-2 p-3 bg-primary position-absolute right-0 border-radius large-shadow me-4 top20px" style="max-width: 148px; margin-top: 150px">
                       <p class="font-weight-bold text-uppercase text-white mb-0 lh-sm">NEW UI/UX YIELDS GREAT REVIEWS</p>
                     </div>
 
-                     <div class="d-none d-lg-block col-2 p-3 bg-background position-absolute right-0 border-radius large-shadow me-4 top20px" style="max-width: 148px; margin-top: 270px">
+                     <div class="d-none d-xl-block col-2 p-3 bg-background position-absolute right-0 border-radius large-shadow me-4 top20px" style="max-width: 148px; margin-top: 270px">
                       <img src="img/misc/shapes/rating-stars.svg" alt="Rating stars logo icon" style="height: 12px;" class="me-2 img-fluid align-bottom"/>
                       <p class="text-dark mb-0 lh-sm"><strong>4.4</strong> out of 5</p>
                       <img src="img/misc/logos/gartner-logo.svg" alt="Gartner logo icon" style="height: 26px;" class="me-2 img-fluid align-bottom"/>
@@ -288,12 +295,6 @@
     
     <div class="minHeight75vh"></div>
 
-    
-    
-    
-
-
-
     <section class="design-process">
       <div class="row-fluid">
 
@@ -301,35 +302,35 @@
           
           <div class="design-cards">
             
-            <div class="design-card d-flex col-7 col-md-6 col-xxl-4 p-5 large-shadow border-radius flex-wrap bg-accent">
+            <div class="design-card d-flex col-10 col-md-8 col-xxl-4 p-5 large-shadow border-radius flex-wrap bg-accent">
               <img src="img/misc/illustrations/research-and-discovery.svg" alt="Resarch and discovery illustration" class="img-fluid align-self-start" style="height: 220px" />
               <h3 class="display-6 mb-0 font-weight-bold align-self-end">
                 Research and discovery
               </h3>
             </div>
             
-            <div class="design-card d-flex col-7 col-md-6 col-xxl-4 p-5 large-shadow border-radius flex-wrap" style="background: #33D3B6;">
+            <div class="design-card d-flex col-10 col-md-8 col-xxl-4 p-5 large-shadow border-radius flex-wrap" style="background: #33D3B6;">
               <img src="img/misc/illustrations/wireframing-and-prototyping.svg" alt="Wireframing and prototyping illustration" class="img-fluid align-self-start" style="height: 220px"/>
               <h3 class="display-6 mb-0 font-weight-bold align-self-end">
                 Wireframing and prototyping
               </h3>
             </div>
             
-            <div class="design-card d-flex col-7 col-md-6 col-xxl-4 p-5 large-shadow border-radius flex-wrap" style="background: #4FEACE;">
+            <div class="design-card d-flex col-10 col-md-8 col-xxl-4 p-5 large-shadow border-radius flex-wrap" style="background: #4FEACE;">
               <img src="img/misc/illustrations/user-interviews-and-iteration.svg" alt="User interviews and iteration illustration" class="img-fluid align-self-start" style="height: 220px"/>
               <h3 class="display-6 mb-0 font-weight-bold align-self-end">
                 User interviews and iteration
               </h3>
             </div>
             
-            <div class="design-card d-flex col-7 col-md-6 col-xxl-4 p-5 large-shadow border-radius flex-wrap" style="background: #86EEDC;">
+            <div class="design-card d-flex col-10 col-md-8 col-xxl-4 p-5 large-shadow border-radius flex-wrap" style="background: #86EEDC;">
               <img src="img/misc/illustrations/hifi-mockup-design.svg" alt="Hi-fi mockup design illustration" class="img-fluid align-self-start" style="height: 220px"/>
               <h3 class="display-6 mb-0 font-weight-bold align-self-end">
                 Hi-fi mockup design
               </h3>
             </div>
             
-            <div class="design-card d-flex col-7 col-md-6 col-xxl-4 p-5 large-shadow border-radius flex-wrap bg-white">
+            <div class="design-card d-flex col-10 col-md-8 col-xxl-4 p-5 large-shadow border-radius flex-wrap bg-white">
               <img src="img/misc/illustrations/ship-celebrate-and-measure.svg" alt="Ship, celebrate and measure illustration" class="img-fluid align-self-start" style="height: 220px"/>
               <h3 class="display-6 mb-0 font-weight-bold align-self-end">
                 Ship, celebrate and measure
@@ -348,7 +349,7 @@
 
     <section class="horizontal feedback">
        <div class="container">
-          <div class="col-12 bg-secondary border-radius p-5 testimonials">
+          <div class="col-12 bg-secondary border-radius py-4 px-2 px-lg-4 testimonials">
             <div class="row">
               
               <div class="col-12 col-lg-4 bg-secondary border-radius p-4" style="z-index: 10;">
@@ -357,57 +358,69 @@
                 <a href="https://linkedin.com/in/VasilisKolip" target="_blank" class="btn btn-outline-primary py-2 px-3 bg-background text-dark rounded-pill mt-4">Read all on LinkedIn<img src="img/misc/shapes/diagonal-arrow.svg" alt="Diagonal arrow" class="img-fluid ms-2 mb-1"/></a>
               </div>
 
-              <div class="col-12 col-md-8 py-2">
+              <div class="col-12 col-md-8 py-3">
                 <div class="pin-wrap overflow-hidden">
                   <div class="animation-wrap to-right">
                     
-                    <div class="testimonialCard d-flex justify-content-center align-items-start flex-wrap text-center position-relative item col-3 col-lg-3 me-4 bg-background border-radius the-border large-shadow p-3">
+                    <div class="testimonialCard text-center position-relative item col-3 col-lg-3 me-4 bg-background border-radius the-border large-shadow p-3">
                       <img src="img/misc/testimonials/valia-lekka-thumb.png" alt="Valia Lekka testimonial" class="img-fluid mt-3" style="height: 55px" />
                       <img src="img/misc/logos/meta-logo-testimonial.svg" alt="Meta logo" class="img-fluid mt-3" style="height: 55px" />
-                      <p class="mt-4 bigger-1">“Vasilis is first and foremost a wonderful person.”</p>
-                      <p class="mt-5 smaller-3">Valia Lekka <strong>— Manager</strong></p>
+                      <p class="mt-4 bigger-1" style="min-height: 120px">“Vasilis is first and foremost a wonderful person.”</p>
+                      <div class="d-flex align-items-end" style="height: 80px">
+                        <p class="smaller-3 w-100">Valia Lekka <br/><strong>— Manager</strong></p>
+                      </div>
                     </div>
 
-                    <div class="testimonialCard d-flex justify-content-center align-items-start flex-wrap text-center position-relative item col-3 col-lg-3 me-4 bg-background border-radius the-border large-shadow p-3">
+                    <div class="testimonialCard text-center position-relative item col-3 col-lg-3 me-4 bg-background border-radius the-border large-shadow p-3">
                       <img src="img/misc/testimonials/maria-kourousi-thumb.png" alt="Maria Kourousi testimonial" class="img-fluid mt-3" style="height: 55px"/>
                       <img src="img/misc/logos/meta-logo-testimonial.svg" alt="Meta logo" class="img-fluid mt-3" style="height: 55px" />
-                      <p class="mt-4 bigger-1">“Vasilis is a talented and skilled designer.”</p>
-                      <p class="mt-5 smaller-2">Maria Kourousi <strong>— Software Engineer</strong></p>
+                      <p class="mt-4 bigger-1" style="min-height: 120px">“Vasilis is a talented and skilled designer.”</p>
+                      <div class="d-flex align-items-end" style="height: 80px">
+                        <p class="smaller-2 w-100">Maria Kourousi <br/><strong>— Software Engineer</strong></p>
+                      </div>
                     </div>
 
-                    <div class="testimonialCard d-flex justify-content-center align-items-start flex-wrap text-center position-relative item col-3 col-lg-3 me-4 bg-background border-radius the-border large-shadow p-3">
+                    <div class="testimonialCard text-center position-relative item col-3 col-lg-3 me-4 bg-background border-radius the-border large-shadow p-3">
                       <img src="img/misc/testimonials/chara-konstantakopoulou-thumb.png" alt="Chara Konstantakopoulou testimonial" class="img-fluid mt-3" style="height: 55px"/>
                       <img src="img/misc/logos/gateio-logo-testimonial.png" alt="Meta logo" class="img-fluid mt-3" style="height: 55px" />
-                      <p class="mt-4 bigger-1">“Amazing designer, talented in breaking down complex ideas.”</p>
-                      <p class="mt-5 smaller-2">Chara Konstantakopoulou <strong>— Multidisciplinary designer</strong></p>
+                      <p class="mt-4 bigger-1" style="min-height: 120px">“Amazing designer, talented in breaking down complex ideas.”</p>
+                      <div class="d-flex align-items-end" style="height: 80px">
+                        <p class="smaller-2 w-100">Chara Konstantakopoulou <br/><strong>— Multidisciplinary designer</strong></p>
+                      </div>
                     </div>
 
-                    <div class="testimonialCard d-flex justify-content-center align-items-start flex-wrap text-center position-relative item col-3 col-lg-3 me-4 bg-background border-radius the-border large-shadow p-3">
+                    <div class="testimonialCard text-center position-relative item col-3 col-lg-3 me-4 bg-background border-radius the-border large-shadow p-3">
                       <img src="img/misc/testimonials/haris-renieris-thumb.png" alt="Haris Renieris testimonial" class="img-fluid mt-3" style="height: 55px"/>
                       <img src="img/misc/logos/meta-logo-testimonial.svg" alt="Meta logo" class="img-fluid mt-3" style="height: 55px" />
-                      <p class="mt-4 bigger-1">“Very smart and talented professional.”</p>
-                      <p class="mt-5 smaller-2">Haris Renieris <strong>— Software Engineer</strong></p>
+                      <p class="mt-4 bigger-1" style="min-height: 120px">“Very smart and talented professional.”</p>
+                      <div class="d-flex align-items-end" style="height: 80px">
+                        <p class="smaller-2 w-100">Haris Renieris <br/><strong>— Software Engineer</strong></p>
+                      </div>
                     </div>
 
-                    <div class="testimonialCard d-flex justify-content-center align-items-start flex-wrap text-center position-relative item col-3 col-lg-3 me-4 bg-background border-radius the-border large-shadow p-3">
+                    <div class="testimonialCard text-center position-relative item col-3 col-lg-3 me-4 bg-background border-radius the-border large-shadow p-3">
                       <img src="img/misc/testimonials/alkisti-katsantoni-thumb.png" alt="Alkistis Katsantoni testimonial" class="img-fluid mt-3" style="height: 55px"/>
                       <img src="img/misc/logos/meta-logo-testimonial.svg" alt="Meta logo" class="img-fluid mt-3" style="height: 55px" />
-                      <p class="mt-4 bigger-1">“One of the most creative and cooperative people I have worked with.”</p>
-                      <p class="mt-5 smaller-2">Alkistis Katsantoni <strong>— Manager</strong></p>
+                      <p class="mt-4 bigger-1" style="min-height: 120px">“One of the most creative and cooperative people I have worked with.”</p>
+                      <div class="d-flex align-items-end" style="height: 80px">
+                        <p class="smaller-2 w-100">Alkistis Katsantoni <br/><strong>— Manager</strong></p>
+                      </div>
                     </div>
 
-                    <div class="testimonialCard d-flex justify-content-center align-items-start flex-wrap text-center position-relative item col-3 col-lg-3 me-4 bg-background border-radius the-border large-shadow p-3">
-                      <img src="img/misc/testimonials/stelios-bournous-thumb.png" alt="Stelios Bournous testimonial" class="img-fluid mt-3" style="height: 55px"/>
-                      <img src="img/misc/logos/meta-logo-testimonial.svg" alt="Meta logo" class="img-fluid mt-3" style="height: 55px" />
-                      <p class="mt-4 bigger-1">“An exceptional designer and teammate.”</p>
-                      <p class="mt-5 smaller-2">Stelios Bournous <strong>— Manager</strong></p>
+                    <div class="testimonialCard text-center position-relative item col-3 col-lg-3 me-4 bg-background border-radius the-border large-shadow p-3">
+                      <img src="img/misc/testimonials/stelios-bournous-thumb.png" alt="Stelios Bournous testimonial" class="img-fluid mt-3" style="height: 55px"/><img src="img/misc/logos/meta-logo-testimonial.svg" alt="Meta logo" class="img-fluid mt-3" style="height: 55px" />
+                      <p class="mt-4 bigger-1" style="min-height: 120px">“An exceptional designer and teammate.”</p>
+                    <div class="d-flex align-items-end" style="height: 80px">
+                      <p class="smaller-2 w-100">Stelios Bournous <br/><strong>— Manager</strong></p>
+                      </div>
                     </div>
-
-                    <div class="testimonialCard d-flex justify-content-center align-items-start flex-wrap text-center position-relative item col-3 col-lg-3 me-4 bg-background border-radius the-border large-shadow p-3">
+                    <div class="testimonialCard text-center position-relative item col-3 col-lg-3 me-4 bg-background border-radius the-border large-shadow p-3">
                       <img src="img/misc/testimonials/frini-paschou-thumb.png" alt="Frini Paschou testimonial" class="img-fluid mt-3" style="height: 55px"/>
                       <img src="img/misc/logos/meta-logo-testimonial.svg" alt="Meta logo" class="img-fluid mt-3" style="height: 55px" />
-                      <p class="mt-4 bigger-1">“Vasilis made UX workflows development less intimidating.”</p>
-                      <p class="mt-5 smaller-2">Frini Paschou <strong>— Software Engineer</strong></p>
+                      <p class="mt-4 bigger-1" style="min-height: 120px">“Vasilis made UX workflows development less intimidating.”</p>
+                      <div class="d-flex align-items-end" style="height: 80px">
+                        <p class="smaller-2 w-100">Frini Paschou <br/><strong>— Software Engineer</strong></p>
+                      </div>
                     </div>
                
                   </div>
@@ -455,7 +468,7 @@
         <div class="row row-cols-2">
 
           <div class="col-12 col-xl-4 mb-4 mb-xl-0">
-            <div class="card h-100 the-border bg-secondary large-shadow border-radius p-5">
+            <div class="card h-100 the-border bg-secondary large-shadow border-radius p-4">
             
                 <p class="text-center">Best known for</p>
                 
@@ -464,42 +477,42 @@
                   <span class="justify-content-end"><p>Masterful command of Figma</p></span>
                 </div>
 
-                <div class="col-12 d-flex mt-1">
+                <div class="col-12 d-flex mt-2">
                   <span class="justify-content-start pe-3 text-center" style="width: 40px;"><img src="img/misc/icons/icons8-user-female.png" alt="User icon" class="img-fluid" style="max-height: 28px;"></span>
                   <span class="justify-content-end"><p>User research</p></span>
                 </div>
 
-                <div class="col-12 d-flex mt-1">
+                <div class="col-12 d-flex mt-2">
                   <span class="justify-content-start pe-3 text-center" style="width: 40px;"><img src="img/misc/icons/icons8-adobe-illustrator-64.png" alt="Illustrator icon" class="img-fluid" style="max-height: 28px;"></span>
                   <span class="justify-content-end"><p>Proficiency across Adobe</p></span>
                 </div>
 
-                <div class="col-12 d-flex mt-1">
+                <div class="col-12 d-flex mt-2">
                   <span class="justify-content-start pe-3 text-center" style="width: 40px;"><img src="img/misc/icons/icons8-animation-64.png" alt="Micro-interactions icon" class="img-fluid" style="max-height: 28px;"></span>
                   <span class="justify-content-end"><p>Micro-interactions & animations</p></span>
                 </div>
 
-                <div class="col-12 d-flex mt-1">
+                <div class="col-12 d-flex mt-2">
                   <span class="justify-content-start pe-3 text-center" style="width: 40px;"><img src="img/misc/icons/icons8-accessibility-64.png" alt="Accessibility icon" class="img-fluid" style="max-height: 28px;"></span>
                   <span class="justify-content-end"><p>Accessibility standards</p></span>
                 </div>
 
-                <div class="col-12 d-flex mt-1">
+                <div class="col-12 d-flex mt-2">
                   <span class="justify-content-start pe-3 text-center" style="width: 40px;"><img src="img/misc/icons/icons8-internet-64.png" alt="Progressive web app icon" class="img-fluid" style="max-height: 28px;"></span>
                   <span class="justify-content-end"><p>Progressive web app design</p></span>
                 </div>
 
-                <div class="col-12 d-flex mt-1">
+                <div class="col-12 d-flex mt-2">
                   <span class="justify-content-start pe-3 text-center" style="width: 40px;"><img src="img/misc/icons/icons8-mac-logo-64.png" alt="Native MacOS app icon" class="img-fluid" style="max-height: 28px;"></span>
                   <span class="justify-content-end"><p>Native MacOS app design</p></span>
                 </div>
 
-                <div class="col-12 d-flex mt-1">
+                <div class="col-12 d-flex mt-2">
                   <span class="justify-content-start pe-3 text-center" style="width: 40px;"><img src="img/misc/icons/icons8-windows-10-store-64.png" alt="Native Windows app icon" class="img-fluid" style="max-height: 28px;"></span>
                   <span class="justify-content-end"><p>Native Windows app design</p></span>
                 </div>
 
-                <p class="subtitle mt-4 mb-0 text-primary">More than 10 million people use the products I've worked on.</p>
+                <p class="subtitle mt-5 mb-0 text-primary">More than 10 million people use the products I've worked on.</p>
               
             </div>
           </div>
@@ -508,20 +521,21 @@
             <div class="row row-cols-2">
               
               <div class="col-12 col-xl-6 mb-4">
-                <div class="card h-100 the-border bg-secondary large-shadow border-radius px-5">
-                  <div class="col-12 d-flex" style="height: 350px">
+                <div class="card h-100 the-border bg-secondary large-shadow border-radius p-4">
+                <p class="text-center">Experience</p>
+                  <div class="col-12 d-flex" style="height: 160px">
                     <div class="col align-self-center">
                       <h3 class="display-1 text-center text-dark font-weight-bold">
                         <img src="img/misc/icons/icons8-star-64.png" alt="Star icon" class="img-fluid align-text-middle mb-3" style="max-height: 48px;"><span class="px-lg-3 text-dark">10</span><img src="img/misc/icons/icons8-star-64.png" alt="Star icon" class="img-fluid align-text-middle mb-3" style="max-height: 48px;">
                       </h3>
-                      <p class="text-center">Ten years of experience in UI/UX, product design and user research.</p>
+                      <p class="text-center">Ten years of know-how in UI/UX, product design and user research.</p>
                     </div>
                   </div>
                 </div>
               </div>
 
               <div class="col-12 col-xl-6 mb-4">
-                <div class="card h-100 the-border bg-secondary large-shadow border-radius p-5">
+                <div class="card h-100 the-border bg-secondary large-shadow border-radius p-4">
 
                     <p class="text-center">Skills</p>
 
@@ -568,7 +582,7 @@
             <div class="row">
 
               <div class="col-12">
-                <div class="card h-100 the-border bg-secondary large-shadow border-radius p-5">
+                <div class="card h-100 the-border bg-secondary large-shadow border-radius p-4">
 
                     <p class="text-center">Crafting captivating interfaces by leveraging user-centric design processes</p>
                     <div class="col-12 mx-auto my-3 text-center">
@@ -751,7 +765,7 @@
       </div>
 
 
-      <div class="minHeight10vh"></div>
+      <div class="minHeight20vh"></div>
       
       <footer>
         <div class="container mt-5">
@@ -783,7 +797,7 @@
     
     <div class="position-fixed" id="toTop">
       <progress max="100" value="0"></progress>
-      <a class="btn btn-secondary rounded-circle stretched-link" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Go to top">
+      <a class="btn btn-secondary d-none d-xl-block rounded-circle stretched-link" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Go to top">
         <img src="img/misc/shapes/arrow-up.svg" alt="Arrow up" class="img-fluid">
       </a>
     </div>

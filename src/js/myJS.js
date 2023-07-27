@@ -70,14 +70,13 @@ const panelTimeline = gsap.timeline({
   },
 });
 
-let completedIndexCount = 0;
-
 // Add animations for each panel to the timeline, with a delay before each animation begins
 panels.forEach((panel, index) => {
     var currentPanel = `${index + 1}`;
     panelTimeline.to(panel, {
     y: -(index * panel.offsetHeight - index * 75), // Move the panel up to its final position
     duration: 5.5, // Set the duration of the animation to 5 second
+    stagger: 1,
     delay: index * 2, // Delay the animation by 2 seconds per panel
     ease: 'circ.out', // Add some easing to the motion
     onComplete: () => {
@@ -121,7 +120,7 @@ panels.forEach((panel, index) => {
             $("#metaPanel").css('scale', '1').css('marginTop', "0px");
             $("[data-target='#metaPanel']").addClass('btn-primary').removeClass('btn-outline-primary');
             $("[data-target='#msftPanel']").addClass('btn-outline-primary').removeClass('btn-primary');
-            $(".pin-spacer").css('zIndex', 'auto');
+            $(".pin-spacer").css('zIndex', '-1');
             break;
           default:
             //console.log("Unknown panel");
@@ -172,7 +171,7 @@ horizontalSections.forEach(function (sec, i) {
     ease: "none",
     scrollTrigger: {
         trigger: sec,
-        start: "-30%",
+        start: "-50%",
         end: "+=1500px",
         pin: true,
         invalidateOnRefresh: true,
