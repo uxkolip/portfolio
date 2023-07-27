@@ -11480,6 +11480,9 @@ a:hover, button:hover, .pointer {
 .selectedWork {
   transition: .3s all; }
 
+.testimonialCard {
+  min-height: 300px; }
+
 progress {
   position: fixed;
   bottom: 0;

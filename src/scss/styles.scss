@@ -277,6 +277,10 @@ a:hover, button:hover, .pointer {
   transition: .3s all; 
 }
 
+.testimonialCard {
+  min-height: 300px;
+}
+
 progress {
   position: fixed;
   bottom: 0;

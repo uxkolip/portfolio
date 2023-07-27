@@ -56,7 +56,7 @@ let completedIndexCount = 0;
 panels.forEach((panel, index) => {
     var currentPanel = `${index + 1}`;
     panelTimeline.to(panel, {
-    y: -(index * panel.offsetHeight - index * 114), 
+    y: -(index * panel.offsetHeight - index * 75), 
     duration: 5.5, 
     delay: index * 2, 
     ease: 'circ.out', 
@@ -71,13 +71,13 @@ panels.forEach((panel, index) => {
             break;
           case "3":
             $("#voicemodPanel").css('scale', '.86');
-            $("#metaPanel").css('scale', '.94').css('marginTop', "-58px");
+            $("#metaPanel").css('scale', '.94').css('marginTop', "-55px");
             $("[data-target='#metaPanel']").addClass('btn-outline-primary').removeClass('btn-primary');
             $("[data-target='#msftPanel']").addClass('btn-primary').removeClass('btn-outline-primary');
             setTimeout(function() {
                 $(".selectedWork").css('opacity', 0);
             }, 300);
-            $(".pin-spacer").css('zIndex', 9);
+            $(".pin-spacer").css('zIndex', 99999);
             break;
           default:
         }
@@ -131,13 +131,13 @@ horizontalSections.forEach(function (sec, i) {
 
     var thisPinWrap = sec.querySelector('.pin-wrap');
     var thisAnimWrap = thisPinWrap.querySelector('.animation-wrap');
-    var getToValue = () => -(thisAnimWrap.scrollWidth - window.innerWidth);
+    var getToValue = () => -($('.testimonialCard').width() * 5.8);
 
     gsap.set(horizontalSections, {marginTop: '-350px'})
 
     gsap.fromTo(thisAnimWrap, 
-        { x: () => thisAnimWrap.classList.contains('to-right') ? 0 : getToValue() * 2 },
-        { x: () => thisAnimWrap.classList.contains('to-right') ? getToValue() * 2 : 0, 
+        { x: () => thisAnimWrap.classList.contains('to-right') ? 0 : getToValue()  },
+        { x: () => thisAnimWrap.classList.contains('to-right') ? getToValue()  : 0, 
     ease: "none",
     scrollTrigger: {
         trigger: sec,
