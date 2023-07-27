@@ -18,17 +18,6 @@ $(document).ready(function() {
 
 }); 
 
-const lenis = new Lenis()
-
-lenis.on('scroll', (e) => {
-})
-
-function raf(time) {
-  lenis.raf(time)
-  requestAnimationFrame(raf)
-}
-
-requestAnimationFrame(raf)
 
 
 const showAnim = gsap.from('.main-navbar', { 
@@ -87,8 +76,8 @@ panels.forEach((panel, index) => {
             $("[data-target='#msftPanel']").addClass('btn-primary').removeClass('btn-outline-primary');
             setTimeout(function() {
                 $(".selectedWork").css('opacity', 0);
-            }, 500);
-            $(".pin-spacer").css('zIndex', 9999);
+            }, 300);
+            $(".pin-spacer").css('zIndex', 9);
             break;
           default:
         }
@@ -130,7 +119,7 @@ gsap.to(".design-card", {
         trigger: ".design-cards",
         pin: true,
         scrub: true,
-        start: "-20%",
+        start: "-15%",
         end: "1000px",
     }
 });
@@ -139,7 +128,6 @@ gsap.to(".design-card", {
 const horizontalSections = gsap.utils.toArray('section.horizontal')
 
 horizontalSections.forEach(function (sec, i) {  
-
 
     var thisPinWrap = sec.querySelector('.pin-wrap');
     var thisAnimWrap = thisPinWrap.querySelector('.animation-wrap');
@@ -152,12 +140,12 @@ horizontalSections.forEach(function (sec, i) {
         { x: () => thisAnimWrap.classList.contains('to-right') ? getToValue() * 2 : 0, 
     ease: "none",
     scrollTrigger: {
-            trigger: sec,
-            start: "-40%",
-            end: "+=1500px",
-            pin: true,
-            invalidateOnRefresh: true,
-            scrub: true
+        trigger: sec,
+        start: "-30%",
+        end: "+=1500px",
+        pin: true,
+        invalidateOnRefresh: true,
+        scrub: true
         }
     });
 
@@ -183,6 +171,5 @@ $(window).scroll(function() {
         }, 800)
 
 });
-
 
 

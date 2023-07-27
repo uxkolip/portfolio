@@ -19,18 +19,18 @@ $(document).ready(function() {
 }); 
 
 //smooth scroll
-const lenis = new Lenis()
+    /*const lenis = new Lenis()
 
-lenis.on('scroll', (e) => {
-  //console.log(e)
-})
+    lenis.on('scroll', (e) => {
+      //console.log(e)
+    })
 
-function raf(time) {
-  lenis.raf(time)
-  requestAnimationFrame(raf)
-}
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
 
-requestAnimationFrame(raf)
+    requestAnimationFrame(raf)*/
 //smooth scroll end
 
 
@@ -151,7 +151,7 @@ gsap.to(".design-card", {
         trigger: ".design-cards",
         pin: true,
         scrub: true,
-        start: "-20%",
+        start: "-15%",
         end: "1000px",
     }
 });
@@ -162,7 +162,6 @@ gsap.to(".design-card", {
 const horizontalSections = gsap.utils.toArray('section.horizontal')
 
 horizontalSections.forEach(function (sec, i) {  
-
 
     var thisPinWrap = sec.querySelector('.pin-wrap');
     var thisAnimWrap = thisPinWrap.querySelector('.animation-wrap');
@@ -175,12 +174,12 @@ horizontalSections.forEach(function (sec, i) {
         { x: () => thisAnimWrap.classList.contains('to-right') ? getToValue() * 2 : 0, 
     ease: "none",
     scrollTrigger: {
-            trigger: sec,
-            start: "-40%",
-            end: "+=1500px",
-            pin: true,
-            invalidateOnRefresh: true,
-            scrub: true
+        trigger: sec,
+        start: "-30%",
+        end: "+=1500px",
+        pin: true,
+        invalidateOnRefresh: true,
+        scrub: true
         }
     });
 
@@ -211,7 +210,6 @@ $(window).scroll(function() {
 
 });
 //scroll toTop end
-
 
 
 //lottie homepage test
