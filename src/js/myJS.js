@@ -14,6 +14,8 @@ $(document).ready(function() {
         checkiftooltip()
     });
 
+    $(".panel").css("opacity", "1");
+
 }); 
 
 //smooth scroll
@@ -42,7 +44,6 @@ const showAnim = gsap.from('.main-navbar', {
 ScrollTrigger.create({
     start: "top top",
     end: 99999,
-    addClass: "the-border",
     onUpdate: (self) => {
         self.direction === -1 ? showAnim.play() : showAnim.reverse()
     }
@@ -55,7 +56,6 @@ const panels = document.querySelectorAll('.panel');
 panels.forEach((panel, index) => {
         gsap.set(panel, {
         y: index * panel.offsetHeight, // Add some vertical space between the panels
-        opacity: 1 // Set the initial opacity to 0 so the panels are hidden
     });
 });
 
@@ -76,7 +76,6 @@ let completedIndexCount = 0;
 panels.forEach((panel, index) => {
   panelTimeline.to(panel, {
     y: -(index * panel.offsetHeight - index * 50), // Move the panel up to its final position
-    opacity: 1, // Fade the panel in
     duration: 5.5, // Set the duration of the animation to 2 second
     delay: index * 2, // Delay the animation by 0.5 seconds per panel
     ease: 'circ.out', // Add some easing to the motion
@@ -102,7 +101,7 @@ gsap.set(cards, {position: 'absolute'})
 
 gsap.to(".design-card", {
     yPercent: -180,
-    rotation: 23,
+    rotation: 32,
     stagger: 3,
     duration: 3.5,
     scrollTrigger: {

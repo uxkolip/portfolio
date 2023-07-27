@@ -14,6 +14,8 @@ $(document).ready(function() {
         checkiftooltip()
     });
 
+    $(".panel").css("opacity", "1");
+
 }); 
 
 const lenis = new Lenis()
@@ -38,7 +40,6 @@ const showAnim = gsap.from('.main-navbar', {
 ScrollTrigger.create({
     start: "top top",
     end: 99999,
-    addClass: "the-border",
     onUpdate: (self) => {
         self.direction === -1 ? showAnim.play() : showAnim.reverse()
     }
@@ -48,7 +49,6 @@ const panels = document.querySelectorAll('.panel');
 panels.forEach((panel, index) => {
         gsap.set(panel, {
         y: index * panel.offsetHeight, 
-        opacity: 1 
     });
 });
 
@@ -67,7 +67,6 @@ let completedIndexCount = 0;
 panels.forEach((panel, index) => {
   panelTimeline.to(panel, {
     y: -(index * panel.offsetHeight - index * 50), 
-    opacity: 1, 
     duration: 5.5, 
     delay: index * 2, 
     ease: 'circ.out', 
@@ -90,7 +89,7 @@ gsap.set(cards, {position: 'absolute'})
 
 gsap.to(".design-card", {
     yPercent: -180,
-    rotation: 23,
+    rotation: 32,
     stagger: 3,
     duration: 3.5,
     scrollTrigger: {

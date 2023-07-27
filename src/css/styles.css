@@ -11473,6 +11473,9 @@ a:hover, button:hover {
   z-index: 3;
   display: none; }
 
+.panel {
+  opacity: 0; }
+
 progress {
   position: fixed;
   bottom: 0;
