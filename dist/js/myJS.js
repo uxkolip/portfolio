@@ -10,20 +10,21 @@ function checkiftooltip() {
 }
 
 $(document).ready(function() {
-    $(window).resize(function() {
-        checkiftooltip()
-    });
-
     $(".panel").css("opacity", "1");
-
+    checkiftooltip();
 }); 
+
+$(window).resize(function() {
+    checkiftooltip();
+    alignPlayBtn();
+});
 
 
 
 const showAnim = gsap.from('.main-navbar', { 
     yPercent: -100,
     paused: true,
-    duration: 0.2
+    duration: 0.3
 }).progress(1);
 
 ScrollTrigger.create({
@@ -46,7 +47,7 @@ const panelTimeline = gsap.timeline({
     trigger: '.cardsContainer', 
     pin: true,
     start: 'top 20%', 
-    end: '1000px', 
+    end: '+=1000px', 
     scrub: true 
   },
 });
@@ -64,7 +65,7 @@ panels.forEach((panel, index) => {
           case "1":
             break;
           case "2":
-            $("#voicemodPanel").css('scale', '.94');
+            $("#voicemodPanel").css('scale', '.94').css('marginTop', "-25px");;
             $("[data-target='#voicemodPanel']").addClass('btn-outline-primary').removeClass('btn-primary');
             $("[data-target='#metaPanel']").addClass('btn-primary').removeClass('btn-outline-primary');
             break;
@@ -73,7 +74,6 @@ panels.forEach((panel, index) => {
             $("#metaPanel").css('scale', '.94').css('marginTop', "-55px");
             $("[data-target='#metaPanel']").addClass('btn-outline-primary').removeClass('btn-primary');
             $("[data-target='#msftPanel']").addClass('btn-primary').removeClass('btn-outline-primary');
-            $(".pin-spacer").css('zIndex', 99999);
             break;
           default:
         }
@@ -91,7 +91,6 @@ panels.forEach((panel, index) => {
             $("#metaPanel").css('scale', '1').css('marginTop', "0px");
             $("[data-target='#metaPanel']").addClass('btn-primary').removeClass('btn-outline-primary');
             $("[data-target='#msftPanel']").addClass('btn-outline-primary').removeClass('btn-primary');
-            $(".pin-spacer").css('zIndex', '-1');
             break;
           default:
         }
@@ -109,7 +108,7 @@ gsap.to(".design-card", {
     yPercent: -180,
     rotation: 32,
     stagger: 3,
-    duration: 3.5,
+    duration: 8,
     scrollTrigger: {
         trigger: ".design-cards",
         pin: true,
@@ -166,5 +165,18 @@ $(window).scroll(function() {
         }, 800)
 
 });
+
+const aboutmeVideoModal = document.getElementById('aboutmeVideoModal');
+const aboutmeVideo = document.getElementById('aboutmeVideo');
+
+aboutmeVideoModal.addEventListener('hidden.bs.modal', () => {
+    aboutmeVideo.pause();
+    aboutmeVideo.currentTime = 0;
+});
+
+aboutmeVideoModal.addEventListener('shown.bs.modal', () => {
+    aboutmeVideo.play();
+});
+
 
 

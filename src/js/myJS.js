@@ -10,13 +10,14 @@ function checkiftooltip() {
 }
 
 $(document).ready(function() {
-    $(window).resize(function() {
-        checkiftooltip()
-    });
-
     $(".panel").css("opacity", "1");
-
+    checkiftooltip();
 }); 
+
+$(window).resize(function() {
+    checkiftooltip();
+    alignPlayBtn();
+});
 
 //smooth scroll
     /*const lenis = new Lenis()
@@ -38,7 +39,7 @@ $(document).ready(function() {
 const showAnim = gsap.from('.main-navbar', { 
     yPercent: -100,
     paused: true,
-    duration: 0.2
+    duration: 0.3
 }).progress(1);
 
 ScrollTrigger.create({
@@ -65,7 +66,7 @@ const panelTimeline = gsap.timeline({
     trigger: '.cardsContainer', // The wrapper element that contains the panels
     pin: true,
     start: 'top 20%', // The animation starts when the top of the wrapper is 75% from the top of the viewport
-    end: '1000px', // The animation ends when the bottom of the wrapper is 25% from the top of the viewport
+    end: '+=1000px', // The animation ends when the bottom of the wrapper is 25% from the top of the viewport
     scrub: true // Enable "scrubbing" so that the animations are smoothly reversed as the user scrolls back up
   },
 });
@@ -87,7 +88,7 @@ panels.forEach((panel, index) => {
             break;
           case "2":
             //console.log("meta panel is complete");
-            $("#voicemodPanel").css('scale', '.94');
+            $("#voicemodPanel").css('scale', '.94').css('marginTop', "-25px");;
             $("[data-target='#voicemodPanel']").addClass('btn-outline-primary').removeClass('btn-primary');
             $("[data-target='#metaPanel']").addClass('btn-primary').removeClass('btn-outline-primary');
             break;
@@ -97,7 +98,7 @@ panels.forEach((panel, index) => {
             $("#metaPanel").css('scale', '.94').css('marginTop', "-55px");
             $("[data-target='#metaPanel']").addClass('btn-outline-primary').removeClass('btn-primary');
             $("[data-target='#msftPanel']").addClass('btn-primary').removeClass('btn-outline-primary');
-            $(".pin-spacer").css('zIndex', 99999);
+            //$(".pin-spacer").css('zIndex', 99);
             break;
           default:
             //console.log("Unknown panel");
@@ -120,7 +121,7 @@ panels.forEach((panel, index) => {
             $("#metaPanel").css('scale', '1').css('marginTop', "0px");
             $("[data-target='#metaPanel']").addClass('btn-primary').removeClass('btn-outline-primary');
             $("[data-target='#msftPanel']").addClass('btn-outline-primary').removeClass('btn-primary');
-            $(".pin-spacer").css('zIndex', '-1');
+            //$(".pin-spacer").css('zIndex', '-1');
             break;
           default:
             //console.log("Unknown panel");
@@ -141,7 +142,7 @@ gsap.to(".design-card", {
     yPercent: -180,
     rotation: 32,
     stagger: 3,
-    duration: 3.5,
+    duration: 8,
     scrollTrigger: {
         trigger: ".design-cards",
         pin: true,
@@ -206,6 +207,21 @@ $(window).scroll(function() {
 
 });
 //scroll toTop end
+
+// aboutmeVideoModal functions
+const aboutmeVideoModal = document.getElementById('aboutmeVideoModal');
+const aboutmeVideo = document.getElementById('aboutmeVideo');
+
+aboutmeVideoModal.addEventListener('hidden.bs.modal', () => {
+    aboutmeVideo.pause();
+    aboutmeVideo.currentTime = 0;
+});
+
+aboutmeVideoModal.addEventListener('shown.bs.modal', () => {
+    aboutmeVideo.play();
+});
+// aboutmeVideoModal functions end
+
 
 
 //lottie homepage test

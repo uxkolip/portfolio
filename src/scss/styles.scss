@@ -6,6 +6,9 @@ $danger: #FF415C;
 $info: #007BFF;
 $light: #D3CBD3;
 $dark: #16013E;
+$modal-backdrop-bg: $secondary;
+$modal-backdrop-opacity: .96;
+
 
 @import 'bootstrap/_functions.scss';
 @import 'bootstrap/variables.scss';
@@ -217,7 +220,7 @@ strong {
 }
 
 .border-radius {
-  border-radius: 24px;
+  border-radius: 24px !important;
 }
 
 .large-shadow {
