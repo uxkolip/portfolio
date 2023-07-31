@@ -1,12 +1,10 @@
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+
 function checkiftooltip() {
     $(window).width() > 768 ? ($('[data-toggle="tooltip"]').tooltip(), 
+    $("[data-toggle='tooltip']").tooltip(),
     $('[data-toggle="tooltip"]').tooltip("enable")) : $('[data-toggle="tooltip"]').tooltip("disable")
-
-    $("[data-toggle='tooltip']").tooltip();
-
-    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
-
 }
 
 $(document).ready(function() {
@@ -19,7 +17,7 @@ $(window).resize(function() {
 });
 
 //smooth scroll
-    /*const lenis = new Lenis()
+    const lenis = new Lenis()
 
     lenis.on('scroll', (e) => {
       //console.log(e)
@@ -30,7 +28,7 @@ $(window).resize(function() {
       requestAnimationFrame(raf)
     }
 
-    requestAnimationFrame(raf)*/
+    requestAnimationFrame(raf)
 //smooth scroll end
 
 

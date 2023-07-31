@@ -1,12 +1,10 @@
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+
 function checkiftooltip() {
     $(window).width() > 768 ? ($('[data-toggle="tooltip"]').tooltip(), 
+    $("[data-toggle='tooltip']").tooltip(),
     $('[data-toggle="tooltip"]').tooltip("enable")) : $('[data-toggle="tooltip"]').tooltip("disable")
-
-    $("[data-toggle='tooltip']").tooltip();
-
-    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
-
 }
 
 $(document).ready(function() {
@@ -18,6 +16,17 @@ $(window).resize(function() {
     checkiftooltip();
 });
 
+    const lenis = new Lenis()
+
+    lenis.on('scroll', (e) => {
+    })
+
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
 
 
 const showAnim = gsap.from('.main-navbar', { 

@@ -146,6 +146,28 @@ $theme-colors: map-merge($custom-theme-colors, $theme-colors);
   font-weight: 400;
 }
 
+/*lenis stuff*/
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+   pointer-events: none;
+}
+/*lenis stuff end*/
+
 body {
   background: #FFFBF5;
   font-family: 'gt_america_extended_regular', sans-serif;
@@ -372,6 +394,13 @@ progress::-moz-progress-bar {
     right: 0;
 }
 
+.voiceChangeContainer .form-check {
+  background-color: #fffbf5;
+}
+
+.voiceChangeContainer .form-check.activeVoice {
+  background-color: #00c9a5;
+}
 
 /*homepage design process*/
 .design-cards {

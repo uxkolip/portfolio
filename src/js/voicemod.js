@@ -18,7 +18,7 @@ $(window).resize(function() {
 });
 
 //smooth scroll
-    /*const lenis = new Lenis()
+    const lenis = new Lenis()
 
     lenis.on('scroll', (e) => {
       //console.log(e)
@@ -29,12 +29,12 @@ $(window).resize(function() {
       requestAnimationFrame(raf)
     }
 
-    requestAnimationFrame(raf)*/
+    requestAnimationFrame(raf)
 //smooth scroll end
 
 
 //navbar show on scroll up
-/*const showAnim = gsap.from('.main-navbar', { 
+const showAnim = gsap.from('.main-navbar', { 
     yPercent: -100,
     paused: true,
     duration: 0.3
@@ -46,22 +46,32 @@ ScrollTrigger.create({
     onUpdate: (self) => {
         self.direction === -1 ? showAnim.play() : showAnim.reverse()
     }
-});*/
+});
 //navbar show on scroll up end
 
 
 //scroll toTop
-/*$(window).scroll(function() {
+$(window).scroll(function() {
     $(this).scrollTop() > 800 ? $("#toTop").fadeIn("fast", function() {}) : $("#toTop").fadeOut("fast", function() {})
     }), $("#toTop").click(function() {
         return $("html, body").animate({
             scrollTop: 0
         }, 800)
 
-});*/
+});
 //scroll toTop end
 
 
+//voice changer radios
+$(document).on('click', '.voiceChangeContainer .form-check', function() {
+    var voiceId = "#" + $(this).find('input').attr('id');
+    $(voiceId).attr("checked", true);
+    $('.voiceChangeContainer .form-check').removeClass('activeVoice');
+    $('.voiceChangeContainer .form-check p').removeClass('text-white');
+    $(voiceId).closest('.form-check').addClass('activeVoice');
+    $(voiceId).closest('.form-check').find('p').addClass('text-white');
+});
+// voice changer radios end
 
 
 //lottie
@@ -70,7 +80,7 @@ var vmHeroAnimation = bodymovin.loadAnimation({
   path: 'js/vm-lottie/vm-hero-lottie.json', // Required
   renderer: 'svg', // Required
   loop: true, // Optional
-  autoplay: false
+  autoplay: true
 });
 vmHeroAnimation.setSpeed(4);
 
@@ -79,7 +89,7 @@ var vmStreamingApps = bodymovin.loadAnimation({
   path: 'js/vm-lottie/streaming-apps.json', // Required
   renderer: 'svg', // Required
   loop: true, // Optional
-  autoplay: false
+  autoplay: true
 });
 
 var vmMeetingApps = bodymovin.loadAnimation({
@@ -87,7 +97,7 @@ var vmMeetingApps = bodymovin.loadAnimation({
   path: 'js/vm-lottie/meeting-apps.json', // Required
   renderer: 'svg', // Required
   loop: true, // Optional
-  autoplay: false
+  autoplay: true
 });
 
 var vmMetaverseApps = bodymovin.loadAnimation({
@@ -95,7 +105,7 @@ var vmMetaverseApps = bodymovin.loadAnimation({
   path: 'js/vm-lottie/metaverse-apps.json', // Required
   renderer: 'svg', // Required
   loop: true, // Optional
-  autoplay: false
+  autoplay: true
 });
 
 //lottie end

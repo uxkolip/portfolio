@@ -17,12 +17,52 @@ $(window).resize(function() {
     checkiftooltip();
 });
 
+    const lenis = new Lenis()
+
+    lenis.on('scroll', (e) => {
+    })
+
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
 
 
+const showAnim = gsap.from('.main-navbar', { 
+    yPercent: -100,
+    paused: true,
+    duration: 0.3
+}).progress(1);
+
+ScrollTrigger.create({
+    start: "top top",
+    end: 99999,
+    onUpdate: (self) => {
+        self.direction === -1 ? showAnim.play() : showAnim.reverse()
+    }
+});
 
 
+$(window).scroll(function() {
+    $(this).scrollTop() > 800 ? $("#toTop").fadeIn("fast", function() {}) : $("#toTop").fadeOut("fast", function() {})
+    }), $("#toTop").click(function() {
+        return $("html, body").animate({
+            scrollTop: 0
+        }, 800)
+
+});
 
 
+$(document).on('click', '.voiceChangeContainer .form-check', function() {
+    var voiceId = "#" + $(this).find('input').attr('id');
+    $(voiceId).attr("checked", true);
+    $('.voiceChangeContainer .form-check').removeClass('activeVoice');
+    $('.voiceChangeContainer .form-check p').removeClass('text-white');
+    $(voiceId).closest('.form-check').addClass('activeVoice');
+    $(voiceId).closest('.form-check').find('p').addClass('text-white');
+});
 
 
 var vmHeroAnimation = bodymovin.loadAnimation({
@@ -30,7 +70,7 @@ var vmHeroAnimation = bodymovin.loadAnimation({
   path: 'js/vm-lottie/vm-hero-lottie.json', 
   renderer: 'svg', 
   loop: true, 
-  autoplay: false
+  autoplay: true
 });
 vmHeroAnimation.setSpeed(4);
 
@@ -39,7 +79,7 @@ var vmStreamingApps = bodymovin.loadAnimation({
   path: 'js/vm-lottie/streaming-apps.json', 
   renderer: 'svg', 
   loop: true, 
-  autoplay: false
+  autoplay: true
 });
 
 var vmMeetingApps = bodymovin.loadAnimation({
@@ -47,7 +87,7 @@ var vmMeetingApps = bodymovin.loadAnimation({
   path: 'js/vm-lottie/meeting-apps.json', 
   renderer: 'svg', 
   loop: true, 
-  autoplay: false
+  autoplay: true
 });
 
 var vmMetaverseApps = bodymovin.loadAnimation({
@@ -55,6 +95,6 @@ var vmMetaverseApps = bodymovin.loadAnimation({
   path: 'js/vm-lottie/metaverse-apps.json', 
   renderer: 'svg', 
   loop: true, 
-  autoplay: false
+  autoplay: true
 });
 
