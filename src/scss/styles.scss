@@ -1,5 +1,5 @@
 /*custom variables*/
-$primary: #3A2D52;
+$primary: #16013E;
 $secondary: #FDF3E7;
 $success: #00C9A5;
 $danger: #FF415C;
@@ -17,6 +17,7 @@ $modal-backdrop-opacity: .96;
 $custom-theme-colors: (
   "accent": #00C9A5,
   "background": #FFFBF5,
+  "secondary-darker": #F2E9DF,
   "petrol": #007A8B,
   "green": #005A38,
   "mustard": #B79313,
@@ -427,6 +428,7 @@ progress::-moz-progress-bar {
   z-index: 0;
 }
 /*homepage design process end*/
+
 
 @include media-breakpoint-up(xs) {
     html, body {
