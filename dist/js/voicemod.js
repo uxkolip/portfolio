@@ -29,6 +29,18 @@ $(window).resize(function() {
 
     requestAnimationFrame(raf)
 
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        lenis.scrollTo(this.getAttribute('href'))
+      });
+    })
+
+    $(window).scroll(function() {
+        $(this).scrollTop() > 800 ? $("#toTop").fadeIn("fast", function() {}) : $("#toTop").fadeOut("fast")
+    });
+
+
 
 const showAnim = gsap.from('.main-navbar', { 
     yPercent: -100,
@@ -42,16 +54,6 @@ ScrollTrigger.create({
     onUpdate: (self) => {
         self.direction === -1 ? showAnim.play() : showAnim.reverse()
     }
-});
-
-
-$(window).scroll(function() {
-    $(this).scrollTop() > 800 ? $("#toTop").fadeIn("fast", function() {}) : $("#toTop").fadeOut("fast", function() {})
-    }), $("#toTop").click(function() {
-        return $("html, body").animate({
-            scrollTop: 0
-        }, 800)
-
 });
 
 
@@ -97,4 +99,6 @@ var vmMetaverseApps = bodymovin.loadAnimation({
   loop: true, 
   autoplay: true
 });
+
+
 

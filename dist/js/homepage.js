@@ -28,6 +28,25 @@ $(window).resize(function() {
 
     requestAnimationFrame(raf)
 
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        lenis.scrollTo(this.getAttribute('href'))
+      });
+    })
+
+    document.querySelectorAll('[data-target^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        lenis.scrollTo(this.getAttribute('data-target'))
+      });
+    })
+
+    $(window).scroll(function() {
+        $(this).scrollTop() > 800 ? $("#toTop").fadeIn("fast", function() {}) : $("#toTop").fadeOut("fast")
+    });
+
+
 
 const showAnim = gsap.from('.main-navbar', { 
     yPercent: -100,
@@ -163,7 +182,6 @@ horizontalSections.forEach(function (sec, i) {
 }); 
 
 
-
 gsap.registerPlugin(ScrollTrigger);
 gsap.to('progress', {
   value: 100,
@@ -171,15 +189,6 @@ gsap.to('progress', {
   scrollTrigger: { scrub: 0.3 }
 });
 
-
-$(window).scroll(function() {
-    $(this).scrollTop() > 800 ? $("#toTop").fadeIn("fast", function() {}) : $("#toTop").fadeOut("fast", function() {})
-    }), $("#toTop").click(function() {
-        return $("html, body").animate({
-            scrollTop: 0
-        }, 800)
-
-});
 
 if ($("#aboutmeVideoModal").length) {
     const aboutmeVideoModal = document.getElementById('aboutmeVideoModal');
@@ -194,6 +203,3 @@ if ($("#aboutmeVideoModal").length) {
         aboutmeVideo.play();
     });    
 }
-
-
-

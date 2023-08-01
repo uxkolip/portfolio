@@ -30,6 +30,20 @@ $(window).resize(function() {
     }
 
     requestAnimationFrame(raf)
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        lenis.scrollTo(this.getAttribute('href'))
+      });
+    })
+
+    //scroll toTop
+    $(window).scroll(function() {
+        $(this).scrollTop() > 800 ? $("#toTop").fadeIn("fast", function() {}) : $("#toTop").fadeOut("fast")
+    });
+    //scroll toTop end
+
 //smooth scroll end
 
 
@@ -48,18 +62,6 @@ ScrollTrigger.create({
     }
 });
 //navbar show on scroll up end
-
-
-//scroll toTop
-$(window).scroll(function() {
-    $(this).scrollTop() > 800 ? $("#toTop").fadeIn("fast", function() {}) : $("#toTop").fadeOut("fast", function() {})
-    }), $("#toTop").click(function() {
-        return $("html, body").animate({
-            scrollTop: 0
-        }, 800)
-
-});
-//scroll toTop end
 
 
 //voice changer radios
@@ -109,3 +111,5 @@ var vmMetaverseApps = bodymovin.loadAnimation({
 });
 
 //lottie end
+
+

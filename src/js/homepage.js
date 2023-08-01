@@ -29,6 +29,27 @@ $(window).resize(function() {
     }
 
     requestAnimationFrame(raf)
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        lenis.scrollTo(this.getAttribute('href'))
+      });
+    })
+
+    document.querySelectorAll('[data-target^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        lenis.scrollTo(this.getAttribute('data-target'))
+      });
+    })
+
+    //scroll toTop
+    $(window).scroll(function() {
+        $(this).scrollTop() > 800 ? $("#toTop").fadeIn("fast", function() {}) : $("#toTop").fadeOut("fast")
+    });
+    //scroll toTop end
+    
 //smooth scroll end
 
 
@@ -217,7 +238,6 @@ horizontalSections.forEach(function (sec, i) {
 //homepage testimonials end
 
 
-
 // page progress
 gsap.registerPlugin(ScrollTrigger);
 gsap.to('progress', {
@@ -227,17 +247,6 @@ gsap.to('progress', {
 });
 // page progress end
 
-
-//scroll toTop
-$(window).scroll(function() {
-    $(this).scrollTop() > 800 ? $("#toTop").fadeIn("fast", function() {}) : $("#toTop").fadeOut("fast", function() {})
-    }), $("#toTop").click(function() {
-        return $("html, body").animate({
-            scrollTop: 0
-        }, 800)
-
-});
-//scroll toTop end
 
 // aboutmeVideoModal functions
 if ($("#aboutmeVideoModal").length) {
@@ -254,16 +263,3 @@ if ($("#aboutmeVideoModal").length) {
     });    
 }
 // aboutmeVideoModal functions end
-
-
-
-//lottie homepage test
-/*var animation = bodymovin.loadAnimation({
-  container: document.getElementById('lottie'), // Required
-  path: 'js/takes-export.json', // Required
-  renderer: 'svg', // Required
-  loop: true, // Optional
-  autoplay: true, // Optional
-  name: "Hero animation", // Name for future reference. Optional.
-});*/
-//lottie homepage test end

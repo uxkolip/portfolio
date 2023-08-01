@@ -30,7 +30,7 @@ $custom-theme-colors: (
   "gray-50": #F4EFEC,
   "gray-100": #F2EDEA,
   "gray-300": #E0E0E0,
-  "gray-400": #F2EDEA,
+  "gray-400": #BDBDBD,
 );
 
 $theme-colors: map-merge($custom-theme-colors, $theme-colors);
@@ -254,12 +254,12 @@ strong {
   border: 1px solid #D3CBD3;
 }
 
-section.horizontal {
+.horizontal {
   overflow-x: hidden;
 }
 
-section.horizontal .pin-wrap,
-section.horizontal .animation-wrap {
+.horizontal .pin-wrap,
+.horizontal .animation-wrap {
   display: flex;
   position: relative;
   z-index: 1;
@@ -288,7 +288,7 @@ a:hover, button:hover, .pointer {
 }
 
 #toTop {
-  left: 40px; 
+  left: 20px; 
   bottom: 40px; 
   z-index: 3; 
   display: none;
@@ -301,10 +301,6 @@ a:hover, button:hover, .pointer {
 
 .selectedWork {
   transition: .3s all; 
-}
-
-.testimonialCard {
-  min-height: 300px;
 }
 
 progress {
@@ -395,11 +391,46 @@ progress::-moz-progress-bar {
 }
 
 .voiceChangeContainer .form-check {
-  background-color: #fffbf5;
+  background-color: #FFFBF5;
+  transition: .1s all;
+}
+
+.voiceChangeContainer .form-check:hover {
+  background-color: $dark;
+}
+
+.voiceChangeContainer .form-check:hover p {
+  color: #fffbf5;
 }
 
 .voiceChangeContainer .form-check.activeVoice {
-  background-color: #00c9a5;
+  background-color: $dark;
+}
+
+.activeVoice:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: 117px;
+  background-image: url("../img/misc/shapes/checked-tick.svg");
+}
+
+.dotted-bg {
+   /* diameter of the circle */
+   --d: 2px; 
+   
+   background : radial-gradient(
+     circle at 
+        var(--d) 
+        var(--d), 
+        
+     #E0E0E0 calc(var(--d) - 1px), 
+     #FFFBF5 var(--d)
+   ) 
+   0 0 / 25px 25px;
 }
 
 /*homepage design process*/
