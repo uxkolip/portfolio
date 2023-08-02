@@ -70,7 +70,7 @@ $(document).on('click', '.voiceChangeContainer .form-check', function() {
 
 var vmHeroAnimation = bodymovin.loadAnimation({
   container: document.getElementById('vm-hero-lottie'), 
-  path: 'js/vm-lottie/vm-hero-lottie.json', 
+  path: 'js/lottie-files/vm-hero-lottie.json', 
   renderer: 'svg', 
   loop: true, 
   autoplay: true
@@ -79,7 +79,7 @@ vmHeroAnimation.setSpeed(4);
 
 var vmStreamingApps = bodymovin.loadAnimation({
   container: document.getElementById('vm-streaming-apps'), 
-  path: 'js/vm-lottie/streaming-apps.json', 
+  path: 'js/lottie-files/streaming-apps.json', 
   renderer: 'svg', 
   loop: true, 
   autoplay: true
@@ -87,7 +87,7 @@ var vmStreamingApps = bodymovin.loadAnimation({
 
 var vmMeetingApps = bodymovin.loadAnimation({
   container: document.getElementById('vm-meeting-apps'), 
-  path: 'js/vm-lottie/meeting-apps.json', 
+  path: 'js/lottie-files/meeting-apps.json', 
   renderer: 'svg', 
   loop: true, 
   autoplay: true
@@ -95,7 +95,7 @@ var vmMeetingApps = bodymovin.loadAnimation({
 
 var vmMetaverseApps = bodymovin.loadAnimation({
   container: document.getElementById('vm-metaverse-apps'), 
-  path: 'js/vm-lottie/metaverse-apps.json', 
+  path: 'js/lottie-files/metaverse-apps.json', 
   renderer: 'svg', 
   loop: true, 
   autoplay: true

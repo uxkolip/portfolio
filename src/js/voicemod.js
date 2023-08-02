@@ -80,7 +80,7 @@ $(document).on('click', '.voiceChangeContainer .form-check', function() {
 //lottie
 var vmHeroAnimation = bodymovin.loadAnimation({
   container: document.getElementById('vm-hero-lottie'), // Required
-  path: 'js/vm-lottie/vm-hero-lottie.json', // Required
+  path: 'js/lottie-files/vm-hero-lottie.json', // Required
   renderer: 'svg', // Required
   loop: true, // Optional
   autoplay: true
@@ -89,7 +89,7 @@ vmHeroAnimation.setSpeed(4);
 
 var vmStreamingApps = bodymovin.loadAnimation({
   container: document.getElementById('vm-streaming-apps'), // Required
-  path: 'js/vm-lottie/streaming-apps.json', // Required
+  path: 'js/lottie-files/streaming-apps.json', // Required
   renderer: 'svg', // Required
   loop: true, // Optional
   autoplay: true
@@ -97,7 +97,7 @@ var vmStreamingApps = bodymovin.loadAnimation({
 
 var vmMeetingApps = bodymovin.loadAnimation({
   container: document.getElementById('vm-meeting-apps'), // Required
-  path: 'js/vm-lottie/meeting-apps.json', // Required
+  path: 'js/lottie-files/meeting-apps.json', // Required
   renderer: 'svg', // Required
   loop: true, // Optional
   autoplay: true
@@ -105,7 +105,7 @@ var vmMeetingApps = bodymovin.loadAnimation({
 
 var vmMetaverseApps = bodymovin.loadAnimation({
   container: document.getElementById('vm-metaverse-apps'), // Required
-  path: 'js/vm-lottie/metaverse-apps.json', // Required
+  path: 'js/lottie-files/metaverse-apps.json', // Required
   renderer: 'svg', // Required
   loop: true, // Optional
   autoplay: true
