@@ -12132,6 +12132,9 @@ progress::-moz-progress-bar {
 .top20px {
   top: 20px; }
 
+.minHeight5vh {
+  min-height: 5vh; }
+
 .minHeight10vh {
   min-height: 10vh; }
 
