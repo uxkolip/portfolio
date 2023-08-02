@@ -12138,11 +12138,23 @@ progress::-moz-progress-bar {
 .minHeight20vh {
   min-height: 20vh; }
 
+.minHeight25vh {
+  min-height: 25vh; }
+
 .minHeight30vh {
   min-height: 30vh; }
 
+.minHeight35vh {
+  min-height: 35vh; }
+
+.minHeight40vh {
+  min-height: 40vh; }
+
 .minHeight45vh {
   min-height: 45vh; }
+
+.minHeight50vh {
+  min-height: 50vh; }
 
 .minHeight55vh {
   min-height: 55vh; }
@@ -12215,10 +12227,6 @@ progress::-moz-progress-bar {
   --spacing: 1rem;
   position: relative;
   height: 564px;
-  /*display: flex;
-  justify-content: top;
-  align-items: left;
-  flex-direction: column;*/
   top: var(--spacing);
   z-index: 5;
   padding: 2rem;
@@ -12251,9 +12259,6 @@ progress::-moz-progress-bar {
 /*homepage design process end*/
 html, body {
   font-size: 1rem !important; }
-
-.display-1 {
-  font-size: 2rem; }
 
 .bigger-1 {
   font-size: 1.1rem !important; }

@@ -51,7 +51,7 @@
     </title>
   </head>
   <body>
-    <section class="container">
+    <section class="container" id="pageTop">
       <div class="position-fixed w-100 main-navbar" style="z-index: 9999;">
         <nav class="navbar navbar-expand-lg navbar-light container bg-background position-relative px-3 px-md-0" style="border-radius: 0px 0px 24px 24px !important;">
           <div class="container-fluid">
@@ -203,7 +203,7 @@
               </button>
 
               <button type="button" class="btn btn-outline-secondary py-2 mb-2 me-1 text-primary bg-secondary the-border smaller-2">
-                <span class="badge bg-fluo-green rounded-circle text-accent smaller-6">1</span> Workshops
+                <span class="badge bg-fluo-green rounded-circle text-fluo-green smaller-6">1</span> Workshops
               </button>
 
           </div>
@@ -225,8 +225,8 @@
           <div class="row">
             
             <div class="col-12 col-lg-8" data-bs-spy="scroll" data-bs-target="#voicemodScrollspy" data-bs-smooth-scroll="true" tabindex="0">
-              <div class="row">
-                <div class="col-12" id="overview">
+              <div id="overview" class="row">
+                <div class="col-12">
                   <h2 class="section-title">Overview</h2>
                   <p class="mt-4">Voicemod is a real-time voice changing app for use with meeting apps such as Discord, Google Meet, Zoom but not just! Our users typically use it within games when they're streaming or just playing with friends.</p>
 
@@ -348,12 +348,12 @@
             </div>
 
 
-            <div class="minHeight20vh"></div>
+            <div class="minHeight10vh"></div>
 
 
 
-            <div class="row mt-5 pt-5">
-                <div class="col-12" id="problem">
+            <div id="problem" class="row mt-5 pt-5">
+                <div class="col-12">
                   <h2 class="section-title">Problem</h2>
                   <p class="mt-4">Our "uninstall survey" (a survey that pops up when the user uninstalls the app) revealed a high dropout rate. New users were experiencing problems due to difficulty in setting up the app correctly.</p>
                   <p>25% of new users uninstalled within 24 hours due to lack of experience in using audio software; they couldn't set-up their gear properly, didn't know what was wrong and how to connect to a third party app.</p>
@@ -389,10 +389,8 @@
 
                 </div>
               </div>
-            </div>
 
-            <div class="row mt-5 pt-5">
-              <div class="col-12 bg-secondary the-border large-shadow border-radius p-4">
+              <div class="col-12 bg-secondary the-border large-shadow border-radius p-4 mt-5">
                 <p class="font-weight-bold my-1">What was the number one thing that motivated you to uninstall Voicemod?</p>
                 <p class="text-gray-400 subtitle">134.7k out of 134.7k people answered this question</p>
 
@@ -433,23 +431,25 @@
                 </p>
 
               </div>
-            </div>
 
-             <div class="row my-5 py-5">
-              <div class="col-12">
+              <div class="col-12 my-5 py-5">
                 <p>To address this issue I proposed an onboarding process that would guide new users through the setup process and allow them to reach the "wow" moment of the app right from the start.</p>
 
-                <p>I presented my recommendations to the stakeholders and with minor changes, we decided to move forward to user validation using this <a href="https://www.figma.com/proto/LaOv1YVhMiwoMxk5i2uQjZ/User-onboarding%2C-walkthrough-%26-progressive-trance?page-id=0%3A1&type=design&node-id=293-15486&scaling=contain&starting-point-node-id=293%3A15486" target="_blank" class="text-info" title="Opens my Figma prototype on a new tab.">Figma prototype</a>.</p>
+                <p class="mb-5">I presented my recommendations to the stakeholders and with minor changes, we decided to move forward to user validation using this <a href="https://www.figma.com/proto/LaOv1YVhMiwoMxk5i2uQjZ/User-onboarding%2C-walkthrough-%26-progressive-trance?page-id=0%3A1&type=design&node-id=293-15486&scaling=contain&starting-point-node-id=293%3A15486" target="_blank" class="text-info" title="Opens my Figma prototype on a new tab.">Figma prototype</a>.</p>
               </div>
+
             </div>
 
 
+            
 
-             <div class="row p-1 p-lg-5 bg-primary position-absolute w-100 ms-0 minHeight75vh" style="left: 0; z-index: 1021;">
-              <div id="opportunity" class="container mt-5">
-                <div class="col-12 col-lg-9 mx-auto py-5">
+
+
+             <div id="opportunity" class="row p-1 p-lg-5 bg-primary position-absolute w-100 ms-0 minHeight75vh" style="left: 0; z-index: 1021;">
+              <div class="container mt-5">
+                <div class="col-12 col-sm-11 col-md-10 col-lg-11 col-xxl-10 mx-auto py-5">
                   <h2 class="section-title text-background">Opportunity</h2>
-                  <p class="mt-4 mb-5 display-4 text-background lh-lg">"How can we provide effective guidance to our users, enabling them to quickly set up the app and experience the 'wow moment' within just 5 minutes?"</p>
+                  <p class="mt-4 mb-5 display-5 text-background lh-lg">"How can we provide effective guidance to our users, enabling them to quickly set up the app and experience the 'wow moment' within just 5 minutes?"</p>
                 </div>
               </div>
             </div>
@@ -457,8 +457,8 @@
 
             <div class="minHeight100vh"></div>
 
-            <div class="row my-5 py-5">
-              <div class="col-12" id="analysis">
+            <div id="analysis" class="row mt-4 pt-4">
+              <div class="col-12">
                 <h2 class="section-title">Competitive analysis</h2>
                 <p class="mt-4">Before anything, I conducted a competitive analysis to analyze strengths and weaknesses from key competitors.</p>
                 <p>The best and closest match to our case was Krisp.ai - a tool that allows users the stifle background noise to zero.</p>
@@ -522,10 +522,8 @@
               </div>
             </div>
 
-
-
-            <div class="row my-5 py-5">
-              <div class="col-12" id="persona">
+            <div id="persona" class="row my-5 py-5">
+              <div class="col-12 mt-5">
                 <h2 class="section-title">User persona</h2>
                 <p class="mt-4">Once done with the competitive analysis, I drafted a persona for me and the team to get acquainted with and feel empathetic towards. We already had one, but it was outdated and the team felt disconnected with them.</p>
                 <p>In our case, the target audience consists mostly of Gen Z males, as evidenced by numerous surveys and user interviews.</p>
@@ -599,59 +597,57 @@
             <div class="minHeight40vh"></div>
 
 
-            <div class="row p-1 p-lg-5 dotted-bg position-absolute w-100 ms-0 mt-5" style="left: 0; z-index: 1021;">
-              <div id="journey" class="container my-5 py-5">
+            <div id="journey" class="row p-1 p-lg-5 dotted-bg position-absolute w-100 ms-0 mt-5" style="left: 0; z-index: 1021;">
+              <div class="container">
 
-                <div class="col-12 col-lg-9 mx-auto feedback horizontal py-5">
+                <div class="col-12 col-sm-11 col-md-10 col-lg-11 col-xxl-10 mx-auto feedback horizontal py-5">
 
                   <h2 class="section-title">User journey</h2>
 
                   <p>Having conducted a thorough exploration of many (if not all) possible options, I identified three potential user journeys. I carefully evaluated each journey and ultimately selected the one that best met the needs of both users and the business.</p>
 
-                  <div class="pin-wrap overflow-hidden mt-5 pt-5">
-                    <div class="animation-wrap to-right">
+                  <div class="row mt-5 pt-5 d-flex flex-nowrap flex-nowrap overflow-x-scroll">
                       
-                      <div class="testimonialCard text-center position-relative item col-3 col-lg-3 me-4 bg-light-purple border-radius text-background large-shadow p-3">
-                        <p class="my-4 bigger-1" style="min-height: 120px">Users opens VM</p>
+                      <div class="col-3 col-lg-3 mx-3 mb-5 position-relative d-flex align-items-center justify-content-center text-center bg-light-purple border-radius text-background large-shadow p-5 minHeight10vh">
+                        <p class="mb-0 bigger-1 py-4">Users opens VM</p>
                       </div>
 
-                      <div class="testimonialCard text-center position-relative item col-3 col-lg-3 me-4 bg-light-purple border-radius text-background large-shadow p-3">
-                        <p class="my-4 bigger-1" style="min-height: 120px">Select use case</p>
+                      <div class="col-3 col-lg-3 mx-3 mb-5 position-relative d-flex align-items-center justify-content-center text-center bg-light-purple border-radius text-background large-shadow p-5 minHeight10vh">
+                        <p class="mb-0 bigger-1 py-4">Select use case</p>
                       </div>
 
-                      <div class="testimonialCard text-center position-relative item col-3 col-lg-3 me-4 bg-light-purple border-radius text-background large-shadow p-3">
-                        <p class="my-4 bigger-1" style="min-height: 120px">Pick your microphone & headphones</p>
+                      <div class="col-3 col-lg-3 mx-3 mb-5 position-relative d-flex align-items-center justify-content-center text-center bg-light-purple border-radius text-background large-shadow p-5 minHeight10vh">
+                        <p class="mb-0 bigger-1 py-4">Pick your microphone & headphones</p>
                       </div>
 
-                      <div class="testimonialCard text-center position-relative item col-3 col-lg-3 me-4 bg-light-purple border-radius text-background large-shadow p-3">
-                        <p class="my-4 bigger-1" style="min-height: 120px">OS dialog for mic permission</p>
+                      <div class="col-3 col-lg-3 mx-3 mb-5 position-relative d-flex align-items-center justify-content-center text-center bg-light-purple border-radius text-background large-shadow p-5 minHeight10vh">
+                        <p class="mb-0 bigger-1 py-4">OS dialog for mic permission</p>
                       </div>
 
-                      <div class="testimonialCard text-center position-relative item col-3 col-lg-3 me-4 bg-light-purple border-radius text-background large-shadow p-3">
-                        <p class="my-4 bigger-1" style="min-height: 120px">Voice recording</p>
+                      <div class="col-3 col-lg-3 mx-3 mb-5 position-relative d-flex align-items-center justify-content-center text-center bg-light-purple border-radius text-background large-shadow p-5 minHeight10vh">
+                        <p class="mb-0 bigger-1 py-4">Voice recording</p>
                       </div>
 
-                      <div class="testimonialCard text-center position-relative item col-3 col-lg-3 me-4 bg-light-purple border-radius text-background large-shadow p-3">
-                        <p class="my-4 bigger-1" style="min-height: 120px">User tries out various voices (wow moment)</p>
+                      <div class="col-3 col-lg-3 mx-3 mb-5 position-relative d-flex align-items-center justify-content-center text-center bg-light-purple border-radius text-background large-shadow p-5 minHeight10vh">
+                        <p class="mb-0 bigger-1 py-4">User tries out various voices (wow moment)</p>
                       </div>
 
-                      <div class="testimonialCard text-center position-relative item col-3 col-lg-3 me-4 bg-light-purple border-radius text-background large-shadow p-3">
-                        <p class="my-4 bigger-1" style="min-height: 120px">Selects 3rd party app</p>
+                      <div class="col-3 col-lg-3 mx-3 mb-5 position-relative d-flex align-items-center justify-content-center text-center bg-light-purple border-radius text-background large-shadow p-5 minHeight10vh">
+                        <p class="mb-0 bigger-1 py-4">Selects 3rd party app</p>
                       </div>
 
-                      <div class="testimonialCard text-center position-relative item col-3 col-lg-3 me-4 bg-light-purple border-radius text-background large-shadow p-3">
-                        <p class="my-4 bigger-1" style="min-height: 120px">Gets instructions</p>
+                      <div class="col-3 col-lg-3 mx-3 mb-5 position-relative d-flex align-items-center justify-content-center text-center bg-light-purple border-radius text-background large-shadow p-5 minHeight10vh">
+                        <p class="mb-0 bigger-1 py-4">Gets instructions</p>
                       </div>
 
-                      <div class="testimonialCard text-center position-relative item col-3 col-lg-3 me-4 bg-light-purple border-radius text-background large-shadow p-3">
-                        <p class="my-4 bigger-1" style="min-height: 120px">Complete</p>
+                      <div class="col-3 col-lg-3 mx-3 mb-5 position-relative d-flex align-items-center justify-content-center text-center bg-light-purple border-radius text-background large-shadow p-5 minHeight10vh">
+                        <p class="mb-0 bigger-1 py-4">Complete</p>
                       </div>
 
-                      <div class="testimonialCard text-center position-relative item col-3 col-lg-3 me-4 bg-light-purple border-radius text-background large-shadow p-3">
-                        <p class="my-4 bigger-1" style="min-height: 120px">Moment of celebration!</p>
+                      <div class="col-3 col-lg-3 mx-3 mb-5 position-relative d-flex align-items-center justify-content-center text-center bg-light-purple border-radius text-background large-shadow p-5 minHeight10vh">
+                        <p class="mb-0 bigger-1 py-4">Moment of celebration!</p>
                       </div>
                  
-                    </div>
                   </div>
                 </div>
 
@@ -662,7 +658,265 @@
 
           <div class="minHeight100vh"></div>
 
+          <div class="minHeight20vh"></div>
 
+          <div id="goals" class="row my-5 py-5">
+            <div class="col-12">
+              <h2 class="section-title">Design goals</h2>
+              <p class="mt-4">Survey results showed a high dropout rate, prompting a need for drastic action. We converted our key problems into opportunities to solve for in the new onboarding experience.</p>
+            </div>
+            <div class="col-12 my-5">
+              <div class="row">
+                <div class="col">
+                  <p class="bigger-1 border border-top-0 border-start-0 border-end-0 border-the-border pb-3">Audio setup<span class="ms-3 text-gray-400">3</span></p>
+
+                  <ul class="list-group">
+                    <li class="list-group-item bg-background border-0 my-1 ps-0">
+                      <input class="form-check-input me-1 bg-accent border-0" type="checkbox" value="" id="micSelection" checked style="transform: scale(1.2);">
+                      <label class="form-check-label" for="micSelection">Microphone selection</label>
+                    </li>
+                    <li class="list-group-item bg-background border-0 my-1 ps-0">
+                      <input class="form-check-input me-1 bg-accent border-0" type="checkbox" value="" id="headphoneSelection" checked style="transform: scale(1.2);">
+                      <label class="form-check-label" for="headphoneSelection">Headphone selection</label>
+                    </li>
+                    <li class="list-group-item bg-background border-0 my-1 ps-0">
+                      <input class="form-check-input me-1 bg-accent border-0" type="checkbox" value="" id="audioSetupSelection" checked style="transform: scale(1.2);">
+                      <label class="form-check-label" for="audioSetupSelection">Test audio setup</label>
+                    </li>
+                  </ul>
+                  
+                </div>
+
+                <div class="col">
+                  <p class="bigger-1 border border-top-0 border-start-0 border-end-0 border-the-border pb-3">Wow moment<span class="ms-3 text-gray-400">3</span></p>
+
+                  <ul class="list-group">
+                    <li class="list-group-item bg-background border-0 my-1 ps-0">
+                      <input class="form-check-input me-1 bg-accent border-0" type="checkbox" value="" id="voiceChangerSelection" checked style="transform: scale(1.2);">
+                      <label class="form-check-label" for="voiceChangerSelection">Test voice changer</label>
+                    </li>
+                    <li class="list-group-item bg-background border-0 my-1 ps-0">
+                      <input class="form-check-input me-1 bg-accent border-0" type="checkbox" value="" id="voicesSelection" checked style="transform: scale(1.2);">
+                      <label class="form-check-label" for="voicesSelection">Try 3-4 voices</label>
+                    </li>
+                    <li class="list-group-item bg-background border-0 my-1 ps-0">
+                      <input class="form-check-input me-1 bg-accent border-0" type="checkbox" value="" id="toggleSelection" checked style="transform: scale(1.2);">
+                      <label class="form-check-label" for="toggleSelection">Toggle voice changer</label>
+                    </li>
+                  </ul>
+                  
+                </div>
+
+                <div class="col">
+                  <p class="bigger-1 border border-top-0 border-start-0 border-end-0 border-the-border pb-3">Third party integration<span class="ms-3 text-gray-400">4</span></p>
+
+                  <ul class="list-group">
+                    <li class="list-group-item bg-background border-0 my-1 ps-0">
+                      <input class="form-check-input me-1 bg-accent border-0" type="checkbox" value="" id="discordSelection" checked style="transform: scale(1.2);">
+                      <label class="form-check-label" for="discordSelection">Voicemod in Discord</label>
+                    </li>
+                    <li class="list-group-item bg-background border-0 my-1 ps-0">
+                      <input class="form-check-input me-1 bg-accent border-0" type="checkbox" value="" id="obsSelection" checked style="transform: scale(1.2);">
+                      <label class="form-check-label" for="obsSelection">Voicemod in OBS Studio</label>
+                    </li>
+                    <li class="list-group-item bg-background border-0 my-1 ps-0">
+                      <input class="form-check-input me-1 bg-accent border-0" type="checkbox" value="" id="twitchSelection" checked style="transform: scale(1.2);">
+                      <label class="form-check-label" for="twitchSelection">Voicemod in Twitch</label>
+                    </li>
+                    <li class="list-group-item bg-background border-0 my-1 ps-0">
+                      <input class="form-check-input me-1 bg-accent border-0" type="checkbox" value="" id="robloxSelection" checked style="transform: scale(1.2);">
+                      <label class="form-check-label" for="robloxSelection">Voicemod in Roblox</label>
+                    </li>
+                  </ul>
+                  
+                </div>
+
+              </div>
+            </div>  
+          </div>
+
+
+          <div class="minHeight10vh"></div>
+
+
+          <div id="wireframes" class="row dotted-bg mt-5">
+              <div class="container my-5">
+
+                <div class="col-12">
+
+                  <h2 class="section-title">Wireframes</h2>
+
+                  <p>Some of the early sketches that lead to the final result.</p>
+
+                  <div class="row mt-5 pt-5 d-flex flex-nowrap flex-nowrap overflow-x-scroll">
+                      
+                      <div class="col-8 me-2 mb-5 position-relative d-flex align-items-center justify-content-center position-relative">
+                        <img src="img/misc/elements/01-wireframe.png" alt="Wireframe" class="img-fluid" />
+                      </div>
+
+                      <div class="col-8 mx-2 mb-5 position-relative d-flex align-items-center justify-content-center position-relative">
+                        <img src="img/misc/elements/02-wireframe.png" alt="Wireframe" class="img-fluid" />
+                      </div>
+
+                      <div class="col-8 mx-2 mb-5 position-relative d-flex align-items-center justify-content-center position-relative">
+                        <img src="img/misc/elements/03-wireframe.png" alt="Wireframe" class="img-fluid" />
+                      </div>
+
+                      <div class="col-8 mx-2 mb-5 position-relative d-flex align-items-center justify-content-center position-relative">
+                        <img src="img/misc/elements/04-wireframe.png" alt="Wireframe" class="img-fluid" />
+                      </div>
+
+                      <div class="col-8 ms-2 mb-5 position-relative d-flex align-items-center justify-content-center position-relative">
+                        <img src="img/misc/elements/05-wireframe.png" alt="Wireframe" class="img-fluid" />
+                      </div>
+                     
+                 
+                  </div>
+                </div>
+
+
+            </div>
+          </div>
+
+          <div class="minHeight10vh"></div>
+
+          <div id="prototype" class="row my-5 py-5">
+            
+            <div class="col-12">
+              <h2 class="section-title">Prototype</h2>
+              <p class="mt-4">When done with the wireframes and mockups, I created a <a href="https://www.figma.com/proto/LaOv1YVhMiwoMxk5i2uQjZ/User-onboarding%2C-walkthrough-%26-progressive-trance?page-id=0%3A1&type=design&node-id=293-15486&scaling=contain&starting-point-node-id=293%3A15486" target="_blank" class="text-info" title="Opens my Figma prototype on a new tab.">Figma prototype</a> taking into consideration feedback from the stakeholders (including developers).</p>
+
+              <p>By incorporating their perspectives, I refined the design and identified potential technical challenges and optimizations.</p>
+
+              <p>Through this collaborative process, we created a user-friendly and efficient final product, with all team members aligned and working towards a shared vision.</p>
+            </div>
+
+            <div class="col-12">
+              <div class="row mt-4">
+                
+                <div class="col-6">
+                  
+                    <div class="col-12 bg-petrol border-radius p-5">
+                      <p class="p-5 text-white text-center">VIDEO</p>
+                    </div>
+                  
+                </div>
+
+                <div class="col-6">
+                  
+                    <div class="col-12 bg-green border-radius p-5">
+                      <p class="p-5 text-white text-center">VIDEO</p>
+                    </div>
+                  
+                </div>
+
+              </div>
+
+              <div class="row mt-4">
+                
+                <div class="col-6">
+                 
+                    <div class="col-12 bg-oranje border-radius p-5">
+                      <p class="p-5 text-white text-center">VIDEO</p>
+                    </div>
+                  
+                </div>
+
+                <div class="col-6">
+                
+                    <div class="col-12 bg-mustard border-radius p-5">
+                      <p class="p-5 text-white text-center">VIDEO</p>
+                    </div>
+                  
+                </div>
+
+              </div>
+
+              </div>
+            </div>
+
+
+            <div class="row my-5">
+              <div class="col-12 bg-secondary border-radius d-flex align-items-center justify-content-between p-3">
+                <img src="img/misc/icons/icons8-question-mark-64.png" alt="Question mark icon" class="img-fluid mx-3" style="width: 40px;" />
+                <p class="font-weight-bold mb-0 pe-1">Research fan? Take a look at the process</p>
+                <button class="btn btn-primary rounded-pill ms-auto py-2 px-3" onclick="showResearchPlan();">View research process</button>
+              </div>
+            </div>
+
+
+
+
+
+
+            <div id="research" class="row my-5 py-5">
+              <div class="col-12">
+                
+                <h2 class="section-title">Research plan</h2>
+                
+                <p class="mt-4">To validate the new flow, the user research plan I prepared included the following key steps:</p>
+                
+                <ul class="lh-lg my-4">
+                  <li>Research objectives</li>
+                  <li>Research questions</li>
+                  <li>Participant criteria</li>
+                </ul>
+
+                <p>To ensure a successful user interview with everyone involved, I required the presence of two colleagues playing key roles:</p>
+
+                <ul class="lh-lg my-4">
+                  <li>a note-taker who should ideally be closely connected to the project (such as a product manager or stakeholder), and</li>
+                  <li>an observer who validates that subsequent iterations are based on user feedback</li>
+                </ul>
+
+                <p>Since I was the facilitator who conducted the interview with the user, I sought assistance from my partners in crime.</p>
+
+                <p>Of course I could have conducted the interviews alone and check later the recordings, but two heads are better than one...</p>
+
+              </div>
+
+              <div class="col-12 text-center mt-5">
+                <img src="img/misc/elements/user-interviews-diagram.svg" alt="User interview diagram" class="img-fluid" style="width: 100%; max-width: 679px;" />
+              </div>
+
+              
+            </div>
+
+
+            <div class="row my-3">
+              <div class="col-12 bg-secondary border-radius d-flex align-items-center justify-content-between p-3">
+                <img src="img/misc/icons/icons8-bulb-64.png" alt="Question mark icon" class="img-fluid mx-3" style="width: 40px;" />
+                <p class="mb-0 smaller-2 ps-3">My user research tools include Typeform to recruit participants & accepting GDPR terms, Calendly to schedule the interview slots and Lookback to conduct and record the interviews.</p>
+              </div>
+            </div>
+
+
+
+
+            <div id="interviews" class="row my-5 py-5">
+              <div class="col-12">
+                
+                <h2 class="section-title">User interviews</h2>
+                
+                <p class="mt-4">During the user testing sessions, we first explained what we were hoping to learn from them and then asked them to complete the dummy onboarding using the prototype while asking open-ended questions to gather their thoughts and feedback.</p>
+
+                <p>As they interacted with the app, we observed their behavior and took notes on any issues they encountered or areas where they seemed confused. Moreover, we paid close attention to their verbal feedback and any nonverbal cues, such as frustration or confusion.</p>
+
+              </div>
+
+              <div class="col-12 mt-4">
+                <video width="100%" height="100%" autoplay loop muted style="object-fit: cover;" class="border-radius">
+                  <source src="video/vm-persona.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <p class="smaller-3 mt-2 text-center">A small sample of the user research session.</p>
+              </div>
+
+              <div class="col-12 text-center mt-5 pt-5">
+                <img src="img/misc/elements/script-notepad.svg" alt="User interview intro script on a notepad" class="img-fluid" style="width: 100%; max-width: 1200px;" />
+              </div>
+
+            </div>
 
 
 
@@ -707,7 +961,7 @@
     
   <div class="position-fixed" id="toTop">
     <progress max="100" value="0"></progress>
-    <a class="btn btn-secondary d-none d-xl-block rounded-circle stretched-link" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Go to top">
+    <a href="#pageTop" class="btn btn-secondary d-none d-xl-block rounded-circle stretched-link" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Go to top">
       <img src="img/misc/shapes/arrow-up.svg" alt="Arrow up" class="img-fluid">
     </a>
   </div>

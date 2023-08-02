@@ -52,7 +52,7 @@
   </head>
   <body>
 
-  <section class="container">
+  <section class="container" id="pageTop">
     <div class="position-fixed w-100 main-navbar" style="z-index: 999;">
       <nav class="navbar navbar-expand-lg navbar-light container bg-background position-relative px-3 px-md-0" style="border-radius: 0px 0px 24px 24px !important;">
         <div class="container-fluid">
@@ -753,7 +753,7 @@
 
           <div class="col-12 col-md-6 pe-md-5 ms-auto d-none d-lg-block position-relative me-5" style="max-width: 306px">
             
-            <video width="306" height="359" autoplay="" loop="" muted="" style="object-fit: cover;" class="border-radius">
+            <video width="306" height="359" autoplay loop muted style="object-fit: cover;" class="border-radius">
               <source src="video/vm-persona.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
@@ -812,7 +812,7 @@
     
   <div class="position-fixed" id="toTop">
     <progress max="100" value="0"></progress>
-    <a class="btn btn-secondary d-none d-xl-block rounded-circle stretched-link" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Go to top">
+    <a href="#pageTop" class="btn btn-secondary d-none d-xl-block rounded-circle stretched-link" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Go to top">
       <img src="img/misc/shapes/arrow-up.svg" alt="Arrow up" class="img-fluid">
     </a>
   </div>

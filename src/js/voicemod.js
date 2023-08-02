@@ -1,4 +1,5 @@
 function checkiftooltip() {
+
     $(window).width() > 768 ? ($('[data-toggle="tooltip"]').tooltip(), 
     $('[data-toggle="tooltip"]').tooltip("enable")) : $('[data-toggle="tooltip"]').tooltip("disable")
 
@@ -111,5 +112,11 @@ var vmMetaverseApps = bodymovin.loadAnimation({
 });
 
 //lottie end
+
+
+//user journey
+
+//user journey end
+
 
 

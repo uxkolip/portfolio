@@ -49,14 +49,14 @@ gulp.task('minify-css', function() {
 
 //strip comments
 gulp.task('strip', function() {
-  return gulp.src('./src/js/**/*.js')
+  return gulp.src('./src/js/**/*.*')
     .pipe(strip())
     .pipe(gulp.dest('./dist/js/'));
 });
 
 // Task to Minify JS
 gulp.task('jsmin', function() {
-  return gulp.src('./src/js/**/*.js')
+  return gulp.src('./src/js/**/*.*')
     .pipe(gulp.dest('./dist/js/'));
 });
 
