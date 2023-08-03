@@ -73,6 +73,4 @@ var metaHeroAnimation = bodymovin.loadAnimation({
   loop: true, // Optional
   autoplay: true
 });
-vmHeroAnimation.setSpeed(4);
-
 //lottie end

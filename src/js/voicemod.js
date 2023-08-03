@@ -110,7 +110,6 @@ var vmMetaverseApps = bodymovin.loadAnimation({
   loop: true, // Optional
   autoplay: true
 });
-
 //lottie end
 
 

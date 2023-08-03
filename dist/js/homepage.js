@@ -190,16 +190,3 @@ gsap.to('progress', {
 });
 
 
-if ($("#aboutmeVideoModal").length) {
-    const aboutmeVideoModal = document.getElementById('aboutmeVideoModal');
-    const aboutmeVideo = document.getElementById('aboutmeVideo');
-
-    aboutmeVideoModal.addEventListener('hidden.bs.modal', () => {
-        aboutmeVideo.pause();
-        aboutmeVideo.currentTime = 0;
-    });
-
-    aboutmeVideoModal.addEventListener('shown.bs.modal', () => {
-        aboutmeVideo.play();
-    });    
-}

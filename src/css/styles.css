@@ -12138,6 +12138,9 @@ progress::-moz-progress-bar {
 .minHeight10vh {
   min-height: 10vh; }
 
+.minHeight15vh {
+  min-height: 15vh; }
+
 .minHeight20vh {
   min-height: 20vh; }
 
@@ -12165,19 +12168,31 @@ progress::-moz-progress-bar {
 .minHeight60vh {
   min-height: 60vh; }
 
+.minHeight65vh {
+  min-height: 65vh; }
+
+.minHeight70vh {
+  min-height: 70vh; }
+
 .minHeight75vh {
   min-height: 75vh; }
 
 .minHeight80vh {
   min-height: 80vh; }
 
+.minHeight85vh {
+  min-height: 85vh; }
+
 .minHeight90vh {
   min-height: 90vh; }
+
+.minHeight95vh {
+  min-height: 95vh; }
 
 .minHeight100vh {
   min-height: 100vh; }
 
-.left {
+.left-0 {
   left: 0; }
 
 .right-0 {
@@ -12260,6 +12275,161 @@ progress::-moz-progress-bar {
   z-index: 0; }
 
 /*homepage design process end*/
+/*isometric mockups for meta*/
+:root {
+  --isometricCardW: 14em;
+  --isometricCardH: 8em;
+  --isometricCardZInc: 2em; }
+
+.isometric-main {
+  display: block;
+  margin: auto;
+  position: relative;
+  height: calc(var(--isometricCardH) * 36 - 1.5em); }
+
+/* Grid */
+.isometricCards, .stack {
+  transform-style: preserve-3d; }
+
+.isometricCards {
+  --scroll: 0;
+  display: -ms-grid;
+  display: grid;
+  grid-template: repeat(36, var(--isometricCardH))/var(--isometricCardW);
+  grid-gap: 1.5em;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) rotateX(45deg) rotateZ(45deg) translateY(var(--scroll));
+  transform-origin: 50% 0; }
+
+.stack {
+  display: block;
+  position: relative; }
+
+.contents {
+  color: #000;
+  font-size: 0.5em;
+  line-height: 1.25;
+  -webkit-font-smoothing: antialiased; }
+
+.stack:nth-of-type(even) .contents {
+  color: #fff; }
+
+.contents h2, .contents .h2 {
+  color: #aff;
+  font-size: 2em;
+  font-weight: 400;
+  margin-bottom: 0.25em; }
+
+.contents span {
+  margin-right: 0.75em; }
+
+.city {
+  margin-top: 11.75em; }
+
+/* Card backgrounds */
+.stack:nth-of-type(4n + 2) .isometricCard {
+  background-position: 0 100%; }
+
+.stack:nth-of-type(4n + 3) .isometricCard {
+  background-position: 100% 0; }
+
+.stack:nth-of-type(4n + 4) .isometricCard {
+  background-position: 100% 100%; }
+
+.stack:nth-child(8n + 5) .isometricCard,
+.stack:nth-child(8n + 6) .isometricCard,
+.stack:nth-child(8n + 7) .isometricCard,
+.stack:nth-child(8n + 8) .isometricCard {
+  filter: hue-rotate(90deg);
+  -webkit-filter: hue-rotate(90deg); }
+
+.stack:nth-child(12n + 9) .isometricCard,
+.stack:nth-child(12n + 10) .isometricCard,
+.stack:nth-child(12n + 11) .isometricCard,
+.stack:nth-child(12n + 12) .isometricCard {
+  filter: hue-rotate(180deg);
+  -webkit-filter: hue-rotate(180deg); }
+
+/* Card hover */
+.stack:hover .top, .stack:focus .top {
+  transform: translateZ(calc(var(--isometricCardZInc)*4)); }
+
+.stack:hover .mid-top, .stack:focus .mid-top {
+  transform: translateZ(calc(var(--isometricCardZInc)*3)); }
+
+.stack:hover .mid-bottom, .stack:focus .mid-bottom {
+  transform: translateZ(calc(var(--isometricCardZInc)*2)); }
+
+.stack:hover .bottom, .stack:focus .bottom {
+  transform: translateZ(var(--isometricCardZInc)); }
+
+.stack:hover .shadow, .stack:focus .shadow {
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  opacity: 0.2; }
+
+/* Other card styles */
+.isometricCard {
+  background-image: url(https://i.postimg.cc/Vspg0Nn2/business-card-backgrounds.png);
+  background-size: 200% 200%;
+  box-shadow: -1px -1px 0 rgba(0, 0, 0, 0.2) inset;
+  color: #000;
+  padding: 0.75em;
+  position: absolute;
+  transition: all 0.3s;
+  width: 100%;
+  height: 100%; }
+
+.top {
+  transform: translateZ(4px);
+  z-index: 4; }
+
+.mid-top {
+  transform: translateZ(3px);
+  z-index: 3; }
+
+.mid-bottom {
+  transform: translateZ(2px);
+  z-index: 2; }
+
+.bottom {
+  transform: translateZ(1px);
+  z-index: 1; }
+
+.shadow {
+  background: #000;
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+  opacity: 0.4; }
+
+/* Alter grid at breakpoints */
+@media screen and (min-width: 361px) {
+  .isometric-main {
+    height: calc(var(--isometricCardH) * 18 - 1.5em); }
+  .isometricCards {
+    grid-template: repeat(18, var(--isometricCardH))/repeat(2, var(--isometricCardW)); } }
+
+@media screen and (min-width: 641px) {
+  .isometric-main {
+    height: calc(var(--isometricCardH) * 12 - 1.5em); }
+  .isometricCards {
+    grid-template: repeat(12, var(--isometricCardH))/repeat(3, var(--isometricCardW)); } }
+
+@media screen and (min-width: 961px) {
+  .isometric-main {
+    height: calc(var(--isometricCardH) * 9 - 1.5em); }
+  .isometricCards {
+    grid-template: repeat(9, var(--isometricCardH))/repeat(4, var(--isometricCardW)); } }
+
+@media screen and (min-width: 1281px) {
+  .isometric-main {
+    height: calc(var(--isometricCardH) * 8 - 1.5em); }
+  .isometricCards {
+    grid-template: repeat(8, var(--isometricCardH))/repeat(5, var(--isometricCardW)); } }
+
+/*isometric mockups for meta end*/
 html, body {
   font-size: 1rem !important; }
 

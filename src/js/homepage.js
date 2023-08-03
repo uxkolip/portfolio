@@ -249,7 +249,7 @@ gsap.to('progress', {
 
 
 // aboutmeVideoModal functions
-if ($("#aboutmeVideoModal").length) {
+/*if ($("#aboutmeVideoModal").length) {
     const aboutmeVideoModal = document.getElementById('aboutmeVideoModal');
     const aboutmeVideo = document.getElementById('aboutmeVideo');
 
@@ -261,5 +261,5 @@ if ($("#aboutmeVideoModal").length) {
     aboutmeVideoModal.addEventListener('shown.bs.modal', () => {
         aboutmeVideo.play();
     });    
-}
+}*/
 // aboutmeVideoModal functions end

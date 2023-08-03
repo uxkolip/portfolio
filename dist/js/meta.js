@@ -65,5 +65,3 @@ var metaHeroAnimation = bodymovin.loadAnimation({
   loop: true, 
   autoplay: true
 });
-vmHeroAnimation.setSpeed(4);
-
