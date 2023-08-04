@@ -64,6 +64,15 @@ ScrollTrigger.create({
 });
 //navbar show on scroll up end
 
+// page progress
+gsap.registerPlugin(ScrollTrigger);
+gsap.to('progress', {
+  value: 100,
+  ease: 'none',
+  scrollTrigger: { scrub: 0.3 }
+});
+// page progress end
+
 
 //voice changer radios
 $(document).on('click', '.voiceChangeContainer .form-check', function() {

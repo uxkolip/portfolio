@@ -69,6 +69,15 @@ ScrollTrigger.create({
 });
 //navbar show on scroll up end
 
+// page progress
+gsap.registerPlugin(ScrollTrigger);
+gsap.to('progress', {
+  value: 100,
+  ease: 'none',
+  scrollTrigger: { scrub: 0.3 }
+});
+// page progress end
+
 // homepage selected work gsock
 // Select the panels and set their initial position and opacity
 const panels = document.querySelectorAll('.panel');
@@ -236,16 +245,6 @@ horizontalSections.forEach(function (sec, i) {
 
 }); 
 //homepage testimonials end
-
-
-// page progress
-gsap.registerPlugin(ScrollTrigger);
-gsap.to('progress', {
-  value: 100,
-  ease: 'none',
-  scrollTrigger: { scrub: 0.3 }
-});
-// page progress end
 
 
 // aboutmeVideoModal functions
