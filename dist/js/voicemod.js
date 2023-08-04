@@ -57,6 +57,13 @@ ScrollTrigger.create({
     }
 });
 
+gsap.registerPlugin(ScrollTrigger);
+gsap.to('progress', {
+  value: 100,
+  ease: 'none',
+  scrollTrigger: { scrub: 0.3 }
+});
+
 
 $(document).on('click', '.voiceChangeContainer .form-check', function() {
     var voiceId = "#" + $(this).find('input').attr('id');

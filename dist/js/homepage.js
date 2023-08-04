@@ -62,6 +62,13 @@ ScrollTrigger.create({
     }
 });
 
+gsap.registerPlugin(ScrollTrigger);
+gsap.to('progress', {
+  value: 100,
+  ease: 'none',
+  scrollTrigger: { scrub: 0.3 }
+});
+
 const panels = document.querySelectorAll('.panel');
 panels.forEach((panel, index) => {
         gsap.set(panel, {
@@ -180,13 +187,5 @@ horizontalSections.forEach(function (sec, i) {
     gsap.registerPlugin(ScrollTrigger);
 
 }); 
-
-
-gsap.registerPlugin(ScrollTrigger);
-gsap.to('progress', {
-  value: 100,
-  ease: 'none',
-  scrollTrigger: { scrub: 0.3 }
-});
 
 
