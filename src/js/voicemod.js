@@ -191,7 +191,7 @@ var audioElement = document.createElement('audio');
         $('#pause').find('img').attr('alt', 'Play icon');
         $('#pause').attr('id', 'play');
         $('.playBtnOFF').removeClass('playBtnOFF').addClass('playBtn');
-        $('.fancy-arrow').removeClass('opacity-100').addClass('opacity-0')
+        $('.fancy-arrow').removeClass('opacity-100').addClass('opacity-0');
         $('.playing_progress').css('width', '0%');
         audioElement.currentTime = 0;
         audioElement.setAttribute('src', '../sounds/vm-voice-clean.mp3');
@@ -207,5 +207,10 @@ var audioElement = document.createElement('audio');
         $('#pause').find('img').attr('src', 'img/misc/icons/play-icon-solo.svg');
         $('#pause').find('img').attr('alt', 'Play icon');
         $('.playBtnOFF').removeClass('playBtnOFF').addClass('playBtn');
+        $('.fancy-arrow').removeClass('opacity-100').addClass('opacity-0');
+        $('#voiceEngineSwitch').attr('disabled', true).prop('checked', false);
+        $('.fancy-arrow').removeClass('opacity-100').addClass('opacity-0');
+        audioElement.setAttribute('src', '../sounds/vm-voice-clean.mp3');
+        $('#pause').attr('id', 'play');
     });
 //voice changer sample end
