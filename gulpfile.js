@@ -82,6 +82,12 @@ gulp.task('video', function() {
   .pipe(gulp.dest('dist/video'));
 });
 
+//Copy sounds
+gulp.task('sounds', function() {
+   return gulp.src(['./src/sounds/**/*'])
+  .pipe(gulp.dest('dist/sounds'));
+});
+
 //Copy default video and json
 gulp.task('defaultimport', function(){
   return gulp.src(['./src/test/**/*'])
@@ -135,5 +141,5 @@ gulp.task('default', ['watch']);
 
 // Gulp Build Task
 gulp.task('build', function() {
-  runSequence('clean', 'sass','minify-css','minifyhtml', 'jsmin', 'fonts', 'video', 'defaultimport', 'strip', 'imagemin');
+  runSequence('clean', 'sass','minify-css','minifyhtml', 'jsmin', 'fonts', 'video', 'sounds', 'defaultimport', 'strip', 'imagemin');
 });
