@@ -325,6 +325,20 @@ progress::-moz-progress-bar {
   background-attachment: fixed;
 }
 
+#educationSection .accordion-button::after {
+  content: none;
+}
+
+.metroStop:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 8px;
+  background-color: #00C9A5;
+  top: 110px;
+  right: 140px;
+}
+
 .noUnderline {
   text-decoration: none !important;
 }
