@@ -69,5 +69,32 @@ gsap.to('progress', {
 });
 
 
+gsap.registerPlugin(ScrollTrigger);
 
+const cards = $(".design-card");
 
+gsap.set(cards, {
+    position: "absolute",
+    opacity: 0,
+    scale: .1,
+    yPercent: 0,
+    rotate: 0,
+    filter: 'blur(10px)',
+})
+
+gsap.to(".design-card", {
+    yPercent: -15,
+    stagger: 5000,
+    duration: 1400,
+    opacity: 1,
+    rotate: 0,
+    scale: 1,
+    filter: 'blur(0px)',
+    scrollTrigger: {
+        trigger: ".design-cards",
+        pin: true,
+        scrub: true,
+        start: "-20%",
+        end: "5900px"
+    }
+});
