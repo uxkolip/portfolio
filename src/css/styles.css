@@ -12237,6 +12237,33 @@ progress::-moz-progress-bar {
   --d: 2px;
   background: radial-gradient(circle at var(--d) var(--d), #E0E0E0 calc(var(--d) - 1px), #FFFBF5 var(--d)) 0 0/25px 25px; }
 
+.playBtn {
+  animation: ripple 1.2s linear infinite; }
+
+@keyframes ripple {
+  from {
+    opacity: 1;
+    transform: scale3d(0.75, 0.75, 1); }
+  to {
+    opacity: 0;
+    transform: scale3d(1.5, 1.5, 1); } }
+
+.fancy-arrow {
+  transition: .3s all; }
+
+.voice-progress {
+  position: relative;
+  width: 100%;
+  height: 66px;
+  overflow: hidden; }
+
+.playing_progress {
+  width: 0;
+  top: 0;
+  left: 0;
+  position: absolute;
+  overflow: hidden; }
+
 /*homepage design process*/
 .design-cards {
   position: relative;

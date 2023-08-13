@@ -74,18 +74,6 @@ gsap.to('progress', {
 // page progress end
 
 
-//voice changer radios
-$(document).on('click', '.voiceChangeContainer .form-check', function() {
-    var voiceId = "#" + $(this).find('input').attr('id');
-    $(voiceId).attr("checked", true);
-    $('.voiceChangeContainer .form-check').removeClass('activeVoice');
-    $('.voiceChangeContainer .form-check p').removeClass('text-white');
-    $(voiceId).closest('.form-check').addClass('activeVoice');
-    $(voiceId).closest('.form-check').find('p').addClass('text-white');
-});
-// voice changer radios end
-
-
 //lottie
 var vmHeroAnimation = bodymovin.loadAnimation({
   container: document.getElementById('vm-hero-lottie'), // Required
@@ -127,4 +115,97 @@ var vmMetaverseApps = bodymovin.loadAnimation({
 //user journey end
 
 
+//voice changer radios
+$(document).on('click', '.voiceChangeContainer .form-check', function() {
+    var voiceId = "#" + $(this).find('input').attr('id');
+    $(voiceId).attr("checked", true);
+    $('.voiceChangeContainer .form-check').removeClass('activeVoice');
+    $('.voiceChangeContainer .form-check p').removeClass('text-white');
+    $(voiceId).closest('.form-check').addClass('activeVoice');
+    $(voiceId).closest('.form-check').find('p').addClass('text-white');
+});
+// voice changer radios end
 
+
+//voice changer sample
+var audioElement = document.createElement('audio');
+    audioElement.setAttribute('src', '../sounds/vm-voice-clean.mp3');
+    currentTime = '';
+    
+    audioElement.addEventListener("canplay", function(){
+        //$("#length").text("Duration: " + audioElement.duration + " seconds");
+        //$("#source").text("Source: " + audioElement.src);
+        //$("#status").text("Status: Ready to play").css("color","green");
+    });
+    
+    audioElement.addEventListener("timeupdate", function(){
+        const totalDuration = audioElement.duration; // Total duration of the audio in seconds
+        currentTime = audioElement.currentTime;
+        const percentage = (currentTime / totalDuration) * 100;
+        $('.playing_progress').css('width', percentage + '%')
+        //$("#currentTime").text("Current second: " + audioElement.currentTime + " and percentage is " + percentage);
+    });
+
+    $(document).on("click", "#voiceEngineSwitch", function() {
+        if ($('#voiceEngineSwitch').prop("checked")) {
+            var selectedVoice = $('.activeVoice').find('input[type="radio"]').attr('id');
+            audioElement.pause();
+            audioElement.setAttribute('src', '../sounds/vm-voice-' + selectedVoice + '.mp3');
+            audioElement.currentTime = currentTime;
+            audioElement.play();
+        } else {
+            audioElement.pause();
+            audioElement.setAttribute('src', '../sounds/vm-voice-clean.mp3');
+            audioElement.currentTime = currentTime;
+            audioElement.play();
+        }        
+    });
+        
+    $(document).on("click", "#play", function() {
+        $('#voiceEngineSwitch').attr('disabled', false);
+        audioElement.play();
+        $(this).attr('id', 'pause');
+        $(this).find('img').attr('src', 'img/misc/icons/pause-icon-solo.svg');
+        $(this).find('img').attr('alt', 'Pause icon');
+        $('.playBtn').removeClass('playBtn').addClass('playBtnOFF');
+        $('.fancy-arrow').removeClass('opacity-0').addClass('opacity-100');
+        //$("#status").text("Status: Playing");
+    });
+    
+    $(document).on("click", "#pause", function() {
+        $('#voiceEngineSwitch').attr('disabled', true);
+        audioElement.pause();
+        $(this).attr('id', 'play');
+        $(this).find('img').attr('src', 'img/misc/icons/play-icon-solo.svg');
+        $(this).find('img').attr('alt', 'Play icon');
+        $('.playBtnOFF').removeClass('playBtnOFF').addClass('playBtn');
+        $('.fancy-arrow').removeClass('opacity-100').addClass('opacity-0')
+        //$("#status").text("Status: Paused");
+    });
+
+    $(document).on('click', '.voiceChangeContainer .form-check', function() {
+        console.log('allagi fonis');
+        $('#voiceEngineSwitch').attr('disabled', true).prop('checked', false);
+        audioElement.pause();
+        $('#pause').find('img').attr('src', 'img/misc/icons/play-icon-solo.svg');
+        $('#pause').find('img').attr('alt', 'Play icon');
+        $('#pause').attr('id', 'play');
+        $('.playBtnOFF').removeClass('playBtnOFF').addClass('playBtn');
+        $('.fancy-arrow').removeClass('opacity-100').addClass('opacity-0')
+        $('.playing_progress').css('width', '0%');
+        audioElement.currentTime = 0;
+        audioElement.setAttribute('src', '../sounds/vm-voice-clean.mp3');
+        //$("#status").text("Status: Paused");
+    });
+        
+    $('#restart').click(function() {
+        audioElement.currentTime = 0;
+    });
+
+    audioElement.addEventListener('ended', function() {
+        audioElement.pause();
+        $('#pause').find('img').attr('src', 'img/misc/icons/play-icon-solo.svg');
+        $('#pause').find('img').attr('alt', 'Play icon');
+        $('.playBtnOFF').removeClass('playBtnOFF').addClass('playBtn');
+    });
+//voice changer sample end
