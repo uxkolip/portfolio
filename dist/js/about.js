@@ -69,7 +69,6 @@ gsap.to('.progress-circle', {
   ease: 'none',
   scrollTrigger: { scrub: 0.3 },
   onComplete: self => {
-      console.log('completed!')
       $('.icon-wrap').addClass('bg-accent');
       $('.icon--close path').css({ fill: '#fff' })
   },
