@@ -68,7 +68,18 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.to('.progress-circle', {
   strokeDashoffset: 0,
   ease: 'none',
-  scrollTrigger: { scrub: 0.3 }
+  scrollTrigger: { scrub: 0.3 },
+  onComplete: self => {
+      console.log('completed!')
+      $('.icon-wrap').addClass('bg-accent');
+      $('.icon--close path').css({ fill: '#fff' })
+  },
+  onUpdate: self => {
+      if ($('.progress-circle').css('stroke-dashoffset') !== "0px" ) {
+          $('.icon-wrap').removeClass('bg-accent');
+          $('.icon--close path').css({ fill: '#3A2D52' })
+      } 
+  }
 });
 
 

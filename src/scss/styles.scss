@@ -361,7 +361,8 @@ a:hover, button:hover, .pointer {
   border-radius: 50%;
   width: 1.79em;
   height: 1.79em;
-  background-color: #fff
+  background-color: #fff;
+  transition: .3s all;
 }
 
 .close-button .icon {
