@@ -137,7 +137,7 @@ $(document).on('click', '.voiceChangeContainer .form-check', function() {
 
 //voice changer sample
 var audioElement = document.createElement('audio');
-    audioElement.setAttribute('src', '/../sounds/vm-voice-clean.mp3');
+    audioElement.setAttribute('src', 'sounds/vm-voice-clean.mp3');
     currentTime = '';
     
     audioElement.addEventListener("canplay", function(){
@@ -158,12 +158,12 @@ var audioElement = document.createElement('audio');
         if ($('#voiceEngineSwitch').prop("checked")) {
             var selectedVoice = $('.activeVoice').find('input[type="radio"]').attr('id');
             audioElement.pause();
-            audioElement.setAttribute('src', '/../sounds/vm-voice-' + selectedVoice + '.mp3');
+            audioElement.setAttribute('src', 'sounds/vm-voice-' + selectedVoice + '.mp3');
             audioElement.currentTime = currentTime;
             audioElement.play();
         } else {
             audioElement.pause();
-            audioElement.setAttribute('src', '/../sounds/vm-voice-clean.mp3');
+            audioElement.setAttribute('src', 'sounds/vm-voice-clean.mp3');
             audioElement.currentTime = currentTime;
             audioElement.play();
         }        
@@ -173,7 +173,7 @@ var audioElement = document.createElement('audio');
         $('#voiceEngineSwitch').attr('disabled', false);
         audioElement.play();
         $(this).attr('id', 'pause');
-        $(this).find('img').attr('src', '/img/misc/icons/pause-icon-solo.svg');
+        $(this).find('img').attr('src', 'img/misc/icons/pause-icon-solo.svg');
         $(this).find('img').attr('alt', 'Pause icon');
         $('.playBtn').removeClass('playBtn').addClass('playBtnOFF');
         $('.fancy-arrow').removeClass('opacity-0').addClass('opacity-100');
@@ -184,7 +184,7 @@ var audioElement = document.createElement('audio');
         $('#voiceEngineSwitch').attr('disabled', true);
         audioElement.pause();
         $(this).attr('id', 'play');
-        $(this).find('img').attr('src', '/img/misc/icons/play-icon-solo.svg');
+        $(this).find('img').attr('src', 'img/misc/icons/play-icon-solo.svg');
         $(this).find('img').attr('alt', 'Play icon');
         $('.playBtnOFF').removeClass('playBtnOFF').addClass('playBtn');
         $('.fancy-arrow').removeClass('opacity-100').addClass('opacity-0')
@@ -195,14 +195,14 @@ var audioElement = document.createElement('audio');
         console.log('allagi fonis');
         $('#voiceEngineSwitch').attr('disabled', true).prop('checked', false);
         audioElement.pause();
-        $('#pause').find('img').attr('src', '/img/misc/icons/play-icon-solo.svg');
+        $('#pause').find('img').attr('src', 'img/misc/icons/play-icon-solo.svg');
         $('#pause').find('img').attr('alt', 'Play icon');
         $('#pause').attr('id', 'play');
         $('.playBtnOFF').removeClass('playBtnOFF').addClass('playBtn');
         $('.fancy-arrow').removeClass('opacity-100').addClass('opacity-0');
         $('.playing_progress').css('width', '0%');
         audioElement.currentTime = 0;
-        audioElement.setAttribute('src', '/../sounds/vm-voice-clean.mp3');
+        audioElement.setAttribute('src', 'sounds/vm-voice-clean.mp3');
         //$("#status").text("Status: Paused");
     });
         
@@ -212,13 +212,13 @@ var audioElement = document.createElement('audio');
 
     audioElement.addEventListener('ended', function() {
         audioElement.pause();
-        $('#pause').find('img').attr('src', '/img/misc/icons/play-icon-solo.svg');
+        $('#pause').find('img').attr('src', 'img/misc/icons/play-icon-solo.svg');
         $('#pause').find('img').attr('alt', 'Play icon');
         $('.playBtnOFF').removeClass('playBtnOFF').addClass('playBtn');
         $('.fancy-arrow').removeClass('opacity-100').addClass('opacity-0');
         $('#voiceEngineSwitch').attr('disabled', true).prop('checked', false);
         $('.fancy-arrow').removeClass('opacity-100').addClass('opacity-0');
-        audioElement.setAttribute('src', '/../sounds/vm-voice-clean.mp3');
+        audioElement.setAttribute('src', 'sounds/vm-voice-clean.mp3');
         $('#pause').attr('id', 'play');
     });
 //voice changer sample end
