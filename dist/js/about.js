@@ -61,6 +61,8 @@ ScrollTrigger.create({
     }
 });
 
+
+
 gsap.registerPlugin(ScrollTrigger);
 gsap.to('.progress-circle', {
   strokeDashoffset: 0,
