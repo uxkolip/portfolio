@@ -811,18 +811,19 @@
     
   <div class="position-fixed" id="toTop">
 
-    <button class="close-button " style="top: 15px;"><div class="icon-wrap "></div><svg class="icon icon--close icon--green-gradient" viewBox="0 0 20 20" version="1.1" aria-labelledby="title"><title>Close Screen</title><path d="M0,2.9h2.9V0H0V2.9z M2.9,5.7h2.9V2.9H2.9V5.7z M5.7,8.6h2.9V5.7H5.7V8.6z M8.6,11.4h2.9V8.6H8.6V11.4z M5.7,14.3h2.9v-2.9H5.7V14.3z M2.9,17.1h2.9v-2.9H2.9V17.1z M0,20h2.9v-2.9H0V20z M11.4,14.3h2.9v-2.9h-2.9V14.3z M14.3,17.1h2.9v-2.9h-2.9V17.1zM17.1,20H20v-2.9h-2.9V20z M11.4,8.6h2.9V5.7h-2.9V8.6z M14.3,5.7h2.9V2.9h-2.9V5.7z M17.1,2.9H20V0h-2.9V2.9z"></path></svg>
+    <button class="close-button bg-transparent" style="top: 15px;" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Go to top" data-target="#pageTop">
+      <div class="icon-wrap"></div>
+      <svg class="icon icon--close icon--green-gradient" viewBox="0 0 16 16" version="1.1" aria-labelledby="title">
+      <path d="M8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 19V1H7V19H9Z" fill="#3A2D52"/>
+      </svg>
+      <div class="progress-wrap">
+        <svg viewBox="0 0 50 50">
+          <circle class="progress-circle " cx="25" cy="25" r="22" style="stroke-dasharray: 137.4px; stroke-dashoffset: 137.4px;"></circle>
+        </svg>
+      </div>
 
-    <div class="progress-wrap"><svg viewBox="0 0 50 50"><circle class="progress-circle " cx="25" cy="25" r="22" style="stroke-dasharray: 137.4px; stroke-dashoffset: 133.69px;"></circle></svg></div>
+    </button>
 
-  </button>
-
-
-
-    <progress max="100" value="0"></progress>
-    <a href="#pageTop" class="btn btn-secondary d-none d-xl-block rounded-circle stretched-link" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Go to top">
-      <img src="img/misc/shapes/arrow-up.svg" alt="Arrow up" class="img-fluid">
-    </a>
   </div>
 
   <!-- Modal -->

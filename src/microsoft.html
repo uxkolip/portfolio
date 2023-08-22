@@ -1105,10 +1105,20 @@
   <div class="minHeight5vh"></div>
     
   <div class="position-fixed" id="toTop">
-    <progress max="100" value="0"></progress>
-    <a href="#pageTop" class="btn btn-secondary d-none d-xl-block rounded-circle stretched-link" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Go to top">
-      <img src="img/misc/shapes/arrow-up.svg" alt="Arrow up" class="img-fluid">
-    </a>
+
+    <button class="close-button bg-transparent" style="top: 15px;" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Go to top" data-target="#pageTop">
+      <div class="icon-wrap"></div>
+      <svg class="icon icon--close icon--green-gradient" viewBox="0 0 16 16" version="1.1" aria-labelledby="title">
+      <path d="M8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 19V1H7V19H9Z" fill="#3A2D52"/>
+      </svg>
+      <div class="progress-wrap">
+        <svg viewBox="0 0 50 50">
+          <circle class="progress-circle " cx="25" cy="25" r="22" style="stroke-dasharray: 137.4px; stroke-dashoffset: 137.4px;"></circle>
+        </svg>
+      </div>
+
+    </button>
+
   </div>
 
   <footer class="mt-5 pt-5">
