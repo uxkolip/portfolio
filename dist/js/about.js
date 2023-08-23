@@ -91,8 +91,8 @@ gsap.set(cards, {
     scale: .1,
     yPercent: 0,
     rotate: 0,
-    filter: 'blur(10px)',
-})
+    filter: 'blur(10px)'
+});
 
 gsap.to(".design-card", {
     yPercent: -15,

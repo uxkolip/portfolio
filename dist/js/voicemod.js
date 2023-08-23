@@ -207,3 +207,58 @@ var audioElement = document.createElement('audio');
         audioElement.setAttribute('src', 'sounds/vm-voice-clean.mp3');
         $('#pause').attr('id', 'play');
     });
+
+
+$(document).on('click', '.competitive-analysis .nav-link', function(){
+  var targetElement = $('.analysis-container div');
+
+  var currentId = $(this).attr('id');
+  switch (currentId) {
+    case 'analysisBtn01':
+      targetElement.removeClass('d-none');
+      targetElement.addClass('d-none');
+      $('.analysis-01').removeClass('d-none').addClass('d-block');
+      $(this).closest('.competitive-analysis').find('.active').removeClass('active');
+      $(this).addClass('active');
+      break;
+    case 'analysisBtn02':
+      targetElement.removeClass('d-none');
+      targetElement.addClass('d-none');
+      $('.analysis-02').removeClass('d-none').addClass('d-block');
+      $(this).closest('.competitive-analysis').find('.active').removeClass('active');
+      $(this).addClass('active');
+      break;
+    case 'analysisBtn03':
+      targetElement.removeClass('d-none');
+      targetElement.addClass('d-none');
+      $('.analysis-03').removeClass('d-none').addClass('d-block');
+      $(this).closest('.competitive-analysis').find('.active').removeClass('active');
+      $(this).addClass('active');
+      break;
+    case 'analysisBtn04':
+      targetElement.removeClass('d-none');
+      targetElement.addClass('d-none');
+      $('.analysis-04').removeClass('d-none').addClass('d-block');
+      $(this).closest('.competitive-analysis').find('.active').removeClass('active');
+      $(this).addClass('active');
+      break;
+    case 'analysisBtn05':
+      targetElement.removeClass('d-none');
+      targetElement.addClass('d-none');
+      $('.analysis-05').removeClass('d-none').addClass('d-block');
+      $(this).closest('.competitive-analysis').find('.active').removeClass('active');
+      $(this).addClass('active');
+      break;
+    default:
+      break;
+  }
+
+  });
+
+
+
+
+
+
+
+

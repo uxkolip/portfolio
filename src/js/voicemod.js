@@ -231,3 +231,62 @@ var audioElement = document.createElement('audio');
         $('#pause').attr('id', 'play');
     });
 //voice changer sample end
+
+
+//competitive analysis
+$(document).on('click', '.competitive-analysis .nav-link', function(){
+  var targetElement = $('.analysis-container div');
+    
+  // Get the current class
+  var currentId = $(this).attr('id');
+  // Use a switch statement to toggle classes
+  switch (currentId) {
+    case 'analysisBtn01':
+      targetElement.removeClass('d-none');
+      targetElement.addClass('d-none');
+      $('.analysis-01').removeClass('d-none').addClass('d-block');
+      $(this).closest('.competitive-analysis').find('.active').removeClass('active');
+      $(this).addClass('active');
+      break;
+    case 'analysisBtn02':
+      targetElement.removeClass('d-none');
+      targetElement.addClass('d-none');
+      $('.analysis-02').removeClass('d-none').addClass('d-block');
+      $(this).closest('.competitive-analysis').find('.active').removeClass('active');
+      $(this).addClass('active');
+      break;
+    case 'analysisBtn03':
+      targetElement.removeClass('d-none');
+      targetElement.addClass('d-none');
+      $('.analysis-03').removeClass('d-none').addClass('d-block');
+      $(this).closest('.competitive-analysis').find('.active').removeClass('active');
+      $(this).addClass('active');
+      break;
+    case 'analysisBtn04':
+      targetElement.removeClass('d-none');
+      targetElement.addClass('d-none');
+      $('.analysis-04').removeClass('d-none').addClass('d-block');
+      $(this).closest('.competitive-analysis').find('.active').removeClass('active');
+      $(this).addClass('active');
+      break;
+    case 'analysisBtn05':
+      targetElement.removeClass('d-none');
+      targetElement.addClass('d-none');
+      $('.analysis-05').removeClass('d-none').addClass('d-block');
+      $(this).closest('.competitive-analysis').find('.active').removeClass('active');
+      $(this).addClass('active');
+      break;
+    default:
+      break;
+  }
+  
+});
+//competitive analysis end
+
+
+
+
+
+
+
+
