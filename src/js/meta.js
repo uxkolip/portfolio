@@ -92,11 +92,6 @@ gsap.to('.progress-circle', {
 
 
 //lottie
-var metaHeroAnimation = bodymovin.loadAnimation({
-  container: document.getElementById('meta-hero-lottie'), // Required
-  path: 'js/lottie-files/meta-hero-lottie.json', // Required
-  renderer: 'svg', // Required
-  loop: true, // Optional
-  autoplay: true
-});
+//const player = document.getElementById("lottiePlayer");
+//player.playOnShow();
 //lottie end

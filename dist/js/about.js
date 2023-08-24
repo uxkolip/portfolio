@@ -15,9 +15,11 @@ $(window).resize(function() {
     checkiftooltip();
 });
 
+//smooth scroll
     const lenis = new Lenis()
 
     lenis.on('scroll', (e) => {
+      //console.log(e)
     })
 
     function raf(time) {
@@ -41,12 +43,16 @@ $(window).resize(function() {
       });
     })
 
+    //scroll toTop
     $(window).scroll(function() {
         $(this).scrollTop() > 800 ? $("#toTop").fadeIn("fast", function() {}) : $("#toTop").fadeOut("fast")
     });
+    //scroll toTop end
+    
+//smooth scroll end
 
 
-
+//navbar show on scroll up
 const showAnim = gsap.from('.main-navbar', { 
     yPercent: -100,
     paused: true,
@@ -60,9 +66,19 @@ ScrollTrigger.create({
         self.direction === -1 ? showAnim.play() : showAnim.reverse()
     }
 });
+//navbar show on scroll up end
+
+// page progress
+/*gsap.registerPlugin(ScrollTrigger);
+gsap.to('progress', {
+  value: 100,
+  ease: 'none',
+  scrollTrigger: { scrub: 0.3 }
+});*/
+// page progress end
 
 
-
+// page progress
 gsap.registerPlugin(ScrollTrigger);
 gsap.to('.progress-circle', {
   strokeDashoffset: 0,
@@ -79,8 +95,10 @@ gsap.to('.progress-circle', {
       } 
   }
 });
+// page progress end
 
 
+// workspaces scroller
 gsap.registerPlugin(ScrollTrigger);
 
 const cards = $(".design-card");
@@ -102,6 +120,8 @@ gsap.to(".design-card", {
     rotate: 0,
     scale: 1,
     filter: 'blur(0px)',
+    //x: 100,
+    //y: -50,
     scrollTrigger: {
         trigger: ".design-cards",
         pin: true,
@@ -110,3 +130,4 @@ gsap.to(".design-card", {
         end: "5900px"
     }
 });
+// workspaces scroller end

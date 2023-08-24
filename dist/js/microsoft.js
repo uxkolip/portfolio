@@ -18,9 +18,11 @@ $(window).resize(function() {
     checkiftooltip();
 });
 
+//smooth scroll
     const lenis = new Lenis()
 
     lenis.on('scroll', (e) => {
+      //console.log(e)
     })
 
     function raf(time) {
@@ -44,12 +46,16 @@ $(window).resize(function() {
       });
     })
 
+    //scroll toTop
     $(window).scroll(function() {
         $(this).scrollTop() > 800 ? $("#toTop").fadeIn("fast", function() {}) : $("#toTop").fadeOut("fast")
     });
+    //scroll toTop end
 
+//smooth scroll end
+ 
 
-
+//navbar show on scroll up
 const showAnim = gsap.from('.main-navbar', { 
     yPercent: -100,
     paused: true,
@@ -63,7 +69,9 @@ ScrollTrigger.create({
         self.direction === -1 ? showAnim.play() : showAnim.reverse()
     }
 });
+//navbar show on scroll up end
 
+// page progress
 gsap.registerPlugin(ScrollTrigger);
 gsap.to('.progress-circle', {
   strokeDashoffset: 0,
@@ -80,4 +88,5 @@ gsap.to('.progress-circle', {
       } 
   }
 });
+// page progress end
 
