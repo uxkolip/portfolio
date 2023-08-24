@@ -141,5 +141,5 @@ gulp.task('default', ['watch']);
 
 // Gulp Build Task
 gulp.task('build', function() {
-  runSequence('clean', 'sass','minify-css','minifyhtml', 'jsmin', 'fonts', 'video', 'sounds', 'defaultimport', 'strip', 'imagemin');
+  runSequence('clean', 'sass','minify-css','minifyhtml', 'jsmin', 'fonts', 'video', 'sounds', 'defaultimport',  'imagemin');
 });
