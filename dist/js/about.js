@@ -99,35 +99,38 @@ gsap.to('.progress-circle', {
 
 
 // workspaces scroller
-gsap.registerPlugin(ScrollTrigger);
+/*gsap.registerPlugin(ScrollTrigger);
 
 const cards = $(".design-card");
 
 gsap.set(cards, {
     position: "absolute",
-    opacity: 0,
+    opacity: 1,
     scale: .1,
-    yPercent: 0,
+    yPercent: 100,
+    xPercent: 0,
     rotate: 0,
     filter: 'blur(10px)'
 });
 
 gsap.to(".design-card", {
-    yPercent: -15,
-    stagger: 5000,
+    yPercent: 0,
+    xPercent: 0,
+    stagger: 1000,
     duration: 1400,
     opacity: 1,
     rotate: 0,
     scale: 1,
     filter: 'blur(0px)',
-    //x: 100,
-    //y: -50,
     scrollTrigger: {
         trigger: ".design-cards",
         pin: true,
         scrub: true,
         start: "-20%",
         end: "5900px"
-    }
-});
+    },
+    onComplete: self => {
+       $(this).fadeOut();
+  },
+});*/
 // workspaces scroller end
