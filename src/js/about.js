@@ -9,6 +9,23 @@ function checkiftooltip() {
 
 $(document).ready(function() {
     checkiftooltip();
+
+    $.get("https://api.openweathermap.org/data/2.5/weather?q=Athens&units=metric&appid=cc645b18d5f5a4906bf8bdc7f9137124", function(athData) {
+        setTimeout(function() {
+            var temp = athData.main.temp
+            var truncatedTemp = temp.toFixed(0);
+            $('#athTemp').html(truncatedTemp + '°C')
+        }, 300);
+    });
+
+    $.get("https://api.openweathermap.org/data/2.5/weather?q=Amsterdam&units=metric&appid=cc645b18d5f5a4906bf8bdc7f9137124", function(amsData) {
+        setTimeout(function() {
+            var temp = amsData.main.temp
+            var truncatedTemp = temp.toFixed(0);
+            $('#amsTemp').html(truncatedTemp + '°C')
+        }, 100);
+    });
+
 }); 
 
 $(window).resize(function() {
@@ -97,6 +114,14 @@ gsap.to('.progress-circle', {
 });
 // page progress end
 
+
+//get weather from https://home.openweathermap.org
+
+
+//http://api.openweathermap.org/geo/1.0/direct?q=Athens,ATH,GR&limit={limit}&appid=572411f622250c0eadb58134c8a65cb5
+//http://api.openweathermap.org/geo/1.0/direct?q=Athens&limit=5&appid=572411f622250c0eadb58134c8a65cb5
+
+//get weather from https://home.openweathermap.org end
 
 // workspaces scroller
 /*gsap.registerPlugin(ScrollTrigger);
