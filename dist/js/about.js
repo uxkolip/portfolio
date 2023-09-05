@@ -10,6 +10,7 @@ function checkiftooltip() {
 $(document).ready(function() {
     checkiftooltip();
 
+    //get athens' temp
     $.get("https://api.openweathermap.org/data/2.5/weather?q=Athens&units=metric&appid=cc645b18d5f5a4906bf8bdc7f9137124", function(athData) {
         setTimeout(function() {
             var temp = athData.main.temp
@@ -18,6 +19,7 @@ $(document).ready(function() {
         }, 300);
     });
 
+    //get amsterdam's temp
     $.get("https://api.openweathermap.org/data/2.5/weather?q=Amsterdam&units=metric&appid=cc645b18d5f5a4906bf8bdc7f9137124", function(amsData) {
         setTimeout(function() {
             var temp = amsData.main.temp
@@ -25,6 +27,8 @@ $(document).ready(function() {
             $('#amsTemp').html(truncatedTemp + '°C')
         }, 100);
     });
+
+    //end temps
 
 }); 
 

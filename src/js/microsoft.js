@@ -19,7 +19,7 @@ $(window).resize(function() {
 });
 
 //smooth scroll
-    const lenis = new Lenis()
+/*    const lenis = new Lenis()
 
     lenis.on('scroll', (e) => {
       //console.log(e)
@@ -49,10 +49,8 @@ $(window).resize(function() {
     //scroll toTop
     $(window).scroll(function() {
         $(this).scrollTop() > 800 ? $("#toTop").fadeIn("fast", function() {}) : $("#toTop").fadeOut("fast")
-    });
-    //scroll toTop end
-
-//smooth scroll end
+    });*/
+//scroll toTop end
  
 
 //navbar show on scroll up
@@ -90,3 +88,33 @@ gsap.to('.progress-circle', {
 });
 // page progress end
 
+//old - new switch
+ $(document).on("click", "#oldNewSwitch", function() {
+    // Check if the switch is checked or not
+    if ($(this).prop("checked")) {
+        // If checked, change the image source to image2.jpg
+        $("#oldNewImageContainer").attr("src", "img/misc/elements/power-automate-desktop.jpg");
+        $("#oldNewImageContainer").attr("alt", "Screenshot from Power Automate Desktop");
+    } else {
+        // If not checked, change the image source back to image1.jpg
+        $("#oldNewImageContainer").attr("src", "img/misc/elements/winautomation-old.jpg");
+        $("#oldNewImageContainer").attr("alt", "Screenshot from WinAutomation");
+    }
+});
+//old - new switch end
+
+
+ //accessibility switch
+ $(document).on("click", "#accessibilitySwitch", function() {
+    // Check if the switch is checked or not
+    if ($(this).prop("checked")) {
+        // If checked, change the image source to image2.jpg
+        $("#accessibilityImgContainer").attr("src", "img/misc/elements/pad-high-contrast.png");
+        $("#accessibilityImgContainer").attr("alt", "High contrast version");
+    } else {
+        // If not checked, change the image source back to image1.jpg
+        $("#accessibilityImgContainer").attr("src", "img/misc/elements/pad-no-high-contrast.png");
+        $("#accessibilityImgContainer").attr("alt", "Regular version");
+    }
+});
+//accessibility switch end

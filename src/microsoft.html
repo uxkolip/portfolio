@@ -229,7 +229,7 @@
         <div class="container mt-5">
             <div class="row">
               
-              <div class="col-12 col-xl-8 pe-lg-0" data-bs-spy="scroll" data-bs-target="#voicemodScrollspy" data-bs-smooth-scroll="true" tabindex="0">
+              <div class="col-12 col-xl-9 pe-lg-0" data-bs-spy="scroll" data-bs-target="#voicemodScrollspy" data-bs-smooth-scroll="true" tabindex="0">
                 <div id="overview" class="row">
                   <div class="col-12">
                     <h2 class="section-title">Overview</h2>
@@ -422,7 +422,7 @@
 
               <div class="minHeight10vh"></div>
 
-              <div id="goals" class="row my-5 py-5">
+              <div id="goals" class="row mb-5 py-5">
                 <div class="col-12">
                   <h2 class="section-title">Design goals</h2>
                   <p class="mt-4">The design process for WinAutomation commenced with thorough internal research. I engaged in discussions with key stakeholders, including designers, developers, managers, the CTO and the CEO.</p>
@@ -542,7 +542,7 @@
                   <p>We embarked on a transformational journey by introducing colors, updating the icons into with a contemporary flat style, enhancing layouts and incorporating helpful illustrations.</p>
                 </div>
 
-                <div class="col-12 mt-5">
+                <div class="col-12 mt-4">
 
                   <div class="form-check form-switch d-flex justify-content-center ps-0 mt-4">
                     <label class="form-check-label font-weight-bold" for="oldNewSwitch">Old</label>
@@ -552,11 +552,9 @@
 
                 </div>
 
-                <div class="col-12 mt-4">
+                <div class="col-12 mt-4 text-center">
 
-                  <img src="img/misc/elements/winautomation-old.jpg" alt="Screenshot from WinAutomation" class="img-fluid large-shadow the-border border-radius" />
-
-                  <img src="img/misc/elements/power-automate-desktop.jpg" alt="Screenshot from Power Automate Desktop" class="img-fluid large-shadow the-border border-radius d-none" />
+                  <img id="oldNewImageContainer" src="img/misc/elements/winautomation-old.jpg" alt="Screenshot from WinAutomation" class="img-fluid large-shadow the-border" style="height: 591px" />
 
                 </div>
 
@@ -675,57 +673,117 @@
               </div>            
             </div>
 
-
             <div class="minHeight15vh"></div>
 
-
-            <div id="accessibility" class="row my-5 py-5">
-              <div class="col-12 border-radius p-5" style="background: #1F1F1F">
-                <h2 class="section-title text-background">Accessibility</h2>
-
-                <div class="row">
-                  <div class="col-12 col-lg-6">
-                    <p class="mt-4 text-background font-weight-bold">Why it matters</p>
-                    <p class="text-background">Every human on the planet approaches situations differently.</p>
-                    <p class="text-background">We all have different ways to think about problems, different things we need to make decisions and different ways we like to learn.</p>
-                    <p class="text-background">— Cambridge Cognition</p>                    
-                  </div>
-
-                  <div class="col-12 col-lg-6 text-end">
-                    <img src="img/misc/illustrations/accessibility-group.svg" alt="Users with different needs" class="img-fluid w-75 mt-4" />
-                  </div>
-
-                </div>
-
-              </div>
-            </div>
-
-
-            <div class="minHeight15vh"></div>
-
-
-            <div id="designSystem" class="row my-5 py-5">
-              <div class="col-12">
-                <h2 class="section-title">Design system</h2>
-
-                <div class="row">
-                  <div class="col-12 col-lg-6">
-                    <p class="mt-4">When I joined WinAutomation, there was no established design system in place. Although the team had intentions to creating one, we had been preoccupied with other priorities.</p>
-                    <p>One of my responsibilities was to initiate the process by carefully analyzing the existing patterns and compiling an inventory of design assets and components across the entire Softomotive product family.</p>                    
-                  </div>
-
-                  <div class="col-12 col-lg-6">
-                    <p class="mt-4">Just as I began the componentization process, the company underwent acquisition by Microsoft. Consequently, I shifted gears and transitioned to utilizing Microsoft's renowned Fluent design system, aligning our efforts with their established framework.</p>
-                  </div>
-
-                </div>
-
+            <div id="accessibility" class="row">
                 
+                <div style="background: #1F1F1F" class="col-12 position-relative minHeight10vh border-radius p-5">
+
+                  <div class="container">
+                    <div class="row">
+
+                      <div class="col-12">
+                        <h2 class="section-title text-background">Accessibility</h2></div><div class="col-12 col-lg-6">
+                        <p class="mt-4 text-background font-weight-bold">Why it matters</p>
+                        <p class="text-background">Every human on the planet approaches situations differently.</p>
+                        <p class="text-background">We all have different ways to think about problems, different things we need to make decisions and different ways we like to learn.</p>
+                        <p class="text-background">— Cambridge Cognition</p>
+                      </div>
+
+                      <div class="col-12 col-lg-6 text-end">
+                        <img src="img/misc/illustrations/accessibility-group.svg" alt="Users with different needs" class="img-fluid mt-5">
+                      </div>                        
+                      
+                    </div>
+
+                    <div class="row mt-5 pt-5">
+
+                      <div class="col-12 col-lg-6">
+                        <img src="img/misc/illustrations/accessibility-group-2.svg" alt="Users with different needs" class="img-fluid">
+                      </div>
+
+                      <div class="col-12 col-lg-5 offset-lg-1">
+                        <p class="text-background font-weight-bold">Inclusive design principles</p>
+                        <p class="text-background">My work was based on three principles:</p>
+                        <ul class="text-background">
+                          <li>Recognize exclusion</li>
+                          <li>Learn from diversity</li>
+                          <li>Solve for one, extend to many</li>
+                        </ul>
+                        <p class="text-background">Throughout the development process, I meticulously oversaw the implementation, ensuring that screen readers and high contrast modes seamlessly integrated with the UI/UX without any disruptions.</p>
+                      </div>
+                      
+                    </div>
+
+                    <div class="row">
+
+                      <div class="col-12 mt-4">
+
+                        <div class="form-check form-switch d-flex justify-content-center ps-0 mt-4">
+                          <label class="form-check-label text-background font-weight-bold" for="accessibilitySwitch">Regular</label>
+                          <input class="form-check-input mx-5" type="checkbox" role="switch" id="accessibilitySwitch" style="transform: scale(2);" checked="">
+                          <label class="form-check-label text-background font-weight-bold" for="accessibilitySwitch">High contrast</label>
+                        </div>
+
+                      </div>
+
+                      <div class="col-12 mt-5">
+                        <img id="accessibilityImgContainer" src="img/misc/elements/pad-high-contrast.png" alt="Power Automate Desktop without high contrast" class="img-fluid">
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>            
               </div>
+
+
+            <div class="minHeight15vh"></div>
+
+            <div id="designSystem" class="row p-5 border-radius" style="background-image: url('img/misc/elements/fluent-background.jpg'); background-repeat: no-repeat; background-size: cover;">
+                
+                <div class="col-12 position-relative">
+
+                      <div class="background-blur bg-background bg-opacity-50 position-absolute start-50 top-50 translate-middle minHeight95vh w-100 border-radius" style="backdrop-filter: blur(34px)"></div>
+
+                      <div class="container position-relative py-5" style="z-index: 1000">
+                        <div class="row">
+
+                          <div class="col-12">
+                            <h2 class="section-title">Design system</h2>
+                          </div>
+
+                          <div class="col-12 col-lg-6">
+                            <p class="mt-4">When I joined WinAutomation, there was no established design system in place. Although the team had intentions to creating one, we had been preoccupied with other priorities.</p>
+                            <p>One of my responsibilities was to initiate the process by carefully analyzing the existing patterns and compiling an inventory of design assets and components across the entire Softomotive product family.</p>                    
+                          </div>
+
+                          <div class="col-12 col-lg-6">
+                            <p class="mt-4">Just as I began the componentization process, the company underwent acquisition by Microsoft. Consequently, I shifted gears and transitioned to utilizing Microsoft's renowned Fluent design system, aligning our efforts with their established framework.</p>
+                          </div>
+
+                          <div class="row">
+
+                            <div class="col-12 col-lg">
+                              <img src="img/misc/elements/fluent-typography.png" alt="PAD Typography" class="img-fluid mt-4" />
+                            </div>
+
+                            <div class="col-12 col-lg">
+                              <img src="img/misc/elements/pad-theme.png" alt="PAD Theme" class="img-fluid mt-4" />
+                            </div>
+
+                            <div class="col-12 col-lg">
+                              <img src="img/misc/elements/fluent-buttons.png" alt="PAD Buttons" class="img-fluid mt-4" />
+                            </div>                        
+                            
+                          </div>
+                          
+                        </div>                  
+
+                    </div>
+
+              </div>            
             </div>
-
-
-
 
 
             <div class="minHeight10vh"></div>
@@ -1010,8 +1068,6 @@
 
 
 
-
-
           </div>
           <div class="col-3 col-xl-2 ms-auto d-none d-xl-block top10px">
             <div class="sticky-top">
@@ -1157,7 +1213,7 @@
     <script src="js/lottie.min.js"></script>
     <script src="js/gsap-latest-beta.min.js"></script>
     <script src="js/ScrollTrigger.min.js"></script>
-    <script src="js/lenis.min.js"></script>
+    <!-- <script src="js/lenis.min.js"></script> -->
     <script src="js/microsoft.js?v=1"></script>
   </body>
 </html>
