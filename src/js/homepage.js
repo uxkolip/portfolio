@@ -33,14 +33,20 @@ $(window).resize(function() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        lenis.scrollTo(this.getAttribute('href'))
+        lenis.scrollTo(this.getAttribute('href'));
+        setTimeout(function() {
+          showAnim.reverse();
+        }, 3050);
       });
     })
 
     document.querySelectorAll('[data-target^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        lenis.scrollTo(this.getAttribute('data-target'))
+        lenis.scrollTo(this.getAttribute('data-target'));
+        setTimeout(function() {
+          showAnim.reverse();
+        }, 3050);
       });
     })
 

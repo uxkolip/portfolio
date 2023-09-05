@@ -35,14 +35,20 @@ $(window).resize(function() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        lenis.scrollTo(this.getAttribute('href'))
+        lenis.scrollTo(this.getAttribute('href'));
+        setTimeout(function() {
+          showAnim.reverse();
+        }, 3050);
       });
     })
 
     document.querySelectorAll('[data-target^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        lenis.scrollTo(this.getAttribute('data-target'))
+        lenis.scrollTo(this.getAttribute('data-target'));
+        setTimeout(function() {
+          showAnim.reverse();
+        }, 3050);
       });
     })
 
@@ -137,9 +143,9 @@ $(document).on('click', '.voiceChangeContainer .form-check', function() {
     var voiceId = "#" + $(this).find('input').attr('id');
     $(voiceId).attr("checked", true);
     $('.voiceChangeContainer .form-check').removeClass('activeVoice');
-    $('.voiceChangeContainer .form-check p').removeClass('text-white');
+    $('.voiceChangeContainer .form-check p').removeClass('text-background');
     $(voiceId).closest('.form-check').addClass('activeVoice');
-    $(voiceId).closest('.form-check').find('p').addClass('text-white');
+    $(voiceId).closest('.form-check').find('p').addClass('text-background');
 });
 // voice changer radios end
 
@@ -201,7 +207,7 @@ var audioElement = document.createElement('audio');
     });
 
     $(document).on('click', '.voiceChangeContainer .form-check', function() {
-        console.log('allagi fonis');
+        /*console.log('allagi fonis');*/
         $('#voiceEngineSwitch').attr('disabled', true).prop('checked', false);
         audioElement.pause();
         $('#pause').find('img').attr('src', 'img/misc/icons/play-icon-solo.svg');
@@ -285,8 +291,65 @@ $(document).on('click', '.competitive-analysis .nav-link', function(){
 
 
 
+//drag to scroll
+var isDragging = false;
+var startX, scrollLeft;
+
+$("#userJourneyScroll").mousedown(function(e) {
+    e.preventDefault();
+    isDragging = true;
+    startX = e.pageX - $("#userJourneyScroll").offset().left;
+    scrollLeft = $("#userJourneyScroll").scrollLeft();
+    $(this).css("cursor", "grabbing"); // Change cursor to grabbing during drag
+}).mouseup(function() {
+    isDragging = false;
+    $(this).css("cursor", "grab"); // Restore cursor to grab after drag
+});
+
+$(document).mousemove(function(e) {
+    e.preventDefault();
+    if (!isDragging) return;
+    var mouseX = e.pageX - $("#userJourneyScroll").offset().left;
+    var distance = mouseX - startX;
+    $("#userJourneyScroll").scrollLeft(scrollLeft - distance);
+}).mouseup(function() {
+    isDragging = false;
+});
 
 
 
 
 
+var isDraggingWireframes = false;
+var startXWireframes, scrollLeftWireframes;
+
+$("#wireframesScroll").mousedown(function(e) {
+    e.preventDefault();
+    isDraggingWireframes = true;
+    startXWireframes = e.pageX - $("#wireframesScroll").offset().left;
+    scrollLeftWireframes = $("#wireframesScroll").scrollLeft();
+    $(this).css("cursor", "grabbing"); // Change cursor to grabbing during drag
+}).mouseup(function() {
+    isDraggingWireframes = false;
+    $(this).css("cursor", "grab"); // Restore cursor to grab after drag
+});
+
+$(document).mousemove(function(e) {
+    e.preventDefault();
+    if (!isDraggingWireframes) return;
+    var mouseX = e.pageX - $("#wireframesScroll").offset().left;
+    var distance = mouseX - startXWireframes;
+    $("#wireframesScroll").scrollLeft(scrollLeftWireframes - distance);
+}).mouseup(function() {
+    isDraggingWireframes = false;
+});
+//drag to scroll end
+
+
+//show research plan
+function showResearchPlan() {
+  $('#research').removeClass('d-none');
+  $('.researchPlanBtn').addClass('d-none');
+  lenis.scrollTo('#research');
+}
+//show research plan end

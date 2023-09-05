@@ -35,14 +35,20 @@ $(window).resize(function() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        lenis.scrollTo(this.getAttribute('href'))
+        lenis.scrollTo(this.getAttribute('href'));
+        setTimeout(function() {
+          showAnim.reverse();
+        }, 3050);
       });
     })
 
     document.querySelectorAll('[data-target^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        lenis.scrollTo(this.getAttribute('data-target'))
+        lenis.scrollTo(this.getAttribute('data-target'));
+        setTimeout(function() {
+          showAnim.reverse();
+        }, 3050);
       });
     })
 
@@ -95,3 +101,59 @@ gsap.to('.progress-circle', {
 //const player = document.getElementById("lottiePlayer");
 //player.playOnShow();
 //lottie end
+
+
+
+//drag to scroll
+var isDragging = false;
+var startX, scrollLeft;
+
+$("#userJourneyScroll").mousedown(function(e) {
+    e.preventDefault();
+    isDragging = true;
+    startX = e.pageX - $("#userJourneyScroll").offset().left;
+    scrollLeft = $("#userJourneyScroll").scrollLeft();
+    $(this).css("cursor", "grabbing"); // Change cursor to grabbing during drag
+}).mouseup(function() {
+    isDragging = false;
+    $(this).css("cursor", "grab"); // Restore cursor to grab after drag
+});
+
+$(document).mousemove(function(e) {
+    e.preventDefault();
+    if (!isDragging) return;
+    var mouseX = e.pageX - $("#userJourneyScroll").offset().left;
+    var distance = mouseX - startX;
+    $("#userJourneyScroll").scrollLeft(scrollLeft - distance);
+}).mouseup(function() {
+    isDragging = false;
+});
+
+
+
+
+
+var isDraggingWireframes = false;
+var startXWireframes, scrollLeftWireframes;
+
+$("#wireframesScroll").mousedown(function(e) {
+    e.preventDefault();
+    isDraggingWireframes = true;
+    startXWireframes = e.pageX - $("#wireframesScroll").offset().left;
+    scrollLeftWireframes = $("#wireframesScroll").scrollLeft();
+    $(this).css("cursor", "grabbing"); // Change cursor to grabbing during drag
+}).mouseup(function() {
+    isDraggingWireframes = false;
+    $(this).css("cursor", "grab"); // Restore cursor to grab after drag
+});
+
+$(document).mousemove(function(e) {
+    e.preventDefault();
+    if (!isDraggingWireframes) return;
+    var mouseX = e.pageX - $("#wireframesScroll").offset().left;
+    var distance = mouseX - startXWireframes;
+    $("#wireframesScroll").scrollLeft(scrollLeftWireframes - distance);
+}).mouseup(function() {
+    isDraggingWireframes = false;
+});
+//drag to scroll end

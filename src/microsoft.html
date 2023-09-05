@@ -320,11 +320,11 @@
 
               <div id="opportunity" class="row">
                 
-                <div class="col-12 position-relative pb-5">
+                <div class="col-12 position-relative pb-4">
 
                   <div class="col-12 py-5 position-relative" style="z-index: 1022;">
                     <h2 class="section-title text-background">Opportunity</h2>
-                    <p class="mt-4 mb-5 display-5 text-background lh-lg">"How can we provide effective support to a large audience in automating their repetitive workflows by offering a modern and user-friendly tool?"</p>
+                    <p class="mt-4 mb-3 display-5 text-background lh-lg">"How can we provide effective support to a large audience in automating their repetitive workflows by offering a modern and user-friendly tool?"</p>
                   </div>
 
                   <div class="bg-primary position-absolute start-0 top-50 left-0 translate-middle minHeight100vh" style="width: 200vw; z-index: 1021;">
@@ -558,7 +558,7 @@
 
                 </div>
 
-                <div class="row mt-5">
+                <div class="row mt-5 beforeAfterBtn">
                   <div class="col-12 bg-secondary border-radius d-flex align-items-center justify-content-between p-3">
                     <img src="img/misc/icons/icons8-compare-64.png" alt="Compare icon" class="img-fluid mx-3" style="width: 40px;" />
                     <p class="font-weight-bold mb-0 pe-1">Curious about details? Dive a little deeper</p>
@@ -568,45 +568,86 @@
        
                 <div class="minHeight20vh"></div>
 
-                <div class="row">
+                <div id="beforeAfter" class="row d-none">
                     
                   <div class="col-12 position-relative">
 
                     <p><img src="img/misc/icons/winautomation-icon.png" alt="WinAutomation icon" class="img-fluid me-3" style="height: 34px" />WinAutomation (before)</p>
 
-                    <div class="row mt-5 pt-5 px-0 d-flex flex-nowrap flex-nowrap overflow-x-scroll">
-                        
-                      <div class="col-3 col-lg-3 mx-3 mb-5 px-0 position-relative d-flex align-items-center justify-content-center text-center bg-light-purple border-radius text-background large-shadow p-5 minHeight10vh">
-                        <p class="mb-0 bigger-1 py-4">Users opens VM</p>
+                     <p class="position-absolute start-0 top-50 translate-middle" style="margin-left: 180px"><img src="img/misc/icons/power-automate-desktop-icon.png" alt="Power Automate Desktop icon" class="img-fluid me-3" style="height: 34px" />Power Automate Desktop (after)</p>
+
+                    <div class="row mt-5">
+
+                      <div class="col-12">
+
+                        <div id="scrollableDiv1" class="row scrollableDiv d-flex flex-nowrap flex-nowrap overflow-x-hidden">
+                          <div class="col-5 me-5 mb-5 px-0 minHeight10vh">
+                            <img src="img/misc/elements/winautomation-layout.svg" alt="WinAutomation UI layout" title="WinAutomation UI layout" class="img-fluid" />
+                          </div>
+
+                          <div class="col-2 mx-5 mb-5 px-0 minHeight10vh">
+                            <img src="img/misc/elements/wa-right-click-menu.png" alt="WinAutomation right click menu" title="WinAutomation right click menu" class="img-fluid the-border large-shadow" />
+                          </div>
+
+                          <div class="col-4 mx-5 mb-5 px-0 minHeight10vh">
+                            <img src="img/misc/elements/wa-browser-recording.png" alt="WinAutomation right click menu" title="WinAutomation right click menu" class="img-fluid the-border large-shadow" />
+                          </div>
+
+                          <div class="col-3 mx-5 mb-5 px-0 minHeight10vh">
+                            <img src="img/misc/elements/wa-variables-pane.png" alt="WinAutomation Variables pane" title="WinAutomation Variables pane" class="img-fluid the-border large-shadow" />
+                          </div>
+
+                          <div class="col-5 mx-5 mb-5 px-0 minHeight10vh">
+                            <img src="img/misc/elements/wa-main-pane.png" alt="WinAutomation main pane" title="WinAutomation main pane" class="img-fluid the-border large-shadow" />
+                          </div>
+
+                          <div class="col-6 mx-5 mb-5 px-0 minHeight10vh">
+                            <img src="img/misc/elements/wa-icons.png" alt="WinAutomation icons" title="WinAutomation icons" class="img-fluid the-border large-shadow" />
+                          </div>
+
+                          <div class="col-6 mx-5 mb-5 px-0 minHeight10vh">
+                            <img src="img/misc/elements/wa-top-icons.png" alt="WinAutomation top icons" title="WinAutomation top icons" class="img-fluid the-border large-shadow" />
+                          </div>
+
+                        </div>
+
+                        <div id="scrollableDiv2" class="row scrollableDiv mt-5 position-relative d-flex flex-nowrap flex-nowrap overflow-x-scroll">
+                          <div class="col-5 me-5 mb-5 px-0 mt-2 minHeight10vh">
+                            <img src="img/misc/elements/pad-layout.svg" alt="Power Automate Desktop UI layout" title="Power Automate Desktop UI layout" class="img-fluid" />
+                          </div>
+
+                          <div class="col-2 mx-5 mb-5 px-0 mt-2 minHeight10vh">
+                            <img src="img/misc/elements/pad-right-click-menu.png" alt="Power Automate Desktop right click menu" title="Power Automate Desktop right click menu" class="img-fluid the-border large-shadow" />
+                          </div>
+
+                          <div class="col-4 mx-5 mb-5 px-0 mt-2 minHeight10vh">
+                            <img src="img/misc/elements/pad-browser-recording.png" alt="WinAutomation right click menu" title="WinAutomation right click menu" class="img-fluid the-border large-shadow" />
+                          </div>
+
+                          <div class="col-3 mx-5 mb-5 px-0 minHeight10vh">
+                            <img src="img/misc/elements/pad-variable-pane.png" alt="Power Automate Desktop Variables pane" title="Power Automate Desktop Variables pane" class="img-fluid the-border large-shadow" />
+                          </div>
+
+                          <div class="col-5 mx-5 mb-5 px-0 minHeight10vh">
+                            <img src="img/misc/elements/pad-main-pane.png" alt="Power Automate Desktop main pane" title="Power Automate Desktop main pane" class="img-fluid the-border large-shadow" />
+                          </div>
+
+                          <div class="col-6 mx-5 mb-5 px-0 minHeight10vh">
+                            <img src="img/misc/elements/pad-icons.png" alt="Power Automate Desktop icons" title="Power Automate Desktop icons" class="img-fluid the-border large-shadow" />
+                          </div>
+
+                          <div class="col-6 mx-5 mb-5 px-0 minHeight10vh">
+                            <img src="img/misc/elements/pad-top-icons.png" alt="Power Automate Desktop top icons" class="img-fluid the-border large-shadow" />
+                          </div>
+
+                        </div>
+
                       </div>
-
-                      <div class="col-3 col-lg-3 mx-3 mb-5 px-0 position-relative d-flex align-items-center justify-content-center text-center bg-light-purple border-radius text-background large-shadow p-5 minHeight10vh">
-                        <p class="mb-0 bigger-1 py-4">Select use case</p>
-                      </div>
-
-                    </div>
-
-
-                    <div class="minHeight20vh"></div>
-
-
-                    <p><img src="img/misc/icons/power-automate-desktop-icon.png" alt="Power Automate Desktop icon" class="img-fluid me-3" style="height: 34px" />Power Automate Desktop (after)</p>
-
-
-                    <div class="row mt-5 pt-5 px-0 d-flex flex-nowrap flex-nowrap overflow-x-scroll">
-                        
-                      <div class="col-3 col-lg-3 mx-3 mb-5 px-0 position-relative d-flex align-items-center justify-content-center text-center bg-light-purple border-radius text-background large-shadow p-5 minHeight10vh">
-                        <p class="mb-0 bigger-1 py-4">Users opens VM</p>
-                      </div>
-
-                      <div class="col-3 col-lg-3 mx-3 mb-5 px-0 position-relative d-flex align-items-center justify-content-center text-center bg-light-purple border-radius text-background large-shadow p-5 minHeight10vh">
-                        <p class="mb-0 bigger-1 py-4">Select use case</p>
-                      </div>
-
+                    
                     </div>
                     
 
-                    <div class="dotted-bg position-absolute start-0 top-50 mt-n5 translate-middle minHeight80vh" style="z-index: -1; width: 1000vh">
+                    <div class="dotted-bg position-absolute start-0 top-50 mt-n3 translate-middle minHeight100vh" style="z-index: -1; width: 1000vh">
                     </div>
 
                   </div>            
@@ -615,7 +656,7 @@
               </div>
 
 
-              <div class="minHeight25vh"></div>
+              <div class="minHeight15vh"></div>
 
 
               <div id="uxImprovements" class="row">
@@ -630,7 +671,7 @@
 
                   <p>Finally, as a team we placed great emphasis on accessibility and I conducted regular design QA (quality assurance) checks to ensure optimal usability.</p>
 
-                  <div class="row mt-5 pt-5 px-0 d-flex flex-nowrap flex-nowrap overflow-x-scroll">
+                  <div id="scrollableDivImprovements" class="row mt-5 pt-5 px-0 d-flex flex-nowrap flex-nowrap overflow-x-scroll">
                       
                     <div class="col-6 col-lg-5 mx-3 mb-5 bg-secondary border-radius the-border large-shadow p-4 minHeight5vh">
                       <img src="img/misc/icons/icons8-team-64.png" alt="Users icon" class="img-fluid mt-3" style="width: 64px;" />
@@ -727,7 +768,7 @@
 
                       </div>
 
-                      <div class="col-12 mt-5">
+                      <div class="col-12 mt-4">
                         <img id="accessibilityImgContainer" src="img/misc/elements/pad-high-contrast.png" alt="Power Automate Desktop without high contrast" class="img-fluid">
                       </div>
                     </div>
@@ -924,7 +965,7 @@
                   <div class="col-12 col-lg-6">
                     <p class="mt-4"><mark>Continuous improvement:</mark> Regular retrospective rituals provided valuable insights for refining workflows, identifying areas for improvement, and implementing adjustments to enhance future projects.</p>
 
-                    <p><mark>NEXT STEPS</mark> <br/>The journey of Power Automate Desktop is an ongoing one, marked by continuous growth and endless possibilities.</p>
+                    <p><strong>NEXT STEPS</strong> <br/>The journey of Power Automate Desktop is an ongoing one, marked by continuous growth and endless possibilities.</p>
 
                     <p>By harnessing the power of Chat GPT's technology across our product lineup, we have revolutionized the ease of building natural language-based automations.</p>
 
@@ -935,9 +976,9 @@
                 </div>
 
 
-                <div class="row mt-5 pt-5 px-0 d-flex flex-nowrap flex-nowrap overflow-x-scroll">
+                <div id="scrollableDivImages" class="row mt-5 pt-5 px-0 d-flex flex-nowrap flex-nowrap overflow-x-scroll">
                       
-                    <div class="col-8 mx-3 mb-5 bg-secondary border-radius the-border large-shadow p-0 minHeight5vh">
+                    <div class="col-5 mx-3 mb-5 bg-secondary border-radius the-border large-shadow p-0 minHeight5vh">
                       <p class="px-4 mt-2"><img src="img/misc/icons/power-automate-desktop-icon.png" alt="Power Automate Desktop icon" class="img-fluid mt-3 me-3 align-text-bottom" style="width: 24px;" />Microsoft at night</p>
                       <img src="img/misc/elements/office-at-night.jpg" alt="Microsoft at night" class="img-fluid" />
                       <p class="px-4 pt-2 my-2">
@@ -948,7 +989,7 @@
                       </p>
                     </div>
 
-                    <div class="col-8 mx-3 mb-5 bg-secondary border-radius the-border large-shadow p-0 minHeight5vh">
+                    <div class="col-5 mx-3 mb-5 bg-secondary border-radius the-border large-shadow p-0 minHeight5vh">
                       <p class="px-4 mt-2"><img src="img/misc/icons/power-automate-desktop-icon.png" alt="Power Automate Desktop icon" class="img-fluid mt-3 me-3 align-text-bottom" style="width: 24px;" />Working on the icons</p>
                       <img src="img/misc/elements/icon-design-desk.jpg" alt="Working on the icons" class="img-fluid" />
                       <p class="px-4 pt-2 my-2">
@@ -959,7 +1000,7 @@
                       </p>
                     </div>
 
-                    <div class="col-8 mx-3 mb-5 bg-secondary border-radius the-border large-shadow p-0 minHeight5vh">
+                    <div class="col-5 mx-3 mb-5 bg-secondary border-radius the-border large-shadow p-0 minHeight5vh">
                       <p class="px-4 mt-2"><img src="img/misc/icons/power-automate-desktop-icon.png" alt="Power Automate Desktop icon" class="img-fluid mt-3 me-3 align-text-bottom" style="width: 24px;" />User journeys</p>
                       <img src="img/misc/elements/savvas-ux-journey.jpg" alt="User journeys" class="img-fluid" />
                       <p class="px-4 pt-2 my-2">
@@ -970,7 +1011,7 @@
                       </p>
                     </div>
 
-                    <div class="col-8 mx-3 mb-5 bg-secondary border-radius the-border large-shadow p-0 minHeight5vh">
+                    <div class="col-5 mx-3 mb-5 bg-secondary border-radius the-border large-shadow p-0 minHeight5vh">
                       <p class="px-4 mt-2"><img src="img/misc/icons/power-automate-desktop-icon.png" alt="Power Automate Desktop icon" class="img-fluid mt-3 me-3 align-text-bottom" style="width: 24px;" />Apollo team on a typical standup</p>
                       <img src="img/misc/elements/standup-01.jpg" alt="Apollo team on a typical standup" class="img-fluid" />
                       <p class="px-4 pt-2 my-2">
@@ -981,7 +1022,7 @@
                       </p>
                     </div>
 
-                    <div class="col-8 mx-3 mb-5 bg-secondary border-radius the-border large-shadow p-0 minHeight5vh">
+                    <div class="col-5 mx-3 mb-5 bg-secondary border-radius the-border large-shadow p-0 minHeight5vh">
                       <p class="px-4 mt-2"><img src="img/misc/icons/power-automate-desktop-icon.png" alt="Power Automate Desktop icon" class="img-fluid mt-3 me-3 align-text-bottom" style="width: 24px;" />Yet another daily standup</p>
                       <img src="img/misc/elements/standup-02.jpg" alt="Yet another daily standup" class="img-fluid" />
                       <p class="px-4 pt-2 my-2">
@@ -992,7 +1033,7 @@
                       </p>
                     </div>
 
-                    <div class="col-8 mx-3 mb-5 bg-secondary border-radius the-border large-shadow p-0 minHeight5vh">
+                    <div class="col-5 mx-3 mb-5 bg-secondary border-radius the-border large-shadow p-0 minHeight5vh">
                       <p class="px-4 mt-2"><img src="img/misc/icons/power-automate-desktop-icon.png" alt="Power Automate Desktop icon" class="img-fluid mt-3 me-3 align-text-bottom" style="width: 24px;" />Apollo team in retrospective mode</p>
                       <img src="img/misc/elements/retrospective-mode.jpg" alt="Apollo team in retrospective mode" class="img-fluid" />
                       <p class="px-4 pt-2 my-2">
@@ -1003,8 +1044,8 @@
                       </p>
                     </div>
 
-                    <div class="col-8 mx-3 mb-5 bg-secondary border-radius the-border large-shadow p-0 minHeight5vh">
-                      <p class="px-4 mt-2"><img src="img/misc/icons/power-automate-desktop-icon.png" alt="Power Automate Desktop icon" class="img-fluid mt-3 me-3 align-text-bottom" style="width: 24px;" />Design team with the QA grand-master</p>
+                    <div class="col-5 mx-3 mb-5 bg-secondary border-radius the-border large-shadow p-0 minHeight5vh">
+                      <p class="px-4 mt-2"><img src="img/misc/icons/power-automate-desktop-icon.png" alt="Power Automate Desktop icon" class="img-fluid mt-3 me-3 align-text-bottom" style="width: 24px;" />Design + QA</p>
                       <img src="img/misc/elements/design-team.jpg" alt="Design team with the QA grand-master" class="img-fluid" />
                       <p class="px-4 pt-2 my-2">
                         <img src="img/misc/icons/heart-n-bubble.svg" alt="Like heart and comment bubble icons" class="img-fluid" style="height: 24px" />
@@ -1015,9 +1056,21 @@
                     </div>
 
 
-                    <div class="col-8 mx-3 mb-5 bg-secondary border-radius the-border large-shadow p-0 minHeight5vh">
+                    <div class="col-5 mx-3 mb-5 bg-secondary border-radius the-border large-shadow p-0 minHeight5vh">
                       <p class="px-4 mt-2"><img src="img/misc/icons/power-automate-desktop-icon.png" alt="Power Automate Desktop icon" class="img-fluid mt-3 me-3 align-text-bottom" style="width: 24px;" />Good ol' fun around the Xmas tree</p>
                       <img src="img/misc/elements/xmas-tree.jpg" alt="Good ol' fun around the Xmas tree" class="img-fluid" />
+                      <p class="px-4 pt-2 my-2">
+                        <img src="img/misc/icons/heart-n-bubble.svg" alt="Like heart and comment bubble icons" class="img-fluid" style="height: 24px" />
+                        <span class="float-end">
+                          <img src="img/misc/icons/bookmark-icon.svg" alt="Bookmark icon" class="img-fluid" style="height: 24px;">
+                        </span>
+                      </p>
+                    </div>
+
+
+                    <div class="col-5 mx-3 mb-5 bg-secondary border-radius the-border large-shadow p-0 minHeight5vh">
+                      <p class="px-4 mt-2"><img src="img/misc/icons/power-automate-desktop-icon.png" alt="Power Automate Desktop icon" class="img-fluid mt-3 me-3 align-text-bottom" style="width: 24px;" />Design team out and about</p>
+                      <img src="img/misc/elements/design-team-2.jpg" alt="Design team out and about" class="img-fluid" />
                       <p class="px-4 pt-2 my-2">
                         <img src="img/misc/icons/heart-n-bubble.svg" alt="Like heart and comment bubble icons" class="img-fluid" style="height: 24px" />
                         <span class="float-end">
@@ -1069,8 +1122,8 @@
 
 
           </div>
-          <div class="col-3 col-xl-2 ms-auto d-none d-xl-block top10px">
-            <div class="sticky-top">
+          <div class="col-3 col-xl-2 ms-auto d-none d-xl-block">
+            <div class="sticky-top top60px">
               <p class="smaller-3 pb-2 border border-top-0 border-start-0 border-end-0 border-the-border">On this page</p>
               <nav id="voicemodScrollspy" class="h-100 flex-column align-items-stretch mt-2">
                 <nav class="nav nav-pills flex-column smaller-4">
@@ -1111,10 +1164,10 @@
           <div class="col-12">
             <h2 class="section-title">Next project</h2>
           </div>
-          <div class="col-12 bg-secondary large-shadow border-radius the-border mt-4" style="min-height: 400px;">
+          <div class="col-12 bg-secondary large-shadow border-radius the-border mt-4 position-relative" style="min-height: 400px;">
                   
             <div class="row p-5">
-              <div class="col-12 col-lg-6 position-relative">
+              <div class="col-12 col-lg-6">
                 <img src="img/misc/logos/voicemod-logo-card.svg" alt="Voicemod logo" class="img-fluid" style="height: 26px;">
                 <p class="font-weight-bold pt-2">Senior staff product designer (full-time) <span class="badge bg-accent font-weight-normal smaller-4 ms-1">2022</span> <span class="badge bg-accent font-weight-normal smaller-4">2023</span>
                 </p>
@@ -1213,7 +1266,7 @@
     <script src="js/lottie.min.js"></script>
     <script src="js/gsap-latest-beta.min.js"></script>
     <script src="js/ScrollTrigger.min.js"></script>
-    <!-- <script src="js/lenis.min.js"></script> -->
+    <script src="js/lenis.min.js"></script>
     <script src="js/microsoft.js?v=1"></script>
   </body>
 </html>

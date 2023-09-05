@@ -107,6 +107,10 @@ mark, .mark {
   color: #FFFBF5;
 }
 
+#scrollableDiv1, #scrollableDiv2, #scrollableDivImprovements, #scrollableDivImages, #userJourneyScroll, .cursorGrab, #wireframesScroll {
+  cursor: grab;
+}
+
 .isometric-card {
   margin: 0 auto;
   /*transform: rotateX(51deg) rotateZ(43deg);*/
@@ -333,11 +337,27 @@ a:hover, button:hover, .pointer {
 }
 
 .top10px {
-  top: 10px;  
+  top: 10px;
 }
 
 .top20px {
   top: 20px;
+}
+
+.top30px {
+  top: 30px;
+}
+
+.top40px {
+  top: 40px;
+}
+
+.top50px {
+  top: 50px;
+}
+
+.top60px {
+  top: 60px;
 }
 
 .minHeight5vh {
