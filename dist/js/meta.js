@@ -97,17 +97,7 @@ gsap.to('.progress-circle', {
 // page progress end
 
 
-//lottie
-const player = document.getElementById("lottiePlaya");
 
-// Play on scroll as soon as the animation is visible
-player.playOnScroll();
-
-
-// Stop playing on scroll
-player.stopPlayOnScroll();
-
-//lottie end
 
 
 
@@ -139,7 +129,6 @@ $(document).mousemove(function(e) {
 
 
 
-
 var isDraggingWireframes = false;
 var startXWireframes, scrollLeftWireframes;
 
@@ -164,3 +153,23 @@ $(document).mousemove(function(e) {
     isDraggingWireframes = false;
 });
 //drag to scroll end
+
+
+
+
+//lottie
+const player = document.getElementById("lottiePlaya");
+
+// Play as soon as the animation is visible
+player.playOnShow();
+
+// Options:
+player.playOnShow({
+    threshold: [0.25],
+    autoplay: false
+});
+
+// Stop playing on show
+player.stopPlayOnShow();
+
+//lottie end

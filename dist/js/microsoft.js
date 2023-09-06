@@ -99,11 +99,11 @@ gsap.to('.progress-circle', {
     // Check if the switch is checked or not
     if ($(this).prop("checked")) {
         // If checked, change the image source to image2.jpg
-        $("#oldNewImageContainer").attr("src", "img/misc/elements/power-automate-desktop.jpg");
+        $("#oldNewImageContainer").attr("src", "img/misc/elements/power-automate-desktop.png");
         $("#oldNewImageContainer").attr("alt", "Screenshot from Power Automate Desktop");
     } else {
-        // If not checked, change the image source back to image1.jpg
-        $("#oldNewImageContainer").attr("src", "img/misc/elements/winautomation-old.jpg");
+        // If not checked, change the image source back to image1.png
+        $("#oldNewImageContainer").attr("src", "img/misc/elements/winautomation-old.png");
         $("#oldNewImageContainer").attr("alt", "Screenshot from WinAutomation");
     }
 });
