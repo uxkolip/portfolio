@@ -105,7 +105,7 @@ var vmHeroAnimation = bodymovin.loadAnimation({
   loop: true, // Optional
   autoplay: true
 });
-vmHeroAnimation.setSpeed(4);
+vmHeroAnimation.setSpeed(2);
 
 var vmStreamingApps = bodymovin.loadAnimation({
   container: document.getElementById('vm-streaming-apps'), // Required

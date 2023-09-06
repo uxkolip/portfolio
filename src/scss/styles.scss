@@ -111,6 +111,18 @@ mark, .mark {
   cursor: grab;
 }
 
+.userJourneyStep:not(:last-child)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 60px;
+  height: 18px;
+  margin-top: 10px;
+  margin-left: 148%;
+  background-image: url("../img/misc/shapes/arrow-right.svg");
+  background-repeat: no-repeat;
+}
+
 .isometric-card {
   margin: 0 auto;
   /*transform: rotateX(51deg) rotateZ(43deg);*/
@@ -465,14 +477,13 @@ a:hover, button:hover, .pointer {
   background-color: $dark;
 }
 
-.activeVoice:before {
+.activeVoice:after {
   content: "";
   display: block;
   position: absolute;
   width: 20px;
   height: 20px;
-  margin-top: -10px;
-  margin-left: 117px;
+  margin-top: -110px;
   background-image: url("../img/misc/shapes/checked-tick.svg");
 }
 

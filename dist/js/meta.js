@@ -98,8 +98,15 @@ gsap.to('.progress-circle', {
 
 
 //lottie
-//const player = document.getElementById("lottiePlayer");
-//player.playOnShow();
+const player = document.getElementById("lottiePlaya");
+
+// Play on scroll as soon as the animation is visible
+player.playOnScroll();
+
+
+// Stop playing on scroll
+player.stopPlayOnScroll();
+
 //lottie end
 
 
