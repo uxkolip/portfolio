@@ -124,14 +124,22 @@ gsap.to('.progress-circle', {
 });
 // page progress end
 
+//voiceflow
+(function(d, t) {
+  var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+  v.onload = function() {
+    window.voiceflow.chat.load({
+      verify: { projectID: '64f776b3d0a6dd00073f976a' },
+      url: 'https://general-runtime.voiceflow.com',
+      versionID: 'production'
+    });
+  }
+  v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; 
+  v.type = "text/javascript"; 
+  s.parentNode.insertBefore(v, s);
+})(document, 'script');
+//voiceflow end
 
-//get weather from https://home.openweathermap.org
-
-
-//http://api.openweathermap.org/geo/1.0/direct?q=Athens,ATH,GR&limit={limit}&appid=572411f622250c0eadb58134c8a65cb5
-//http://api.openweathermap.org/geo/1.0/direct?q=Athens&limit=5&appid=572411f622250c0eadb58134c8a65cb5
-
-//get weather from https://home.openweathermap.org end
 
 // workspaces scroller
 /*gsap.registerPlugin(ScrollTrigger);
@@ -169,3 +177,4 @@ gsap.to(".design-card", {
   },
 });*/
 // workspaces scroller end
+

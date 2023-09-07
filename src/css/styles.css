@@ -11931,6 +11931,9 @@ mark, .mark, .mark {
   background-image: url("../img/misc/shapes/arrow-right.svg");
   background-repeat: no-repeat; }
 
+.vfrc-launcher {
+  display: none !important; }
+
 .isometric-card {
   margin: 0 auto;
   /*transform: rotateX(51deg) rotateZ(43deg);*/
