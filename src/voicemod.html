@@ -49,6 +49,8 @@
     <link href="css/styles.css?v=1.5" rel="stylesheet">
     <title>Vasilis Kolip - Voicemod
     </title>
+    <script src="https://fast.wistia.com/embed/medias/e2zpqg3isy.jsonp" async></script>
+    <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
   </head>
   <body>
     <section class="container" id="pageTop">
@@ -126,7 +128,7 @@
 
         <div class="row mt-3">
           <div class="col-12">
-            <script src="https://fast.wistia.com/embed/medias/e2zpqg3isy.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_e2zpqg3isy seo=false videoFoam=true" style="height:100%;position:relative;width:100%">&nbsp;</div></div></div>
+            <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_e2zpqg3isy seo=false videoFoam=true" style="height:100%;position:relative;width:100%">&nbsp;</div></div></div>
           </div>
         </div>
       </div>
@@ -192,9 +194,9 @@
                 <span class="badge bg-oranje rounded-circle text-oranje smaller-6">1</span> Prototyping
               </button>
 
-              <button type="button" class="btn btn-outline-secondary py-2 mb-2 me-1 text-primary bg-secondary the-border smaller-2">
-                <span class="badge bg-mustard rounded-circle text-mustard smaller-6">1</span> Competitive analysis 
-              </button>              
+              <button type="button" class="btn btn-outline-secondary py-2 mb-2 me-1 text-primary bg-secondary the-border smaller-2 text-truncate" style="max-width: 190px;">
+                  <span class="badge bg-mustard rounded-circle text-mustard smaller-6">1</span> <span class="2" style="">Competitive analysis</span>
+                </button>              
               
               <button type="button" class="btn btn-outline-secondary py-2 mb-2 me-1 text-primary bg-secondary the-border smaller-2">
                 <span class="badge bg-light-purple rounded-circle text-light-purple smaller-6">1</span> User research
@@ -223,6 +225,8 @@
           <div class="row">
             
             <div class="col-12 col-xl-9 pe-lg-0" data-bs-spy="scroll" data-bs-target="#voicemodScrollspy" data-bs-smooth-scroll="true" tabindex="0">
+              
+
               <div id="overview" class="row">
                 <div class="col-12">
                   <h2 class="section-title">Overview</h2>
@@ -232,28 +236,26 @@
 
                   <div class="row mt-5 pt-5">
 
-                    <div class="col-4 text-center">                      
+                    <div class="col-6 col-lg-4 text-center mb-5">                      
                       <div id="vm-streaming-apps" class="col p-3 large-shadow border-radius mx-auto" style="height: 114px; width: 114px"></div>
                       <p class="text-uppercase mt-3 mb-2">Video streaming apps</p>
                       <p class="smaller-4">Jazz up your live streams</p>
                     </div>
 
-                    <div class="col-4 text-center">                      
+                    <div class="col-6 col-lg-4 text-center mb-5">                      
                       <div id="vm-meeting-apps" class="col p-3 large-shadow border-radius mx-auto" style="height: 114px; width: 114px"></div>
                       <p class="text-uppercase mt-3 mb-2">Meeting apps</p>
                       <p class="smaller-4">Add some humor to your meetings</p>
                     </div>
 
-                    <div class="col-4 text-center">                      
+                    <div class="col-6 col-lg-4 text-center mb-5">                      
                       <div id="vm-metaverse-apps" class="col p-3 large-shadow border-radius mx-auto" style="height: 114px; width: 114px"></div>
                       <p class="text-uppercase mt-3 mb-2">Metaverse apps</p>
                       <p class="smaller-4">Anonymize your virtual presence in the Metaverse</p>
                     </div>
-                  </div>
+        
 
-                  <div class="row mt-5">
-
-                    <div class="col-4 text-center">
+                    <div class="col-6 col-lg-4 text-center mb-5">
                       <video width="114" height="114" autoplay loop muted style="object-fit: cover;" class="border-radius">
                         <source src="video/fun-gaming-2.mp4" type="video/mp4">
                         Your browser does not support the video tag.
@@ -262,7 +264,7 @@
                       <p class="smaller-4">Transform your gaming experience</p>
                     </div>
 
-                    <div class="col-4 text-center">                      
+                    <div class="col-6 col-lg-4 text-center mb-5">                      
                       <video width="114" height="114" autoplay loop muted style="object-fit: cover;" class="border-radius">
                         <source src="video/role-play.mp4" type="video/mp4">
                         Your browser does not support the video tag.
@@ -271,7 +273,7 @@
                       <p class="smaller-4">Immerse yourself in character and interact</p>
                     </div>
 
-                    <div class="col-4 text-center">                      
+                    <div class="col-6 col-lg-4 text-center mb-5">                      
                       <video width="114" height="114" autoplay loop muted style="object-fit: cover;" class="border-radius">
                         <source src="video/content-creator-2.mp4" type="video/mp4">
                          Your browser does not support the video tag.
@@ -397,26 +399,34 @@
                   <p class="mt-4">Our "uninstall survey" (a survey that pops up when the user uninstalls the app) revealed a high dropout rate. New users were experiencing problems due to difficulty in setting up the app correctly.</p>
                   <p>25% of new users uninstalled within 24 hours due to lack of experience in using audio software; they couldn't set-up their gear properly, didn't know what was wrong and how to connect to a third party app.</p>
 
-                  <div class="row mt-5 grid gap-3 pt-5">
+                  <div class="row mt-5 grid gap-0 gap-lg-3 pt-5">
 
-                    <div class="col bg-secondary the-border large-shadow border-radius text-center py-4 px-3">
-                      <img src="img/misc/icons/icons8-software-installer-64.png" alt="Download icon" class="img-fluid" style="height: 32px; width: 32px;">
-                      <p class="mt-3 mb-0">Downloaded</p>
+                    <div class="col-6 col-lg mb-4">
+                      <div class="col-12 bg-secondary the-border large-shadow border-radius text-center py-4 px-3">
+                        <img src="img/misc/icons/icons8-software-installer-64.png" alt="Download icon" class="img-fluid" style="height: 32px; width: 32px;">
+                        <p class="mt-3 mb-0">Downloaded</p>
+                      </div>
                     </div>
 
-                    <div class="col bg-secondary the-border large-shadow border-radius text-center py-4 px-3">
-                      <img src="img/misc/icons/icons8-download-64.png" alt="Installation icon" class="img-fluid" style="height: 32px; width: 32px;">
-                      <p class="mt-3 mb-0">Installed</p>
+                    <div class="col-6 col-lg mb-4">
+                      <div class="col-12 bg-secondary the-border large-shadow border-radius text-center py-4 px-3">
+                        <img src="img/misc/icons/icons8-download-64.png" alt="Installation icon" class="img-fluid" style="height: 32px; width: 32px;">
+                        <p class="mt-3 mb-0">Installed</p>
+                      </div>
                     </div>
 
-                    <div class="col bg-secondary the-border large-shadow border-radius text-center py-4 px-3">
-                      <img src="img/misc/icons/icons8-concerned-face-64.png" alt="Troubled user icon" class="img-fluid" style="height: 32px; width: 32px;">
-                      <p class="mt-3 mb-0 lh-sm">24.6% of the users faced issues</p>
+                    <div class="col-6 col-lg mb-4">
+                      <div class="col-12 bg-secondary the-border large-shadow border-radius text-center py-4 px-3">
+                        <img src="img/misc/icons/icons8-concerned-face-64.png" alt="Troubled user icon" class="img-fluid" style="height: 32px; width: 32px;">
+                        <p class="mt-3 mb-0 lh-sm">24.6% of the users faced issues</p>
+                      </div>
                     </div>
 
-                    <div class="col bg-secondary the-border large-shadow border-radius text-center py-4 px-3">
-                      <img src="img/misc/icons/icons8-trash-64.png" alt="Uninstall icon" class="img-fluid" style="height: 32px; width: 32px;">
-                      <p class="mt-3 mb-0">Uninstalled</p>
+                    <div class="col-6 col-lg mb-4">
+                      <div class="col-12 bg-secondary the-border large-shadow border-radius text-center py-4 px-3">
+                        <img src="img/misc/icons/icons8-trash-64.png" alt="Uninstall icon" class="img-fluid" style="height: 32px; width: 32px;">
+                        <p class="mt-3 mb-4">Uninstalled</p>
+                      </div>
                     </div>
 
                     <div class="col-10 mx-auto mt-3 text-center position-relative">                      
@@ -429,49 +439,51 @@
                 </div>
               </div>
 
-              <div class="col-12 bg-secondary the-border large-shadow border-radius p-4 mt-5">
-                <p class="font-weight-bold my-1">What was the number one thing that motivated you to uninstall Voicemod?</p>
-                <p class="text-gray-400 subtitle">134.7k out of 134.7k people answered this question</p>
+              <div class="col-12">
+                <div class="col-12 bg-secondary the-border large-shadow border-radius p-4 mt-5">
+                  <p class="font-weight-bold my-1">What was the number one thing that motivated you to uninstall Voicemod?</p>
+                  <p class="text-gray-400 subtitle">134.7k out of 134.7k people answered this question</p>
 
-                <p class="mt-3 mb-1">Voicemod didn't work</p>
-                <div class="progress rounded-pill bg-background the-border position-relative" role="progressbar" aria-label="Users who said Voicemod didn't work" aria-valuenow="14.4" aria-valuemin="0" aria-valuemax="100" style="height: 40px">
-                  <div class="progress-bar bg-danger rounded-pill text-end d-inline-block pt-2" style="width: 14.4%">
-                    <span class="position-absolute top-50 start-0 translate-middle ms-4"><img src="img/misc/icons/icons8-thumbs-down-64.png" alt="Thumbs down icon" class="img-fluid d-none d-md-block" style="height: 24px; width: 24px;"/></span>
-                    <span class="pe-3 font-weight-bold">14.4%</span>
-                    <span class="ms-n5 text-gray-400 position-absolute top-50 start-100 translate-middle">19k resp.</span>
+                  <p class="mt-3 mb-1">Voicemod didn't work</p>
+                  <div class="progress rounded-pill bg-background the-border position-relative" role="progressbar" aria-label="Users who said Voicemod didn't work" aria-valuenow="14.4" aria-valuemin="0" aria-valuemax="100" style="height: 40px">
+                    <div class="progress-bar bg-danger rounded-pill text-end d-inline-block pt-2" style="width: 14.4%">
+                      <span class="position-absolute top-50 start-0 translate-middle ms-4"><img src="img/misc/icons/icons8-thumbs-down-64.png" alt="Thumbs down icon" class="img-fluid d-none d-md-block" style="height: 24px; width: 24px;"/></span>
+                      <span class="pe-3 font-weight-bold">14.4%</span>
+                      <span class="ms-n5 text-gray-400 position-absolute top-50 start-100 translate-middle">19k resp.</span>
+                    </div>
                   </div>
-                </div>
 
-                <p class="font-weight-bold mb-1 mt-5">What exactly didn't work?</p>
-                <p class="text-gray-400 subtitle">19.3k out of 134.7k people answered this question</p>
+                  <p class="font-weight-bold mb-1 mt-5">What exactly didn't work?</p>
+                  <p class="text-gray-400 subtitle">19.3k out of 134.7k people answered this question</p>
 
 
-                <p class="mt-3 mb-1">I couldn't open Voicemod</p>
-                <div class="progress rounded-pill bg-background the-border position-relative" role="progressbar" aria-label="Users who said they couldn't open Voicemod" aria-valuenow="24.6" aria-valuemin="0" aria-valuemax="100" style="height: 40px">
-                  <div class="progress-bar bg-danger rounded-pill text-end d-inline-block pt-2" style="width: 24.6%">
-                    <span class="position-absolute top-50 start-0 translate-middle ms-4"><img src="img/misc/icons/icons8-thumbs-down-64.png" alt="Thumbs down icon" class="img-fluid d-none d-md-block" style="height: 24px; width: 24px;"/></span>
-                    <span class="pe-3 font-weight-bold">24.6%</span>
-                    <span class="ms-n5 text-gray-400 position-absolute top-50 start-100 translate-middle">4.8k resp.</span>
+                  <p class="mt-3 mb-1">I couldn't open Voicemod</p>
+                  <div class="progress rounded-pill bg-background the-border position-relative" role="progressbar" aria-label="Users who said they couldn't open Voicemod" aria-valuenow="24.6" aria-valuemin="0" aria-valuemax="100" style="height: 40px">
+                    <div class="progress-bar bg-danger rounded-pill text-end d-inline-block pt-2" style="width: 24.6%">
+                      <span class="position-absolute top-50 start-0 translate-middle ms-4"><img src="img/misc/icons/icons8-thumbs-down-64.png" alt="Thumbs down icon" class="img-fluid d-none d-md-block" style="height: 24px; width: 24px;"/></span>
+                      <span class="pe-3 font-weight-bold">24.6%</span>
+                      <span class="ms-n5 text-gray-400 position-absolute top-50 start-100 translate-middle">4.8k resp.</span>
+                    </div>
                   </div>
-                </div>
 
 
-                <p class="mt-3 mb-1">I couldn't connect Voicemod with Discord etc</p>
-                <div class="progress rounded-pill bg-background the-border position-relative" role="progressbar" aria-label="Users who said they couldn't open Voicemod" aria-valuenow="21.2" aria-valuemin="0" aria-valuemax="100" style="height: 40px">
-                  <div class="progress-bar bg-danger rounded-pill text-end d-inline-block pt-2" style="width: 21.2%">
-                    <span class="position-absolute top-50 start-0 translate-middle ms-4"><img src="img/misc/icons/icons8-thumbs-down-64.png" alt="Thumbs down icon" class="img-fluid d-none d-md-block" style="height: 24px; width: 24px;"/></span>
-                    <span class="pe-3 font-weight-bold">21.2%</span>
-                    <span class="ms-n5 text-gray-400 position-absolute top-50 start-100 translate-middle">4.1k resp.</span>
+                  <p class="mt-3 mb-1">I couldn't connect Voicemod with Discord etc</p>
+                  <div class="progress rounded-pill bg-background the-border position-relative" role="progressbar" aria-label="Users who said they couldn't open Voicemod" aria-valuenow="21.2" aria-valuemin="0" aria-valuemax="100" style="height: 40px">
+                    <div class="progress-bar bg-danger rounded-pill text-end d-inline-block pt-2" style="width: 21.2%">
+                      <span class="position-absolute top-50 start-0 translate-middle ms-4"><img src="img/misc/icons/icons8-thumbs-down-64.png" alt="Thumbs down icon" class="img-fluid d-none d-md-block" style="height: 24px; width: 24px;"/></span>
+                      <span class="pe-3 font-weight-bold">21.2%</span>
+                      <span class="ms-n5 text-gray-400 position-absolute top-50 start-100 translate-middle">4.1k resp.</span>
+                    </div>
                   </div>
+
+                  <p class="mt-3 mb-0 text-end">
+                    <img src="img/misc/logos/typeform-logo.svg" alt="Typeform logo" style="max-width: 62px" class="img-fluid">
+                  </p>
+
                 </div>
-
-                <p class="mt-3 mb-0 text-end">
-                  <img src="img/misc/logos/typeform-logo.svg" alt="Typeform logo" style="max-width: 62px" class="img-fluid">
-                </p>
-
               </div>
 
-              <div class="col-12 my-5 py-5">
+              <div class="col-12 mb-5 py-5">
                 <p>To address this issue I proposed an onboarding process that would guide new users through the setup process and allow them to reach the "wow" moment of the app right from the start.</p>
 
                 <p class="mb-5">I presented my recommendations to the stakeholders and with minor changes, we decided to move forward to user validation using this <a href="https://www.figma.com/proto/LaOv1YVhMiwoMxk5i2uQjZ/User-onboarding%2C-walkthrough-%26-progressive-trance?page-id=0%3A1&type=design&node-id=293-15486&scaling=contain&starting-point-node-id=293%3A15486" target="_blank" class="text-info" title="Opens my Figma prototype on a new tab">Figma prototype</a>.</p>
@@ -509,63 +521,63 @@
               </div>
 
               <div class="col-12">
-              <div class="col-12 bg-secondary the-border large-shadow border-radius p-4 mt-5">
-                <div class="row">
-                  <div class="col-12 col-lg-4">
+                <div class="col-12 bg-secondary the-border large-shadow border-radius p-4 mt-5">
+                  <div class="row">
+                    <div class="col-12 col-lg-4">
 
-                    <ul class="nav nav-pills flex-column competitive-analysis">
-                      <p class="font-weight-bold">Ideas that would work</p>
-                      <li class="nav-item">
-                        <button id="analysisBtn01" class="nav-link rounded-pill py-3 my-1 active"><img src="img/misc/icons/icons8-microphone-64.png" alt="Mic icon" class="img-fluid me-3" style="height: 32px; width: 32px;"/>Record your voice</button>
-                      </li>
-                      <li class="nav-item">
-                        <button id="analysisBtn02" class="nav-link rounded-pill py-3 my-1"><img src="img/misc/icons/icons8-headphones-64.png" alt="Headphones icon" class="img-fluid me-3" style="height: 32px; width: 32px;"/>Hear it in action</button>
-                      </li>
-                      <li class="nav-item">
-                        <button id="analysisBtn03" class="nav-link rounded-pill py-3 my-1"><img src="img/misc/icons/icons8-connected-64.png" alt="Plug icon" class="img-fluid me-3" style="height: 32px; width: 32px;"/>Connect to 3rd party</button>
-                      </li>                      
-                      <p class="font-weight-bold mt-5">Ideas best to avoid</p>
-                      <li class="nav-item">
-                        <button id="analysisBtn04" class="nav-link rounded-pill py-3 my-1"><img src="img/misc/icons/icons8-graduation-64.png" alt="Graduation hat icon" class="img-fluid me-3" style="height: 32px; width: 32px;"/>Train user's voice</button>
-                      </li>
-                      <li class="nav-item">
-                        <button id="analysisBtn05" class="nav-link rounded-pill py-3 my-1"><img src="img/misc/icons/icons8-concerned-face-64.png" alt="Confused user icon" class="img-fluid me-3" style="height: 32px; width: 32px;"/>Confuse with boards</button>
-                      </li>
-                    </ul>
+                      <ul class="nav nav-pills flex-column competitive-analysis">
+                        <p class="font-weight-bold">Ideas that would work</p>
+                        <li class="nav-item">
+                          <button id="analysisBtn01" class="nav-link rounded-pill py-3 my-1 active"><img src="img/misc/icons/icons8-microphone-64.png" alt="Mic icon" class="img-fluid me-3" style="height: 32px; width: 32px;"/>Record your voice</button>
+                        </li>
+                        <li class="nav-item">
+                          <button id="analysisBtn02" class="nav-link rounded-pill py-3 my-1"><img src="img/misc/icons/icons8-headphones-64.png" alt="Headphones icon" class="img-fluid me-3" style="height: 32px; width: 32px;"/>Hear it in action</button>
+                        </li>
+                        <li class="nav-item">
+                          <button id="analysisBtn03" class="nav-link rounded-pill py-3 my-1"><img src="img/misc/icons/icons8-connected-64.png" alt="Plug icon" class="img-fluid me-3" style="height: 32px; width: 32px;"/>Connect to 3rd party</button>
+                        </li>                      
+                        <p class="font-weight-bold mt-5">Ideas best to avoid</p>
+                        <li class="nav-item">
+                          <button id="analysisBtn04" class="nav-link rounded-pill py-3 my-1"><img src="img/misc/icons/icons8-graduation-64.png" alt="Graduation hat icon" class="img-fluid me-3" style="height: 32px; width: 32px;"/>Train user's voice</button>
+                        </li>
+                        <li class="nav-item">
+                          <button id="analysisBtn05" class="nav-link rounded-pill py-3 my-1"><img src="img/misc/icons/icons8-concerned-face-64.png" alt="Confused user icon" class="img-fluid me-3" style="height: 32px; width: 32px;"/>Confuse with boards</button>
+                        </li>
+                      </ul>
 
-                  </div>
-
-                  <div class="col-12 col-lg-8 bg-background border-radius p-3 text-center analysis-container">
-
-                    <div class="analysis-01 mt-5">
-                      <img src="img/misc/elements/analysis-01.png" alt="Analysis image" class="img-fluid" style="width: 448px; height: 264px;" />
-                      <p class="text-center mt-3 mb-0">During the onboarding process Krisp.ai requires users to record their voice...</p>
                     </div>
 
-                    <div class="analysis-02 d-none mt-5">
-                      <img src="img/misc/elements/analysis-02.png" alt="Analysis image" class="img-fluid" style="width: 448px; height: 264px;" />
-                      <p class="text-center mt-3 mb-0">...and then test it to see the difference themselves. That's the "wow moment"!</p>
-                    </div>
+                    <div class="col-12 col-lg-8 bg-background border-radius p-3 text-center analysis-container">
 
-                    <div class="analysis-03 d-none mt-5">
-                      <img src="img/misc/elements/analysis-03.png" alt="Analysis image" class="img-fluid" style="width: 448px; height: 264px;" />
-                      <p class="text-center mt-3 mb-0">Make sure users connect to third party apps right off the bat!</p>
-                    </div>
+                      <div class="analysis-01 mt-5">
+                        <img src="img/misc/elements/analysis-01.png" alt="Analysis image" class="img-fluid" style="width: 448px; height: 264px;" />
+                        <p class="text-center mt-3 mb-0">During the onboarding process Krisp.ai requires users to record their voice...</p>
+                      </div>
 
-                    <div class="analysis-04 d-none mt-5">
-                      <img src="img/misc/elements/analysis-04.png" alt="Analysis image" class="img-fluid" style="width: 448px; height: 264px;" />
-                      <p class="text-center mt-3 mb-0">Asking users to train their voice to clone it from the start would be time consuming...</p>
-                    </div>
+                      <div class="analysis-02 d-none mt-5">
+                        <img src="img/misc/elements/analysis-02.png" alt="Analysis image" class="img-fluid" style="width: 448px; height: 264px;" />
+                        <p class="text-center mt-3 mb-0">...and then test it to see the difference themselves. That's the "wow moment"!</p>
+                      </div>
 
-                    <div class="analysis-05 d-none mt-5">
-                      <img src="img/misc/elements/analysis-05.png" alt="Analysis image" class="img-fluid" style="width: 448px; height: 264px;" />
-                      <p class="text-center mt-3 mb-0">Introducing a soundboard during onboarding, would be nice but unnecessary...</p>
+                      <div class="analysis-03 d-none mt-5">
+                        <img src="img/misc/elements/analysis-03.png" alt="Analysis image" class="img-fluid" style="width: 448px; height: 264px;" />
+                        <p class="text-center mt-3 mb-0">Make sure users connect to third party apps right off the bat!</p>
+                      </div>
+
+                      <div class="analysis-04 d-none mt-5">
+                        <img src="img/misc/elements/analysis-04.png" alt="Analysis image" class="img-fluid" style="width: 448px; height: 264px;" />
+                        <p class="text-center mt-3 mb-0">Asking users to train their voice to clone it from the start would be time consuming...</p>
+                      </div>
+
+                      <div class="analysis-05 d-none mt-5">
+                        <img src="img/misc/elements/analysis-05.png" alt="Analysis image" class="img-fluid" style="width: 448px; height: 264px;" />
+                        <p class="text-center mt-3 mb-0">Introducing a soundboard during onboarding, would be nice but unnecessary...</p>
+                      </div>
+                      
                     </div>
-                    
                   </div>
                 </div>
               </div>
-            </div>
             </div>
 
             <div class="minHeight5vh"></div>
@@ -643,7 +655,7 @@
             </div>
 
 
-            <div class="minHeight30vh"></div>
+            <div class="minHeight10vh"></div>
 
 
             <div id="journey" class="row">
@@ -699,14 +711,14 @@
                
               </div>
 
-              <div class="dotted-bg position-absolute start-0 top-50 left-0 translate-middle minHeight80vh" style="z-index: -1; width: 1000vh">
+              <div class="dotted-bg position-absolute start-0 top-50 w-100 translate-middle-y minHeight75vh" style="z-index: -1;">
               </div>
 
             </div>            
           </div>
 
           
-          <div class="minHeight25vh"></div>
+          <div class="minHeight10vh"></div>
 
 
 
@@ -717,7 +729,7 @@
             </div>
             <div class="col-12 my-5">
               <div class="row">
-                <div class="col-6 col-lg">
+                <div class="col-12 col-lg">
                   <p class="bigger-1 border border-top-0 border-start-0 border-end-0 border-the-border pb-3">Audio setup<span class="ms-3 text-gray-400">3</span></p>
 
                   <ul class="list-group smaller-2 lh-base">
@@ -737,7 +749,7 @@
                   
                 </div>
 
-                <div class="col-6 col-lg mb-5">
+                <div class="col-12 col-lg mb-5">
                   <p class="bigger-1 border border-top-0 border-start-0 border-end-0 border-the-border pb-3">Wow moment<span class="ms-3 text-gray-400">3</span></p>
 
                   <ul class="list-group smaller-2 lh-base">
@@ -822,7 +834,7 @@
                  
                   </div>
 
-              <div class="dotted-bg position-absolute start-0 top-50 left-0 translate-middle minHeight100vh" style="z-index: -1; width: 1000vh">
+              <div class="dotted-bg position-absolute start-0 top-50 left-0 translate-middle-y minHeight75vh w-100" style="z-index: -1;">
               </div>
 
             </div>            
@@ -831,7 +843,7 @@
 
           
 
-          <div class="minHeight20vh"></div>
+          <div class="minHeight10vh"></div>
 
           <div id="prototype" class="row my-5 py-5">
             

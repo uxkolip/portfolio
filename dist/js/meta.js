@@ -158,7 +158,7 @@ $(document).mousemove(function(e) {
 
 
 //lottie
-/*const player = document.getElementById("lottiePlaya");
+const player = document.getElementById("lottiePlaya");
 
 // Play as soon as the animation is visible
 player.playOnShow();
@@ -170,7 +170,7 @@ player.playOnShow({
 });
 
 // Stop playing on show
-player.stopPlayOnShow();*/
+player.stopPlayOnShow();
 
 //lottie end
 
