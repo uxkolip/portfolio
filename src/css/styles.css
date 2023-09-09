@@ -12280,7 +12280,8 @@ a:hover, button:hover, .pointer {
   top: var(--spacing);
   z-index: 5;
   padding: 2rem;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  height: 500px; }
 
 .design-card:nth-child(2) {
   top: calc(var(--spacing) * 2);
