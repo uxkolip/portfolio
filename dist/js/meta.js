@@ -190,3 +190,45 @@ player.stopPlayOnShow();
   s.parentNode.insertBefore(v, s);
 })(document, 'script');
 //voiceflow end
+
+
+//figma iframe loader
+function loadIframe() {
+    const iframeContainer = document.getElementById('iframeContainer');
+    const iframe = document.createElement('iframe');
+    iframe.src = 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2Fe44ChloeUsy3j33N2e2Fv3%2FEnnely%252C-user-journey%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3DHltnsOoRKN7jZkYN-1'; // Replace with your iframe source URL
+    iframe.width = '100%';
+    iframe.height = '100%';
+    iframe.style.border = 'none';
+    iframe.setAttribute('allowfullscreen', 'true');
+
+    // Append the iframe to the container
+    iframeContainer.appendChild(iframe);
+    setTimeout(function() {
+        $('.figmaLoader').remove();
+    }, 3300);
+}
+
+// Intersection Observer configuration
+const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1 // Adjust the threshold as needed
+};
+
+// Create the Intersection Observer
+const observer = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+            // Load the iframe when it becomes visible
+            loadIframe();
+
+            // Disconnect the observer after loading
+            observer.disconnect();
+        }
+    });
+}, options);
+
+// Start observing the iframe container
+observer.observe(document.getElementById('iframeContainer'));
+//figma iframe loader end
