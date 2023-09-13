@@ -119,15 +119,15 @@ panels.forEach((panel, index) => {
     var currentPanel = `${index + 1}`;
     panelTimeline.to(panel, {
     y: -(index * panel.offsetHeight - index * 75), // Move the panel up to its final position
-    duration: 5.5, // Set the duration of the animation to 5 second
+    duration: 1, // Set the duration of the animation to 5 second
     stagger: 1,
-    delay: index * 2, // Delay the animation by 2 seconds per panel
-    ease: 'circ.out', // Add some easing to the motion
+    delay: index * 1, // Delay the animation by 2 seconds per panel
+    ease: 'linear', // Add some easing to the motion
     onComplete: () => {
         //console.log(`Panel ${index + 1} timeline completed`);
         switch (currentPanel) {
           case "1":
-            console.log("voicemod panel is complete");
+            //console.log("voicemod panel is complete");
             break;
           case "2":
             //console.log("meta panel is complete");
