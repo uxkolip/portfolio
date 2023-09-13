@@ -62,7 +62,7 @@ gulp.task('jsmin', function() {
 
 // Minify Images
 gulp.task('imagemin', function (){
-  return gulp.src('./src/img/**/*.+(png|jpg|jpeg|gif|svg|mp4|webp)')
+  return gulp.src('./src/img/**/*.+(png|jpg|jpeg|gif|svg|mp4|webp|avif)')
   // Caching images that ran through imagemin
   .pipe(cache(imagemin({
       interlaced: true
