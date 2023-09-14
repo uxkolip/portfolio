@@ -168,6 +168,28 @@ mark, .mark {
   line-height: 203%; /* 2.5375rem */
 }
 
+.nav-pills {
+  transition: .3s all;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: inherit !important;
+  background-color: transparent;
+  border-radius: 0 !important;
+  transition: .05s all;  
+  font-weight: bold;
+}
+
+.nav-pills .nav-link.active:before {
+  content: "";
+  width: 4px;
+  height: 30px;
+  position: absolute;
+  margin-top: -6px;
+  left: -5px;
+  background-color: #16013e;
+}
+
 .subtitle {
   font-family: 'gt_america_extended_regular', sans-serif;
   font-size: 0.75rem;
