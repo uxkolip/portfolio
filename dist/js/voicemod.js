@@ -369,3 +369,63 @@ function showResearchPlan() {
   s.parentNode.insertBefore(v, s);
 })(document, 'script');
 //voiceflow end
+
+
+// horizontal scroll buttons scrollableDivImprovements
+function checkScrollableLeftSpace($scrollableDiv) {
+  const $btnLeft = $scrollableDiv.parent().find('.btn-left');
+
+  if ($scrollableDiv.scrollLeft() <= 0) {
+    $btnLeft.addClass('d-none');
+  } else {
+    $btnLeft.removeClass('d-none');
+  }
+}
+
+function checkScrollableRightSpace($scrollableDiv) {
+  const $btnRight = $scrollableDiv.parent().find('.btn-right');
+  const maxScrollLeft = $scrollableDiv.get(0).scrollWidth - $scrollableDiv.width();
+
+  if ($scrollableDiv.scrollLeft() >= maxScrollLeft) {
+    $btnRight.addClass('d-none');
+  } else {
+    $btnRight.removeClass('d-none');
+  }
+}
+
+// Function to handle manual scrolling
+function handleManualScroll() {
+  const $scrollableDiv = $(this);
+  checkScrollableLeftSpace($scrollableDiv);
+  checkScrollableRightSpace($scrollableDiv);
+}
+
+// Event listener for manual scrolling
+$('.scrollableArea').on('scroll', handleManualScroll);
+
+// Event handler for left button click
+$('.btn-left').click(function() {
+  const $scrollableDiv = $(this).parent().find('.scrollableArea');
+  $scrollableDiv.animate({
+    scrollLeft: '-=300px'
+  }, 'fast');
+  checkScrollableLeftSpace($scrollableDiv);
+  checkScrollableRightSpace($scrollableDiv);
+});
+
+// Event handler for right button click
+$('.btn-right').click(function() {
+  const $scrollableDiv = $(this).parent().find('.scrollableArea');
+  $scrollableDiv.animate({
+    scrollLeft: '+=300px'
+  }, 'fast');
+  checkScrollableLeftSpace($scrollableDiv);
+  checkScrollableRightSpace($scrollableDiv);
+});
+
+// Call these functions once to initialize the button visibility for all .scrollableArea elements
+$('.scrollableArea').each(function() {
+  checkScrollableLeftSpace($(this));
+  checkScrollableRightSpace($(this));
+});
+// horizontal scroll buttons scrollableDivImprovements end

@@ -33,7 +33,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/misc/favicon/favicon-16x16.png">
     <link rel="manifest" href="img/misc/favicon/manifest.json">
     <!-- myStylez YO! -->
-    <link href="css/styles.css?v=1.5" rel="stylesheet">
+    <link href="css/styles.css?v=1.7" rel="stylesheet">
     <title>Vasilis Kolip - Voicemod
     </title>
     <script src="https://fast.wistia.com/embed/medias/e2zpqg3isy.jsonp" async></script>
@@ -654,7 +654,11 @@
                 <p class="mt-4">Having conducted thorough explorations, I identified three potential user journeys.</p>
                 <p>I carefully evaluated each journey and selected the one that best met the needs of both users and the business.</p>
 
-                <div id="userJourneyScroll" class="row mt-3 pt-5 px-3 px-lg-0 d-flex flex-nowrap flex-nowrap overflow-x-scroll">
+
+                <button class="btn rounded-circle btn-background btn-left ms-n4 border border-the-border position-absolute top-50 start-0 translate-middle-y d-none z-3 mt-5" title="Click to scroll left"><img src="img/misc/shapes/arrow-right.svg" alt="Left arrow" class="img-fluid w-75 py-4" style="rotate: 180deg;"/></button>
+                  
+
+                <div id="userJourneyScroll" class="scrollableArea row mt-3 pt-5 px-3 px-lg-0 d-flex flex-nowrap flex-nowrap overflow-x-scroll">
                     
                   <div class="col-9 col-lg-3 me-5 mb-5 position-relative d-flex align-items-center justify-content-center text-center bg-secondary border-radius the-border large-shadow p-5 minHeight5vh userJourneyStep">
                     <p class="mb-0 py-3">User opens VM</p>
@@ -697,6 +701,8 @@
                   </div>
                
               </div>
+
+              <button class="btn rounded-circle btn-background btn-right me-n5 border border-the-border position-absolute top-50 end-0 translate-middle-y mt-5" title="Click to scroll right"><img src="img/misc/shapes/arrow-right.svg" alt="Right arrow" class="img-fluid w-75 py-4"/></button>
 
               <div class="dotted-bg position-absolute start-0 top-50 w-100 translate-middle-y minHeight75vh" style="z-index: -1;">
               </div>
@@ -793,7 +799,10 @@
 
                 <p class="mt-4">Some of the early sketches that lead to the final result.</p>
 
-                <div id="wireframesScroll" class="row mt-3 pt-5 d-flex flex-nowrap flex-nowrap overflow-x-scroll">
+
+                <button class="btn rounded-circle btn-background btn-left ms-n4 border border-the-border position-absolute top-50 start-0 translate-middle-y d-none z-3 mt-3" title="Click to scroll left"><img src="img/misc/shapes/arrow-right.svg" alt="Left arrow" class="img-fluid w-75 py-4" style="rotate: 180deg;"/></button>
+
+                <div id="wireframesScroll" class="scrollableArea row mt-3 pt-5 d-flex flex-nowrap flex-nowrap overflow-x-scroll">
                       
                       <div class="col-8 col-lg-7 me-3 mb-5 position-relative d-flex align-items-center justify-content-center position-relative">
                         <img src="img/misc/elements/01-vm-wireframe.jpg" alt="Wireframe" class="img-fluid large-shadow border-radius" />
@@ -812,6 +821,8 @@
                       </div>                     
                  
                   </div>
+
+                  <button class="btn rounded-circle btn-background btn-right me-n5 border border-the-border position-absolute top-50 end-0 translate-middle-y mt-3" title="Click to scroll right"><img src="img/misc/shapes/arrow-right.svg" alt="Right arrow" class="img-fluid w-75 py-4"/></button>
 
               <div class="dotted-bg position-absolute start-0 top-50 left-0 translate-middle-y minHeight85vh w-100" style="z-index: -1;">
               </div>
@@ -1319,6 +1330,6 @@
     <script src="js/gsap-latest-beta.min.js"></script>
     <script src="js/ScrollTrigger.min.js"></script>
     <script src="js/lenis.min.js"></script>
-    <script src="js/voicemod.js?v=1.1"></script>
+    <script src="js/voicemod.js?v=1.5"></script>
   </body>
 </html>
