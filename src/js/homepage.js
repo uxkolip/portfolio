@@ -239,7 +239,7 @@ horizontalSections.forEach(function (sec, i) {
     var thisPinWrap = sec.querySelector('.pin-wrap');
     var thisAnimWrap = thisPinWrap.querySelector('.animation-wrap');
     /*var getToValue = () => -(thisAnimWrap.scrollWidth - window.innerWidth);*/
-    var getToValue = () => -($('.testimonialCard').width() * 5.8);
+    var getToValue = () => -($('.testimonialCard').width() * 6.2);
 
     //gsap.set(horizontalSections, {marginTop: '-350px'})
 
