@@ -108,7 +108,7 @@ const panelTimeline = gsap.timeline({
   scrollTrigger: {
     trigger: '.cardsContainer', // The wrapper element that contains the panels
     pin: true,
-    start: 'top 20%', // The animation starts when the top of the wrapper is 75% from the top of the viewport
+    start: 'top 5%', // The animation starts when the top of the wrapper is 75% from the top of the viewport
     end: '+=1400px', // The animation ends when the bottom of the wrapper is 25% from the top of the viewport
     scrub: true // Enable "scrubbing" so that the animations are smoothly reversed as the user scrolls back up
   },
