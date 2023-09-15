@@ -110,24 +110,77 @@
     <div class="container">
       <div class="col-12 mt-5">
         <div class="row">
+
+          <div class="col-12 mb-lg-0 pb-5 top12vh selectedWork">
+            <div class="row">                  
+              <div class="col-12 col-lg-4">
+                <h2 class="section-title">Selected work</h2>
+              </div>
+                
+              <div class="col-12 col-lg-8 d-none d-lg-flex justify-content-end selectedWorkNav">
+                <button class="btn smaller-2 btn-outline-primary noUnderline py-2 px-3 rounded-pill" data-target="#voicemodPanel">Voicemod</button>
+                <button class="btn smaller-2 btn-link noUnderline py-2 px-3 rounded-pill mx-3" data-target="#metaPanel">Meta</button>
+                <button class="btn smaller-2 btn-link noUnderline py-2 px-3 rounded-pill" data-target="#msftPanel">Microsoft</button>
+              </div>
+              </div>
+            </div>
+
+          <div class="col-12 mobileCards d-lg-none">
+
+            <div class="col-12 bg-secondary large-shadow border-radius the-border position-relative mb-5" style="min-height: 400px;">
+              <div class="row p-5">
+                <div class="col-12 col-lg-6">
+                  <img src="img/misc/logos/voicemod-logo-card.svg" alt="Voicemod logo" class="img-fluid mb-2 mb-lg-0" style="height: 26px;">
+                  <p class="font-weight-bold pt-2">Senior staff product designer (full-time) <span class="badge bg-accent font-weight-normal smaller-4 ms-1">2022</span> <span class="badge bg-accent font-weight-normal smaller-4">2023</span>
+                  </p>
+                  <p class="mt-4">Voicemod is a B2C MacOS and Windows real-time voice changing app.</p>
+                  <p class="d-none d-lg-block">Discover how I successfully reduced the app's uninstall rate by revamping the onboarding experience and conducting user testing with individuals who encountered difficulties during setup.</p>
+                  <p class="mt-5">
+                    <a href="voicemod.html" class="btn btn-primary rounded-pill py-2 px-3 stretched-link" title="Click to view project page">View project
+                    </a>
+                  </p>
+                </div>    
+              </div>  
+            </div>
+
+
+            <div class="col-12 bg-secondary large-shadow border-radius the-border position-relative mb-5" style="min-height: 400px;">
+              <div class="row p-5">
+                <div class="col-12 col-lg-6">
+                  <img src="img/misc/logos/meta-logo-card.svg" alt="Meta logo" class="img-fluid" style="height: 24px;">
+                  <p class="font-weight-bold pt-2">Senior UX designer (full-time) <span class="badge bg-accent font-weight-normal smaller-4 ms-1">2021</span> <span class="badge bg-accent font-weight-normal smaller-4">2022</span>
+                  </p>
+                  <p class="mt-4">Ennely app was a B2C MacOS video editor assistant that enabled content creators to create a first cut within minutes.</p>
+                  <p class="d-none d-lg-block">Find out how a unique app with no pre-established rules came to life and how along with a small team I created magic.</p>
+                  <p class="mt-5">
+                    <a href="meta.html" class="btn btn-primary rounded-pill py-2 px-3 stretched-link" title="Click to view project page">View project
+                    </a>
+                  </p>
+                </div>    
+              </div>
+            </div>
+
+
+            <div class="col-12 bg-secondary large-shadow border-radius the-border position-relative mb-5" style="min-height: 400px;">
+              <div class="row p-5">
+                <div class="col-12 col-lg-6">
+                  <img src="img/misc/logos/msft-logo-card.svg" alt="Microsoft logo" class="img-fluid" style="height: 34px;">
+                  <p class="font-weight-bold pt-2">Senior designer (full-time) <span class="badge bg-accent font-weight-normal smaller-4 ms-1">2019</span> <span class="badge bg-accent font-weight-normal smaller-4">2020</span>  <span class="badge bg-accent font-weight-normal smaller-4">2021</span>
+                  </p>
+                  <p class="mt-4">Power Automate desktop is a B2B Windows app that saves its users  time from doing repetitive tasks on their computers.</p>
+                  <p class="d-none d-lg-block">Join me in the world of desktop automation and let's explore how an app created by a small company, became part of Windows 11.</p>
+                  <p class="mt-5">
+                    <a href="microsoft.html" class="btn btn-primary rounded-pill py-2 px-3 stretched-link" title="Click to view project page">View project
+                    </a>
+                  </p>
+                </div>
+              </div>  
+            </div>
+
+          </div>
           
 
-          <div class="cardsContainer col-12" >
-
-            <div class="col-12 mb-lg-0 pb-5 top12vh selectedWork">
-            <div class="row">                  
-                <div class="col-12 col-lg-4">
-                  <h2 class="section-title">Selected work</h2>
-                </div>
-                
-                <div class="col-12 col-lg-8 d-none d-lg-flex justify-content-end selectedWorkNav">
-                  <button class="btn smaller-2 btn-outline-primary noUnderline py-2 px-3 rounded-pill" data-target="#voicemodPanel">Voicemod</button>
-                  <button class="btn smaller-2 btn-link noUnderline py-2 px-3 rounded-pill mx-3" data-target="#metaPanel">Meta</button>
-                  <button class="btn smaller-2 btn-link noUnderline py-2 px-3 rounded-pill" data-target="#msftPanel">Microsoft</button>
-                </div>
-              </div>
-            
-          </div>
+          <div class="cardsContainer col-12 d-none d-lg-block">
 
             <div id="voicemodPanel" class="col-12 panel panel-1 bg-secondary one large-shadow border-radius the-border position-relative" style="min-height: 400px;">
               
@@ -188,7 +241,7 @@
                     </p>
                   </div>
 
-                  <div class="col-12 col-md-6 pe-md-5 ms-auto d-none d-lg-block position-relative me-5" style="max-width: 306px">
+                  <div class="d-none d-xl-block col-12 col-md-6 pe-md-5 ms-auto d-none d-lg-block position-relative me-5" style="max-width: 306px">
             
                     <video width="306" height="359" autoplay loop muted style="object-fit: cover;" class="border-radius the-border large-shadow">
                       <source src="video/meta-persona.mp4" type="video/mp4">
@@ -196,21 +249,21 @@
                     </video>
 
 
-                    <div class="col-12 bg-background rounded-circle position-absolute top-0 start-50 translate-middle text-center  ms-n5" style="width: 52px; height: 52px;">
+                    <div class="d-none d-xl-block col-12 bg-background rounded-circle position-absolute top-0 start-50 translate-middle text-center  ms-n5" style="width: 52px; height: 52px;">
                         <img src="img/misc/icons/icons8-lightning-64.png" alt="Lightning bolt icon" style="height: 32px; width: 32px;" class="img-fluid mt-2">
                     </div>
 
 
-                    <div class="col-12 p-3 text-centr bg-green position-absolute top-0 start-100 translate-middle rounded-pill ms-n5" style="max-width: 245px;">
+                    <div class="d-none d-xl-block col-12 p-3 text-centr bg-green position-absolute top-0 start-100 translate-middle rounded-pill ms-n5" style="max-width: 245px;">
                       <p class="font-weight-bold text-white mb-0 lh-sm">Lightning fast 1st cuts</p>
                     </div>
 
-                    <div class="col-12 bg-background position-absolute start-0 translate-middle border-radius large-shadow p-3 ms-n4" style="max-width: 210px; top: 100px;">
+                    <div class="d-none d-xl-block col-12 bg-background position-absolute start-0 translate-middle border-radius large-shadow p-3 ms-n4" style="max-width: 210px; top: 100px;">
                       <p class="mb-1 smaller-1">Footage duration</p>
                       <p class="mb-1 text-green bigger-5 font-weight-bold align-bottom lh-1"><img src="img/misc/icons/icons8-documentary-64.png" alt="Camera icon" style="height: 28px;" class="me-2 img-fluid align-bottom">869m.</p>
                     </div>
 
-                    <div class="col-12 bg-background position-absolute start-0 translate-middle border-radius large-shadow p-3 ms-n4" style="max-width: 210px; top: 270px;">
+                    <div class="d-none d-xl-block col-12 bg-background position-absolute start-0 translate-middle border-radius large-shadow p-3 ms-n4" style="max-width: 210px; top: 270px;">
                       <p class="text-green bigger-1 lh-1 font-weight-bold my-2"><img src="img/misc/icons/icons8-user-64.png" alt="User icon" style="height: 18px;" class="me-2 img-fluid align-bottom">Requirements</p>
                       <ul class="list-unstyled mt-3 mb-0">
                         <li class="smaller-3 bg-secondary border-radius p-2 mt-1">Combine footage</li>
@@ -219,7 +272,7 @@
                       </ul>
                     </div>
 
-                    <div class="col-12 position-absolute start-100 translate-middle bg-background border-radius p-3 large-shadow ms-n4" style="max-width: 170px; top: 306px;">
+                    <div class="d-none d-xl-block col-12 position-absolute start-100 translate-middle bg-background border-radius p-3 large-shadow ms-n4" style="max-width: 170px; top: 306px;">
                       <p class="text-primary bigger-1 lh-1 my-2"><img src="img/misc/elements/channel_avatar.png" alt="YouTube channel avatar" style="height: 18px;" class="me-2 img-fluid align-bottom">@Channel</p>
                       <img src="img/misc/shapes/dummy-lines-meta-card.svg" alt="Dummy lines icon" class="img-fluid w-100 mt-2">
                     </div>
@@ -245,26 +298,26 @@
                     </p>
                   </div>
 
-                  <div class="col-12 col-md-6 pe-md-5 ms-auto d-none d-lg-block position-relative me-5" style="max-width: 306px">
+                  <div class="d-none d-xl-block col-12 col-md-6 pe-md-5 ms-auto d-none d-lg-block position-relative me-5" style="max-width: 306px">
             
                     <video width="306" height="359" autoplay loop muted style="object-fit: cover;" class="border-radius the-border large-shadow">
                       <source src="video/msft-persona.mp4" type="video/mp4">
                       Your browser does not support the video tag.
                     </video>                
 
-                    <div class="col-12 bg-background position-absolute start-0 translate-middle ms-n4 border-radius large-shadow p-3" style="max-width: 210px; top: 100px;">
+                    <div class="d-none d-xl-block col-12 bg-background position-absolute start-0 translate-middle ms-n4 border-radius large-shadow p-3" style="max-width: 210px; top: 100px;">
                       <p class="lh-base mb-0">Process automation made <strong>easy</strong>.</p>
                     </div>
 
-                    <div class="col-12 bg-background position-absolute start-0 translate-middle border-radius large-shadow p-3 ms-n4" style="max-width: 210px; top: 180px;">
+                    <div class="d-none d-xl-block col-12 bg-background position-absolute start-0 translate-middle border-radius large-shadow p-3 ms-n4" style="max-width: 210px; top: 180px;">
                       <p class="lh-base mb-0 smaller-2"><img src="img/misc/icons/icons8-clock-64.png" alt="Clock icon" style="height: 24px;" class="me-2 img-fluid align-bottom"/>...Process running</p>
                     </div>
 
-                    <div class="col-12 p-3 bg-primary position-absolute top-50 start-100 translate-middle mt-n3 ms-n4 border-radius" style="max-width: 148px;">
+                    <div class="d-none d-xl-block col-12 p-3 bg-primary position-absolute top-50 start-100 translate-middle mt-n3 ms-n4 border-radius" style="max-width: 148px;">
                       <p class="font-weight-bold text-uppercase text-white mb-0 lh-sm">New UI/UX yields great reviews</p>
                     </div>
 
-                    <div class="col-12 position-absolute start-100 translate-middle ms-n4 bg-background border-radius p-3 large-shadow" style="max-width: 150px; top: 290px">
+                    <div class="d-none d-xl-block col-12 position-absolute start-100 translate-middle ms-n4 bg-background border-radius p-3 large-shadow" style="max-width: 150px; top: 290px">
                        <img src="img/misc/shapes/rating-stars.svg" alt="Rating stars logo icon" style="height: 12px;" class="me-2 img-fluid">
                         <p class="text-primary lh-sm"><strong>4.4</strong> out of 5</p>
                         <img src="img/misc/logos/gartner-logo.svg" alt="Gartner logo icon" style="height: 26px;" class="me-2 img-fluid align-bottom mb-1">
@@ -285,7 +338,8 @@
     </div>
   </section>
     
-  <div class="minHeight65vh"></div>
+  <div class="minHeight30vh"></div>
+  <div class="minHeight35vh d-none d-lg-block"></div>
 
   <section class="design-process">
     <div class="row-fluid">
@@ -356,7 +410,7 @@
                   
                   <div class="testimonialCard text-center position-relative item col-3 col-lg-3 me-5 bg-background border-radius the-border large-shadow p-3">
                     <img src="img/misc/testimonials/valia-lekka-thumb.png" alt="Valia Lekka testimonial" class="img-fluid mt-3" style="height: 55px" />
-                    <img src="img/misc/logos/meta-logo-testimonial.svg" alt="Meta logo" class="img-fluid mt-3" style="height: 55px" />
+                    <img src="img/misc/logos/meta-logo-testimonial.svg" alt="Meta logo" class="img-fluid mt-3 ms-n3" style="height: 55px" />
                     <p class="mt-4 bigger-1" style="min-height: 120px">"Vasilis is first and foremost a wonderful person."</p>
                     <div class="d-flex align-items-end" style="height: 80px">
                       <p class="subtitle w-100">Valia Lekka — Manager</p>
@@ -365,7 +419,7 @@
 
                   <div class="testimonialCard text-center position-relative item col-3 col-lg-3 me-5 bg-background border-radius the-border large-shadow p-3">
                     <img src="img/misc/testimonials/maria-kourousi-thumb.png" alt="Maria Kourousi testimonial" class="img-fluid mt-3" style="height: 55px"/>
-                    <img src="img/misc/logos/meta-logo-testimonial.svg" alt="Meta logo" class="img-fluid mt-3" style="height: 55px" />
+                    <img src="img/misc/logos/meta-logo-testimonial.svg" alt="Meta logo" class="img-fluid mt-3 ms-n3" style="height: 55px" />
                     <p class="mt-4 bigger-1" style="min-height: 120px">"Vasilis is a talented and skilled designer."</p>
                     <div class="d-flex align-items-end" style="height: 80px">
                       <p class="subtitle w-100">Maria Kourousi — Software Engineer</p>
@@ -374,7 +428,7 @@
 
                   <div class="testimonialCard text-center position-relative item col-3 col-lg-3 me-5 bg-background border-radius the-border large-shadow p-3">
                     <img src="img/misc/testimonials/chara-konstantakopoulou-thumb.png" alt="Chara Konstantakopoulou testimonial" class="img-fluid mt-3" style="height: 55px"/>
-                    <img src="img/misc/logos/gateio-logo-testimonial.png" alt="Meta logo" class="img-fluid mt-3" style="height: 55px" />
+                    <img src="img/misc/logos/gateio-logo-testimonial.png" alt="GateIO logo" class="img-fluid mt-3 ms-n3" style="height: 55px" />
                     <p class="mt-4 bigger-1" style="min-height: 120px">"Amazing designer, talented in breaking down complex ideas."</p>
                     <div class="d-flex align-items-end" style="height: 80px">
                       <p class="subtitle w-100">Chara Konstantakopoulou — Multidisciplinary designer</p>
@@ -383,7 +437,7 @@
 
                   <div class="testimonialCard text-center position-relative item col-3 col-lg-3 me-5 bg-background border-radius the-border large-shadow p-3">
                     <img src="img/misc/testimonials/haris-renieris-thumb.png" alt="Haris Renieris testimonial" class="img-fluid mt-3" style="height: 55px"/>
-                    <img src="img/misc/logos/meta-logo-testimonial.svg" alt="Meta logo" class="img-fluid mt-3" style="height: 55px" />
+                    <img src="img/misc/logos/meta-logo-testimonial.svg" alt="Meta logo" class="img-fluid mt-3 ms-n3" style="height: 55px" />
                     <p class="mt-4 bigger-1" style="min-height: 120px">"Very smart and talented professional."</p>
                     <div class="d-flex align-items-end" style="height: 80px">
                       <p class="subtitle w-100">Haris Renieris — Software Engineer</p>
@@ -392,7 +446,7 @@
 
                   <div class="testimonialCard text-center position-relative item col-3 col-lg-3 me-5 bg-background border-radius the-border large-shadow p-3">
                     <img src="img/misc/testimonials/alkisti-katsantoni-thumb.png" alt="Alkistis Katsantoni testimonial" class="img-fluid mt-3" style="height: 55px"/>
-                    <img src="img/misc/logos/meta-logo-testimonial.svg" alt="Meta logo" class="img-fluid mt-3" style="height: 55px" />
+                    <img src="img/misc/logos/meta-logo-testimonial.svg" alt="Meta logo" class="img-fluid mt-3 ms-n3" style="height: 55px" />
                     <p class="mt-4 bigger-1" style="min-height: 120px">"One of the most creative and cooperative people I have worked with."</p>
                     <div class="d-flex align-items-end" style="height: 80px">
                       <p class="subtitle w-100">Alkistis Katsantoni — Manager</p>
@@ -400,7 +454,7 @@
                   </div>
 
                   <div class="testimonialCard text-center position-relative item col-3 col-lg-3 me-5 bg-background border-radius the-border large-shadow p-3">
-                    <img src="img/misc/testimonials/stelios-bournous-thumb.png" alt="Stelios Bournous testimonial" class="img-fluid mt-3" style="height: 55px"/><img src="img/misc/logos/meta-logo-testimonial.svg" alt="Meta logo" class="img-fluid mt-3" style="height: 55px" />
+                    <img src="img/misc/testimonials/stelios-bournous-thumb.png" alt="Stelios Bournous testimonial" class="img-fluid mt-3" style="height: 55px"/><img src="img/misc/logos/meta-logo-testimonial.svg" alt="Meta logo" class="img-fluid mt-3 ms-n3" style="height: 55px" />
                     <p class="mt-4 bigger-1" style="min-height: 120px">"An exceptional designer and teammate."</p>
                   <div class="d-flex align-items-end" style="height: 80px">
                     <p class="subtitle w-100">Stelios Bournous — Manager</p>
@@ -408,7 +462,7 @@
                   </div>
                   <div class="testimonialCard text-center position-relative item col-3 col-lg-3 me-5 bg-background border-radius the-border large-shadow p-3 d-none d-xxl-block">
                     <img src="img/misc/testimonials/frini-paschou-thumb.png" alt="Frini Paschou testimonial" class="img-fluid mt-3" style="height: 55px"/>
-                    <img src="img/misc/logos/meta-logo-testimonial.svg" alt="Meta logo" class="img-fluid mt-3" style="height: 55px" />
+                    <img src="img/misc/logos/meta-logo-testimonial.svg" alt="Meta logo" class="img-fluid mt-3 ms-n3" style="height: 55px" />
                     <p class="mt-4 bigger-1" style="min-height: 120px">"Vasilis made UX workflows development less intimidating."</p>
                     <div class="d-flex align-items-end" style="height: 80px">
                       <p class="subtitle w-100">Frini Paschou — Software Engineer</p>
@@ -645,7 +699,7 @@
             <p class="font-weight-bold pt-2">Senior staff product designer (full-time) <span class="badge bg-accent font-weight-normal smaller-4 ms-1">2022</span> <span class="badge bg-accent font-weight-normal smaller-4">2023</span>
             </p>
             <p class="mt-4">Voicemod is a B2C MacOS and Windows real-time voice changing app.</p>
-            <p>Discover how I successfully reduced the app's uninstall rate by revamping the onboarding experience and conducting user testing with individuals who encountered difficulties during setup.</p>
+            <p class="d-none d-lg-block">Discover how I successfully reduced the app's uninstall rate by revamping the onboarding experience and conducting user testing with individuals who encountered difficulties during setup.</p>
             <p class="mt-5">
               <a href="voicemod.html" class="btn btn-primary rounded-pill py-2 px-3 stretched-link" title="Click to view project page">View project
               </a>

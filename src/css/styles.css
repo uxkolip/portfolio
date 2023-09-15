@@ -11974,15 +11974,14 @@ mark, .mark, .mark {
 .nav-pills {
   transition: .3s all; }
 
-.nav-pills .nav-link.active,
-.nav-pills .show > .nav-link {
+.sticky-top .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
   color: inherit !important;
   background-color: transparent;
   border-radius: 0 !important;
   transition: .05s all;
   font-weight: bold; }
 
-.nav-pills .nav-link.active:before {
+.sticky-top .nav-pills .nav-link.active:before {
   content: "";
   width: 4px;
   height: 30px;
