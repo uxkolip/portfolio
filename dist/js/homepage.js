@@ -249,8 +249,8 @@ horizontalSections.forEach(function (sec, i) {
     ease: "none",
     scrollTrigger: {
         trigger: sec,
-        start: "-50%",
-        end: "+=1500px",
+        start: "center center",
+        end: "+=100%",        
         pin: true,
         invalidateOnRefresh: true,
         scrub: true
