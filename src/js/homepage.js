@@ -156,13 +156,13 @@ panels.forEach((panel, index) => {
             $("[data-target='#metaPanel']").addClass('btn-link').removeClass('btn-outline-primary');
             break;
           case "2":
-            console.log("meta panel is reverse-complete");
+            //console.log("meta panel is reverse-complete");
             $("#voicemodPanel").css('scale', '1');
             $("[data-target='#voicemodPanel']").addClass('btn-link').removeClass('btn-link');
             $("[data-target='#metaPanel']").addClass('btn-link').removeClass('btn-link');
             break;
           case "3":
-            console.log("msft panel is reverse-complete");
+            //console.log("msft panel is reverse-complete");
             $("#metaPanel").css('scale', '1').css('marginTop', "0px");
             $("[data-target='#metaPanel']").addClass('btn-outline-primary').removeClass('btn-link');
             $("[data-target='#msftPanel']").addClass('btn-link').removeClass('btn-outline-primary');
@@ -176,36 +176,6 @@ panels.forEach((panel, index) => {
 });
 // homepage selected work gsock end
 
-// homepage selected work scrollTo
-/*$(document).on('click', '.selectedWorkNav button', function() {
-   
-    //$("html, body").animate({ scrollTop: $($(this).attr('data-target')).offset().top - 400}, 1500);
-    var targetElement = $(this).attr('data-target');
-     
-    console.log(targetElement);
-     // Apply ScrollTrigger to the target element
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.set(targetElement, { opacity: 0, y: 100 });
-    const targetOffsetTop = document.getElementById(targetElement).getBoundingClientRect().top;
-    const currentScrollPosition = window.pageYOffset;
-    const scrollToPosition = currentScrollPosition + targetOffsetTop;
-    
-
-    function scrollToTarget() {     
-
-      window.scrollTo({
-        top: scrollToPosition,
-        behavior: "smooth", // You can use "auto" for instant scroll without animation
-      });            
-    }
-
-    $("html, body").animate({ 
-        scrollTop: $(scrollToPosition).offset().top - 400}, 1500
-        );
-        console.log('asdfsdf');
-});*/
-// homepage selected work scrollTo end
-
 
 
 //homepage design process gsock
@@ -215,18 +185,39 @@ const cards = document.querySelectorAll(".design-card");
 
 gsap.set(cards, {position: 'absolute'})
 
-gsap.to(".design-card", {
-    yPercent: -180,
-    rotation: 32,
-    stagger: 3,
-    duration: 8,
-    scrollTrigger: {
-        trigger: ".design-cards",
-        pin: true,
-        scrub: true,
-        start: "-15%",
-        end: "1000px",
-    }
+const cardTimeline = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.design-cards', // The wrapper element that contains the panels
+    pin: true,
+    start: "-15%",
+    end: "1000px",
+    scrub: true // Enable "scrubbing" so that the animations are smoothly reversed as the user scrolls back up
+  },
+});
+
+
+cards.forEach((card, index) => {
+    var currentCard = `${index + 1}`;
+    cardTimeline.to(card, {
+      yPercent: -180,
+      rotation: 32,
+      stagger: 3,
+      duration: 8,
+      onComplete: () => {
+        console.log(`Card ${index + 1} timeline completed`);
+         switch (currentCard) {
+          case "3":
+          confetti({
+            particleCount: 100,
+            spread: 70,
+            origin: { y: 0.6 },
+          });
+          break;
+          default:
+            console.log("Unknown card");
+        }
+      }
+    });
 });
 //homepage design process gsock end
 
@@ -278,3 +269,34 @@ horizontalSections.forEach(function (sec, i) {
   s.parentNode.insertBefore(v, s);
 })(document, 'script');
 //voiceflow end
+
+
+// homepage selected work scrollTo
+/*$(document).on('click', '.selectedWorkNav button', function() {
+   
+    //$("html, body").animate({ scrollTop: $($(this).attr('data-target')).offset().top - 400}, 1500);
+    var targetElement = $(this).attr('data-target');
+     
+    console.log(targetElement);
+     // Apply ScrollTrigger to the target element
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.set(targetElement, { opacity: 0, y: 100 });
+    const targetOffsetTop = document.getElementById(targetElement).getBoundingClientRect().top;
+    const currentScrollPosition = window.pageYOffset;
+    const scrollToPosition = currentScrollPosition + targetOffsetTop;
+    
+
+    function scrollToTarget() {     
+
+      window.scrollTo({
+        top: scrollToPosition,
+        behavior: "smooth", // You can use "auto" for instant scroll without animation
+      });            
+    }
+
+    $("html, body").animate({ 
+        scrollTop: $(scrollToPosition).offset().top - 400}, 1500
+        );
+        console.log('asdfsdf');
+});*/
+// homepage selected work scrollTo end

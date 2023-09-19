@@ -482,7 +482,10 @@
                   <p class="mt-4">Designing the user journey was a meticulous process, focusing on simplicity and speed.</p>
                   <p>I helped streamline the process of merging video and audio footage from multiple sources, allowing users to swiftly create a first draft.</p>
 
-                  <div id="iframeContainer" style="height: 500px" class="col-12 the-border text-center"><p class="mt-5 pt-5 figmaLoader">Loading Figma file...<span class="spinner-border text-accent" style="width: 16px; height: 16px" role="status"><span class="visually-hidden">Loading...</span></span></p></div>
+                  <div id="iframeContainer" style="height: 500px" class="col-12 the-border text-center position-relative w-100">
+                    <p class="figmaLoader position-absolute translate-middle start-50 top-50">Loading Figma file...<span class="spinner-border text-accent" style="width: 16px; height: 16px" role="status"><span class="visually-hidden">Loading...</span></span>
+                    </p>
+                  </div>
 
               </div>            
             </div>
@@ -609,56 +612,59 @@
 
                   <p class="mt-4">During the wireframing process, I carefully mapped out the key functionalities, including the onboarding flow, aligning them with the MVP user stories.</p>
 
+                  <div class="position-relative">
 
-                  <button class="btn rounded-circle btn-background btn-left ms-xl-n4 border border-the-border position-absolute top-50 start-0 translate-middle-y d-none z-3 mt-5 mt-lg-3" title="Click to scroll left"><img src="img/misc/shapes/arrow-right.svg" alt="Left arrow" class="img-fluid w-75 py-4" style="rotate: 180deg;"/></button>
+                    <button title="Click to scroll left" class="btn rounded-circle btn-background btn-left ms-xl-n4 border border-the-border position-absolute top-50 start-0 translate-middle-y z-3 mt-n4 p-2"><img alt="Left arrow" style="rotate: 180deg;" src="img/misc/shapes/chevron-right.svg" class="img-fluid w-100"></button>
 
-                  <div id="wireframesScroll" class="scrollableArea row mt-5 px-0 d-flex flex-nowrap flex-nowrap overflow-x-scroll">
-                      
-                    <div class="col-6 col-lg-3 me-4 mb-5 position-relative d-flex align-items-center justify-content-center">
-                        <img src="img/misc/elements/meta-wireframe-01.jpg" alt="Wireframe" class="img-fluid border-radius large-shadow" style="max-height: 330px"/>
-                      </div>
+                    <div id="wireframesScroll" class="scrollableArea row mt-5 px-0 d-flex flex-nowrap flex-nowrap overflow-x-scroll">
+                        
+                      <div class="col-6 col-lg-3 me-4 mb-5 position-relative d-flex align-items-center justify-content-center">
+                          <img src="img/misc/elements/meta-wireframe-01.jpg" alt="Wireframe" class="img-fluid border-radius large-shadow" style="max-height: 330px"/>
+                        </div>
 
-                      <div class="col-6 col-lg-3 mx-4 mb-5 position-relative d-flex align-items-center justify-content-center">
-                        <img src="img/misc/elements/meta-wireframe-02.jpg" alt="Wireframe" class="img-fluid border-radius large-shadow" style="max-height: 330px"/>
-                      </div>
+                        <div class="col-6 col-lg-3 mx-4 mb-5 position-relative d-flex align-items-center justify-content-center">
+                          <img src="img/misc/elements/meta-wireframe-02.jpg" alt="Wireframe" class="img-fluid border-radius large-shadow" style="max-height: 330px"/>
+                        </div>
 
-                      <div class="col-6 col-lg-3 mx-4 mb-5 position-relative d-flex align-items-center justify-content-center">
-                        <img src="img/misc/elements/meta-wireframe-03.jpg" alt="Wireframe" class="img-fluid border-radius large-shadow" style="max-height: 330px"/>
-                      </div>
+                        <div class="col-6 col-lg-3 mx-4 mb-5 position-relative d-flex align-items-center justify-content-center">
+                          <img src="img/misc/elements/meta-wireframe-03.jpg" alt="Wireframe" class="img-fluid border-radius large-shadow" style="max-height: 330px"/>
+                        </div>
 
-                      <div class="col-6 col-lg-3 mx-4 mb-5 position-relative d-flex align-items-center justify-content-center">
-                        <img src="img/misc/elements/meta-wireframe-04.jpg" alt="Wireframe" class="img-fluid border-radius large-shadow" style="max-height: 330px"/>
-                      </div>
+                        <div class="col-6 col-lg-3 mx-4 mb-5 position-relative d-flex align-items-center justify-content-center">
+                          <img src="img/misc/elements/meta-wireframe-04.jpg" alt="Wireframe" class="img-fluid border-radius large-shadow" style="max-height: 330px"/>
+                        </div>
 
-                      <div class="col-lg-6 mx-3 mb-5 position-relative d-flex align-items-center justify-content-center">
-                        <img src="img/misc/elements/meta-wireframe-05.jpg" alt="Wireframe" class="img-fluid border-radius large-shadow" style="max-height: 330px"/>
-                      </div>                     
+                        <div class="col-lg-6 mx-3 mb-5 position-relative d-flex align-items-center justify-content-center">
+                          <img src="img/misc/elements/meta-wireframe-05.jpg" alt="Wireframe" class="img-fluid border-radius large-shadow" style="max-height: 330px"/>
+                        </div>                     
 
-                      <div class="col-lg-8 mx-4 mb-5 position-relative d-flex align-items-center justify-content-center">
-                        <img src="img/misc/elements/old-wireframe-02.jpg" alt="Wireframe" class="img-fluid large-shadow" style="max-height: 330px"/>
-                      </div>
+                        <div class="col-lg-8 mx-4 mb-5 position-relative d-flex align-items-center justify-content-center">
+                          <img src="img/misc/elements/old-wireframe-02.jpg" alt="Wireframe" class="img-fluid large-shadow" style="max-height: 330px"/>
+                        </div>
 
-                      <div class="col-lg-8 mx-4 mb-5 position-relative d-flex align-items-center justify-content-center">
-                        <img src="img/misc/elements/old-wireframe-03.jpg" alt="Wireframe" class="img-fluid large-shadow" style="max-height: 330px"/>
-                      </div>
+                        <div class="col-lg-8 mx-4 mb-5 position-relative d-flex align-items-center justify-content-center">
+                          <img src="img/misc/elements/old-wireframe-03.jpg" alt="Wireframe" class="img-fluid large-shadow" style="max-height: 330px"/>
+                        </div>
 
-                      <div class="col-lg-8 mx-4 mb-5 position-relative d-flex align-items-center justify-content-center">
-                        <img src="img/misc/elements/old-wireframe-04.jpg" alt="Wireframe" class="img-fluid large-shadow" style="max-height: 330px"/>
-                      </div>
+                        <div class="col-lg-8 mx-4 mb-5 position-relative d-flex align-items-center justify-content-center">
+                          <img src="img/misc/elements/old-wireframe-04.jpg" alt="Wireframe" class="img-fluid large-shadow" style="max-height: 330px"/>
+                        </div>
 
-                      <div class="col-lg-8 mx-4 mb-5 position-relative d-flex align-items-center justify-content-center">
-                        <img src="img/misc/elements/old-wireframe-05.jpg" alt="Wireframe" class="img-fluid large-shadow" style="max-height: 330px"/>
-                      </div>
+                        <div class="col-lg-8 mx-4 mb-5 position-relative d-flex align-items-center justify-content-center">
+                          <img src="img/misc/elements/old-wireframe-05.jpg" alt="Wireframe" class="img-fluid large-shadow" style="max-height: 330px"/>
+                        </div>
 
-                      <div class="col-lg-8 ms-4 mb-5 position-relative d-flex align-items-center justify-content-center">
-                        <img src="img/misc/elements/old-wireframe-06.jpg" alt="Wireframe" class="img-fluid large-shadow" style="max-height: 330px"/>
-                      </div>
-                 
-                </div>
+                        <div class="col-lg-8 ms-4 mb-5 position-relative d-flex align-items-center justify-content-center">
+                          <img src="img/misc/elements/old-wireframe-06.jpg" alt="Wireframe" class="img-fluid large-shadow" style="max-height: 330px"/>
+                        </div>
+                   
+                  </div>
 
-                <button class="btn rounded-circle btn-background btn-right me-xl-n5 border border-the-border position-absolute top-50 end-0 translate-middle-y mt-5 mt-lg-3" title="Click to scroll right"><img src="img/misc/shapes/arrow-right.svg" alt="Right arrow" class="img-fluid w-75 py-4"/></button>
+                  <button class="btn rounded-circle btn-background btn-right me-xl-n5 border border-the-border position-absolute top-50 end-0 translate-middle-y mt-n4 p-2" title="Click to scroll right"><img src="img/misc/shapes/chevron-right.svg" alt="Right arrow" class="img-fluid w-100"/></button>
 
-                <div class="dotted-bg position-absolute start-0 top-50 w-100 translate-middle-y minHeight75vh" style="z-index: -1;">
+                  <div class="dotted-bg position-absolute start-0 top-50 w-100 translate-middle-y minHeight75vh" style="z-index: -1;">
+                  </div>
+
                 </div>
 
               </div>            
