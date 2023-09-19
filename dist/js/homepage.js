@@ -177,6 +177,19 @@ panels.forEach((panel, index) => {
 // homepage selected work gsock end
 
 
+// checks if elem is in view
+function isScrolledIntoView(elem)
+{
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
+// checks if elem is in view end
+
 
 //homepage design process gsock
 gsap.registerPlugin(ScrollTrigger);
@@ -195,7 +208,6 @@ const cardTimeline = gsap.timeline({
   },
 });
 
-
 cards.forEach((card, index) => {
     var currentCard = `${index + 1}`;
     cardTimeline.to(card, {
@@ -204,17 +216,19 @@ cards.forEach((card, index) => {
       stagger: 3,
       duration: 8,
       onComplete: () => {
-        console.log(`Card ${index + 1} timeline completed`);
+        //console.log(`Card ${index + 1} timeline completed`);
          switch (currentCard) {
           case "3":
-          confetti({
-            particleCount: 100,
-            spread: 70,
-            origin: { y: 0.6 },
-          });
+            if (isScrolledIntoView($('.celebrate'))) {
+              confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 },
+              });
+            }
           break;
           default:
-            console.log("Unknown card");
+            //console.log("Unknown card");
         }
       }
     });
