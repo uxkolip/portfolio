@@ -219,7 +219,7 @@ cards.forEach((card, index) => {
         //console.log(`Card ${index + 1} timeline completed`);
          switch (currentCard) {
           case "3":
-            if (isScrolledIntoView($('.celebrate'))) {
+            if (isScrolledIntoView($('.celebrate')) && $(window).width() >= 769) {
               confetti({
                 particleCount: 100,
                 spread: 70,
@@ -283,6 +283,19 @@ horizontalSections.forEach(function (sec, i) {
   s.parentNode.insertBefore(v, s);
 })(document, 'script');
 //voiceflow end
+
+//homepage animations
+gsap.set(".anim01, .anim02, .anim03, .anim04, .anim05", { opacity: "0" });
+
+const timeline = gsap.timeline();
+
+timeline
+  .add(gsap.to(".anim02", { delay: 1, duration: 1, opacity: 1 }))
+  .add(gsap.to(".anim03", { duration: 1, opacity: 1 }), "-=0.3")
+  .add(gsap.to(".anim01", { duration: 1, opacity: 1 }), "-=0.3")
+  .add(gsap.to(".anim05", { duration: 1, opacity: 1 }), "-=0.3")
+  .add(gsap.to(".anim04", { duration: 1, opacity: 1 }), "-=0.3");
+//homepage animations end
 
 
 // homepage selected work scrollTo
