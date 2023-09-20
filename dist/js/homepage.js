@@ -10,6 +10,7 @@ function checkiftooltip() {
 $(document).ready(function() {
     $(".panel").css("opacity", "1");
     checkiftooltip();
+    $("body").removeClass("opacity-0");
 }); 
 
 $(window).resize(function() {
