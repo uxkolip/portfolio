@@ -9,7 +9,6 @@ $dark: #16013E;
 $modal-backdrop-bg: $secondary;
 $modal-backdrop-opacity: .96;
 
-
 @import 'bootstrap/_functions.scss';
 @import 'bootstrap/variables.scss';
 
@@ -101,6 +100,10 @@ p {
 strong {
   font-family:'gt_america_extended_bold';
 }
+
+/*.btn-primary:hover {
+  background-color: #21025B !important;
+}*/
 
 mark, .mark {
   background-color: $success;

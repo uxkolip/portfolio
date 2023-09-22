@@ -11913,6 +11913,9 @@ p {
 strong {
   font-family: 'gt_america_extended_bold'; }
 
+/*.btn-primary:hover {
+  background-color: #21025B !important;
+}*/
 mark, .mark, .mark {
   background-color: #00C9A5;
   color: #FFFBF5; }
