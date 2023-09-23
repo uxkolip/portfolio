@@ -1,5 +1,8 @@
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+const lenis = new Lenis();
+
+lenis.stop();
 
 function checkiftooltip() {
 
@@ -12,6 +15,7 @@ function checkiftooltip() {
 $(document).ready(function() {
     checkiftooltip();
     $("body").removeClass("opacity-0");
+    lenis.start();
 }); 
 
 $(window).resize(function() {
