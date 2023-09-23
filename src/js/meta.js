@@ -1,17 +1,17 @@
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+
 function checkiftooltip() {
 
     $(window).width() > 768 ? ($('[data-toggle="tooltip"]').tooltip(), 
     $('[data-toggle="tooltip"]').tooltip("enable")) : $('[data-toggle="tooltip"]').tooltip("disable")
 
     $("[data-toggle='tooltip']").tooltip();
-
-    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
-
 }
 
 $(document).ready(function() {
     checkiftooltip();
+    $("body").removeClass("opacity-0");
 }); 
 
 $(window).resize(function() {
@@ -36,8 +36,10 @@ $(window).resize(function() {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
         lenis.scrollTo(this.getAttribute('href'));
+        bootstrap.Tooltip.getInstance('.close-button').dispose();
         setTimeout(function() {
           showAnim.reverse();
+          [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
         }, 3050);
       });
     })
@@ -46,8 +48,10 @@ $(window).resize(function() {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
         lenis.scrollTo(this.getAttribute('data-target'));
+        bootstrap.Tooltip.getInstance('.close-button').dispose();        
         setTimeout(function() {
           showAnim.reverse();
+          [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
         }, 3050);
       });
     })
@@ -154,24 +158,32 @@ $(document).mousemove(function(e) {
 });
 //drag to scroll end
 
+// checks if elem is in view
+function isScrolledIntoView(elem)
+{
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
 
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
+// checks if elem is in view end
 
 
 //lottie
-const player = document.getElementById("lottiePlaya");
-
-// Play as soon as the animation is visible
-player.playOnShow();
-
-// Options:
-player.playOnShow({
-    threshold: [0.25],
-    autoplay: false
+$(document).on('scroll', function() {
+    if (isScrolledIntoView($('.lottieRow'))) {
+        if (!$('#lottiePlaya').length) {
+            $('.lottieRow').html('<dotlottie-player id="lottiePlaya" autoplay="false" loop mode="normal" src="js/lottie-files/meta-hero-lottie-2.lottie" style="max-height: 650px" class="w-100"></dotlottie-player>');    
+        }        
+        setTimeout(function() {
+            const player = document.getElementById("lottiePlaya");
+            player.play();
+        }, 500);
+    }
 });
-
-// Stop playing on show
-player.stopPlayOnShow();
-
 //lottie end
 
 
@@ -292,3 +304,18 @@ $('.scrollableArea').each(function() {
   checkScrollableRightSpace($(this));
 });
 // horizontal scroll buttons scrollableDivImprovements end
+
+
+//page animations
+gsap.set(".anim01, .anim02, .anim03, .anim04, .anim05, .anim06", { opacity: "0" });
+
+const timeline = gsap.timeline();
+
+timeline
+  .add(gsap.to(".anim01", { delay: 1, duration: 1, opacity: 1 }))
+  .add(gsap.to(".anim02", { duration: 1, opacity: 1 }), "-=0.3")
+  .add(gsap.to(".anim03", { duration: 1, opacity: 1 }), "-=0.3")
+  .add(gsap.to(".anim04", { duration: 1, opacity: 1 }), "-=0.3")
+  .add(gsap.to(".anim05", { duration: 1, opacity: 1 }), "-=0.3")
+  .add(gsap.to(".anim06", { duration: 1, opacity: 1 }), "-=0.3");
+//page animations end

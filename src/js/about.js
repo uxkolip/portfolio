@@ -54,8 +54,10 @@ $(window).resize(function() {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
         lenis.scrollTo(this.getAttribute('href'));
+        bootstrap.Tooltip.getInstance('.close-button').dispose();
         setTimeout(function() {
           showAnim.reverse();
+          [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
         }, 3050);
       });
     })
@@ -64,8 +66,10 @@ $(window).resize(function() {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
         lenis.scrollTo(this.getAttribute('data-target'));
+        bootstrap.Tooltip.getInstance('.close-button').dispose();
         setTimeout(function() {
           showAnim.reverse();
+          [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
         }, 3050);
       });
     })
@@ -94,15 +98,6 @@ ScrollTrigger.create({
     }
 });
 //navbar show on scroll up end
-
-// page progress
-/*gsap.registerPlugin(ScrollTrigger);
-gsap.to('progress', {
-  value: 100,
-  ease: 'none',
-  scrollTrigger: { scrub: 0.3 }
-});*/
-// page progress end
 
 
 // page progress

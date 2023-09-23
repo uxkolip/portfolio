@@ -101,9 +101,19 @@ strong {
   font-family:'gt_america_extended_bold';
 }
 
-/*.btn-primary:hover {
-  background-color: #21025B !important;
-}*/
+.btn {
+  transition: all 0.2s ease-in-out 0s !important;
+}
+
+.btn-outline-primary:hover {
+  box-shadow: #00c9a8 1px 1px, #00c9a8 2px 2px, #00c9a8 3px 3px;
+  transform: translateX(-3px);
+}
+
+.btn-primary:hover {
+  box-shadow: #00e6c3 1px 1px, #00e6c3 2px 2px, #00e6c3 3px 3px;
+  transform: translateX(-3px);
+}
 
 mark, .mark {
   background-color: $success;
@@ -563,6 +573,10 @@ a:hover, button:hover, .pointer {
   transition: .3s all;
 }
 
+.progress {
+  transition: 3s all;
+}
+
 .voice-progress {
   position: relative;
   width: 100%;
@@ -639,7 +653,7 @@ a:hover, button:hover, .pointer {
 
 @include media-breakpoint-up(xs) {
     html, body {
-        font-size: 1rem !important;
+        font-size: .9rem !important;
     }
     .bigger-1 {
         font-size: 1.1rem !important;
@@ -688,7 +702,7 @@ a:hover, button:hover, .pointer {
 
 @include media-breakpoint-up(sm) {
     html {
-        font-size: 1.2rem;
+        font-size: .9rem;
     }
     .display-1 {
         font-size: 5rem;

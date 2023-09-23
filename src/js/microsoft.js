@@ -1,3 +1,6 @@
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+
 function checkiftooltip() {
 
     $(window).width() > 768 ? ($('[data-toggle="tooltip"]').tooltip(), 
@@ -5,13 +8,11 @@ function checkiftooltip() {
 
     $("[data-toggle='tooltip']").tooltip();
 
-    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
-
 }
 
 $(document).ready(function() {
     checkiftooltip();
+    $("body").removeClass("opacity-0");
 }); 
 
 $(window).resize(function() {
@@ -36,8 +37,10 @@ $(window).resize(function() {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
         lenis.scrollTo(this.getAttribute('href'))
+        bootstrap.Tooltip.getInstance('.close-button').dispose();
         setTimeout(function() {
           showAnim.reverse();
+          [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
         }, 3050);
       });
     })
@@ -46,8 +49,10 @@ $(window).resize(function() {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
         lenis.scrollTo(this.getAttribute('data-target'))
+        bootstrap.Tooltip.getInstance('.close-button').dispose();
         setTimeout(function() {
           showAnim.reverse();
+          [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
         }, 3050);
       });
     })
@@ -307,3 +312,17 @@ $('.scrollableArea').each(function() {
   checkScrollableRightSpace($(this));
 });
 // horizontal scroll buttons scrollableDivImprovements end
+
+//page animations
+gsap.set(".anim01, .anim02, .anim03, .anim04, .anim05, .anim06", { opacity: "0" });
+
+const timeline = gsap.timeline();
+
+timeline
+  .add(gsap.to(".anim01", { delay: 1, duration: 1, opacity: 1 }))
+  .add(gsap.to(".anim02", { duration: 1, opacity: 1 }), "-=0.3")
+  .add(gsap.to(".anim03", { duration: 1, opacity: 1 }), "-=0.3")
+  .add(gsap.to(".anim04", { duration: 1, opacity: 1 }), "-=0.3")
+  .add(gsap.to(".anim05", { duration: 1, opacity: 1 }), "-=0.3")
+  .add(gsap.to(".anim06", { duration: 1, opacity: 1 }), "-=0.3");
+//page animations end
