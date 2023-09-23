@@ -54,25 +54,6 @@ gulp.task('strip', function() {
     .pipe(gulp.dest('./dist/js/'));
 });
 
-//strip uglify
-gulp.task('uglify', function() {
-  return gulp.src('./src/js/**/*.*')
-    .pipe(strip())
-    .pipe(gulp.dest('./dist/js/'));
-});
-
-
-gulp.task('minify-js', function() {
-  return gulp.src('./src/js/**/*.*')
-    .pipe(uglify().on('error', function(err) {
-      console.error(err.message);
-      this.emit('end'); // Continue Gulp task execution
-    }))
-    .pipe(gulp.dest('./dist/js/'));
-});
-
-
-
 // Task to Minify JS
 gulp.task('jsmin', function() {
   return gulp.src('./src/js/**/*.*')
@@ -160,5 +141,5 @@ gulp.task('default', ['watch']);
 
 // Gulp Build Task
 gulp.task('build', function() {
-  runSequence('clean', 'sass','minify-css','minifyhtml', 'jsmin', 'minify-js', 'fonts', 'video', 'sounds', 'defaultimport', 'imagemin');
+  runSequence('clean', 'sass','minify-css','minifyhtml', 'jsmin', 'fonts', 'video', 'sounds', 'defaultimport', 'imagemin');
 });
