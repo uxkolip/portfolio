@@ -62,7 +62,7 @@ document.querySelectorAll('[data-target^="#"]').forEach(anchor => {
 
 //scroll toTop
 $(window).scroll(function() {
-    $(this).scrollTop() > 800 ? $("#toTop").fadeIn("fast", function() {}) : $("#toTop").fadeOut("fast")
+    $(this).scrollTop() > 800 ? $("#toTop").fadeIn("fast") : $("#toTop").fadeOut("fast")
 });
 //scroll toTop end
  
@@ -322,10 +322,10 @@ gsap.set(".anim01, .anim02, .anim03, .anim04, .anim05, .anim06", { opacity: "0" 
 const timeline = gsap.timeline();
 
 timeline
-  .add(gsap.to(".anim01", { delay: 1, duration: 1, opacity: 1 }))
-  .add(gsap.to(".anim02", { duration: 1, opacity: 1 }), "-=0.3")
   .add(gsap.to(".anim03", { duration: 1, opacity: 1 }), "-=0.3")
   .add(gsap.to(".anim04", { duration: 1, opacity: 1 }), "-=0.3")
+  .add(gsap.to(".anim02", { duration: 1, opacity: 1 }), "-=0.3")
+  .add(gsap.to(".anim01", { duration: 1, opacity: 1 }), "-=0.3")
   .add(gsap.to(".anim05", { duration: 1, opacity: 1 }), "-=0.3")
   .add(gsap.to(".anim06", { duration: 1, opacity: 1 }), "-=0.3");
 //page animations end
