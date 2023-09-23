@@ -22,8 +22,6 @@ $(window).resize(function() {
 });
 
 //smooth scroll
-    const lenis = new Lenis()
-
     lenis.on('scroll', (e) => {
       //console.log(e)
     })
