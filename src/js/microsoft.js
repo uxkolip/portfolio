@@ -5,12 +5,9 @@ const lenis = new Lenis();
 lenis.stop();
 
 function checkiftooltip() {
-
     $(window).width() > 768 ? ($('[data-toggle="tooltip"]').tooltip(), 
     $('[data-toggle="tooltip"]').tooltip("enable")) : $('[data-toggle="tooltip"]').tooltip("disable")
-
     $("[data-toggle='tooltip']").tooltip();
-
 }
 
 $(document).ready(function() {
@@ -24,47 +21,49 @@ $(window).resize(function() {
 });
 
 //smooth scroll
-    
+lenis.on('scroll', ScrollTrigger.update)
 
-    lenis.on('scroll', (e) => {
-      //console.log(e)
-    })
+gsap.ticker.add((time)=>{
+  lenis.raf(time * 1000)
+})
 
-    function raf(time) {
-      lenis.raf(time)
-      requestAnimationFrame(raf)
-    }
+gsap.ticker.lagSmoothing(0)
 
-    requestAnimationFrame(raf)
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        lenis.scrollTo(this.getAttribute('href'))
-        bootstrap.Tooltip.getInstance('.close-button').dispose();
-        setTimeout(function() {
-          showAnim.reverse();
-          [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
-        }, 3050);
-      });
-    })
+requestAnimationFrame(raf)
 
-    document.querySelectorAll('[data-target^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        lenis.scrollTo(this.getAttribute('data-target'))
-        bootstrap.Tooltip.getInstance('.close-button').dispose();
-        setTimeout(function() {
-          showAnim.reverse();
-          [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
-        }, 3050);
-      });
-    })
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    lenis.scrollTo(this.getAttribute('href'))
+    bootstrap.Tooltip.getInstance('.close-button').dispose();
+    setTimeout(function() {
+      showAnim.reverse();
+      [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+    }, 3050);
+  });
+})
 
-    //scroll toTop
-    $(window).scroll(function() {
-        $(this).scrollTop() > 800 ? $("#toTop").fadeIn("fast", function() {}) : $("#toTop").fadeOut("fast")
-    });
+document.querySelectorAll('[data-target^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    lenis.scrollTo(this.getAttribute('data-target'))
+    bootstrap.Tooltip.getInstance('.close-button').dispose();
+    setTimeout(function() {
+      showAnim.reverse();
+      [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+    }, 3050);
+  });
+})
+
+//scroll toTop
+$(window).scroll(function() {
+    $(this).scrollTop() > 800 ? $("#toTop").fadeIn("fast", function() {}) : $("#toTop").fadeOut("fast")
+});
 //scroll toTop end
  
 

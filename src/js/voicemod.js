@@ -5,12 +5,9 @@ const lenis = new Lenis();
 lenis.stop();
 
 function checkiftooltip() {
-
     $(window).width() > 768 ? ($('[data-toggle="tooltip"]').tooltip(), 
     $('[data-toggle="tooltip"]').tooltip("enable")) : $('[data-toggle="tooltip"]').tooltip("disable")
-
     $("[data-toggle='tooltip']").tooltip();
-
 }
 
 $(document).ready(function() {
@@ -24,7 +21,13 @@ $(window).resize(function() {
 });
 
 //smooth scroll
-lenis.on('scroll', (e) => {})
+lenis.on('scroll', ScrollTrigger.update)
+
+gsap.ticker.add((time)=>{
+  lenis.raf(time * 1000)
+})
+
+gsap.ticker.lagSmoothing(0)
 
 function raf(time) {
   lenis.raf(time)

@@ -22,43 +22,47 @@ $(window).resize(function() {
 });
 
 //smooth scroll
-    lenis.on('scroll', (e) => {
-      //console.log(e)
-    })
+lenis.on('scroll', ScrollTrigger.update)
 
-    function raf(time) {
-      lenis.raf(time)
-      requestAnimationFrame(raf)
-    }
+gsap.ticker.add((time)=>{
+  lenis.raf(time * 1000)
+})
 
-    requestAnimationFrame(raf)
+gsap.ticker.lagSmoothing(0)
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        lenis.scrollTo(this.getAttribute('href'));
-        setTimeout(function() {
-          showAnim.reverse();
-        }, 3050);
-      });
-    })
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
 
-    document.querySelectorAll('[data-target^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        lenis.scrollTo(this.getAttribute('data-target'));
-        setTimeout(function() {
-          showAnim.reverse();
-        }, 3050);
-      });
-    })
+requestAnimationFrame(raf)
 
-    //scroll toTop visibility
-    $(window).scroll(function() {
-        $(this).scrollTop() > 800 ? $("#toTop").fadeIn("fast", function() {}) : $("#toTop").fadeOut("fast")
-    });
-    //scroll toTop visibility end
-    
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    lenis.scrollTo(this.getAttribute('href'));
+    setTimeout(function() {
+      showAnim.reverse();
+    }, 3050);
+  });
+})
+
+document.querySelectorAll('[data-target^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    lenis.scrollTo(this.getAttribute('data-target'));
+    setTimeout(function() {
+      showAnim.reverse();
+    }, 3050);
+  });
+})
+
+//scroll toTop visibility
+$(window).scroll(function() {
+    $(this).scrollTop() > 800 ? $("#toTop").fadeIn("fast", function() {}) : $("#toTop").fadeOut("fast")
+});
+//scroll toTop visibility end
+
 //smooth scroll end
 
 

@@ -53,7 +53,7 @@ $theme-colors: map-merge($custom-theme-colors, $theme-colors);
 }
 
 /*lenis stuff*/
-html.lenis {
+html, .lenis {
   height: auto;
 }
 
