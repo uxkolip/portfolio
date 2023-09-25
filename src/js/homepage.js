@@ -69,7 +69,7 @@ document.querySelectorAll('[data-target^="#"]').forEach(anchor => {
 
 
 //navbar show on scroll up
-const showAnim = gsap.from('.main-navbar', { 
+/*const showAnim = gsap.from('.main-navbar', { 
     yPercent: -100,
     paused: true,
     duration: 0.3
@@ -81,7 +81,7 @@ ScrollTrigger.create({
     onUpdate: (self) => {
         self.direction === -1 ? showAnim.play() : showAnim.reverse()
     }
-});
+});*/
 //navbar show on scroll up end
 
 // page progress
