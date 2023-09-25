@@ -70,9 +70,9 @@ document.querySelectorAll('[data-target^="#"]').forEach(anchor => {
 })
 
 //scroll toTop
-$(window).scroll(function() {
-    $(this).scrollTop() > 800 ? $("#toTop").fadeIn("fast") : $("#toTop").fadeOut("fast")
-});
+/*$(window).scroll(function() {
+  $(this).scrollTop() > 800 ? $("#toTop").fadeIn("fast") : $("#toTop").fadeOut("fast")
+});*/
 //scroll toTop end
  
 

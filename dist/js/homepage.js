@@ -60,9 +60,9 @@ document.querySelectorAll('[data-target^="#"]').forEach(anchor => {
 
 
 //scroll toTop visibility
-$(window).scroll(function() {
+/*$(window).scroll(function() {
   $(this).scrollTop() > 800 ? $("#toTop").css("opacity", 1) : $("#toTop").css("opacity", 0)
-});
+});*/
 //scroll toTop visibility end
 
 //smooth scroll end
