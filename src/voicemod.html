@@ -75,7 +75,7 @@
 
             <a href="profile.html" title="Click to check out my profile and my previous work experiences" class="mb-0 px-lg-4 noUnderline">About</a>
             <a href="https://uxkolip.github.io/portfolio/src/Vasilis-Kolip-Sr-Product-Designer.pdf" target="_blank" title="Click to dowload my CV in pdf format" class="mb-0 px-lg-4 noUnderline">Résumé</a>
-            <a class="mb-0 button noUnderline" href="javascript:void(0);" onclick="window.voiceflow.chat.open();" title="Click to get in touch">Contact</a>  
+            <a class="mb-0 button noUnderline ps-lg-4" href="javascript:void(0);" onclick="window.voiceflow.chat.open();" title="Click to get in touch">Contact</a>  
 
           </div>
 
@@ -90,30 +90,30 @@
 
   <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
     <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Μenu</h5>
+      <h5 class="offcanvas-title bigger-4" id="offcanvasNavbarLabel">Μenu</h5>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
       <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="index.html">Home</a>
+        <li class="nav-item bigger-1">
+          <a class="nav-link" href="index.html">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link active font-weight-bold" href="voicemod.html">Voicemod</a>
+        <li class="nav-item bigger-1">
+          <a class="nav-link active font-weight-bold" href="voicemod.html" aria-current="page">Voicemod</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item bigger-1">
           <a class="nav-link" href="meta.html">Meta</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item bigger-1">
           <a class="nav-link" href="microsoft.html">Microsoft</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item bigger-1">
           <a class="nav-link" href="profile.html">About</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item bigger-1">
           <a class="nav-link" href="https://uxkolip.github.io/portfolio/src/Vasilis-Kolip-Sr-Product-Designer.pdf" target="_blank" title="Click to dowload my CV in pdf format">Résumé</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item bigger-1">
           <a class="nav-link" href="javascript:void(0);" onclick="window.voiceflow.chat.open();" title="Click to get in touch">Contact</a>
         </li>
       </ul>
@@ -125,21 +125,18 @@
   <section>
     <div class="row-fluid mt-lg-5 pt-5">
       <div class="container mt-5 pt-5">
+
         <div class="row">
-          <div class="col-12 col-xl-4 mb-5 anim01">
-            <img src="img/misc/logos/voicemod-logo-card.svg" alt="Voicemod logo" class="img-fluid" style="max-width: 228px">
-          </div>
+            <div class="col-12 col-xl-5 mb-5">
+              <img src="img/misc/logos/voicemod-logo-card.svg" alt="Voicemod logo" class="img-fluid anim01" style="max-width: 228px">
+              <h1 class="lh-base mt-4 anim02">My revamped onboarding flow, <mark>cut dropouts by 80%</mark></h1>
+            </div>
 
-          <div class="col-12 col-xl-4 mb-5 anim02">
-            <h1 class="lh-base">My revamped onboarding flow, <mark>cut dropouts by 80%</mark></h1>
+            <div class="col-12 col-xl-6 offset-xl-1 mt-5 pt-3 anim03">
+              <p>Voicemod is a voice changing app for in-game use or with Discord, Google Meet or Zoom.</p>
+              <p>Approximately 25% of our new users uninstalled the app within the first 24 hours.</p>
+            </div>
           </div>
-
-          <div class="col-12 col-xl-3 ms-auto anim03">
-            <p>Voicemod is a voice changing app for in-game use or with Discord, Google Meet or Zoom.</p>
-            <p>Approximately 25% of our new users uninstalled the app within the first 24 hours.</p>
-          </div>
-
-        </div>
 
         <div class="row mt-3 anim06">
           <div class="col-12">
@@ -163,7 +160,7 @@
 
           <div class="col-12 col-md-6 col-lg-4 mb-4">
             <p class="mb-2 font-weight-bold text-uppercase">Employer</p>
-            <p><a href="https://voicemod.net" target="_blank" class="text-info" title="Opens Voicemod's website on a new tab">Voicemod</a>, Valencia (remote)</p>
+            <p><a href="https://voicemod.net" target="_blank" class="text-info" title="Opens Voicemod's website on a new tab" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="93x32" data-bs-custom-class="custom-tooltip">Voicemod</a>, Valencia (remote)</p>
           </div>
 
           <div class="col-12 col-md-6 col-lg-4 mb-4">
@@ -345,7 +342,7 @@
                         </div>
 
                         <div class="col-12 bg-secondary-darker border-radius py-5 px-3 p-lg-4 mt-n4 text-center position-relative">
-                          <div class="form-check form-switch d-flex justify-content-center ps-0 mt-4">
+                          <div class="form-check form-switch d-flex justify-content-center ps-0 mt-4" title="Click to toggle between old and new">
                             <label class="form-check-label font-weight-bold" for="voiceEngineSwitch">Without Voicemod</label>
                             <input class="form-check-input mx-2 mx-lg-5" type="checkbox" role="switch" id="voiceEngineSwitch" style="transform: scale(2);" disabled>
                             <label class="form-check-label font-weight-bold" for="voiceEngineSwitch">With Voicemod</label>
@@ -501,7 +498,7 @@
               <div class="col-12 mb-5 py-5">
                 <p>To address this issue I proposed an onboarding process that would guide new users through the setup process and allow them to reach the "wow" moment of the app right from the start.</p>
 
-                <p class="mb-5">I presented my recommendations to the stakeholders and with minor changes, we decided to move forward to user validation using this <a href="https://www.figma.com/proto/LaOv1YVhMiwoMxk5i2uQjZ/User-onboarding%2C-walkthrough-%26-progressive-trance?page-id=0%3A1&type=design&node-id=293-15486&scaling=contain&starting-point-node-id=293%3A15486" target="_blank" class="text-info" title="Opens my Figma prototype on a new tab">Figma prototype</a>.</p>
+                <p class="mb-5">I presented my recommendations to the stakeholders and with minor changes, we decided to move forward to user validation using this <a href="https://www.figma.com/proto/LaOv1YVhMiwoMxk5i2uQjZ/User-onboarding%2C-walkthrough-%26-progressive-trance?page-id=0%3A1&type=design&node-id=293-15486&scaling=contain&starting-point-node-id=293%3A15486" target="_blank" class="text-info" title="Opens my Figma prototype on a new tab"  data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="149x32" data-bs-custom-class="custom-tooltip">Figma prototype</a>.</p>
               </div>
 
             </div>
@@ -875,7 +872,7 @@
             
             <div class="col-12">
               <h2 class="section-title">Prototype</h2>
-              <p class="mt-4">When done with the wireframes and mockups, I created this <a href="https://www.figma.com/proto/LaOv1YVhMiwoMxk5i2uQjZ/User-onboarding%2C-walkthrough-%26-progressive-trance?page-id=0%3A1&type=design&node-id=293-15486&scaling=contain&starting-point-node-id=293%3A15486" target="_blank" class="text-info" title="Opens my Figma prototype on a new tab">Figma prototype</a> taking into consideration feedback from the stakeholders (including developers).</p>
+              <p class="mt-4">When done with the wireframes and mockups, I created this <a href="https://www.figma.com/proto/LaOv1YVhMiwoMxk5i2uQjZ/User-onboarding%2C-walkthrough-%26-progressive-trance?page-id=0%3A1&type=design&node-id=293-15486&scaling=contain&starting-point-node-id=293%3A15486" target="_blank" class="text-info protoLink" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="149x32" data-bs-custom-class="custom-tooltip" title="Opens my Figma prototype on a new tab">Figma prototype</a> taking into consideration feedback from the stakeholders (including developers).</p>
 
               <p>By incorporating their perspectives, I refined the design and started preparing for the user testing process.</p>
             </div>
@@ -1342,10 +1339,8 @@
         <div class="col-12 py-1 px-3">
           <div class="row">
             <div class="col-8">
-              <p class="mb-0">
-                <a href="index.html" class="text-primary noUnderline" title="Homepage">
-                  Vasilis Kolip, UX/Product designer
-                </a>
+              <p class="mb-0 smaller-1">
+                <a href="index.html" class="text-info" title="Homepage" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="59x32" data-bs-custom-class="custom-tooltip">Home</a>
               </p>
             </div>
             <div class="col-4">

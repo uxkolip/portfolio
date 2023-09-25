@@ -5,16 +5,24 @@ const lenis = new Lenis();
 lenis.stop();
 
 function checkiftooltip() {
-
     $(window).width() > 768 ? ($('[data-toggle="tooltip"]').tooltip(), 
-    $('[data-toggle="tooltip"]').tooltip("enable")) : $('[data-toggle="tooltip"]').tooltip("disable")
-    $("[data-toggle='tooltip']").tooltip();
+    $("[data-toggle='tooltip']").tooltip(),
+    $('[data-toggle="tooltip"]').tooltip("enable")) : $('[data-toggle="tooltip"]').tooltip("disable");
+}
+
+function checkifLenis() {
+  var isMobile = $(window).width() < 768;
+  if (isMobile == false) {
+    lenis.start();
+  } else {
+    lenis.destroy();
+  }
 }
 
 $(document).ready(function() {
     checkiftooltip();
+    checkifLenis();
     $("body").removeClass("opacity-0");
-    lenis.start();
 }); 
 
 $(window).resize(function() {
@@ -312,7 +320,11 @@ $('.scrollableArea').each(function() {
 
 
 //page animations
-gsap.set(".anim01, .anim02, .anim03, .anim04, .anim05, .anim06", { opacity: "0" });
+if ($(window).scrollTop() === 0) {
+  gsap.set(".anim01, .anim02, .anim03, .anim04, .anim05, .anim06", { opacity: "0" });
+} else {
+  gsap.set(".anim01, .anim02, .anim03, .anim04, .anim05, .anim06", { opacity: "1" });
+}
 
 const timeline = gsap.timeline();
 

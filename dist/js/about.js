@@ -7,12 +7,21 @@ lenis.stop();
 function checkiftooltip() {
     $(window).width() > 768 ? ($('[data-toggle="tooltip"]').tooltip(), 
     $("[data-toggle='tooltip']").tooltip(),
-    $('[data-toggle="tooltip"]').tooltip("enable")) : $('[data-toggle="tooltip"]').tooltip("disable")
+    $('[data-toggle="tooltip"]').tooltip("enable")) : $('[data-toggle="tooltip"]').tooltip("disable");
+}
+
+function checkifLenis() {
+  var isMobile = $(window).width() < 768;
+  if (isMobile == false) {
+    lenis.start();
+  } else {
+    lenis.destroy();
+  }
 }
 
 $(document).ready(function() {
     checkiftooltip();
-    lenis.start();
+    checkifLenis();
 
     //get athens' temp
     $.get("https://api.openweathermap.org/data/2.5/weather?q=Athens&units=metric&appid=cc645b18d5f5a4906bf8bdc7f9137124", function(athData) {
