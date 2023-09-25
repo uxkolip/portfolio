@@ -45,27 +45,23 @@ requestAnimationFrame(raf)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
+    e.stopPropagation();
     lenis.scrollTo(this.getAttribute('href'));
-    setTimeout(function() {
-      showAnim.reverse();
-    }, 3050);
   });
 })
 
 document.querySelectorAll('[data-target^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
+    e.stopPropagation();
     lenis.scrollTo(this.getAttribute('data-target'));
-    setTimeout(function() {
-      showAnim.reverse();
-    }, 3050);
   });
 })
 
 
 //scroll toTop visibility
 $(window).scroll(function() {
-    $(this).scrollTop() > 800 ? $("#toTop").fadeIn("fast", function() {}) : $("#toTop").fadeOut("fast")
+  $(this).scrollTop() > 800 ? $("#toTop").css("opacity", 1) : $("#toTop").css("opacity", 0)
 });
 //scroll toTop visibility end
 

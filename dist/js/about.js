@@ -20,7 +20,7 @@ function checkifLenis() {
 }
 
 $(document).ready(function() {
-    checkiftooltip();
+    //checkiftooltip();
     checkifLenis();
 
     //get athens' temp
@@ -68,10 +68,10 @@ requestAnimationFrame(raf)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
+    e.stopPropagation();
     lenis.scrollTo(this.getAttribute('href'));
     bootstrap.Tooltip.getInstance('.close-button').dispose();
     setTimeout(function() {
-      showAnim.reverse();
       [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
     }, 3050);
   });
@@ -80,10 +80,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 document.querySelectorAll('[data-target^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
+    e.stopPropagation();
     lenis.scrollTo(this.getAttribute('data-target'));
     bootstrap.Tooltip.getInstance('.close-button').dispose();
     setTimeout(function() {
-      showAnim.reverse();
       [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
     }, 3050);
   });
