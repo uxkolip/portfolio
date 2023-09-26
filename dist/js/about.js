@@ -90,9 +90,9 @@ document.querySelectorAll('[data-target^="#"]').forEach(anchor => {
 })
 
 //scroll toTop
-/*$(window).scroll(function() {
+$(window).scroll(function() {
   $(this).scrollTop() > 800 ? $("#toTop").fadeIn("fast", function() {}) : $("#toTop").fadeOut("fast")
-});*/
+});
 //scroll toTop end
 
 //smooth scroll end

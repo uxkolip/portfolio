@@ -69,7 +69,7 @@ document.querySelectorAll('[data-target^="#"]').forEach(anchor => {
 
 
 //navbar show on scroll up
-/*const showAnim = gsap.from('.main-navbar', { 
+const showAnim = gsap.from('.main-navbar', { 
     yPercent: -100,
     paused: true,
     duration: 0.3
@@ -81,11 +81,11 @@ ScrollTrigger.create({
     onUpdate: (self) => {
         self.direction === -1 ? showAnim.play() : showAnim.reverse()
     }
-});*/
+});
 //navbar show on scroll up end
 
 // page progress
-gsap.registerPlugin(ScrollTrigger);
+/*gsap.registerPlugin(ScrollTrigger);
 gsap.to('.progress-circle', {
   strokeDashoffset: 0,
   ease: 'none',
@@ -100,7 +100,7 @@ gsap.to('.progress-circle', {
           $('.icon--close path').css({ fill: '#3A2D52' })
       } 
   }
-});
+});*/
 // page progress end
 
 // homepage selected work gsock
