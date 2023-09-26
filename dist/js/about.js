@@ -22,6 +22,7 @@ function checkifLenis() {
 $(document).ready(function() {
     //checkiftooltip();
     checkifLenis();
+    $("html").css("opacity", 1);
 
     //get athens' temp
     $.get("https://api.openweathermap.org/data/2.5/weather?q=Athens&units=metric&appid=cc645b18d5f5a4906bf8bdc7f9137124", function(athData) {

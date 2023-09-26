@@ -23,6 +23,7 @@ $(document).ready(function() {
     checkiftooltip();
     checkifLenis();
     $("body").removeClass("opacity-0");
+    $("html").css("opacity", 1);
 }); 
 
 $(window).resize(function() {
