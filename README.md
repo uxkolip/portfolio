@@ -3,7 +3,7 @@
 Vasilis Kolip's Portfolio
 
 GitHub public page:
-https://uxkolip.github.io/portfolio/dist/
+https://kolip.co/dist/
 
 Figma prototype:
 https://www.figma.com/proto/KvZro6YLHayaTX4nbXqdSc/Portfolio?node-id=1-2&starting-point-node-id=1%3A2&mode=design&t=NcGpUp2yPC2itAo6-1
