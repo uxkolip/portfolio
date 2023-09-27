@@ -6,17 +6,15 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     path = require('path'),
     notify = require('gulp-notify'),
-    inlinesource = require('gulp-inline-source'),
     browserSync = require('browser-sync'),
     imagemin = require('gulp-imagemin'),
     del = require('del'),
     cache = require('gulp-cache'),
-    uglify = require('gulp-uglify'),
     autoprefixer = require('gulp-autoprefixer'),
     runSequence = require('run-sequence'),
     cleanCSS = require('gulp-clean-css'),
     htmlmin = require('gulp-html-minifier'),
-    strip = require('gulp-strip-comments');
+    minify = require('gulp-minify');
 
 // Task to compile SCSS
 gulp.task('sass', function () {
@@ -46,18 +44,15 @@ gulp.task('minify-css', function() {
         .pipe(gulp.dest('./dist/css/'));
 });
 
-
-//strip comments
-gulp.task('strip', function() {
-  return gulp.src('./src/js/**/*.*')
-    .pipe(strip())
-    .pipe(gulp.dest('./dist/js/'));
-});
-
-// Task to Minify JS
-gulp.task('jsmin', function() {
-  return gulp.src('./src/js/**/*.*')
-    .pipe(gulp.dest('./dist/js/'));
+gulp.task('compress', function() {
+  gulp.src('./src/js/**/*.*')
+    .pipe(minify({
+        ext:{
+            min:'.js'
+        },
+        exclude: ['libs', 'lottie-files', 'bootstrap'],
+    }))
+    .pipe(gulp.dest('./dist/js/'))
 });
 
 // Minify Images
@@ -94,7 +89,6 @@ gulp.task('defaultimport', function(){
   .pipe(gulp.dest('dist/test'));
 });
 
-
 // BrowserSync Task (Live reload)
 gulp.task('browserSync', function() {
   browserSync({
@@ -109,18 +103,6 @@ gulp.task('minifyhtml', function() {
   gulp.src('./src/*.html')
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('./dist'))
-});
-
-
-
-// Gulp Inline Source Task
-// Embed scripts, CSS or images inline (make sure to add an inline attribute to the linked files)
-// Eg: <script src="default.js" inline></script>
-// Will compile all inline within the html file (less http requests - woot!)
-gulp.task('inlinesource', function () {
-  return gulp.src('./src/*.html')
-    .pipe(inlinesource())
-    .pipe(gulp.dest('./dist/'));
 });
 
 // Gulp Watch Task
@@ -141,5 +123,5 @@ gulp.task('default', ['watch']);
 
 // Gulp Build Task
 gulp.task('build', function() {
-  runSequence('clean', 'sass','minify-css','minifyhtml', 'jsmin', 'fonts', 'video', 'sounds', 'defaultimport', 'imagemin');
+  runSequence('clean', 'sass', 'minify-css', 'minifyhtml', 'compress', 'fonts', 'video', 'sounds', 'defaultimport', 'imagemin');
 });

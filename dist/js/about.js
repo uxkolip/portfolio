@@ -20,8 +20,9 @@ function checkifLenis() {
 }
 
 $(document).ready(function() {
-    //checkiftooltip();
-    checkifLenis();
+    checkiftooltip();
+    //checkifLenis();
+    lenis.start();
     $("html").css("opacity", 1);
 
     //get athens' temp

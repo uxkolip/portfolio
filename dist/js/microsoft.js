@@ -21,7 +21,8 @@ function checkifLenis() {
 
 $(document).ready(function() {
     checkiftooltip();
-    checkifLenis();
+    //checkifLenis();
+    lenis.start();
     $("body").removeClass("opacity-0");
     $("html").css("opacity", 1);
 }); 
@@ -328,9 +329,9 @@ $('.scrollableArea').each(function() {
 
 //page animations
 if ($(window).scrollTop() === 0) {
-  gsap.set(".anim01, .anim02, .anim03, .anim04, .anim05, .anim06", { opacity: "0" });
+  gsap.set(".anim01, .anim02, .anim03, .anim04, .anim05", { opacity: "0" });
 } else {
-  gsap.set(".anim01, .anim02, .anim03, .anim04, .anim05, .anim06", { opacity: "1" });
+  gsap.set(".anim01, .anim02, .anim03, .anim04, .anim05", { opacity: "1" });
 } 
 
 const timeline = gsap.timeline();
@@ -340,6 +341,5 @@ timeline
   .add(gsap.to(".anim02", { duration: 1, opacity: 1 }), "-=0.3")
   .add(gsap.to(".anim03", { duration: 1, opacity: 1 }), "-=0.3")
   .add(gsap.to(".anim04", { duration: 1, opacity: 1 }), "-=0.3")
-  .add(gsap.to(".anim05", { duration: 1, opacity: 1 }), "-=0.3")
-  .add(gsap.to(".anim06", { duration: 1, opacity: 1 }), "-=0.3");
+  .add(gsap.to(".anim05", { duration: 1, opacity: 1 }), "-=0.3");
 //page animations end

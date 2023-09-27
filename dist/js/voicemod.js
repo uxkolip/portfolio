@@ -21,7 +21,8 @@ function checkifLenis() {
 
 $(document).ready(function() {
     checkiftooltip();
-    checkifLenis();
+    //checkifLenis();
+    lenis.start();
     $("body").removeClass("opacity-0");
     $("html").css("opacity", 1);
 }); 
