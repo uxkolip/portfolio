@@ -17,3 +17,8 @@ src/video/power-automate-win-11.mp4
 src/video/profile-final-no-subs.mp4
 src/video/vasilis-kolip-short-intro.mp4
 src/video/vasilis-kolip-short-intro-final.mp4
+dist/js/about-debug.js
+dist/js/homepage-debug.js
+dist/js/meta-debug.js
+dist/js/microsoft-debug.js
+dist/js/voicemod-debug.js
