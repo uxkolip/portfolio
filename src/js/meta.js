@@ -129,10 +129,14 @@ $("#userJourneyScroll").mousedown(function(e) {
     isDragging = true;
     startX = e.pageX - $("#userJourneyScroll").offset().left;
     scrollLeft = $("#userJourneyScroll").scrollLeft();
-    $(this).css("cursor", "grabbing"); // Change cursor to grabbing during drag
+    //$(this).css("cursor", "grabbing"); // Change cursor to grabbing during drag
+    $(this).removeClass("grab");
+    $(this).addClass("grabbing");
 }).mouseup(function() {
-    isDragging = false;
-    $(this).css("cursor", "grab"); // Restore cursor to grab after drag
+    isDraggingImprovements = false;
+    //$(this).css("cursor", "grab"); // Restore cursor to grab after drag
+    $(this).addClass("grab");
+    $(this).removeClass("grabbing");
 });
 
 $(document).mousemove(function(e) {
@@ -156,10 +160,14 @@ $("#wireframesScroll").mousedown(function(e) {
     isDraggingWireframes = true;
     startXWireframes = e.pageX - $("#wireframesScroll").offset().left;
     scrollLeftWireframes = $("#wireframesScroll").scrollLeft();
-    $(this).css("cursor", "grabbing"); // Change cursor to grabbing during drag
+    //$(this).css("cursor", "grabbing"); // Change cursor to grabbing during drag
+    $(this).removeClass("grab");
+    $(this).addClass("grabbing");
 }).mouseup(function() {
-    isDraggingWireframes = false;
-    $(this).css("cursor", "grab"); // Restore cursor to grab after drag
+    isDraggingImprovements = false;
+    //$(this).css("cursor", "grab"); // Restore cursor to grab after drag
+    $(this).addClass("grab");
+    $(this).removeClass("grabbing");
 });
 
 $(document).mousemove(function(e) {

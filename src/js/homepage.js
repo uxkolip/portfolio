@@ -26,6 +26,9 @@ $(document).ready(function() {
     lenis.start();
     $("body").removeClass("opacity-0");
     $("html").css("opacity", 1);
+
+    changingH1s();
+
 });
 
 $(window).resize(function() {
@@ -312,6 +315,36 @@ timeline
   .add(gsap.to(".anim03", { duration: 1, opacity: 1 }), "-=0.3")
   .add(gsap.to(".anim04", { duration: 1, opacity: 1 }), "-=0.3");
 //homepage animations end
+
+
+//h1 text randomizer
+function changingH1s() {
+  var sentences = ["User first, design second.", "Crafting products with a purpose.", "Designing user-centric products.", "User-focused experiences.", "Designing products with user insights." ];
+  var currentIndex = 0;
+  var h1Element = $("#changing-text");
+
+      function changeText() {
+        var currentSentence = sentences[currentIndex];
+        var words = currentSentence.split(" ");
+        var spanElements = words.map(function(word) {
+          return $("<span>").text(word + " ");
+        });
+
+        h1Element.fadeTo("slow", 0, function() {
+          h1Element.empty().append(spanElements);
+          $(spanElements).each(function(index) {
+            $(this).css("opacity", 0).delay(index * 200).fadeTo("slow", 1);
+            h1Element.fadeTo("slow", 1);
+          });
+        });
+
+        currentIndex = (currentIndex + 1) % sentences.length;
+      }
+
+  setInterval(changeText, 7000);
+
+};
+//h1 text randomizer
 
 
 // homepage selected work scrollTo
