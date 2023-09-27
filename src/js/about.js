@@ -153,6 +153,28 @@ gsap.to('.progress-circle', {
 //voiceflow end
 
 
+//homepage animations
+if ($(window).scrollTop() === 0) {
+  gsap.set(".anim01, .anim02, .anim03, .anim04, .anim05", { opacity: "0" });
+  //console.log("Window is at the top.");
+} else {
+  gsap.set(".anim01, .anim02, .anim03, .anim04, .anim05", { opacity: "1" });
+  //console.log("Window is not at the top.");
+} 
+
+const timeline = gsap.timeline();
+
+timeline
+  .add(gsap.to(".anim01", { delay: 1, duration: 1, opacity: 1 }))
+  .add(gsap.to(".anim02", { duration: 1, opacity: 1 }), "-=0.3")
+  .add(gsap.to(".anim03", { duration: 1, opacity: 1 }), "-=0.3")
+  .add(gsap.to(".anim04", { duration: 1, opacity: 1 }), "-=0.3")
+  .add(gsap.to(".anim05", { duration: 1, opacity: 1 }), "-=0.3");
+//homepage animations end
+
+
+
+
 // workspaces scroller
 /*gsap.registerPlugin(ScrollTrigger);
 
