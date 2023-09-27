@@ -8,6 +8,7 @@ var gulp = require('gulp'),
     notify = require('gulp-notify'),
     browserSync = require('browser-sync'),
     imagemin = require('gulp-imagemin'),
+    imageminPDF = require('gulp-imagemin'),
     del = require('del'),
     cache = require('gulp-cache'),
     autoprefixer = require('gulp-autoprefixer'),
@@ -66,6 +67,16 @@ gulp.task('imagemin', function (){
   .pipe(gulp.dest('./dist/img'));
 });
 
+// Minify pdfs
+gulp.task('imageminPDF', function (){
+  return gulp.src('./src/*.+(pdf)')
+  // Caching images that ran through imagemin
+  .pipe(cache(imagemin({
+      interlaced: true
+    })))
+  .pipe(gulp.dest('./dist/'));
+});
+
 //Copy fonts
 gulp.task('fonts', function() {
    return gulp.src(['./src/fonts/**/*'])
@@ -82,12 +93,6 @@ gulp.task('video', function() {
 gulp.task('sounds', function() {
    return gulp.src(['./src/sounds/**/*'])
   .pipe(gulp.dest('dist/sounds'));
-});
-
-//Copy default video and json
-gulp.task('defaultimport', function(){
-  return gulp.src(['./src/test/**/*'])
-  .pipe(gulp.dest('dist/test'));
 });
 
 // BrowserSync Task (Live reload)
@@ -124,5 +129,5 @@ gulp.task('default', ['watch']);
 
 // Gulp Build Task
 gulp.task('build', function() {
-  runSequence('clean', 'sass', 'minify-css', 'minifyhtml', 'compress', 'fonts', 'video', 'sounds', 'defaultimport', 'imagemin');
+  runSequence('clean', 'sass', 'minify-css', 'minifyhtml', 'compress', 'fonts', 'video', 'sounds', 'imagemin', 'imageminPDF');
 });
