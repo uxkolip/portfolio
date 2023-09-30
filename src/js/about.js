@@ -270,7 +270,7 @@ window.onload = () => {
         width: "100%",
         opacity: 1,
         position: "fixed",
-        top: 0,
+        top: 20,
         left: 0,
         perspective: 300
       });
