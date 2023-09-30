@@ -11922,12 +11922,67 @@ strong {
 
 .btn-outline-primary:hover {
   box-shadow: #00c9a8 1px 1px, #00c9a8 2px 2px, #00c9a8 3px 3px;
-  transform: translateX(-3px); }
+  transform: translate3d(-4px, -4px, 0px); }
 
 .btn-primary:hover {
   box-shadow: #00c9a8 1px 1px, #00c9a8 2px 2px, #00c9a8 3px 3px;
-  transform: translateX(-3px); }
+  transform: translate3d(-4px, -4px, 0px); }
 
+/*profile page desk setups*/
+#app {
+  width: 100%;
+  height: 70%;
+  margin: 0;
+  padding: 0; }
+
+#app {
+  opacity: 0;
+  height: auto; }
+
+#DeskAlt {
+  transition: .3s all; }
+
+#app img {
+  display: block; }
+
+#detail {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  top: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: space-evenly;
+      justify-content: space-evenly; }
+
+#detailImg {
+  width: 85%;
+  height: 85%; }
+
+#detailTxt {
+  color: #ccc;
+  font-size: 20px;
+  letter-spacing: 1px; }
+
+svg {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+#headlines {
+  max-width: 800px;
+  min-width: 450px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); }
+
+/*profile page desk setups end*/
 .cvImage {
   transition: .3s all; }
 
@@ -12512,6 +12567,9 @@ html, body {
 .design-card {
   height: 370px; }
 
+.divAfterTimeTravel {
+  margin-top: 0px; }
+
 @media (min-width: 576px) {
   html {
     font-size: .9rem; }
@@ -12602,6 +12660,8 @@ html, body {
   .smaller-5 {
     font-size: .6rem !important; }
   .design-card {
-    height: 500px; } }
+    height: 500px; }
+  .divAfterTimeTravel {
+    margin-top: -1100px; } }
 
 /*# sourceMappingURL=styles.css.map */
