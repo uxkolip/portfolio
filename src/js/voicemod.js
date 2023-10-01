@@ -103,12 +103,12 @@ gsap.to('.progress-circle', {
   ease: 'none',
   scrollTrigger: { scrub: 0.3 },
   onComplete: self => {
-      $('.icon-wrap').addClass('bg-accent');
-      $('.icon--close path').css({ fill: '#fff' })
+      $('.icon-wrap').addClass('bg-secondary');
+      $('.icon--close path').css({ fill: '#3A2D52' })
   },
   onUpdate: self => {
       if ($('.progress-circle').css('stroke-dashoffset') !== "0px" ) {
-          $('.icon-wrap').removeClass('bg-accent');
+          $('.icon-wrap').removeClass('bg-secondary');
           $('.icon--close path').css({ fill: '#3A2D52' })
       } 
   }

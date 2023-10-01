@@ -1,6 +1,8 @@
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
 const lenis = new Lenis();
+const pageHeight = "";
+
 
 lenis.stop();
 
@@ -19,6 +21,10 @@ function checkifLenis() {
   }
 }
 
+window.onload = () => {
+  pageHeight = document.body.scrollHeight;
+};
+
 $(document).ready(function() {
     $(".panel").css("opacity", "1");
     checkiftooltip();
@@ -27,7 +33,7 @@ $(document).ready(function() {
     $("body").removeClass("opacity-0");
     $("html").css("opacity", 1);
 
-    changingH1s();
+    changingH1s();  
 
 });
 
@@ -52,6 +58,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     e.preventDefault();
     e.stopPropagation();
     lenis.scrollTo(this.getAttribute('href'));
+    bootstrap.Tooltip.getInstance('.close-button').dispose();
+    setTimeout(function() {
+      [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+    }, 3050);
   });
 })
 
@@ -60,14 +70,18 @@ document.querySelectorAll('[data-target^="#"]').forEach(anchor => {
     e.preventDefault();
     e.stopPropagation();
     lenis.scrollTo(this.getAttribute('data-target'));
+    bootstrap.Tooltip.getInstance('.close-button').dispose();
+    setTimeout(function() {
+      [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+    }, 3050);
   });
 })
 
 
 //scroll toTop visibility
-/*$(window).scroll(function() {
-  $(this).scrollTop() > 800 ? $("#toTop").css("opacity", 1) : $("#toTop").css("opacity", 0)
-});*/
+$(window).scroll(function() {
+  $(this).scrollTop() > 800 ? $("#toTop").fadeIn("fast", function() {}) : $("#toTop").fadeOut("fast")
+});
 //scroll toTop visibility end
 
 //smooth scroll end
@@ -90,22 +104,28 @@ ScrollTrigger.create({
 //navbar show on scroll up end
 
 // page progress
-/*gsap.registerPlugin(ScrollTrigger);
-gsap.to('.progress-circle', {
-  strokeDashoffset: 0,
-  ease: 'none',
-  scrollTrigger: { scrub: 0.3 },
-  onComplete: self => {
-      $('.icon-wrap').addClass('bg-accent');
-      $('.icon--close path').css({ fill: '#fff' })
-  },
-  onUpdate: self => {
-      if ($('.progress-circle').css('stroke-dashoffset') !== "0px" ) {
-          $('.icon-wrap').removeClass('bg-accent');
-          $('.icon--close path').css({ fill: '#3A2D52' })
-      } 
-  }
-});*/
+gsap.registerPlugin(ScrollTrigger);
+
+setTimeout(function() {
+  gsap.to('.progress-circle', {
+    strokeDashoffset: 0,
+    ease: 'none',
+    height: pageHeight,
+    scrollTrigger: { scrub: 0.3 },
+    onComplete: self => {
+        $('.icon-wrap').addClass('bg-secondary');
+        $('.icon--close path').css({ fill: '#3A2D52' })
+    },
+    onUpdate: self => {
+        if ($('.progress-circle').css('stroke-dashoffset') !== "0px" ) {
+            $('.icon-wrap').removeClass('bg-secondary');
+            $('.icon--close path').css({ fill: '#3A2D52' })
+        } 
+    }
+  });  
+}, 300);
+
+
 // page progress end
 
 // homepage selected work gsock
@@ -206,8 +226,6 @@ function isScrolledIntoView(elem)
 
 
 //homepage design process gsock
-gsap.registerPlugin(ScrollTrigger);
-
 const cards = document.querySelectorAll(".design-card");
 
 gsap.set(cards, {position: 'absolute'})
@@ -257,10 +275,7 @@ horizontalSections.forEach(function (sec, i) {
 
     var thisPinWrap = sec.querySelector('.pin-wrap');
     var thisAnimWrap = thisPinWrap.querySelector('.animation-wrap');
-    /*var getToValue = () => -(thisAnimWrap.scrollWidth - window.innerWidth);*/
     var getToValue = () => -($('.testimonialCard').width() * 6.2);
-
-    //gsap.set(horizontalSections, {marginTop: '-350px'})
 
     gsap.fromTo(thisAnimWrap, 
         { x: () => thisAnimWrap.classList.contains('to-right') ? 0 : getToValue()  },
@@ -274,9 +289,7 @@ horizontalSections.forEach(function (sec, i) {
         invalidateOnRefresh: true,
         scrub: true
         }
-    });
-
-    gsap.registerPlugin(ScrollTrigger);
+    }); 
 
 }); 
 //homepage testimonials end
@@ -319,7 +332,7 @@ timeline
 
 //h1 text randomizer
 function changingH1s() {
-  var sentences = ["User first, design second.", "Crafting products with a purpose.", "Designing user-centric products.", "User-focused experiences.", "Designing products with user insights." ];
+  var sentences = ["Crafting products with a purpose.", "User-focused experiences.", "Designing products with user insights."];
   var currentIndex = 0;
   var h1Element = $("#changing-text");
 
