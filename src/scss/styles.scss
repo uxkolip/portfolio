@@ -734,19 +734,21 @@ a:hover, button:hover, .pointer, button:not(:disabled), [type="button"]:not(:dis
   background-image: url("../img/misc/shapes/checked-tick.svg");
 }
 
-.dotted-bg {
-   /* diameter of the circle */
-   --d: 2px; 
-   
-   background : radial-gradient(
-     circle at 
-        var(--d) 
-        var(--d), 
-        
-     #E0E0E0 calc(var(--d) - 1px), 
-     #FFFBF5 var(--d)
-   ) 
-   0 0 / 25px 25px;
+.dotted-bg:after, .dotted-bg2:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  --d: 2px;
+  background : radial-gradient(
+   circle at 
+      var(--d) 
+      var(--d), 
+   #E0E0E0 calc(var(--d) - 1px), 
+   #FFFBF5 var(--d)
+  ) 
+  0 0 / 25px 25px;
 }
 
 .playBtn {

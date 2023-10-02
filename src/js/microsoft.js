@@ -22,7 +22,10 @@ function checkifLenis() {
 $(document).ready(function() {
 
     var opporunityHeight = $('.opportunityHeight').outerHeight();
-    $('body').append("<style> .opporunityAfter:after { height: "+ opporunityHeight +"px; } </style>");      
+    var dottedBGHeight = $('.dotted-bg').outerHeight();
+    setTimeout(function() {
+      $('body').append("<style> .opporunityAfter:after { height: "+ opporunityHeight +"px; } .dotted-bg:after { height: "+ dottedBGHeight +"px; } </style>");
+    }, 700);
 
     checkiftooltip();
     lenis.start();
@@ -34,8 +37,9 @@ $(window).resize(function() {
     checkiftooltip();
 
     var opporunityHeight = $('.opportunityHeight').outerHeight();
-    $('body').append("<style> .opporunityAfter:after { height: "+ opporunityHeight +"px; } </style>");      
-    
+    var dottedBGHeight = $('.dotted-bg').outerHeight();
+    $('body').append("<style> .opporunityAfter:after { height: "+ opporunityHeight +"px; } .dotted-bg:after { height: "+ dottedBGHeight +"px; } </style>");
+
 });
 
 //smooth scroll
@@ -267,6 +271,10 @@ function showBeforeAfter() {
   $('.beforeAfterBtn').addClass('d-none');
   lenis.scrollTo('#beforeAfter');
   $('.scrollableArea').scroll();
+  setTimeout(function() {
+    var dottedBGHeight = $('.dotted-bg').outerHeight();
+    $('body').append("<style> .dotted-bg:after { height: "+ dottedBGHeight +"px; } </style>");    
+  }, 100);
 }
 //show before and after end
 

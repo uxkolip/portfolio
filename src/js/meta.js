@@ -22,7 +22,10 @@ function checkifLenis() {
 $(document).ready(function() {
 
     var opporunityHeight = $('.opportunityHeight').outerHeight();
-    $('body').append("<style> .opporunityAfter:after { height: "+ opporunityHeight +"px; } </style>");      
+    var dottedBGHeight = $('.dotted-bg').outerHeight();
+    setTimeout(function() {
+      $('body').append("<style> .opporunityAfter:after { height: "+ opporunityHeight +"px; } .dotted-bg:after { height: "+ dottedBGHeight +"px; } </style>");
+    }, 700);
 
     checkiftooltip();
     //checkifLenis();
@@ -35,8 +38,9 @@ $(window).resize(function() {
     checkiftooltip();
 
     var opporunityHeight = $('.opportunityHeight').outerHeight();
-    $('body').append("<style> .opporunityAfter:after { height: "+ opporunityHeight +"px; } </style>");      
-    
+    var dottedBGHeight = $('.dotted-bg').outerHeight();
+    $('body').append("<style> .opporunityAfter:after { height: "+ opporunityHeight +"px; } .dotted-bg:after { height: "+ dottedBGHeight +"px; } </style>");
+
 });
 
 //smooth scroll
