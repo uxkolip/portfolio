@@ -20,8 +20,11 @@ function checkifLenis() {
 }
 
 $(document).ready(function() {
+
+    var opporunityHeight = $('.opportunityHeight').outerHeight();
+    $('body').append("<style> .opporunityAfter:after { height: "+ opporunityHeight +"px; } </style>");      
+
     checkiftooltip();
-    //checkifLenis();
     lenis.start();
     $("body").removeClass("opacity-0");
     $("html").css("opacity", 1);
@@ -29,6 +32,10 @@ $(document).ready(function() {
 
 $(window).resize(function() {
     checkiftooltip();
+
+    var opporunityHeight = $('.opportunityHeight').outerHeight();
+    $('body').append("<style> .opporunityAfter:after { height: "+ opporunityHeight +"px; } </style>");      
+    
 });
 
 //smooth scroll

@@ -106,7 +106,7 @@ gulp.task('browserSync', function() {
 
 // Minify HTML 
 gulp.task('minifyhtml', function() {
-  gulp.src('./src/*.html')
+  gulp.src('./src/**/*.html')
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('./dist'))
 });

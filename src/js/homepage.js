@@ -1,7 +1,6 @@
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
 const lenis = new Lenis();
-const pageHeight = "";
 
 
 lenis.stop();
@@ -21,14 +20,9 @@ function checkifLenis() {
   }
 }
 
-window.onload = () => {
-  pageHeight = document.body.scrollHeight;
-};
-
 $(document).ready(function() {
     $(".panel").css("opacity", "1");
     checkiftooltip();
-    //checkifLenis();
     lenis.start();
     $("body").removeClass("opacity-0");
     $("html").css("opacity", 1);
@@ -53,24 +47,12 @@ function raf(time) {
 
 requestAnimationFrame(raf)
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    e.stopPropagation();
-    lenis.scrollTo(this.getAttribute('href'));
-    bootstrap.Tooltip.getInstance('.close-button').dispose();
-    setTimeout(function() {
-      [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
-    }, 3050);
-  });
-})
-
 document.querySelectorAll('[data-target^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
     e.stopPropagation();
     lenis.scrollTo(this.getAttribute('data-target'));
-    bootstrap.Tooltip.getInstance('.close-button').dispose();
+    bootstrap.Tooltip.dispose();
     setTimeout(function() {
       [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
     }, 3050);
@@ -110,7 +92,6 @@ setTimeout(function() {
   gsap.to('.progress-circle', {
     strokeDashoffset: 0,
     ease: 'none',
-    height: pageHeight,
     scrollTrigger: { scrub: 0.3 },
     onComplete: self => {
         $('.icon-wrap').addClass('bg-secondary');
@@ -166,15 +147,15 @@ panels.forEach((panel, index) => {
           case "2":
             //console.log("meta panel is complete");
             $("#voicemodPanel").css('scale', '.94').css('marginTop', "-25px");
-            $("[data-target='#voicemodPanel']").addClass('btn-link').removeClass('btn-outline-primary');
-            $("[data-target='#metaPanel']").addClass('btn-outline-primary').removeClass('btn-link');
+            $('.voicemodPanel').addClass('btn-link').removeClass('btn-outline-primary');
+            $('.metaPanel').addClass('btn-outline-primary').removeClass('btn-link');
             break;
           case "3":
             //console.log("msft panel is complete");
             $("#voicemodPanel").css('scale', '.86');
             $("#metaPanel").css('scale', '.94').css('marginTop', "-55px");
-            $("[data-target='#metaPanel']").addClass('btn-link').removeClass('btn-outline-primary');
-            $("[data-target='#msftPanel']").addClass('btn-outline-primary').removeClass('btn-link');
+            $('.metaPanel').addClass('btn-link').removeClass('btn-outline-primary');
+            $('.msftPanel').addClass('btn-outline-primary').removeClass('btn-link');
             //$(".pin-spacer").css('zIndex', 99);
             break;
           default:
@@ -186,20 +167,20 @@ panels.forEach((panel, index) => {
         switch (currentPanel) {
           case "1":
             //console.log("voicemod panel is reverse-complete");
-            $("[data-target='#voicemodPanel']").addClass('btn-outline-primary').removeClass('btn-link');
-            $("[data-target='#metaPanel']").addClass('btn-link').removeClass('btn-outline-primary');
+            $('.voicemodPanel').addClass('btn-outline-primary').removeClass('btn-link');
+            $('.metaPanel').addClass('btn-link').removeClass('btn-outline-primary');
             break;
           case "2":
             //console.log("meta panel is reverse-complete");
             $("#voicemodPanel").css('scale', '1');
-            $("[data-target='#voicemodPanel']").addClass('btn-link').removeClass('btn-link');
-            $("[data-target='#metaPanel']").addClass('btn-link').removeClass('btn-link');
+            $('.voicemodPanel').addClass('btn-link').removeClass('btn-link');
+            $('.metaPanel').addClass('btn-link').removeClass('btn-link');
             break;
           case "3":
             //console.log("msft panel is reverse-complete");
             $("#metaPanel").css('scale', '1').css('marginTop', "0px");
-            $("[data-target='#metaPanel']").addClass('btn-outline-primary').removeClass('btn-link');
-            $("[data-target='#msftPanel']").addClass('btn-link').removeClass('btn-outline-primary');
+            $('.metaPanel').addClass('btn-outline-primary').removeClass('btn-link');
+            $('.msftPanel').addClass('btn-link').removeClass('btn-outline-primary');
             //$(".pin-spacer").css('zIndex', '-1');
             break;
           default:
@@ -358,34 +339,3 @@ function changingH1s() {
 
 };
 //h1 text randomizer
-
-
-// homepage selected work scrollTo
-/*$(document).on('click', '.selectedWorkNav button', function() {
-   
-    //$("html, body").animate({ scrollTop: $($(this).attr('data-target')).offset().top - 400}, 1500);
-    var targetElement = $(this).attr('data-target');
-     
-    console.log(targetElement);
-     // Apply ScrollTrigger to the target element
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.set(targetElement, { opacity: 0, y: 100 });
-    const targetOffsetTop = document.getElementById(targetElement).getBoundingClientRect().top;
-    const currentScrollPosition = window.pageYOffset;
-    const scrollToPosition = currentScrollPosition + targetOffsetTop;
-    
-
-    function scrollToTarget() {     
-
-      window.scrollTo({
-        top: scrollToPosition,
-        behavior: "smooth", // You can use "auto" for instant scroll without animation
-      });            
-    }
-
-    $("html, body").animate({ 
-        scrollTop: $(scrollToPosition).offset().top - 400}, 1500
-        );
-        console.log('asdfsdf');
-});*/
-// homepage selected work scrollTo end

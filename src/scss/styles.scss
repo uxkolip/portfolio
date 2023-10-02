@@ -93,7 +93,11 @@ p, h1, h2, h3, h4, h5, h6, input[type="text"], input[type="tel"], input[type="em
     ),auto;
 }
 
-
+.cursorNormal {
+  cursor: url(
+            "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='31' fill='none' viewBox='0 0 26 31'%3E%3Cpath fill='%23fff' fill-rule='evenodd' stroke='%23010101' stroke-linecap='square' stroke-width='2.5' d='M21.993 14.425 2.549 2.935l4.444 23.108 4.653-10.002 10.347-1.616Z' clip-rule='evenodd'/%3E%3C/svg%3E"
+          ),auto;
+}
 
 
 h1 {
@@ -400,7 +404,7 @@ a:hover, button:hover, .pointer, button:not(:disabled), [type="button"]:not(:dis
 .text-info:after {
   content: "";
   display: block;
-  width: 103%;
+  width: calc(100% + 3px);
   height: 40px;
   background-image: url("../img/misc/shapes/link-bounding-box.svg"), url("../img/misc/shapes/link-bounding-box.svg");
   background-repeat: no-repeat, no-repeat;
@@ -408,33 +412,25 @@ a:hover, button:hover, .pointer, button:not(:disabled), [type="button"]:not(:dis
   z-index: 1999999;
   position: absolute;
   margin-top: -36px;
-  left: -2px;
   bottom: -4px;
   opacity: 0;
   transition: .3s all;
+  left: 1px;
+  margin-left: -3px;
 }
 
 .text-info:hover:before, .text-info:hover:after {
   opacity: 1;
 }
 
-/*.text-info span:after {
-  content: "128x20";
-  color: #fffbf5;
-  font-size: 10px;
-  padding: 0 6px;
-  text-align: center;
-  height: 10px;
-  background-color: #1F93E6;
-  border-radius: 4px;
-  position: absolute;
-  top: 54px;
+.opporunityAfter:after {
+  content: "";
+  width: 100%;
   left: 0;
-  margin-left: 50%;
-  margin-right: 50%;
-  transform: translate(-50%, -50%) !important;
-  display: table;
-}*/
+  position: absolute;
+  background-color: #16013e;
+  z-index: 1021;
+}
 
 .custom-tooltip {
   --bs-tooltip-bg: #1f93e6;;
@@ -449,7 +445,6 @@ a:hover, button:hover, .pointer, button:not(:disabled), [type="button"]:not(:dis
 }
 
 .main-navbar {
-  height: 90px;
   left: 0;
   top: 0;
   transition: ease .4s;
