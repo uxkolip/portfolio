@@ -170,7 +170,7 @@ timeline
   .add(gsap.to(".anim02", { duration: 1, opacity: 1 }), "-=0.3")
   .add(gsap.to(".anim03", { duration: 1, opacity: 1 }), "-=0.3")
   .add(gsap.to(".anim04", { duration: 1, opacity: 1 }), "-=0.3")
-  .add(gsap.to(".anim05", { duration: 1, opacity: 1 }), "-=0.3");
+  .add(gsap.to(".anim05", { opacity: 1 }), "-=0.1");
 //homepage animations end
 
 
