@@ -12425,6 +12425,10 @@ a:hover, button:hover, .pointer, button:not(:disabled), [type="button"]:not(:dis
   margin-top: -110px;
   background-image: url("../img/misc/shapes/checked-tick.svg"); }
 
+.nav-link:focus-visible {
+  outline: 0;
+  box-shadow: none !important; }
+
 .dotted-bg:after, .dotted-bg2:after {
   content: "";
   position: absolute;

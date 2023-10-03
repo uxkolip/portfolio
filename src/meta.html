@@ -10,17 +10,17 @@
     <meta property="og:site_name" content="Vasilis Kolip - Meta">
     <meta property="og:type" content="website">
     <meta property="og:image" content="img/misc/favicon/og_image.jpg">
-    <meta property="og:url" content="https://kolip.co">
-    <link rel="canonical" href="https://kolip.co">
+    <meta property="og:url" content="https://kolip.design">
+    <link rel="canonical" href="https://kolip.design">
     <script type="application/ld+json">
       {         
         "@context": "https://schema.org/",
         "@type": "Person",
         "@id": "#Person",
-        "url": "https://kolip.co",
+        "url": "https://kolip.design",
         "name": "Vasilis Kolip",
         "description": "Hi I'm Vasilis Kolip, a product designer working remotely from Athens and Amsterdam.",
-        "image": "https://kolip.co",
+        "image": "https://kolip.design",
         "email": "uxkolip@gmail.com",
         "sameAs": [
           "https://www.linkedin.com/in/vasiliskolip/"
@@ -42,7 +42,7 @@
 
     <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
 
-    <!-- Hotjar Tracking Code for https://kolip.co -->
+    <!-- Hotjar Tracking Code for https://kolip.design -->
     <script>
       (function(h,o,t,j,a,r){
           h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
@@ -89,14 +89,26 @@
         <div class="col-7 d-none d-lg-block d-flex justify-content-between text-end anim05">
 
           <div class="dropdown px-0 d-inline-block px-lg-4">
-              <button type="button" data-bs-toggle="dropdown" aria-expanded="false" class="nav-link dropdown-toggle mx-auto px-0" title="Click to open">
+              <button id="worksDropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false" class="nav-link dropdown-toggle mx-auto px-0" title="Selected work">
                Work
               </button>
-              <ul class="dropdown-menu text-center text-lg-start">
-                <li><a class="dropdown-item smaller-2" href="voicemod.html">Voicemod</a></li>
-                <li><a class="dropdown-item smaller-2 active" href="meta.html">Meta</a></li>
-                <li><a class="dropdown-item smaller-2" href="microsoft.html">Microsoft</a></li>
-              </ul>
+              <div id="dropdown-menu" class="dropdown-menu p-3 border-radius" style="width: 485px; margin-top: 28px">
+                <div class="container ps-0">
+                  <div class="row">
+                    <div class="col-6">
+                      <ul class="list-unstyled mb-0">
+                        <li class="mb-1"><a class="ddLink voicemodDD py-2 dropdown-item smaller-1 border-radius" title="Opens Voicemod's project page" href="voicemod.html">Voicemod</a></li>
+                        <li class="my-1"><a class="ddLink metaDD py-2 dropdown-item smaller-1 border-radius active" title="Opens Meta's project page" href="meta.html">Meta</a></li>
+                        <li class="mt-1"><a class="ddLink msftDD py-2 dropdown-item smaller-1 border-radius" title="Opens Microsoft's project page" href="microsoft.html">Microsoft</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-6 bg-secondary border-radius d-flex align-items-center">
+                      <img id="ddImgContainer" src="img/misc/illustrations/spying.svg" alt="Spying illustration" class="img-fluid mx-auto" style="max-width: 130px" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
           </div>
 
           <a href="profile.html" title="Click to check out my profile and my previous work experiences" class="mb-0 px-lg-4 noUnderline">About</a>

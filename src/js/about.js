@@ -1,5 +1,6 @@
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+
 const lenis = new Lenis();
 
 lenis.stop();
@@ -174,92 +175,6 @@ timeline
 
 
 // workspaces scroller
-/*const cards = document.querySelectorAll(".deskImg");
-
-gsap.set(cards, {
-  position: 'absolute',
-  opacity: 0,
-  filter: 'blur(4px)',
-  yPercent: 0,
-  xPercent: 0
-});
-
-const cardTimeline = gsap.timeline({
-  scrollTrigger: {
-    trigger: '.deskContainer',
-    pin: true,
-    start: "center center",
-    end: "+=300%", // Adjust the end value for a longer animation
-    scrub: true
-  }
-});
-
-cards.forEach((card, index) => {
-  var currentCard = `${index + 1}`;
-  cardTimeline.to(card, {
-    opacity: 1,
-    filter: 'blur(0px)',
-    stagger: 130,
-    duration: 10,
-    onComplete: () => {
-      //console.log('the card that was completed was', card, currentCard)
-      gsap.to(card, {
-        opacity: 0,
-        stagger: 5,
-        scrub: true,
-        onComplete: () => {
-          console.log('Card faded out:', card);
-        }
-      });
-    }
-  });
-});*/
-// workspaces scroller end
-
-
-  //homepage design process gsock
-/*gsap.registerPlugin(ScrollTrigger);
-
-const cards = document.querySelectorAll(".desk-card");
-
-// Set the initial position of each card
-cards.forEach((card, index) => {
-  gsap.set(card, {
-    position: 'absolute',
-    opacity: 0,
-    filter: 'blur(16px)',
-    x: gsap.utils.random(-100, 100), // Randomly offset the X position
-    y: gsap.utils.random(-100, 100), // Randomly offset the Y position
-    scale: .3
-  });
-});
-
-const cardTimeline = gsap.timeline({
-  scrollTrigger: {
-    trigger: '.design-cards', // The wrapper element that contains the panels
-    pin: true,
-    start: "-15%",
-    end: "+=600%",
-    scrub: true // Enable "scrubbing" so that the animations are smoothly reversed as the user scrolls back up
-  },
-});
-
-cards.forEach((card, index) => {
-  var currentCard = `${index + 1}`;
-  cardTimeline.to(card, {
-    filter: 'blur(0px)',
-    translateZ: 15,
-    scale: 1,
-    opacity: 1,
-    stagger: 1,
-    duration: 8,
-    onComplete: () => {
-      console.log(`Card ${index + 1} timeline completed`);    
-    }
-  });
-});*/
-
-
 window.onload = () => {
   gsap.set("#scrollDist", {
     width: "100%",
@@ -424,3 +339,43 @@ if (ScrollTrigger.isTouch === 1) {
 }
 
 //homepage design process gsock end
+
+
+
+//navbar dropdown show on hover
+let trigger = document.getElementById('worksDropdown');
+
+document.getElementById('worksDropdown').addEventListener("mouseover", ()=>{
+    if (!$(trigger).hasClass('show')) {
+      bootstrap.Dropdown.getOrCreateInstance(trigger).toggle()
+    }
+});
+
+document.getElementById('dropdown-menu').addEventListener("mouseleave", ()=>{
+    bootstrap.Dropdown.getOrCreateInstance(trigger).toggle()
+    if (!$(trigger).hasClass('show')) {
+      $("#ddImgContainer").attr("src", "img/misc/illustrations/spying.svg");
+      $("#ddImgContainer").attr("alt", "Spying illustration");
+    }
+});
+
+$(".ddLink").on("mouseover", function () {
+  var className = $(this).attr("class").split(" ")[1]; // Get the second class name
+  switch (className) {
+    case "voicemodDD":
+      $("#ddImgContainer").attr("src", "img/misc/logos/voicemod-logo-card.svg");
+      $("#ddImgContainer").attr("alt", "Voicemod logo");
+      break;
+    case "metaDD":
+      $("#ddImgContainer").attr("src", "img/misc/logos/meta-logo-card.svg");
+      $("#ddImgContainer").attr("alt", "Meta logo");
+      break;
+    case "msftDD":
+      $("#ddImgContainer").attr("src", "img/misc/logos/msft-logo-card.svg");
+      $("#ddImgContainer").attr("alt", "Microsoft logo");
+      break;
+    default:
+      break;
+  }
+});
+//navbar dropdown show on hover end

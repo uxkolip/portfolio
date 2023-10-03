@@ -371,3 +371,42 @@ timeline
   .add(gsap.to(".anim04", { duration: 1, opacity: 1 }), "-=0.3")
   .add(gsap.to(".anim05", { duration: 1, opacity: 1 }), "-=0.3");
 //page animations end
+
+
+//navbar dropdown show on hover
+let trigger = document.getElementById('worksDropdown');
+
+document.getElementById('worksDropdown').addEventListener("mouseover", ()=>{
+    if (!$(trigger).hasClass('show')) {
+      bootstrap.Dropdown.getOrCreateInstance(trigger).toggle()
+    }
+});
+
+document.getElementById('dropdown-menu').addEventListener("mouseleave", ()=>{
+    bootstrap.Dropdown.getOrCreateInstance(trigger).toggle()
+    if (!$(trigger).hasClass('show')) {
+      $("#ddImgContainer").attr("src", "img/misc/illustrations/spying.svg");
+      $("#ddImgContainer").attr("alt", "Spying illustration");
+    }
+});
+
+$(".ddLink").on("mouseover", function () {
+  var className = $(this).attr("class").split(" ")[1]; // Get the second class name
+  switch (className) {
+    case "voicemodDD":
+      $("#ddImgContainer").attr("src", "img/misc/logos/voicemod-logo-card.svg");
+      $("#ddImgContainer").attr("alt", "Voicemod logo");
+      break;
+    case "metaDD":
+      $("#ddImgContainer").attr("src", "img/misc/logos/meta-logo-card.svg");
+      $("#ddImgContainer").attr("alt", "Meta logo");
+      break;
+    case "msftDD":
+      $("#ddImgContainer").attr("src", "img/misc/logos/msft-logo-card.svg");
+      $("#ddImgContainer").attr("alt", "Microsoft logo");
+      break;
+    default:
+      break;
+  }
+});
+//navbar dropdown show on hover end
