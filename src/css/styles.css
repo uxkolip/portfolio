@@ -12169,7 +12169,6 @@ a:hover, button:hover, .pointer, button:not(:disabled), [type="button"]:not(:dis
   background-image: url("../img/misc/shapes/link-bounding-box.svg"), url("../img/misc/shapes/link-bounding-box.svg");
   background-repeat: no-repeat, no-repeat;
   background-position: 0 center, 100% center;
-  z-index: 1999999;
   position: absolute;
   margin-top: -36px;
   bottom: -2px;
@@ -12186,7 +12185,6 @@ footer .text-info:after {
   background-image: url("../img/misc/shapes/link-bounding-box-sm.svg"), url("../img/misc/shapes/link-bounding-box-sm.svg");
   background-repeat: no-repeat, no-repeat;
   background-position: 0 center, 100% center;
-  z-index: 1999999;
   position: absolute;
   margin-top: -36px;
   bottom: -4px;
