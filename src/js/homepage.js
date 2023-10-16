@@ -27,7 +27,7 @@ $(document).ready(function() {
     $("body").removeClass("opacity-0");
     $("html").css("opacity", 1);
 
-    changingH1s();  
+    changingH1s();
 
 });
 
@@ -134,7 +134,7 @@ panels.forEach((panel, index) => {
     var currentPanel = `${index + 1}`;
     panelTimeline.to(panel, {
     y: -(index * panel.offsetHeight - index * 75), // Move the panel up to its final position
-    duration: 1, // Set the duration of the animation to 5 second
+    duration: 4, // Set the duration of the animation to 5 second
     stagger: 1,
     delay: index * 1, // Delay the animation by 2 seconds per panel
     ease: 'linear', // Add some easing to the motion

@@ -156,10 +156,12 @@ gsap.to('.progress-circle', {
 
 //homepage animations
 if ($(window).scrollTop() === 0) {
-  gsap.set(".anim01, .anim02, .anim03, .anim04, .anim05", { opacity: "0" });
+  gsap.set(".anim01, .anim02, .anim03, .anim05", { opacity: "0" });
+  //gsap.set(".anim04 img", { top: 410});
   //console.log("Window is at the top.");
 } else {
-  gsap.set(".anim01, .anim02, .anim03, .anim04, .anim05", { opacity: "1" });
+  gsap.set(".anim01, .anim02, .anim03, .anim05", { opacity: "1" });
+  //gsap.set(".anim04 img", { top: 0});
   //console.log("Window is not at the top.");
 } 
 
@@ -169,7 +171,7 @@ timeline
   .add(gsap.to(".anim01", { delay: .3, duration: 1, opacity: 1 }))
   .add(gsap.to(".anim02", { duration: .3, opacity: 1 }), "-=0.1")
   .add(gsap.to(".anim03", { duration: .3, opacity: 1 }), "-=0.1")
-  //.add(gsap.to(".anim04", { duration: 1, opacity: 1 }), "-=0.3")
+  //.add(gsap.to(".anim04 img", { duration: 1, top: 0 }), "-=0.3")
   .add(gsap.to(".anim05", { opacity: 1 }), "-=0.1");
 //homepage animations end
 
