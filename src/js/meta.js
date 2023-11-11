@@ -208,7 +208,7 @@ function isScrolledIntoView(elem)
 
 
 //lottie
-$(document).on('scroll', function() {
+/*$(document).on('scroll', function() {
     if (isScrolledIntoView($('.lottieRow'))) {
         if (!$('#lottiePlaya').length) {
             $('.lottieRow').html('<dotlottie-player id="lottiePlaya" autoplay="false" loop mode="normal" src="js/lottie-files/meta-hero-lottie-2.lottie" style="max-height: 650px" class="w-100"></dotlottie-player>');    
@@ -218,7 +218,7 @@ $(document).on('scroll', function() {
             player.play();
         }, 500);
     }
-});
+});*/
 //lottie end
 
 
