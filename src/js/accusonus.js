@@ -23,8 +23,9 @@ $(document).ready(function() {
 
     var opporunityHeight = $('.opportunityHeight').outerHeight();
     var dottedBGHeight = $('.dotted-bg').outerHeight();
+    var dottedBGHeight2 = $('.dotted-bg2').outerHeight();
     setTimeout(function() {
-      $('body').append("<style> .opporunityAfter:after { height: "+ opporunityHeight +"px; } .dotted-bg:after { height: "+ dottedBGHeight +"px; } </style>");
+      $('body').append("<style> .opporunityAfter:after { height: "+ opporunityHeight +"px; } .dotted-bg:after { height: "+ dottedBGHeight +"px; } .dotted-bg2:after { height: "+ dottedBGHeight2 +"px; } </style>");
     }, 990);
 
     checkiftooltip();
@@ -39,7 +40,8 @@ $(window).resize(function() {
 
     var opporunityHeight = $('.opportunityHeight').outerHeight();
     var dottedBGHeight = $('.dotted-bg').outerHeight();
-    $('body').append("<style> .opporunityAfter:after { height: "+ opporunityHeight +"px; } .dotted-bg:after { height: "+ dottedBGHeight +"px; } </style>");
+    var dottedBGHeight2 = $('.dotted-bg2').outerHeight();
+    $('body').append("<style> .opporunityAfter:after { height: "+ opporunityHeight +"px; } .dotted-bg:after { height: "+ dottedBGHeight +"px; } .dotted-bg2:after { height: "+ dottedBGHeight2 +"px; } </style>");
 
 });
 
@@ -193,18 +195,7 @@ $(document).mousemove(function(e) {
 });
 //drag to scroll end
 
-// checks if elem is in view
-function isScrolledIntoView(elem)
-{
-    var docViewTop = $(window).scrollTop();
-    var docViewBottom = docViewTop + $(window).height();
 
-    var elemTop = $(elem).offset().top;
-    var elemBottom = elemTop + $(elem).height();
-
-    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-}
-// checks if elem is in view end
 
 var isDragginginitMockups = false;
 var startXinitMockups, scrollLeftinitMockups;
@@ -264,33 +255,6 @@ $(document).mousemove(function(e) {
 });
 //drag to scroll end
 
-// checks if elem is in view
-function isScrolledIntoView(elem)
-{
-    var docViewTop = $(window).scrollTop();
-    var docViewBottom = docViewTop + $(window).height();
-
-    var elemTop = $(elem).offset().top;
-    var elemBottom = elemTop + $(elem).height();
-
-    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-}
-// checks if elem is in view end
-
-
-//lottie
-$(document).on('scroll', function() {
-    if (isScrolledIntoView($('.lottieRow'))) {
-        if (!$('#lottiePlaya').length) {
-            $('.lottieRow').html('<dotlottie-player id="lottiePlaya" autoplay="false" loop mode="normal" src="js/lottie-files/meta-hero-lottie-2.lottie" style="max-height: 650px" class="w-100"></dotlottie-player>');    
-        }        
-        setTimeout(function() {
-            const player = document.getElementById("lottiePlaya");
-            player.play();
-        }, 500);
-    }
-});
-//lottie end
 
 
 //voiceflow
@@ -308,48 +272,6 @@ $(document).on('scroll', function() {
   s.parentNode.insertBefore(v, s);
 })(document, 'script');
 //voiceflow end
-
-
-//figma iframe loader
-function loadIframe() {
-    const iframeContainer = document.getElementById('iframeContainer');
-    const iframe = document.createElement('iframe');
-    iframe.src = 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2Fe44ChloeUsy3j33N2e2Fv3%2FEnnely%252C-user-journey%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3DHltnsOoRKN7jZkYN-1'; // Replace with your iframe source URL
-    iframe.width = '100%';
-    iframe.height = '100%';
-    iframe.style.border = 'none';
-    iframe.setAttribute('allowfullscreen', 'true');
-
-    // Append the iframe to the container
-    iframeContainer.appendChild(iframe);
-    setTimeout(function() {
-        $('.figmaLoader').remove();
-    }, 3300);
-}
-
-// Intersection Observer configuration
-const options = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.1 // Adjust the threshold as needed
-};
-
-// Create the Intersection Observer
-const observer = new IntersectionObserver(function(entries, observer) {
-    entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-            // Load the iframe when it becomes visible
-            loadIframe();
-
-            // Disconnect the observer after loading
-            observer.disconnect();
-        }
-    });
-}, options);
-
-// Start observing the iframe container
-observer.observe(document.getElementById('iframeContainer'));
-//figma iframe loader end
 
 
 // horizontal scroll buttons scrollableDivImprovements
@@ -413,10 +335,10 @@ $('.scrollableArea').each(function() {
 
 
 //page animations
-/*if ($(window).scrollTop() === 0) {
-  gsap.set(".anim01, .anim02, .anim03, .anim04, .anim05", { opacity: "0" });
+if ($(window).scrollTop() === 0) {
+  gsap.set(".anim01, .anim02, .anim03, .anim04, .anim05, .anim06", { opacity: "0" });
 } else {
-  gsap.set(".anim01, .anim02, .anim03, .anim04, .anim05", { opacity: "1" });
+  gsap.set(".anim01, .anim02, .anim03, .anim04, .anim05, .anim06", { opacity: "1" });
 }
 
 const timeline = gsap.timeline();
@@ -426,7 +348,8 @@ timeline
   .add(gsap.to(".anim02", { duration: 1, opacity: 1 }), "-=0.3")
   .add(gsap.to(".anim03", { duration: 1, opacity: 1 }), "-=0.3")
   .add(gsap.to(".anim04", { duration: 1, opacity: 1 }), "-=0.3")
-  .add(gsap.to(".anim05", { duration: 1, opacity: 1 }), "-=0.3");*/
+  .add(gsap.to(".anim05", { duration: 1, opacity: 1 }), "-=0.3")
+  .add(gsap.to(".anim06", { duration: 1, opacity: 1 }), "-=0.3");
 //page animations end
 
 
@@ -461,6 +384,10 @@ $(".ddLink").on("mouseover", function () {
     case "msftDD":
       $("#ddImgContainer").attr("src", "img/misc/logos/msft-logo-card.svg");
       $("#ddImgContainer").attr("alt", "Microsoft logo");
+      break;
+    case "accusonusDD":
+      $("#ddImgContainer").attr("src", "img/misc/logos/accusonus-logo.svg");
+      $("#ddImgContainer").attr("alt", "accusonus logo");
       break;
     default:
       break;

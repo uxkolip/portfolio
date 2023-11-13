@@ -376,6 +376,10 @@ $(".ddLink").on("mouseover", function () {
       $("#ddImgContainer").attr("src", "img/misc/logos/msft-logo-card.svg");
       $("#ddImgContainer").attr("alt", "Microsoft logo");
       break;
+    case "accusonusDD":
+      $("#ddImgContainer").attr("src", "img/misc/logos/accusonus-logo.svg");
+      $("#ddImgContainer").attr("alt", "accusonus logo");
+      break;
     default:
       break;
   }
