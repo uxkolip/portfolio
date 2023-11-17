@@ -25,7 +25,7 @@ $(document).ready(function() {
     var dottedBGHeight = $('.dotted-bg').outerHeight();
     setTimeout(function() {
       $('body').append("<style> .opporunityAfter:after { height: "+ opporunityHeight +"px; } .dotted-bg:after { height: "+ dottedBGHeight +"px; } </style>");
-    }, 700);
+    }, 900);
 
     checkiftooltip();
     lenis.start();
