@@ -25,7 +25,7 @@ $(document).ready(function() {
     var dottedBGHeight = $('.dotted-bg').outerHeight();
     setTimeout(function() {
       $('body').append("<style> .opporunityAfter:after { height: "+ opporunityHeight +"px; } .dotted-bg:after { height: "+ dottedBGHeight +"px; } </style>");
-    }, 700);
+    }, 1700);
 
     checkiftooltip();
     //checkifLenis();
@@ -253,7 +253,7 @@ function loadIframe() {
     iframeContainer.appendChild(iframe);
     setTimeout(function() {
         $('.figmaLoader').remove();
-    }, 3300);
+    }, 1000);
 }
 
 // Intersection Observer configuration
