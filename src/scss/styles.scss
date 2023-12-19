@@ -234,10 +234,10 @@ strong {
   margin-top: 10px !important;
 }
 
-mark, .mark {
+/*mark, .mark {
   background-color: $success;
   color: #FFFBF5;
-}
+}*/
 
 #scrollableDiv1, #scrollableDiv2, #scrollableDivImprovements, #scrollableDivImages, #userJourneyScroll, .cursorGrab, #wireframesScroll, .grab {
   cursor: url(
@@ -506,6 +506,7 @@ footer .text-info:after {
 .sideMenu .active {
   background-color: #FDF3E7;
   border-radius: 8px;
+  font-weight: bold;
 }
 
 .tooltip {
