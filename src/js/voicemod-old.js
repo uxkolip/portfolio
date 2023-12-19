@@ -1,8 +1,8 @@
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
-//const lenis = new Lenis();
+const lenis = new Lenis();
 
-//lenis.stop();
+lenis.stop();
 
 function checkiftooltip() {
     $(window).width() > 768 ? ($('[data-toggle="tooltip"]').tooltip(), 
@@ -10,14 +10,14 @@ function checkiftooltip() {
     $("[data-toggle='tooltip']").tooltip();
 }
 
-/*function checkifLenis() {
+function checkifLenis() {
   var isMobile = $(window).width() < 768;
   if (isMobile == false) {
     lenis.start();
   } else {
     lenis.destroy();
   }
-}*/
+}
 
 $(document).ready(function() {
 
@@ -29,7 +29,7 @@ $(document).ready(function() {
     }, 700);
 
     checkiftooltip();
-    //lenis.start();
+    lenis.start();
     $("body").removeClass("opacity-0");
     $("html").css("opacity", 1);
 }); 
@@ -44,7 +44,7 @@ $(window).resize(function() {
 });
 
 //smooth scroll
-/*lenis.on('scroll', ScrollTrigger.update)
+lenis.on('scroll', ScrollTrigger.update)
 
 gsap.ticker.add((time)=>{
   lenis.raf(time * 1000)
@@ -57,13 +57,13 @@ function raf(time) {
   requestAnimationFrame(raf)
 }
 
-requestAnimationFrame(raf)*/
+requestAnimationFrame(raf)
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
     e.stopPropagation();
-    //lenis.scrollTo(this.getAttribute('href'));
+    lenis.scrollTo(this.getAttribute('href'));
     bootstrap.Tooltip.getInstance('.close-button').dispose();
     setTimeout(function() {
       [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
@@ -75,7 +75,7 @@ document.querySelectorAll('[data-target^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
     e.stopPropagation();
-    //lenis.scrollTo(this.getAttribute('data-target'));
+    lenis.scrollTo(this.getAttribute('data-target'));
     bootstrap.Tooltip.getInstance('.close-button').dispose();
     setTimeout(function() {
       [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
@@ -389,12 +389,12 @@ $(document).mousemove(function(e) {
 function showResearchPlan() {
   $('#research').removeClass('d-none');
   $('.researchPlanBtn').addClass('d-none');
-  //lenis.scrollTo('#research');
+  lenis.scrollTo('#research');
 }
 //show research plan end
 
 //voiceflow
-/*(function(d, t) {
+(function(d, t) {
   var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
   v.onload = function() {
     window.voiceflow.chat.load({
@@ -406,7 +406,7 @@ function showResearchPlan() {
   v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; 
   v.type = "text/javascript"; 
   s.parentNode.insertBefore(v, s);
-})(document, 'script');*/
+})(document, 'script');
 //voiceflow end
 
 
@@ -565,10 +565,6 @@ $(".ddLink").on("mouseover", function () {
     case "msftDD":
       $("#ddImgContainer").attr("src", "img/misc/logos/msft-logo-card.svg");
       $("#ddImgContainer").attr("alt", "Microsoft logo");
-      break;
-    case "accusonusDD":
-      $("#ddImgContainer").attr("src", "img/misc/logos/accusonus-logo.svg");
-      $("#ddImgContainer").attr("alt", "accusonus logo");
       break;
     default:
       break;
