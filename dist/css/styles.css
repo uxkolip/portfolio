@@ -12243,11 +12243,23 @@ footer .text-info:after {
   .main-navbar--scrolled {
     height: 40px; }
 
+.sideMenu li:hover {
+  background-color: #FDF3E7;
+  border-radius: 8px; }
+
+.sideMenu .active {
+  background-color: #FDF3E7;
+  border-radius: 8px; }
+
 .tooltip {
   font-family: 'gt_america_extended_regular', sans-serif; }
 
 .sticky-top {
   top: 50px; }
+
+.workAccordion svg {
+  transition: transform 0.3s ease;
+  /* sidemenu accordion */ }
 
 #toTop {
   left: 20px;

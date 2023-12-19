@@ -575,3 +575,14 @@ $(".ddLink").on("mouseover", function () {
   }
 });
 //navbar dropdown show on hover end
+
+
+//sidemenu accordionWorks
+$('.workAccordion').click(function() {
+  if ($(this).attr('aria-expanded') === 'true') {
+    $(this).find('svg').css('transform', 'rotate(90deg)');
+  } else {
+    $(this).find('svg').css('transform', 'none');
+  }
+});
+//sidemenu accordionWorks end

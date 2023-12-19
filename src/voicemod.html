@@ -170,33 +170,95 @@
 
 
 <div class="row">
-  <div class="col-2 border border-start-0 border-bottom-0 border-top-0 the-border position-relative">
-    <div class="row">
-      <div class="col-12 px-4 position-fixed" style="max-width: 240px">
-        <p class="font-weight-bold mb-0 my-4"><a class="text-primary font-weight-bold noUnderline" href="index.html" title="Homepage">Vasilis Kolip</a></p>
-        <p class="mb-0 mt-n2">Product designer</p>
-        <div class="accordion mt-4" id="accordionExample">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed px-0 py-1 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Work</button>
-            </h2>
-            <div id="collapseOne" class="accordion-collapse collapse bg-transparent border-0" data-bs-parent="#accordionExample" style="">
-              <div class="accordion-body px-0 pt-2">
-               <ul class="list-unstyled mb-0">
-                  <li class="my-2">Voicemod</li>
-                  <li class="my-2"><a href="https://voicemod.net" target="_blank" title="Opens Voicemod's website on a new tab" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="93x32" data-bs-custom-class="custom-tooltip">Meta</a></li>
-                  <li class="my-2"><a href="https://voicemod.net" target="_blank" title="Opens Voicemod's website on a new tab" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="93x32" data-bs-custom-class="custom-tooltip">Microsoft</a></li>
-                  <li class="my-2"><a href="https://voicemod.net" target="_blank" title="Opens Voicemod's website on a new tab" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="93x32" data-bs-custom-class="custom-tooltip">accusonus</a></li>
-                  <li class="my-2"><a href="https://voicemod.net" target="_blank" title="Opens Voicemod's website on a new tab" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="93x32" data-bs-custom-class="custom-tooltip">ContactPigeon</a></li>
-                  <li class="my-2"><a href="https://voicemod.net" target="_blank" title="Opens Voicemod's website on a new tab" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="93x32" data-bs-custom-class="custom-tooltip">YouBeHero</a></li>
-                </ul>
-              </div>
+  <div class="col-2 position-relative overflow-y-auto sideMenu px-0">
+    <div class="col-2 px-0 mx-auto overflow-y-auto overflow-x-hidden position-fixed border the-border border-start-0 border-bottom-0 border-top-0" style="height: 100vh;">
+        
+        <div class="my-4 position-relative ps-4">
+          <div style="max-width: 40px;" class="col-12 px-0 mb-2 rounded-circle d-none d-md-block">
+            <img src="img/misc/moi-thumb.png" alt="Vasilis Kolip portrait thumbnail" class="img-fluid">
+          </div>
+          <div class="col-12 col-md-10 ps-1 pe-0">
+            <div class="row">
+              <p class="mb-0 lh-1"><a class="smaller-1 font-weight-bold noUnderline stretched-link" href="index.html" title="Homepage">Vasilis Kolip</a></p>
+              <p class="mb-0 smaller-2">Product designer</p>
             </div>
-          </div>          
+          </div>
         </div>
-        <p class="smaller-2 mb-1">About</p>
-        <p class="smaller-2">Contact</p>
-      </div>
+
+        <div class="row border the-border opacity-50"></div>
+        
+        <ul class="list-unstyled mb-2 mt-4 pt-2 position-relative ps-4 pe-3">
+          <li class="position-relative py-1 ps-2">
+            <a class="text-primary workAccordion smaller-3 noUnderline stretched-link" data-bs-toggle="collapse" href="#collapseSelectedWork" role="button" aria-expanded="true" aria-controls="collapseSelectedWork">
+              <svg xmlns="http://www.w3.org/2000/svg" class="mt-n2" height="12" viewBox="0 0 320 512" style="transform: rotate(90deg);"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"></path></svg><span class="ps-3">Selected work</span>
+            </a>
+          </li>
+        </ul>
+        
+        <div class="mb-2 collapse show" id="collapseSelectedWork">
+          <div class="card card-body bg-transparent border-0 py-0 ps-4">
+            <ul class="list-unstyled mb-0">
+              <li class="py-1 mb-2 ps-4 position-relative active"><a href="voicemod.html" title="Opens Voicemod's project page" class="smaller-3 noUnderline stretched-link ps-2">Voicemod</a></li>
+              <li class="py-1 my-2 ps-4 position-relative"><a href="meta.html" title="Opens Meta's project page" class="smaller-3 noUnderline stretched-link ps-2">Meta</a></li>
+              <li class=" py-1 my-2 ps-4 position-relative"><a href="microsoft.html" title="Opens Microsoft's project page" class="smaller-3 noUnderline stretched-link ps-2">Microsoft</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-10 mx-auto border the-border opacity-50"></div>
+
+        <ul class="list-unstyled my-2 position-relative ps-4 pe-3">
+          <li class="position-relative py-1 ps-2">
+            <a class="text-primary workAccordion smaller-3 noUnderline stretched-link collapsed" data-bs-toggle="collapse" href="#collapseAdditionalWork" role="button" aria-expanded="false" aria-controls="collapseAdditionalWork">
+              <svg xmlns="http://www.w3.org/2000/svg" class="mt-n1" height="12" viewBox="0 0 320 512" style="transform: none;"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"></path></svg><span class="ps-3">Additional work</span>
+            </a>
+          </li>
+        </ul>
+
+        <div id="collapseAdditionalWork" class="mb-2 collapse" style="">
+          <div class="card card-body bg-transparent border-0 py-0 ps-4">
+            <ul class="list-unstyled mb-0">
+              <li class="py-1 mb-2 ps-4 position-relative"><a href="accusonus.html" title="Opens accusonus' project page" class="smaller-3 noUnderline stretched-link ps-2">accusonus</a></li>
+              <li class="py-1 my-2 ps-4 position-relative"><a href="contapigeon.html" disabled="disabled" title="Opens ContactPigeon's project page" class="smaller-3 noUnderline stretched-link ps-2">ContactPigeon</a></li>
+              <li class="py-1 my-2 ps-4 position-relative"><a href="youbehero.html" title="Opens YouBeHero's project page" class="smaller-3 noUnderline stretched-link ps-2">YouBeHero</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-10 mx-auto border the-border opacity-50"></div>
+        
+         <ul class="list-unstyled my-2 position-relative ps-4 pe-3">
+          <li class="position-relative py-1 ps-2">
+            <a href="Vasilis-Kolip-Sr-Product-Designer.pdf" title="Opens my résumé in a new tab" target="_blank" class="smaller-3 noUnderline stretched-link">Résumé</a>
+          </li>
+        </ul>
+  
+        <div class="col-10 mx-auto border the-border opacity-50"></div>
+        
+        <ul class="list-unstyled my-2 position-relative ps-4 pe-3">
+          <li class="position-relative py-1 ps-2">
+            <a href="profile.html" title="Find out more about me" class="smaller-3 noUnderline stretched-link">About</a>
+          </li>
+        </ul>
+
+        <div class="col-10 mx-auto border the-border opacity-50"></div>
+
+        <ul class="list-unstyled my-2 position-relative ps-4 pe-3">
+          <li class="position-relative py-1 ps-2">
+            <a href="javascript:void(0);" onclick="window.voiceflow.chat.open();" title="Click to get in touch" class="smaller-3 noUnderline stretched-link">Contact</a>
+          </li>
+        </ul>
+
+        <div class="col-10 mx-auto border the-border opacity-50"></div>
+
+        <ul class="list-unstyled my-2 position-relative ps-4 pe-3">
+          <li class="position-relative py-1 ps-2">
+            <a href="javascript:void(0);" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom" title="Click to view the credits" class="smaller-3 noUnderline stretched-link">Credits</a>
+          </li>
+        </ul>
+
+      </div><div class="row">
+      
     </div>
   </div>
 
