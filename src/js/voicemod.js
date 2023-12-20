@@ -1,8 +1,8 @@
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
-//const lenis = new Lenis();
+const lenis = new Lenis();
 
-//lenis.stop();
+lenis.stop();
 
 function checkiftooltip() {
     $(window).width() > 768 ? ($('[data-toggle="tooltip"]').tooltip(), 
@@ -10,28 +10,34 @@ function checkiftooltip() {
     $("[data-toggle='tooltip']").tooltip();
 }
 
-/*function checkifLenis() {
+function checkifLenis() {
   var isMobile = $(window).width() < 768;
   if (isMobile == false) {
     lenis.start();
   } else {
     lenis.destroy();
   }
-}*/
+}
 
 $(document).ready(function() {
-
-    var opporunityHeight = $('.opportunityHeight').outerHeight();
-    var dottedBGHeight = $('.dotted-bg').outerHeight();
-    var dottedBGHeight2 = $('.dotted-bg2').outerHeight();
-    setTimeout(function() {
-      $('body').append("<style> .opporunityAfter:after { height: "+ opporunityHeight +"px; } .dotted-bg:after { height: "+ dottedBGHeight +"px; } .dotted-bg2:after { height: "+ dottedBGHeight2 +"px; } </style>");
-    }, 700);
-
     checkiftooltip();
-    //lenis.start();
+    lenis.start();
     $("body").removeClass("opacity-0");
     $("html").css("opacity", 1);
+
+  //typeform
+  (function() { 
+      var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; 
+      if(!gi.call(d,id)) { 
+          js=ce.call(d,"script"); 
+          js.id=id; 
+          js.src=b+"embed.js"; 
+          q=gt.call(d,"script")[0]; 
+          q.parentNode.insertBefore(js,q) 
+      }
+  })();
+  //typeform end
+
 }); 
 
 $(window).resize(function() {
@@ -44,7 +50,7 @@ $(window).resize(function() {
 });
 
 //smooth scroll
-/*lenis.on('scroll', ScrollTrigger.update)
+lenis.on('scroll', ScrollTrigger.update)
 
 gsap.ticker.add((time)=>{
   lenis.raf(time * 1000)
@@ -57,13 +63,13 @@ function raf(time) {
   requestAnimationFrame(raf)
 }
 
-requestAnimationFrame(raf)*/
+requestAnimationFrame(raf)
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
     e.stopPropagation();
-    //lenis.scrollTo(this.getAttribute('href'));
+    lenis.scrollTo(this.getAttribute('href'));
     bootstrap.Tooltip.getInstance('.close-button').dispose();
     setTimeout(function() {
       [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
@@ -75,7 +81,7 @@ document.querySelectorAll('[data-target^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
     e.stopPropagation();
-    //lenis.scrollTo(this.getAttribute('data-target'));
+    lenis.scrollTo(this.getAttribute('data-target'));
     bootstrap.Tooltip.getInstance('.close-button').dispose();
     setTimeout(function() {
       [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
@@ -389,12 +395,12 @@ $(document).mousemove(function(e) {
 function showResearchPlan() {
   $('#research').removeClass('d-none');
   $('.researchPlanBtn').addClass('d-none');
-  //lenis.scrollTo('#research');
+  lenis.scrollTo('#research');
 }
 //show research plan end
 
-//voiceflow
-/*(function(d, t) {
+/*//voiceflow
+(function(d, t) {
   var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
   v.onload = function() {
     window.voiceflow.chat.load({
@@ -406,9 +412,9 @@ function showResearchPlan() {
   v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; 
   v.type = "text/javascript"; 
   s.parentNode.insertBefore(v, s);
-})(document, 'script');*/
+})(document, 'script');
 //voiceflow end
-
+*/
 
 // horizontal scroll buttons scrollableDivImprovements
 function checkScrollableLeftSpace($scrollableDiv) {
@@ -532,49 +538,6 @@ $(document).on('scroll', function() {
   }  
 });
 //progress width animation end
-
-
-//navbar dropdown show on hover
-let trigger = document.getElementById('worksDropdown');
-
-document.getElementById('worksDropdown').addEventListener("mouseover", ()=>{
-    if (!$(trigger).hasClass('show')) {
-      bootstrap.Dropdown.getOrCreateInstance(trigger).toggle()
-    }
-});
-
-document.getElementById('dropdown-menu').addEventListener("mouseleave", ()=>{
-    bootstrap.Dropdown.getOrCreateInstance(trigger).toggle()
-    if (!$(trigger).hasClass('show')) {
-      $("#ddImgContainer").attr("src", "img/misc/illustrations/spying.svg");
-      $("#ddImgContainer").attr("alt", "Spying illustration");
-    }
-});
-
-$(".ddLink").on("mouseover", function () {
-  var className = $(this).attr("class").split(" ")[1]; // Get the second class name
-  switch (className) {
-    case "voicemodDD":
-      $("#ddImgContainer").attr("src", "img/misc/logos/voicemod-logo-card.svg");
-      $("#ddImgContainer").attr("alt", "Voicemod logo");
-      break;
-    case "metaDD":
-      $("#ddImgContainer").attr("src", "img/misc/logos/meta-logo-card.svg");
-      $("#ddImgContainer").attr("alt", "Meta logo");
-      break;
-    case "msftDD":
-      $("#ddImgContainer").attr("src", "img/misc/logos/msft-logo-card.svg");
-      $("#ddImgContainer").attr("alt", "Microsoft logo");
-      break;
-    case "accusonusDD":
-      $("#ddImgContainer").attr("src", "img/misc/logos/accusonus-logo.svg");
-      $("#ddImgContainer").attr("alt", "accusonus logo");
-      break;
-    default:
-      break;
-  }
-});
-//navbar dropdown show on hover end
 
 
 //sidemenu accordionWorks

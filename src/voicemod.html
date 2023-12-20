@@ -36,9 +36,9 @@
     <link href="css/styles.css?v=1.2" rel="stylesheet">
     <title>Vasilis Kolip • Voicemod
     </title>
-    <script src="https://fast.wistia.com/embed/medias/e2zpqg3isy.jsonp" async></script>
+    <!-- <script src="https://fast.wistia.com/embed/medias/e2zpqg3isy.jsonp" async></script>
     <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
-
+ -->
     <!-- Hotjar Tracking Code for https://kolip.design -->
     <script>
       (function(h,o,t,j,a,r){
@@ -64,13 +64,13 @@
 
 <body class="opacity-0">
 
-      <section class="container" id="pageTop">
+    <section class="container" id="pageTop">
 
-      <div class="position-fixed main-navbar d-none" style="z-index: 1021;">
+      <div class="position-fixed main-navbar d-block d-xl-none w-100" style="z-index: 1021;">
         <nav style="border-radius: 0px 0px 24px 24px !important;" class="navbar navbar-expand-lg navbar-light container bg-background position-relative">
           <div class="container position-relative w-100">
-          <div class="col-9 col-lg-5 position-relative anim04">
-            <div class="d-flex justify-content-start anim01">
+          <div class="col-9 col-lg-5 position-relative">
+            <div class="d-flex justify-content-start">
               <div style="max-width: 46px;" class="col-2 px-0 me-1 mt-n1 rounded-circle d-none d-md-block">
                 <img src="img/misc/moi-thumb.png" alt="Vasilis Kolip portrait thumbnail" class="img-fluid">
               </div>
@@ -83,47 +83,7 @@
             </div>
           </div>
 
-          <div class="col-7 d-none d-lg-block d-flex justify-content-between text-end anim04">
-
-            <div class="dropdown px-0 d-inline-block px-lg-4">
-              <button id="worksDropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false" class="nav-link dropdown-toggle mx-auto px-0" title="Selected work">
-               Work
-              </button>
-              <div id="dropdown-menu" class="dropdown-menu dropdown-menu-end dropdown-menu-xxl-start p-3 border-radius" style="width: 610px; margin-top: 28px">
-                <div class="container ps-0">
-                  <div class="row">
-                    <div class="col-4">
-                      <ul class="list-unstyled mb-0">
-                        <p class="font-weight-bold">Selected</p>
-                        <li class="mb-1"><a class="ddLink voicemodDD py-2 dropdown-item smaller-1 border-radius active" title="Opens Voicemod's project page" href="voicemod.html">Voicemod</a></li>
-                        <li class="my-1"><a class="ddLink metaDD py-2 dropdown-item smaller-1 border-radius" title="Opens Meta's project page" href="meta.html">Meta</a></li>
-                        <li class="mt-1"><a class="ddLink msftDD py-2 dropdown-item smaller-1 border-radius" title="Opens Microsoft's project page" href="microsoft.html">Microsoft</a></li>
-                      </ul>
-                    </div><div class="col-4">
-                      <ul class="list-unstyled mb-0">
-                        <p class="font-weight-bold">Additional</p>
-                        <li class="mb-1"><a class="ddLink accusonusDD py-2 dropdown-item smaller-1 border-radius" title="Opens accusonus' project page" href="accusonus.html">accusonus</a></li>
-                        <li class="my-1" title="Opens ContactPigeon's project page - Coming soon"><a href="contactpigeon.html" class="ddLink contactpigeonDD py-2 dropdown-item smaller-1 border-radius disabled">ContactPigeon</a></li>
-                        <li class="mt-1" title="Opens ContactPigeon's project page - Coming soon"><a href="youbehero.html" class="ddLink youbeheroDD py-2 dropdown-item smaller-1 border-radius disabled">YouBeHero</a></li>
-                      </ul>
-                    </div>
-
-                    <div class="col-4 bg-secondary border-radius d-flex align-items-center">
-                      <img id="ddImgContainer" src="img/misc/illustrations/spying.svg" alt="Spying illustration" class="img-fluid mx-auto" style="max-width: 130px">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-          </div>
-
-            <a href="profile.html" title="Click to check out my profile and my previous work experiences" class="mb-0 px-lg-4 noUnderline">About</a>
-            <a href="Vasilis-Kolip-Sr-Product-Designer.pdf" target="_blank" title="Click to dowload my CV in pdf format" class="mb-0 px-lg-4 noUnderline">Résumé</a>
-            <a class="mb-0 button noUnderline px-lg-4" href="javascript:void(0);" onclick="window.voiceflow.chat.open();" title="Click to get in touch">Contact</a>  
-
-          </div>
-
-          <div class="col-3 d-block ms-auto d-lg-none anim04 text-end">
+          <div class="col-3 ms-auto text-end">
             <button class="btn btn-outline-primary border-radius" class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">MENU</button>
           </div>        
 
@@ -132,39 +92,85 @@
       </div> 
   </section>
 
-  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
     <div class="offcanvas-header bg-background">
-      <h5 class="offcanvas-title bigger-4" id="offcanvasNavbarLabel">Μenu</h5>
+      <h5 class="offcanvas-title bigger-2" id="offcanvasNavbarLabel">Μenu</h5>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
-    <div class="offcanvas-body bg-secondary">
-      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-        <li class="nav-item bigger-1">
-          <a class="nav-link" href="index.html">Home</a>
-        </li>
-        <li class="nav-item bigger-1">
-          <a class="nav-link active font-weight-bold" href="voicemod.html" aria-current="page">Voicemod</a>
-        </li>
-        <li class="nav-item bigger-1">
-          <a class="nav-link" href="meta.html">Meta</a>
-        </li>
-        <li class="nav-item bigger-1">
-          <a class="nav-link" href="microsoft.html">Microsoft</a>
-        </li>
-        <li class="nav-item bigger-1">
-          <a class="nav-link" href="accusonus.html">accusonus</a>
-        </li>
-        <li class="nav-item bigger-1">
-          <a class="nav-link" href="profile.html">About</a>
-        </li>
-        <li class="nav-item bigger-1">
-          <a class="nav-link" href="Vasilis-Kolip-Sr-Product-Designer.pdf" target="_blank" title="Click to dowload my CV in pdf format">Résumé</a>
-        </li>
-        <li class="nav-item bigger-1">
-          <a class="nav-link" href="javascript:void(0);" onclick="window.voiceflow.chat.open();" title="Click to get in touch">Contact</a>
-        </li>
-      </ul>
-     <img src="img/misc/illustrations/nomad-life.svg" alt="Offcanvas illustration" style="transform: scaleX(-1); max-width: 170px" class="img-fluid w-50 position-fixed bottom-0 right-0 mb-2 me-2"/>
+    <div class="offcanvas-body ">
+          <div class="col-12 position-relative sideMenu px-0">
+
+          <ul class="list-unstyled position-relative mb-2">
+            <li class="position-relative py-1 ps-2">
+              <button class="btn text-primary workAccordion smaller-3 noUnderline stretched-link p-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSelectedWork" aria-expanded="true" aria-controls="collapseSelectedWork">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mt-n2" height="12" viewBox="0 0 320 512" style="transform: rotate(90deg);"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"></path></svg><span class="ps-3">Selected work</span>
+              </button>
+            </li>
+          </ul>
+          
+          <div class="mb-2 collapse show" id="collapseSelectedWork">
+            <div class="card card-body bg-transparent border-0 py-0 ps-4">
+              <ul class="list-unstyled mb-0">
+                <li class="py-1 mb-2 ps-4 position-relative active"><a href="voicemod.html" title="Opens Voicemod's project page" class="smaller-3 noUnderline stretched-link ps-2">Voicemod</a></li>
+                <li class="py-1 my-2 ps-4 position-relative"><a href="meta.html" title="Opens Meta's project page" class="smaller-3 noUnderline stretched-link ps-2">Meta</a></li>
+                <li class=" py-1 my-2 ps-4 position-relative"><a href="microsoft.html" title="Opens Microsoft's project page" class="smaller-3 noUnderline stretched-link ps-2">Microsoft</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-10 mx-auto border the-border opacity-50"></div>
+
+          <ul class="list-unstyled my-2 position-relative">
+            <li class="position-relative py-1 ps-2">
+              <button class="btn text-primary workAccordion smaller-3 noUnderline stretched-link p-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAdditionalWork" aria-expanded="false" aria-controls="collapseAdditionalWork">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mt-n2" height="12" viewBox="0 0 320 512" style="transform: none;"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"></path></svg><span class="ps-3">Additional work</span>
+              </button>           
+            </li>
+          </ul>
+
+          <div id="collapseAdditionalWork" class="mb-2 collapse" style="">
+            <div class="card card-body bg-transparent border-0 py-0 ps-4">
+              <ul class="list-unstyled mb-0">
+                <li class="py-1 mb-2 ps-4 position-relative"><a href="accusonus.html" title="Opens accusonus' project page" class="smaller-3 noUnderline stretched-link ps-2">accusonus</a></li>
+                <li class="py-1 my-2 ps-4 position-relative"><a href="contapigeon.html" disabled="disabled" title="Opens ContactPigeon's project page" class="smaller-3 noUnderline stretched-link ps-2">ContactPigeon</a><span class="badge bg-background text-primary the-border font-weight-normal smaller-4 ms-2 px-1">Soon</span></li>
+                <li class="py-1 my-2 ps-4 position-relative"><a href="youbehero.html" title="Opens YouBeHero's project page" class="smaller-3 noUnderline stretched-link ps-2">YouBeHero</a><span class="badge bg-background text-primary the-border font-weight-normal smaller-4 ms-2 px-1">Soon</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-10 mx-auto border the-border opacity-50"></div>
+          
+           <ul class="list-unstyled my-2 position-relative">
+            <li class="position-relative py-1 ps-2">
+              <a href="Vasilis-Kolip-Sr-Product-Designer.pdf" title="Opens my résumé in a new tab" target="_blank" class="smaller-3 noUnderline stretched-link">Résumé</a>
+            </li>
+          </ul>
+    
+          <div class="col-10 mx-auto border the-border opacity-50"></div>
+          
+          <ul class="list-unstyled my-2 position-relative">
+            <li class="position-relative py-1 ps-2">
+              <a href="profile.html" title="Find out more about me" class="smaller-3 noUnderline stretched-link">About</a>
+            </li>
+          </ul>
+
+          <div class="col-10 mx-auto border the-border opacity-50"></div>
+
+          <ul class="list-unstyled my-2 position-relative">
+            <li class="position-relative py-1 ps-2">
+              <a href="https://billk1.typeform.com/to/xNOJ6W" title="Click to get in touch" class="smaller-3 noUnderline stretched-link typeform-share button" data-mode="drawer_right" data-submit-close-delay="5">Contact</a>
+            </li>
+          </ul>
+
+          <div class="col-10 mx-auto border the-border opacity-50"></div>
+
+          <ul class="list-unstyled my-2 position-relative">
+            <li class="position-relative py-1 ps-2">
+              <a href="javascript:void(0);" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom" title="Click to view the credits" class="smaller-3 noUnderline stretched-link">Credits</a>
+            </li>
+          </ul>
+
+      </div>
     </div>
   </div>
 
@@ -173,7 +179,7 @@
   <div class="col-2 position-relative overflow-y-auto sideMenu px-0 d-none d-xl-block">
     <div class="col-2 px-0 mx-auto overflow-y-auto overflow-x-hidden position-fixed border the-border border-start-0 border-bottom-0 border-top-0" style="height: 100vh;">
         
-        <div class="my-4 position-relative ps-4">
+        <div class="d-flex my-4 position-relative ps-4">
           <div style="max-width: 40px;" class="col-12 px-0 mb-2 rounded-circle d-none d-md-block">
             <img src="img/misc/moi-thumb.png" alt="Vasilis Kolip portrait thumbnail" class="img-fluid">
           </div>
@@ -187,11 +193,11 @@
 
         <div class="row border the-border opacity-50"></div>
         
-        <ul class="list-unstyled mb-2 mt-4 pt-2 position-relative ps-4 pe-3">
+        <ul class="list-unstyled mb-2 mt-4 position-relative ps-4 pe-3">
           <li class="position-relative py-1 ps-2">
-            <a class="text-primary workAccordion smaller-3 noUnderline stretched-link" data-bs-toggle="collapse" href="#collapseSelectedWork" role="button" aria-expanded="true" aria-controls="collapseSelectedWork">
+            <button class="btn text-primary workAccordion smaller-3 noUnderline stretched-link p-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSelectedWork" aria-expanded="true" aria-controls="collapseSelectedWork">
               <svg xmlns="http://www.w3.org/2000/svg" class="mt-n2" height="12" viewBox="0 0 320 512" style="transform: rotate(90deg);"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"></path></svg><span class="ps-3">Selected work</span>
-            </a>
+            </button>
           </li>
         </ul>
         
@@ -209,18 +215,18 @@
 
         <ul class="list-unstyled my-2 position-relative ps-4 pe-3">
           <li class="position-relative py-1 ps-2">
-            <a class="text-primary workAccordion smaller-3 noUnderline stretched-link collapsed" data-bs-toggle="collapse" href="#collapseAdditionalWork" role="button" aria-expanded="false" aria-controls="collapseAdditionalWork">
-              <svg xmlns="http://www.w3.org/2000/svg" class="mt-n1" height="12" viewBox="0 0 320 512" style="transform: none;"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"></path></svg><span class="ps-3">Additional work</span>
-            </a>
+            <button class="btn text-primary workAccordion smaller-3 noUnderline stretched-link p-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAdditionalWork" aria-expanded="false" aria-controls="collapseAdditionalWork">
+              <svg xmlns="http://www.w3.org/2000/svg" class="mt-n2" height="12" viewBox="0 0 320 512"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"></path></svg><span class="ps-3">Additional work</span>
+            </button>           
           </li>
         </ul>
 
-        <div id="collapseAdditionalWork" class="mb-2 collapse" style="">
+        <div id="collapseAdditionalWork" class="mb-2 collapse">
           <div class="card card-body bg-transparent border-0 py-0 ps-4">
             <ul class="list-unstyled mb-0">
               <li class="py-1 mb-2 ps-4 position-relative"><a href="accusonus.html" title="Opens accusonus' project page" class="smaller-3 noUnderline stretched-link ps-2">accusonus</a></li>
-              <li class="py-1 my-2 ps-4 position-relative"><a href="contapigeon.html" disabled="disabled" title="Opens ContactPigeon's project page" class="smaller-3 noUnderline stretched-link ps-2">ContactPigeon</a></li>
-              <li class="py-1 my-2 ps-4 position-relative"><a href="youbehero.html" title="Opens YouBeHero's project page" class="smaller-3 noUnderline stretched-link ps-2">YouBeHero</a></li>
+              <li class="py-1 my-2 ps-4 position-relative"><a href="contapigeon.html" disabled="disabled" title="Opens ContactPigeon's project page" class="smaller-3 noUnderline stretched-link ps-2">ContactPigeon</a><span class="badge bg-background text-primary the-border font-weight-normal smaller-4 ms-2 px-1">Soon</span></li>
+              <li class="py-1 my-2 ps-4 position-relative"><a href="youbehero.html" title="Opens YouBeHero's project page" class="smaller-3 noUnderline stretched-link ps-2">YouBeHero</a><span class="badge bg-background text-primary the-border font-weight-normal smaller-4 ms-2 px-1">Soon</span></li>
             </ul>
           </div>
         </div>
@@ -245,7 +251,7 @@
 
         <ul class="list-unstyled my-2 position-relative ps-4 pe-3">
           <li class="position-relative py-1 ps-2">
-            <a href="javascript:void(0);" onclick="window.voiceflow.chat.open();" title="Click to get in touch" class="smaller-3 noUnderline stretched-link">Contact</a>
+            <a href="https://billk1.typeform.com/to/xNOJ6W" title="Click to get in touch" class="smaller-3 noUnderline stretched-link typeform-share button" data-mode="drawer_right" data-submit-close-delay="5">Contact</a>             
           </li>
         </ul>
 
@@ -268,22 +274,21 @@
     <div class="row-fluid">
       <div class="container-fluid mt-3">
 
+        <!-- WISTIA VIDEO 
         <div class="row">
           <div class="col-12">
-<!--             <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:50%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_e2zpqg3isy seo=false videoFoam=true" style="height:50%;position:relative;width:100%">&nbsp;</div></div></div> -->
-
-            <span class="wistia_embed wistia_async_e2zpqg3isy popover=true border-radius" style="display:inline-block;height:440px;position:relative;width:100%;border-radius:24px">&nbsp;</span>
+            <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:50%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_e2zpqg3isy seo=false videoFoam=true" style="height:50%;position:relative;width:100%">&nbsp;</div></div></div>
           </div>
-        </div>
+        </div> -->
 
         <div class="row mt-5">
-            <div class="col-12">
+            <div class="col-12 mt-5 mt-xl-0">
               <img src="img/misc/logos/voicemod-logo-card.svg" alt="Voicemod logo" class="img-fluid anim01" style="max-width: 228px">
               <h1 class="lh-base mt-4 anim02">My revamped onboarding flow, <mark>cut dropouts by 80%</mark></h1>
             </div>
 
-            <div class="col-12 mt-3 anim03">
-              <p>Voicemod is a voice changing app for in-game use or with Discord, Google Meet or Zoom. Approximately 25% of our new users uninstalled the app within the first 24 hours.</p>
+            <div class="col-12 mt-2 anim03">
+              <p class="bigger-1">Approximately 25% of our new users uninstalled the app within the first 24 hours. Find out how I "crushed" that figure.</p>
             </div>
           </div>
 
@@ -325,12 +330,12 @@
 
          <div class="col-12 col-md-6 col-lg-4 mb-4">
             <p class="mb-2 font-weight-bold text-uppercase">Year</p>
-            <p class="smaller-2"><span class="badge bg-secondary the-border text-primary font-weight-normal smaller-2">2022</span> <span class="badge bg-secondary the-border text-primary font-weight-normal smaller-2">2023</span></p>
+            <p class="smaller-2"><span class="badge bg-secondary the-border text-primary font-weight-normal smaller-2 p-1">2022</span> <span class="badge bg-secondary the-border text-primary font-weight-normal smaller-2 p-1">2023</span></p>
           </div>
 
            <div class="col-12 col-md-6 col-lg-4 mb-4">
             <p class="mb-2 font-weight-bold text-uppercase">Tools</p>
-            <p class="smaller-2">Figma, Miro, Typeform, Lookback, Calendly & RewardGenius</p>
+            <p class="smaller-2">Figma, Miro, Typeform, Lookback & Calendly</p>
           </div>
 
            <div class="col-12 col-md-6 col-lg-4 mb-4">
@@ -389,14 +394,13 @@
                   <div class="col-12 bg-secondary border border-start-0 border-bottom-0 border-end-0 border-info border-5 p-4">
                     <h2 class="section-title mt-2">Summary</h2>
                     <ul class="mt-4">
-                      <li class="my-3">Main designer for Voicemod (MacOS)</li>
-                      <li class="my-3">Issue: High uninstall rate within 24 hours</li>
-                      <li class="my-3">Conducted user surveys to identify reasons</li>
-                      <li class="my-3">Designed user journeys, wireframes, mockups and prototypes</li>
-                      <li class="my-3">Conducted user research and usability tests</li>
-                      <li class="my-3">Iterated designs based on user feedback</li>
-                      <li class="my-3">Result: Significant drop in uninstall rate</li>
-                      <li class="my-3">Next: efforts to further reduce churn using AI</li>
+                      <li class="my-2 smaller-2">I was the main designer for Voicemod app, on MacOS</li>
+                      <li class="my-2 smaller-2">I dropped the high uninstall rate by doing the below</li>
+                      <li class="my-2 smaller-2">Created user surveys to identify reasons</li>
+                      <li class="my-2 smaller-2">Designed user journeys, wireframes, mockups and prototypes</li>
+                      <li class="my-2 smaller-2">Conducted user research and usability tests</li>
+                      <li class="my-2 smaller-2">Iterated designs based on user feedback</li>
+                      <li class="my-2 smaller-2">Oversaw implementation process</li>
                     </ul>
                   </div>
                 </div>
@@ -406,30 +410,11 @@
               <div id="overview" class="row mt-lg-5 pt-lg-5">
                 <div class="col-12">
                   <h2 class="section-title">Overview</h2>
-                  <p class="mt-4">Voicemod is a real-time voice changing app for use with meeting apps such as Discord, Google Meet, Zoom but not just! Our users typically use it within games when they're streaming or just playing with friends.</p>
+                  <p class="mt-4">Voicemod is a real-time voice changing app for use with meeting apps such as Discord, Google Meet & Zoom. Users typically use it when gaming with friends.</p>
 
-                  <p>I am one of the main designers for the MacOS version.</p>
+                  <p>I was one of the two main designers for the MacOS version.</p>
 
-                  <div class="row mt-5 pt-5">
-
-                    <div class="col-6 col-lg-4 text-center mb-5">                      
-                      <div id="vm-streaming-apps" class="col p-3 large-shadow border-radius mx-auto" style="height: 114px; width: 114px"></div>
-                      <p class="text-uppercase mt-3 mb-2">Video streaming apps</p>
-                      <p class="smaller-4">Jazz up your live streams</p>
-                    </div>
-
-                    <div class="col-6 col-lg-4 text-center mb-5">                      
-                      <div id="vm-meeting-apps" class="col p-3 large-shadow border-radius mx-auto" style="height: 114px; width: 114px"></div>
-                      <p class="text-uppercase mt-3 mb-2">Meeting apps</p>
-                      <p class="smaller-4">Add some humor to your meetings</p>
-                    </div>
-
-                    <div class="col-6 col-lg-4 text-center mb-5">                      
-                      <div id="vm-metaverse-apps" class="col p-3 large-shadow border-radius mx-auto" style="height: 114px; width: 114px"></div>
-                      <p class="text-uppercase mt-3 mb-2">Metaverse apps</p>
-                      <p class="smaller-4">Anonymize your virtual presence in the Metaverse</p>
-                    </div>
-        
+                  <div class="row mt-5 pt-5">        
 
                     <div class="col-6 col-lg-4 text-center mb-5">
                       <video width="114" height="114" autoplay loop muted style="object-fit: cover;" class="border-radius">
@@ -456,6 +441,25 @@
                       </video>
                       <p class="text-uppercase mt-3 mb-2">Create content</p>
                       <p class="smaller-4">Captivate your audience with voice effects</p>
+                    </div>
+
+
+                      <div class="col-6 col-lg-4 text-center mb-5">                      
+                      <div id="vm-streaming-apps" class="col p-3 large-shadow border-radius mx-auto" style="height: 114px; width: 114px"></div>
+                      <p class="text-uppercase mt-3 mb-2">Video streaming apps</p>
+                      <p class="smaller-4">Jazz up your live streams</p>
+                    </div>
+
+                    <div class="col-6 col-lg-4 text-center mb-5">                      
+                      <div id="vm-meeting-apps" class="col p-3 large-shadow border-radius mx-auto" style="height: 114px; width: 114px"></div>
+                      <p class="text-uppercase mt-3 mb-2">Meeting apps</p>
+                      <p class="smaller-4">Add some humor to your meetings</p>
+                    </div>
+
+                    <div class="col-6 col-lg-4 text-center mb-5">                      
+                      <div id="vm-metaverse-apps" class="col p-3 large-shadow border-radius mx-auto" style="height: 114px; width: 114px"></div>
+                      <p class="text-uppercase mt-3 mb-2">Metaverse apps</p>
+                      <p class="smaller-4">Anonymize your virtual presence in the Metaverse</p>
                     </div>
                     
                   </div>
@@ -522,9 +526,9 @@
                         <div class="col-12 mt-5">
                         <p class="font-weight-bold">Try different voices</p>
 
-                        <div class="row mt-4 grid gap-0 gap-lg-4 col-12 voiceChangeContainer">
+                        <div class="grid mt-4 col-12 voiceChangeContainer">
 
-                           <div class="form-check col-6 col-lg pointer border-radius text-center p-4 activeVoice" title="Click to select this Voice">
+                           <div class="form-check g-col-6 g-col-lg-3 pointer border-radius text-center p-4 activeVoice" title="Click to select this Voice">
                             <input class="form-check-input opacity-0" type="radio" name="ghost" id="ghost" autocomplete="off" checked>
                             <label class="form-check-label pointer-event" for="ghost">
                               <img src="img/misc/icons/sdk-ghost.svg" alt="Ghost icon" class="mt-2 pointer" />
@@ -532,7 +536,7 @@
                             </label>
                           </div>
 
-                          <div class="form-check col-6 col-lg pointer border-radius text-center p-4" title="Click to select this Voice">
+                          <div class="form-check g-col-6 g-col-lg-3 pointer border-radius text-center p-4" title="Click to select this Voice">
                             <input class="form-check-input opacity-0" type="radio" name="evil" id="evil" autocomplete="off">
                             <label class="form-check-label pointer-event" for="evil">
                               <img src="img/misc/icons/sdk-evil.svg" alt="Evil icon" class="mt-2 pointer" />
@@ -540,7 +544,7 @@
                             </label>
                           </div>
 
-                          <div class="form-check col-6 col-lg pointer border-radius text-center p-4" title="Click to select this Voice">
+                          <div class="form-check g-col-6 g-col-lg-3 pointer border-radius text-center p-4" title="Click to select this Voice">
                             <input class="form-check-input opacity-0" type="radio" name="baby" id="baby" autocomplete="off">
                             <label class="form-check-label pointer-event" for="baby">
                               <img src="img/misc/icons/sdk-baby.svg" alt="Baby icon" class="mt-2 pointer" />
@@ -548,7 +552,7 @@
                             </label>
                           </div>
                           
-                          <div class="form-check col-6 col-lg pointer border-radius text-center p-4" title="Click to select this Voice">
+                          <div class="form-check g-col-6 g-col-lg-3 pointer border-radius text-center p-4" title="Click to select this Voice">
                             <input class="form-check-input opacity-0" type="radio" name="cave" id="cave" autocomplete="off">
                             <label class="form-check-label pointer-event" for="cave">
                               <img src="img/misc/icons/sdk-cave.svg" alt="Cave icon" class="mt-2 pointer" />
@@ -575,7 +579,7 @@
                   <p class="mt-4">Our "uninstall survey" (a survey that pops up when the user uninstalls the app) revealed a high dropout rate. New users were experiencing problems due to difficulty in setting up the app correctly.</p>
                   <p>25% of new users uninstalled within 24 hours due to lack of experience in using audio software; they couldn't set-up their gear properly, didn't know what was wrong and how to connect to a third party app.</p>
 
-                  <div class="row mt-5 grid gap-0 pt-5">
+                  <div class="row mt-5 pt-5">
 
                     <div class="col-6 col-lg mb-4">
                       <div class="col-12 bg-secondary the-border large-shadow border-radius text-center py-4 px-3">
@@ -685,7 +689,7 @@
               </div>            
             </div>
 
-            <div class="minHeight10vh"></div>
+            <div class="minHeight20vh"></div>
 
             <div id="analysis" class="row pt-0 mt-4 pt-4">
               
@@ -698,7 +702,7 @@
               <div class="col-12">
                 <div class="col-12 bg-secondary the-border large-shadow border-radius p-4 mt-5">
                   <div class="row">
-                    <div class="col-12 col-lg-5">
+                    <div class="col-12 col-xxl-5 mb-3">
 
                       <ul class="nav nav-pills flex-column competitive-analysis">
                         <p class="font-weight-bold">Ideas that would work</p>
@@ -722,7 +726,7 @@
 
                     </div>
 
-                    <div class="col-12 col-lg-7 bg-background border-radius p-3 text-center analysis-container">
+                    <div class="col-12 col-xxl-7 bg-background border-radius p-3 text-center analysis-container">
 
                       <div class="analysis-01 mt-5">
                         <img src="img/misc/elements/analysis-01.png" alt="Analysis image" class="img-fluid" style="width: 448px; height: 264px;" />
@@ -767,13 +771,13 @@
 
               <div class="col-12 mt-5">
                 <div class="row">
-                  <div class="col-12 col-lg-7 mb-4">
+                  <div class="col-12 col-xxl-7 mb-4">
                     <p class="font-weight-bold bigger-3 mb-0">Generation Z males</p>
                     
                     <div class="row mt-4">
                       <div class="col-6">
                         <p class="mb-1">
-                          <span class="bg-secondary text-primary the-border rounded-pill py-2 px-3 font-weight-bold text-uppercase">Motives</span>
+                          <span class="bg-secondary text-primary the-border rounded-pill py-2 px-3 font-weight-bold text-uppercase smaller-2">Motives</span>
                         </p>
                         <ul class="mt-3 lh-lg">
                           <li class="smaller-2">Have fun with friends</li>
@@ -784,7 +788,7 @@
 
                       <div class="col-6">
                         <p class="mb-1">
-                          <span class="bg-secondary text-primary the-border rounded-pill py-2 px-3 font-weight-bold text-uppercase">Values</span>
+                          <span class="bg-secondary text-primary the-border rounded-pill py-2 px-3 font-weight-bold text-uppercase smaller-2">Values</span>
                         </p>
                         <ul class="mt-3 lh-lg">
                           <li class="smaller-2">Authenticity</li>
@@ -797,7 +801,7 @@
                     <div class="row mt-5">
                       <div class="col-6">
                         <p class="mb-1">
-                          <span class="bg-secondary text-primary the-border rounded-pill py-2 px-3 font-weight-bold text-uppercase">Pain points</span>
+                          <span class="bg-secondary text-primary the-border rounded-pill py-2 px-3 font-weight-bold text-uppercase smaller-2">Pain points</span>
                         </p>
                         <ul class="mt-3 lh-lg">
                           <li class="smaller-2">Too complicated</li>
@@ -808,7 +812,7 @@
 
                       <div class="col-6">
                         <p class="mb-1">
-                          <span class="bg-secondary text-primary the-border rounded-pill py-2 px-3 font-weight-bold text-uppercase">Goals</span>
+                          <span class="bg-secondary text-primary the-border rounded-pill py-2 px-3 font-weight-bold text-uppercase smaller-2">Goals</span>
                         </p>
                         <ul class="mt-3 lh-lg">
                           <li class="smaller-2">Realistic voice</li>
@@ -819,11 +823,12 @@
 
                   </div>
 
-                  <div class="col-12 col-lg-5">
+                  <div class="col-12 col-xxl-5">
                     <video width="100%" height="100%" autoplay loop muted style="object-fit: cover;" class="border-radius">
                       <source src="video/vm-persona.mp4" type="video/mp4">
                       Your browser does not support the video tag.
                     </video>
+                    <p class="smaller-3 mt-1 text-center">User persona</p>
                   </div>
                 </div>
               </div>
@@ -833,14 +838,13 @@
             <div class="minHeight10vh"></div>
 
 
-            <div id="journey" class="row dotted-bg">
+            <div id="journey" class="row">
               
               <div class="col-12 py-5">
 
                 <h2 class="section-title">User journey</h2>
 
-                <p class="mt-4">Having conducted thorough explorations, I identified three potential user journeys.</p>
-                <p>I carefully evaluated each journey and selected the one that best met the needs of both users and the business.</p>
+                <p class="mt-4">Having conducted thorough explorations, I identified three potential user journeys. I carefully evaluated each journey and selected the one the best.</p>
 
                 <div class="position-relative">
 
@@ -848,43 +852,43 @@
 
                   <div id="userJourneyScroll" class="scrollableArea row mt-3 pt-5 px-3 px-lg-0 d-flex flex-nowrap flex-nowrap overflow-x-scroll">
                       
-                    <div class="col-9 col-md-4 col-lg-3 me-5 mb-5 position-relative d-flex align-items-center justify-content-center text-center bg-secondary border-radius the-border large-shadow p-5 minHeight5vh userJourneyStep">
+                    <div class="col-9 col-md-4 col-lg-3 me-5 mb-5 position-relative d-flex align-items-center justify-content-center text-center bg-accent border-radius the-border p-5 minHeight5vh userJourneyStep text-background">
                       <p class="mb-0 py-3">User opens VM</p>
                     </div>
 
-                    <div class="col-9 col-md-4 col-lg-3 mx-5 mb-5 position-relative d-flex align-items-center justify-content-center text-center bg-secondary border-radius the-border large-shadow p-5 minHeight5vh userJourneyStep">
+                    <div class="col-9 col-md-4 col-lg-3 mx-5 mb-5 position-relative d-flex align-items-center justify-content-center text-center bg-fluo-yellow border-radius the-border p-5 minHeight5vh userJourneyStep">
                       <p class="mb-0 py-3">Select use case</p>
                     </div>
 
-                    <div class="col-9 col-md-4 col-lg-3 mx-5 mb-5 position-relative d-flex align-items-center justify-content-center text-center bg-secondary border-radius the-border large-shadow p-5 minHeight5vh userJourneyStep">
+                    <div class="col-9 col-md-4 col-lg-3 mx-5 mb-5 position-relative d-flex align-items-center justify-content-center text-center bg-fluo-yellow border-radius the-border p-5 minHeight5vh userJourneyStep">
                       <p class="mb-0 py-3">Pick your microphone & headphones</p>
                     </div>
 
-                    <div class="col-9 col-md-4 col-lg-3 mx-5 mb-5 position-relative d-flex align-items-center justify-content-center text-center bg-secondary border-radius the-border large-shadow p-5 minHeight5vh userJourneyStep">
+                    <div class="col-9 col-md-4 col-lg-3 mx-5 mb-5 position-relative d-flex align-items-center justify-content-center text-center bg-fluo-yellow border-radius the-border p-5 minHeight5vh userJourneyStep">
                       <p class="mb-0 py-3">OS dialog for mic permission</p>
                     </div>
 
-                    <div class="col-9 col-md-4 col-lg-3 mx-5 mb-5 position-relative d-flex align-items-center justify-content-center text-center bg-secondary border-radius the-border large-shadow p-5 minHeight5vh userJourneyStep">
+                    <div class="col-9 col-md-4 col-lg-3 mx-5 mb-5 position-relative d-flex align-items-center justify-content-center text-center bg-fluo-yellow border-radius the-border p-5 minHeight5vh userJourneyStep">
                       <p class="mb-0 py-3">Voice recording</p>
                     </div>
 
-                    <div class="col-9 col-md-4 col-lg-3 mx-5 mb-5 position-relative d-flex align-items-center justify-content-center text-center bg-secondary border-radius the-border large-shadow p-5 minHeight5vh userJourneyStep">
+                    <div class="col-9 col-md-4 col-lg-3 mx-5 mb-5 position-relative d-flex align-items-center justify-content-center text-center bg-fluo-yellow border-radius the-border p-5 minHeight5vh userJourneyStep">
                       <p class="mb-0 py-3">User tries out various voices (wow moment)</p>
                     </div>
 
-                    <div class="col-9 col-md-4 col-lg-3 mx-5 mb-5 position-relative d-flex align-items-center justify-content-center text-center bg-secondary border-radius the-border large-shadow p-5 minHeight5vh userJourneyStep">
+                    <div class="col-9 col-md-4 col-lg-3 mx-5 mb-5 position-relative d-flex align-items-center justify-content-center text-center bg-fluo-yellow border-radius the-border p-5 minHeight5vh userJourneyStep">
                       <p class="mb-0 py-3">Selects 3rd party app</p>
                     </div>
 
-                    <div class="col-9 col-md-4 col-lg-3 mx-5 mb-5 position-relative d-flex align-items-center justify-content-center text-center bg-secondary border-radius the-border large-shadow p-5 minHeight5vh userJourneyStep">
+                    <div class="col-9 col-md-4 col-lg-3 mx-5 mb-5 position-relative d-flex align-items-center justify-content-center text-center bg-fluo-yellow border-radius the-border p-5 minHeight5vh userJourneyStep">
                       <p class="mb-0 py-3">Gets instructions</p>
                     </div>
 
-                    <div class="col-9 col-md-4 col-lg-3 mx-5 mb-5 position-relative d-flex align-items-center justify-content-center text-center bg-secondary border-radius the-border large-shadow p-5 minHeight5vh userJourneyStep">
+                    <div class="col-9 col-md-4 col-lg-3 mx-5 mb-5 position-relative d-flex align-items-center justify-content-center text-center bg-fluo-yellow border-radius the-border p-5 minHeight5vh userJourneyStep">
                       <p class="mb-0 py-3">Complete</p>
                     </div>
 
-                    <div class="col-9 col-md-4 col-lg-3 mx-5 mb-5 position-relative d-flex align-items-center justify-content-center text-center bg-secondary border-radius the-border large-shadow p-5 minHeight5vh userJourneyStep">
+                    <div class="col-9 col-md-4 col-lg-3 mx-5 mb-5 position-relative d-flex align-items-center justify-content-center text-center bg-accent border-radius the-border p-5 minHeight5vh userJourneyStep text-background">
                       <p class="mb-0 py-3">Moment of celebration!</p>
                     </div>
                  
@@ -911,15 +915,15 @@
 
                   <ul class="list-group smaller-2 lh-base">
                     <li class="list-group-item bg-background border-0 ps-0">
-                      <input class="form-check-input me-1 bg-accent border-0" type="checkbox" id="micSelection" checked style="transform: scale(1.3);">
+                      <input class="form-check-input me-1 border-0" type="checkbox" id="micSelection" checked style="transform: scale(1.3);">
                       <label class="form-check-label ms-2" for="micSelection">Microphone selection</label>
                     </li>
                     <li class="list-group-item bg-background border-0 ps-0">
-                      <input class="form-check-input me-1 bg-accent border-0" type="checkbox" id="headphoneSelection" checked style="transform: scale(1.3);">
+                      <input class="form-check-input me-1 border-0" type="checkbox" id="headphoneSelection" checked style="transform: scale(1.3);">
                       <label class="form-check-label ms-2" for="headphoneSelection">Headphone selection</label>
                     </li>
                     <li class="list-group-item bg-background border-0 ps-0">
-                      <input class="form-check-input me-1 bg-accent border-0" type="checkbox" id="audioSetupSelection" checked style="transform: scale(1.3);">
+                      <input class="form-check-input me-1 border-0" type="checkbox" id="audioSetupSelection" checked style="transform: scale(1.3);">
                       <label class="form-check-label ms-2" for="audioSetupSelection">Test audio setup</label>
                     </li>
                   </ul>
@@ -931,15 +935,15 @@
 
                   <ul class="list-group smaller-2 lh-base">
                     <li class="list-group-item bg-background border-0 ps-0">
-                      <input class="form-check-input me-1 bg-accent border-0" type="checkbox" id="voiceChangerSelection" checked style="transform: scale(1.3);">
+                      <input class="form-check-input me-1 border-0" type="checkbox" id="voiceChangerSelection" checked style="transform: scale(1.3);">
                       <label class="form-check-label ms-2" for="voiceChangerSelection">Test voice changer</label>
                     </li>
                     <li class="list-group-item bg-background border-0 ps-0">
-                      <input class="form-check-input me-1 bg-accent border-0" type="checkbox" id="voicesSelection" checked style="transform: scale(1.3);">
+                      <input class="form-check-input me-1 border-0" type="checkbox" id="voicesSelection" checked style="transform: scale(1.3);">
                       <label class="form-check-label ms-2" for="voicesSelection">Try 3-4 voices</label>
                     </li>
                     <li class="list-group-item bg-background border-0 ps-0">
-                      <input class="form-check-input me-1 bg-accent border-0" type="checkbox" id="toggleSelection" checked style="transform: scale(1.3);">
+                      <input class="form-check-input me-1 border-0" type="checkbox" id="toggleSelection" checked style="transform: scale(1.3);">
                       <label class="form-check-label ms-2" for="toggleSelection">Toggle voice changer</label>
                     </li>
                   </ul>
@@ -951,19 +955,19 @@
 
                   <ul class="list-group smaller-2 lh-base">
                     <li class="list-group-item bg-background border-0 ps-0">
-                      <input class="form-check-input me-1 bg-accent border-0" type="checkbox" id="discordSelection" checked style="transform: scale(1.3);">
+                      <input class="form-check-input me-1 border-0" type="checkbox" id="discordSelection" checked style="transform: scale(1.3);">
                       <label class="form-check-label ms-2" for="discordSelection">Voicemod in Discord</label>
                     </li>
                     <li class="list-group-item bg-background border-0 ps-0">
-                      <input class="form-check-input me-1 bg-accent border-0" type="checkbox" id="obsSelection" checked style="transform: scale(1.3);">
+                      <input class="form-check-input me-1 border-0" type="checkbox" id="obsSelection" checked style="transform: scale(1.3);">
                       <label class="form-check-label ms-2" for="obsSelection">Voicemod in OBS Studio</label>
                     </li>
                     <li class="list-group-item bg-background border-0 ps-0">
-                      <input class="form-check-input me-1 bg-accent border-0" type="checkbox" id="twitchSelection" checked style="transform: scale(1.3);">
+                      <input class="form-check-input me-1 border-0" type="checkbox" id="twitchSelection" checked style="transform: scale(1.3);">
                       <label class="form-check-label ms-2" for="twitchSelection">Voicemod in Twitch</label>
                     </li>
                     <li class="list-group-item bg-background border-0 ps-0">
-                      <input class="form-check-input me-1 bg-accent border-0" type="checkbox" id="robloxSelection" checked style="transform: scale(1.3);">
+                      <input class="form-check-input me-1 border-0" type="checkbox" id="robloxSelection" checked style="transform: scale(1.3);">
                       <label class="form-check-label ms-2" for="robloxSelection">Voicemod in Roblox</label>
                     </li>
                   </ul>
@@ -978,7 +982,7 @@
           <div class="minHeight5vh"></div>
 
 
-          <div id="wireframes" class="row dotted-bg2">
+          <div id="wireframes" class="row">
               
               <div class="col-12 position-relative py-5">
 
@@ -1037,7 +1041,7 @@
               <div class="row mt-4">
                   
                     <div class="col-12">
-                      <video width="100%" height="100%" autoplay loop muted style="object-fit: cover;" class="border-radius large-shadow">
+                      <video width="100%" height="100%" autoplay loop muted controls style="object-fit: cover;" class="border-radius large-shadow">
                         <source src="video/05-prototype.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                       </video>
@@ -1047,7 +1051,7 @@
               </div>
 
 
-              <div class="row mt-5 pt-5">
+             <!--  <div class="row mt-5 pt-5">
                 
                 <div class="col-12 col-lg-6 mb-4">
                  
@@ -1073,7 +1077,7 @@
                 
                   </div>
 
-                </div>
+                </div> -->
 
               </div>
             </div>
@@ -1153,7 +1157,7 @@
               </div>
 
               <div class="col-12 mt-4">
-                <video width="100%" height="100%" autoplay loop muted style="object-fit: cover;" class="border-radius">
+                <video width="100%" height="100%" autoplay loop muted controls style="object-fit: cover;" class="border-radius">
                   <source src="video/user-interview.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
@@ -1176,7 +1180,7 @@
               </div>
 
               <div class="col-12 mt-4">
-                <video width="100%" height="100%" autoplay loop muted style="object-fit: cover;" class="border-radius">
+                <video width="100%" height="100%" autoplay loop muted controls style="object-fit: cover;" class="border-radius">
                   <source src="video/iteration.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
@@ -1205,7 +1209,7 @@
 
             <div id="results" class="row my-lg-5 py-5">
               <div class="col-12">
-                <h2 class="section-title">Project launch results</h2>
+                <h2 class="section-title">Launch results</h2>
                 <p class="mt-4">By providing clear guidance and instructions, users gained a better understanding of how to navigate and utilize the app effectively. As a result, the dropout rate dramatically decreased from 24.6% to an astounding 5%.</p>
                 
                 <p>The implementation of the new onboarding flow brought tremendous success to the app, significantly reducing user uninstalls.</p>
@@ -1267,7 +1271,7 @@
 
             </div>
 
-            <div class="minHeight5vh"></div>
+            <div class="minHeight2vh"></div>
 
 
              <div id="conclusions" class="row my-lg-5 py-5">
@@ -1363,22 +1367,22 @@
               <p class="smaller-3 pb-2 border border-top-0 border-start-0 border-end-0 border-the-border">On this page</p>
               <nav id="voicemodScrollspy" class="h-100 flex-column align-items-stretch mt-2">
                 <nav class="nav nav-pills flex-column smaller-4">
-                  <a class="nav-link rounded-0 active" href="#summary">Summary</a>
-                  <a class="nav-link rounded-0" href="#overview">Overview</a>
-                  <a class="nav-link rounded-0" href="#problem">Problem</a>
-                  <a class="nav-link rounded-0" href="#opportunity">Opportunity</a>
-                  <a class="nav-link rounded-0" href="#analysis">Competitive analysis</a>
-                  <a class="nav-link rounded-0" href="#persona">User persona</a>
-                  <a class="nav-link rounded-0" href="#journey">User journey</a>
-                  <a class="nav-link rounded-0" href="#goals">Design goals</a>
-                  <a class="nav-link rounded-0" href="#wireframes">Wireframes</a>
-                  <a class="nav-link rounded-0" href="#prototype">Prototype</a>
-                  <a class="nav-link rounded-0" href="#interviews">User interviews</a>
-                  <a class="nav-link rounded-0" href="#iteration">Iteration</a>
-                  <a class="nav-link rounded-0" href="#dSystem">Design system</a>
-                  <a class="nav-link rounded-0" href="#results">Project launch results</a>
-                  <a class="nav-link rounded-0" href="#conclusions">Conclusions</a>
-                  <a class="nav-link rounded-0" href="#press">Press</a>
+                  <a class="nav-link rounded-0 text-truncate active" href="#summary">Summary</a>
+                  <a class="nav-link rounded-0 text-truncate" href="#overview">Overview</a>
+                  <a class="nav-link rounded-0 text-truncate" href="#problem">Problem</a>
+                  <a class="nav-link rounded-0 text-truncate" href="#opportunity">Opportunity</a>
+                  <a class="nav-link rounded-0 text-truncate" href="#analysis">Comp. analysis</a>
+                  <a class="nav-link rounded-0 text-truncate" href="#persona">User persona</a>
+                  <a class="nav-link rounded-0 text-truncate" href="#journey">User journey</a>
+                  <a class="nav-link rounded-0 text-truncate" href="#goals">Design goals</a>
+                  <a class="nav-link rounded-0 text-truncate" href="#wireframes">Wireframes</a>
+                  <a class="nav-link rounded-0 text-truncate" href="#prototype">Prototype</a>
+                  <a class="nav-link rounded-0 text-truncate" href="#interviews">User interviews</a>
+                  <a class="nav-link rounded-0 text-truncate" href="#iteration">Iteration</a>
+                  <a class="nav-link rounded-0 text-truncate" href="#dSystem">Design system</a>
+                  <a class="nav-link rounded-0 text-truncate" href="#results">Launch results</a>
+                  <a class="nav-link rounded-0 text-truncate" href="#conclusions">Conclusions</a>
+                  <a class="nav-link rounded-0 text-truncate" href="#press">Press</a>
                 </nav>
               </nav>
             </div>
@@ -1391,7 +1395,7 @@
 
 
 
-  <div class="container-fluid my-5 py-5">
+  <div class="container-fluid my-lg-5 py-lg-5">
     <div class="col-12 border border-the-border"></div>
   </div>
 
@@ -1399,20 +1403,52 @@
 
     <section>
       <div class="row-fluid mt-5">
-        <div class="container-fluid mt-5 pt-5">
-          <div class="row">
+        <div class="container-fluid mt-lg-5 pt-lg-5">
+          
+          <div class="row d-block d-lg-none">
+            <div class="col-12 mb-5">
+              <div class="grid">
+                <div class="g-col-6 bg-secondary large-shadow border-radius the-border p-4 position-relative">
+                  <p class="smaller-2 mb-0">
+                    <svg viewBox="0 0 16 16" version="1.1" aria-labelledby="title" style="width: 16px;transform: rotate(-90deg);" class="icon icon--close icon--green-gradient me-1">
+                    <path d="M8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 19V1H7V19H9Z" fill="#3A2D52" style="fill: rgb(58, 45, 82);"></path>
+                    </svg>
+                    Previous
+                  </p>
+                  <p class="bigger-2 mb-0 lh-sm"><a href="index.html" class="stretched-link noUnderline" title="Opens homepage">Home</a></p>
+                </div>
+                <div class="g-col-6 bg-secondary large-shadow border-radius the-border p-4 position-relative">
+                  <p class="smaller-2 mb-0">
+                    Up next
+                    <svg viewBox="0 0 16 16" version="1.1" aria-labelledby="title" style="width: 16px;transform: rotate(90deg);" class="icon icon--close icon--green-gradient ms-1">
+                    <path d="M8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 19V1H7V19H9Z" fill="#3A2D52" style="fill: rgb(58, 45, 82);"></path>
+                    </svg>
+                  </p>
+                  <p class="bigger-2 mb-0 lh-sm"><a href="meta.html" class="stretched-link noUnderline" title="Opens Meta's project page">Meta</a></p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+          
+          <div class="row d-none d-lg-block">
+
             <div class="col-12">
               <h2 class="section-title">Next project</h2>
             </div>
+
+
             <div class="col-12">
               <div class="col-12 bg-secondary large-shadow border-radius the-border mt-4 position-relative" style="min-height: 400px;">
                 <div class="row p-5">
-                  <div class="col-12 col-lg-6">
+                  <div class="col-12 col-md-5 col-xxl-6">
                     <img src="img/misc/logos/meta-logo-card.svg" alt="Meta logo" class="img-fluid" style="height: 24px;">
                     <p class="font-weight-bold pt-2">Senior UX designer (full-time) <span class="badge bg-background the-border text-primary font-weight-normal smaller-4 ms-1">2021</span> <span class="badge bg-background the-border text-primary font-weight-normal smaller-4">2022</span>
                     </p>
-                    <p class="mt-4 smaller-1">Ennely app was a B2C MacOS video editor assistant that enabled content creators to create a first cut within minutes.</p>
-                    <p class="smaller-1">Find out how a unique app with no pre-established rules came to life and how along with a small team I created magic.</p>
+                    <p class="mt-4 smaller-2">Ennely app was a B2C MacOS video editor assistant that enabled content creators to create a first cut within minutes.</p>
+                    <p class="smaller-2">Find out how a unique app with no pre-established rules came to life and how along with a small team I created magic.</p>
                     <p class="mt-5">
                       <a href="meta.html" class="btn btn-primary rounded-pill py-2 px-3 btn-lg" title="Click to view project page">View project
                       </a>
@@ -1420,7 +1456,7 @@
                   </div>
 
 
-                  <div class="col-12 col-md-6 pe-md-5 ms-auto d-none d-lg-block position-relative me-5" style="max-width: 306px">
+                  <div class="col-12 col-md-6 pe-md-5 ms-auto d-none d-xl-block position-relative me-5" style="max-width: 306px">
                 
                      <a href="meta.html" class="noUnderline stretched-link" title="Click to view project page">
                       <video width="306" height="359" autoplay loop muted style="object-fit: cover;" class="border-radius the-border large-shadow">
@@ -1496,67 +1532,10 @@
       <div class="row-fluid">
         <div class="container-fluid">
           <div class="col-12 bg-secondary the-border large-shadow border-radius position-relative py-4 px-5">
-            
-            <div class="row">
-              
-              <div class="col-7 col-lg-3 position-relative">
-                <p class="font-weight-bold mb-0 bigger-2"><a class="text-primary font-weight-bold noUnderline stretched-link" href="index.html" title="Homepage">Vasilis Kolip</a></p>
-                <p class="mb-0 mt-n2">UX/Product designer</p>
-              </div>
 
-              <div class="col-5 ms-auto mt-2 text-end px-0 d-block d-xl-none">
-                <a href="https://www.figma.com/file/KvZro6YLHayaTX4nbXqdSc/Portfolio?type=design&amp;node-id=0%3A1&amp;mode=design&amp;t=vbcbdwRVd69vZjJI-1" target="_blank" title="Opens portfolio's Figma file in a new tab" class="noUnderline">
-                  <img src="img/misc/icons/figma-footer.svg" alt="Figma icon" class="img-fluid" style="max-width: 28px">
-                </a>
-
-                <a href="https://github.com/uxkolip/portfolio" target="_blank" title="Opens this portfolio's repo at GitHub in a new tab" class="noUnderline px-3">
-                  <img src="img/misc/icons/icons8-github-64.png" alt="GitHub icon" class="img-fluid" style="max-width: 28px">
-                </a>
-
-                <a href="https://linkedin.com/in/VasilisKolip" target="_blank" title="Opens my LinkedIn profile in a new tab" class="noUnderline">
-                  <img src="img/misc/icons/linkedin-64.png" alt="LinkedIn icon" class="img-fluid" style="max-width: 28px">
-                </a>
-              </div>
-
-              <div class="col-9 col-xl-7 offset-xl-1 offset-xxl-2 d-none d-xl-block">
-                <div class="container">
-                  <div class="col-12 d-flex justify-content-between">
-                    <div>
-                      <p class="font-weight-bold">Selected work</p>
-                      <ul class="list-unstyled mb-0">
-                        <li class="mb-3 ps-1" title="You are here">Voicemod</li>
-                        <li class="mb-3"><a href="meta.html" class="text-info" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="52x32" data-bs-custom-class="custom-tooltip">Meta</a></li>
-                        <li class="mb-3"><a href="microsoft.html" class="text-info" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="90x32" data-bs-custom-class="custom-tooltip">Microsoft</a></li>
-                      </ul>
-                    </div>
-                    <div>
-                      <p class="font-weight-bold">Additional work</p>
-                      <ul class="list-unstyled mb-0">
-                        <li class="mb-3"><a href="accusonus.html" class="text-info" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="101x24" data-bs-custom-class="custom-tooltip">accusonus</a></li>
-                        <li class="mb-3">ContactPigeon <span class="badge bg-background text-primary the-border font-weight-normal smaller-3 ms-1">Soon</span></li>
-                        <li class="mb-3">YouBeHero <span class="badge bg-background text-primary the-border font-weight-normal smaller-3 ms-1">Soon</span></li>
-                      </ul>
-                    </div>
-                    <div>
-                      <p class="font-weight-bold">Moreover</p>
-                      <ul class="list-unstyled mb-0">
-                        <li class="mb-3"><a href="profile.html" class="text-info" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="60x32" data-bs-custom-class="custom-tooltip">About</a></li>
-                        <li class="mb-3"><a href="Vasilis-Kolip-Sr-Product-Designer.pdf" target="_blank" class="text-info" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="32x32" data-bs-custom-class="custom-tooltip">CV</a></li>
-                        <li class="mb-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"><a href="javascript:void(0);" class="text-info" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="90x32" data-bs-custom-class="custom-tooltip">Credits</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          
-            <div class="row my-4 pt-3 d-none d-xl-flex">
-              <div class="col-12 border border-the-border"></div>
-            </div>
-
-            <div class="row d-none d-xl-flex">
-              <div class="col-8 px-0">
-                <p class="smaller-3 mb-0">This page is distributed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" class="text-info" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="205x25" data-bs-custom-class="custom-tooltip">Creative Commons</a> license.</p>
+            <div class="row d-flex">
+              <div class="col-7 px-0">
+                <p class="smaller-3 mb-0">Page distributed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" class="text-info" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="205x25" data-bs-custom-class="custom-tooltip">Creative Commons</a>.</p>
               </div>
               <div class="col ms-auto text-end px-0">
                 <a href="https://www.figma.com/file/KvZro6YLHayaTX4nbXqdSc/Portfolio?type=design&amp;node-id=0%3A1&amp;mode=design&amp;t=vbcbdwRVd69vZjJI-1" target="_blank" title="Opens portfolio's Figma file in a new tab" class="noUnderline">
@@ -1591,10 +1570,10 @@
               <div class="offcanvas-body small">
                 <div class="row">
                   <div class="col-4">
-                    <p class="smaller-1">This page was made possible by using many technologies which are either open source, or free to use. The least I could do, is to give credits to all the contributors for making our world open. THANK YOU.</p>
+                    <p class="smaller-2">This page was made possible by using many technologies which are either open source, or free to use. The least I could do, is to give credits to all the contributors for making our world open. THANK YOU.</p>
                   </div>
                   <div class="col-4">
-                    <p class="smaller-1">
+                    <p class="smaller-2">
                       <a href="https://www.figma.com/?ref=kolip.design" target="_blank" class="text-info" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="60x32" data-bs-custom-class="custom-tooltip">Figma</a>, 
                       <a href="https://getbootstrap.com/?ref=kolip.design" target="_blank" class="text-info" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="93x32" data-bs-custom-class="custom-tooltip">Bootstrap</a>, 
                       <a href="https://github.com/?ref=kolip.design" target="_blank" class="text-info" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="69x32" data-bs-custom-class="custom-tooltip">GitHub</a>, 
@@ -1609,7 +1588,7 @@
                     </p>
                   </div>
                   <div class="col-4">
-                    <p class="smaller-1">Local dev environment set on 
+                    <p class="smaller-2">Local dev environment set on 
                       <a href="https://nodejs.org/?ref=kolip.design" target="_blank" class="text-info" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="72x32" data-bs-custom-class="custom-tooltip">Node.js</a> & 
                     <a href="https://gulpjs.com/?ref=kolip.design" target="_blank" class="text-info" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="48x32" data-bs-custom-class="custom-tooltip">Gulp</a>. The font I use is GT America and the icons are from 
                     <a href="https://icons8.com/icons/?ref=kolip.design" target="_blank" class="text-info" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="76x32" data-bs-custom-class="custom-tooltip">ICONS8</a> collection named Dusk. Finally, the Notion-style illustrations are from 
@@ -1625,19 +1604,17 @@
     <!-- Offcanvas bottom end -->
 
 
-    <div class="minHeight2vh"></div>
+      <div class="minHeight2vh"></div>
 
 
-    <script src="js/libs/jquery.min.js"></script>
-    <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="js/libs/lottie.min.js"></script>
-    <script src="js/libs/gsap-latest-beta.min.js"></script>
-    <script src="js/libs/ScrollTrigger.min.js"></script>
-    <!-- <script src="js/libs/lenis.min.js"></script> -->
-    <script src="js/voicemod.js?v=1.2"></script>
+      <script src="js/libs/jquery.min.js"></script>
+      <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+      <script src="js/libs/lottie.min.js"></script>
+      <script src="js/libs/gsap-latest-beta.min.js"></script>
+      <script src="js/libs/ScrollTrigger.min.js"></script>
+      <script src="js/libs/lenis.min.js"></script>
+      <script src="js/voicemod.js?v=1.2"></script>
 
-  
-        
       </div>
     </div>
 
