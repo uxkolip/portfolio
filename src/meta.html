@@ -96,7 +96,7 @@
       </div> 
   </section>
 
-  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
     <div class="offcanvas-header bg-background">
       <h5 class="offcanvas-title bigger-2" id="offcanvasNavbarLabel">Μenu</h5>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -672,9 +672,11 @@
                   <p class="mt-4">Designing the user journey was a meticulous process, focusing on simplicity and speed.</p>
                   <p>I helped streamline the process of merging video and audio footage from multiple sources, allowing users to swiftly create a first draft.</p>
 
-                  <div id="iframeContainer" style="height: 500px" class="col-12 the-border text-center position-relative w-100">
-                    <p class="figmaLoader position-absolute translate-middle start-50 top-50">Loading Figma file...<span class="spinner-border text-accent" style="width: 16px; height: 16px" role="status"><span class="visually-hidden">Loading...</span></span>
-                    </p>
+                  
+
+                    <div id="iframeContainer" style="height: 500px" class="col-12 the-border text-center position-relative w-100 overflow-hidden">
+                    <div class="figmaLoader position-absolute translate-middle start-50 top-50 bg-secondary w-100 minHeight60vh pt-5"><p class="pt-5 mt-5">Loading Figma file...<span class="spinner-border text-accent" style="width: 16px; height: 16px" role="status"><span class="visually-hidden">Loading...</span></span></p>
+                    </div>
                   </div>
 
               </div>            

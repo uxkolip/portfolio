@@ -83,7 +83,7 @@ $(window).scroll(function() {
 
 
 //navbar show on scroll up
-const showAnim = gsap.from('.main-navbar', { 
+/*const showAnim = gsap.from('.main-navbar', { 
     yPercent: -100,
     paused: true,
     duration: 0.3
@@ -95,7 +95,7 @@ ScrollTrigger.create({
     onUpdate: (self) => {
         self.direction === -1 ? showAnim.play() : showAnim.reverse()
     }
-});
+});*/
 //navbar show on scroll up end
 
 // page progress
@@ -236,6 +236,7 @@ cards.forEach((card, index) => {
                 particleCount: 100,
                 spread: 70,
                 origin: { y: 0.6 },
+                position: { x: 58},
               });
             }
           break;
@@ -246,6 +247,20 @@ cards.forEach((card, index) => {
     });
 });
 //homepage design process gsock end
+
+
+// checks if elem is in view
+function isScrolledIntoView(elem)
+{
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
+// checks if elem is in view end
 
 
 //homepage testimonials

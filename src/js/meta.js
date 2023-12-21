@@ -95,7 +95,7 @@ $(window).scroll(function() {
 
 
 //navbar show on scroll up
-const showAnim = gsap.from('.main-navbar', { 
+/*const showAnim = gsap.from('.main-navbar', { 
     yPercent: -100,
     paused: true,
     duration: 0.3
@@ -107,7 +107,7 @@ ScrollTrigger.create({
     onUpdate: (self) => {
         self.direction === -1 ? showAnim.play() : showAnim.reverse()
     }
-});
+});*/
 //navbar show on scroll up end
 
 // page progress
@@ -236,9 +236,11 @@ function loadIframe() {
 
     // Append the iframe to the container
     iframeContainer.appendChild(iframe);
-    setTimeout(function() {
-        $('.figmaLoader').remove();
-    }, 100);
+
+    iframe.addEventListener('load', () => {
+      // This function will be triggered when the iframe content has finished loading
+      $('.figmaLoader').remove();
+    });
 }
 
 // Intersection Observer configuration
