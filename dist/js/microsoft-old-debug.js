@@ -21,6 +21,12 @@ function checkifLenis() {
 
 $(document).ready(function() {
 
+    var opporunityHeight = $('.opportunityHeight').outerHeight();
+    var dottedBGHeight = $('.dotted-bg').outerHeight();
+    setTimeout(function() {
+      $('body').append("<style> .opporunityAfter:after { height: "+ opporunityHeight +"px; } .dotted-bg:after { height: "+ dottedBGHeight +"px; } </style>");
+    }, 900);
+
     checkiftooltip();
     lenis.start();
     $("body").removeClass("opacity-0");
@@ -44,6 +50,11 @@ $(document).ready(function() {
 
 $(window).resize(function() {
     checkiftooltip();
+
+    var opporunityHeight = $('.opportunityHeight').outerHeight();
+    var dottedBGHeight = $('.dotted-bg').outerHeight();
+    $('body').append("<style> .opporunityAfter:after { height: "+ opporunityHeight +"px; } .dotted-bg:after { height: "+ dottedBGHeight +"px; } </style>");
+
 });
 
 //smooth scroll
@@ -283,6 +294,23 @@ function showBeforeAfter() {
 //show before and after end
 
 
+//voiceflow
+(function(d, t) {
+  var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+  v.onload = function() {
+    window.voiceflow.chat.load({
+      verify: { projectID: '64f776b3d0a6dd00073f976a' },
+      url: 'https://general-runtime.voiceflow.com',
+      versionID: 'production'
+    });
+  }
+  v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; 
+  v.type = "text/javascript"; 
+  s.parentNode.insertBefore(v, s);
+})(document, 'script');
+//voiceflow end
+
+
 // horizontal scroll buttons scrollableDivImprovements
 function checkScrollableLeftSpace($scrollableDiv) {
   const $btnLeft = $scrollableDiv.parent().find('.btn-left');
@@ -343,7 +371,7 @@ $('.scrollableArea').each(function() {
 // horizontal scroll buttons scrollableDivImprovements end
 
 //page animations
-/*if ($(window).scrollTop() === 0) {
+if ($(window).scrollTop() === 0) {
   gsap.set(".anim01, .anim02, .anim03, .anim04, .anim05", { opacity: "0" });
 } else {
   gsap.set(".anim01, .anim02, .anim03, .anim04, .anim05", { opacity: "1" });
@@ -356,16 +384,48 @@ timeline
   .add(gsap.to(".anim02", { duration: 1, opacity: 1 }), "-=0.3")
   .add(gsap.to(".anim03", { duration: 1, opacity: 1 }), "-=0.3")
   .add(gsap.to(".anim04", { duration: 1, opacity: 1 }), "-=0.3")
-  .add(gsap.to(".anim05", { duration: 1, opacity: 1 }), "-=0.3");*/
+  .add(gsap.to(".anim05", { duration: 1, opacity: 1 }), "-=0.3");
 //page animations end
 
 
-//sidemenu accordionWorks
-$('.workAccordion').click(function() {
-  if ($(this).attr('aria-expanded') === 'true') {
-    $(this).find('svg').css('transform', 'rotate(90deg)');
-  } else {
-    $(this).find('svg').css('transform', 'none');
+//navbar dropdown show on hover
+let trigger = document.getElementById('worksDropdown');
+
+document.getElementById('worksDropdown').addEventListener("mouseover", ()=>{
+    if (!$(trigger).hasClass('show')) {
+      bootstrap.Dropdown.getOrCreateInstance(trigger).toggle()
+    }
+});
+
+document.getElementById('dropdown-menu').addEventListener("mouseleave", ()=>{
+    bootstrap.Dropdown.getOrCreateInstance(trigger).toggle()
+    if (!$(trigger).hasClass('show')) {
+      $("#ddImgContainer").attr("src", "img/misc/illustrations/spying.svg");
+      $("#ddImgContainer").attr("alt", "Spying illustration");
+    }
+});
+
+$(".ddLink").on("mouseover", function () {
+  var className = $(this).attr("class").split(" ")[1]; // Get the second class name
+  switch (className) {
+    case "voicemodDD":
+      $("#ddImgContainer").attr("src", "img/misc/logos/voicemod-logo-card.svg");
+      $("#ddImgContainer").attr("alt", "Voicemod logo");
+      break;
+    case "metaDD":
+      $("#ddImgContainer").attr("src", "img/misc/logos/meta-logo-card.svg");
+      $("#ddImgContainer").attr("alt", "Meta logo");
+      break;
+    case "msftDD":
+      $("#ddImgContainer").attr("src", "img/misc/logos/msft-logo-card.svg");
+      $("#ddImgContainer").attr("alt", "Microsoft logo");
+      break;
+    case "accusonusDD":
+      $("#ddImgContainer").attr("src", "img/misc/logos/accusonus-logo.svg");
+      $("#ddImgContainer").attr("alt", "accusonus logo");
+      break;
+    default:
+      break;
   }
 });
-//sidemenu accordionWorks end
+//navbar dropdown show on hover end

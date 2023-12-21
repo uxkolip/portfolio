@@ -67,65 +67,24 @@
   <body class="opacity-0">
     <section class="container" id="pageTop">
 
-      <div class="position-fixed w-100 main-navbar" style="z-index: 1021;">
+      <div class="position-fixed main-navbar d-block d-xl-none w-100" style="z-index: 1021;">
         <nav style="border-radius: 0px 0px 24px 24px !important;" class="navbar navbar-expand-lg navbar-light container bg-background position-relative">
           <div class="container position-relative w-100">
           <div class="col-9 col-lg-5 position-relative">
-            <div class="d-flex justify-content-start anim05">
+            <div class="d-flex justify-content-start">
               <div style="max-width: 46px;" class="col-2 px-0 me-1 mt-n1 rounded-circle d-none d-md-block">
                 <img src="img/misc/moi-thumb.png" alt="Vasilis Kolip portrait thumbnail" class="img-fluid">
               </div>
               <div class="col-12 col-md-10 ps-1 pe-0">
                 <div class="row">
                   <p class="mb-0 lh-1"><a class="text-primary font-weight-bold noUnderline stretched-link" href="index.html" title="Homepage">Vasilis Kolip</a></p>
-                  <p class="mb-0">UX/Product designer</p>
+                  <p class="mb-0">Product designer</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-7 d-none d-lg-block d-flex justify-content-between text-end anim05">
-
-            <div class="dropdown px-0 d-inline-block px-lg-4">
-              <button id="worksDropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false" class="nav-link dropdown-toggle mx-auto px-0" title="Selected work">
-               Work
-              </button>
-              <div id="dropdown-menu" class="dropdown-menu dropdown-menu-end dropdown-menu-xxl-start p-3 border-radius" style="width: 610px; margin-top: 28px">
-                <div class="container ps-0">
-                  <div class="row">
-                    <div class="col-4">
-                      <ul class="list-unstyled mb-0">
-                        <p class="font-weight-bold">Selected</p>
-                        <li class="mb-1"><a class="ddLink voicemodDD py-2 dropdown-item smaller-1 border-radius" title="Opens Voicemod's project page" href="voicemod.html">Voicemod</a></li>
-                        <li class="my-1"><a class="ddLink metaDD py-2 dropdown-item smaller-1 border-radius" title="Opens Meta's project page" href="meta.html">Meta</a></li>
-                        <li class="mt-1"><a class="ddLink msftDD py-2 dropdown-item smaller-1 border-radius active" title="Opens Microsoft's project page" href="microsoft.html">Microsoft</a></li>
-                      </ul>
-                    </div>
-                    <div class="col-4">
-                      <ul class="list-unstyled mb-0">
-                        <p class="font-weight-bold">Additional</p>
-                        <li class="mb-1"><a class="ddLink accusonusDD py-2 dropdown-item smaller-1 border-radius" title="Opens accusonus' project page" href="accusonus.html">accusonus</a></li>
-                        <li class="my-1" title="Opens ContactPigeon's project page - Coming soon"><a href="contactpigeon.html" class="ddLink contactpigeonDD py-2 dropdown-item smaller-1 border-radius disabled">ContactPigeon</a></li>
-                        <li class="mt-1" title="Opens ContactPigeon's project page - Coming soon"><a href="youbehero.html" class="ddLink youbeheroDD py-2 dropdown-item smaller-1 border-radius disabled">YouBeHero</a></li>
-                      </ul>
-                    </div>
-
-                    <div class="col-4 bg-secondary border-radius d-flex align-items-center">
-                      <img id="ddImgContainer" src="img/misc/illustrations/spying.svg" alt="Spying illustration" class="img-fluid mx-auto" style="max-width: 130px">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-          </div>
-
-            <a href="profile.html" title="Click to check out my profile and my previous work experiences" class="mb-0 px-lg-4 noUnderline">About</a>
-            <a href="Vasilis-Kolip-Sr-Product-Designer.pdf" target="_blank" title="Click to dowload my CV in pdf format" class="mb-0 px-lg-4 noUnderline">Résumé</a>
-            <a class="mb-0 button noUnderline px-lg-4" href="javascript:void(0);" onclick="window.voiceflow.chat.open();" title="Click to get in touch">Contact</a>  
-
-          </div>
-
-          <div class="col-3 d-block ms-auto d-lg-none text-end anim05">
+          <div class="col-3 ms-auto text-end">
             <button class="btn btn-outline-primary border-radius" class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">MENU</button>
           </div>        
 
@@ -134,57 +93,199 @@
       </div> 
   </section>
 
-  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
     <div class="offcanvas-header bg-background">
-      <h5 class="offcanvas-title bigger-4" id="offcanvasNavbarLabel">Μenu</h5>
+      <h5 class="offcanvas-title bigger-2" id="offcanvasNavbarLabel">Μenu</h5>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
-    <div class="offcanvas-body bg-secondary">
-      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-        <li class="nav-item bigger-1">
-          <a class="nav-link" href="index.html">Home</a>
-        </li>
-        <li class="nav-item bigger-1">
-          <a class="nav-link" href="voicemod.html">Voicemod</a>
-        </li>
-        <li class="nav-item bigger-1">
-          <a class="nav-link" href="meta.html">Meta</a>
-        </li>
-        <li class="nav-item bigger-1">
-          <a class="nav-link active font-weight-bold" href="microsoft.html" aria-current="page">Microsoft</a>
-        </li>
-        <li class="nav-item bigger-1">
-          <a class="nav-link" href="accusonus.html">accusonus</a>
-        </li>
-        <li class="nav-item bigger-1">
-          <a class="nav-link" href="profile.html">About</a>
-        </li>
-        <li class="nav-item bigger-1">
-          <a class="nav-link" href="Vasilis-Kolip-Sr-Product-Designer.pdf" target="_blank" title="Click to dowload my CV in pdf format">Résumé</a>
-        </li>
-        <li class="nav-item bigger-1">
-          <a class="nav-link" href="javascript:void(0);" onclick="window.voiceflow.chat.open();" title="Click to get in touch">Contact</a>
-        </li>
-      </ul>
-      <img src="img/misc/illustrations/nomad-life.svg" alt="Offcanvas illustration" style="transform: scaleX(-1); max-width: 170px" class="img-fluid w-50 position-fixed bottom-0 right-0 mb-2 me-2"/>
+    <div class="offcanvas-body ">
+          <div class="col-12 position-relative sideMenu px-0">
+
+          <ul class="list-unstyled position-relative mb-2">
+            <li class="position-relative py-1 ps-2">
+              <button class="btn text-primary workAccordion smaller-3 noUnderline stretched-link p-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSelectedWork" aria-expanded="true" aria-controls="collapseSelectedWork">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mt-n2" height="12" viewBox="0 0 320 512" style="transform: rotate(90deg);"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"></path></svg><span class="ps-3">Selected work</span>
+              </button>
+            </li>
+          </ul>
+          
+          <div class="mb-2 collapse show" id="collapseSelectedWork">
+            <div class="card card-body bg-transparent border-0 py-0 ps-4">
+              <ul class="list-unstyled mb-0">
+                <li class="py-1 mb-2 ps-4 position-relative"><a href="voicemod.html" title="Opens Voicemod's project page" class="smaller-3 noUnderline stretched-link ps-2">Voicemod</a></li>
+                <li class="py-1 my-2 ps-4 position-relative"><a href="meta.html" title="Opens Meta's project page" class="smaller-3 noUnderline stretched-link ps-2">Meta</a></li>
+                <li class=" py-1 my-2 ps-4 position-relative active"><a href="microsoft.html" title="Opens Microsoft's project page" class="smaller-3 noUnderline stretched-link ps-2">Microsoft</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-10 mx-auto border the-border opacity-50"></div>
+
+          <ul class="list-unstyled my-2 position-relative">
+            <li class="position-relative py-1 ps-2">
+              <button class="btn text-primary workAccordion smaller-3 noUnderline stretched-link p-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAdditionalWork" aria-expanded="false" aria-controls="collapseAdditionalWork">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mt-n2" height="12" viewBox="0 0 320 512" style="transform: none;"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"></path></svg><span class="ps-3">Additional work</span>
+              </button>           
+            </li>
+          </ul>
+
+          <div id="collapseAdditionalWork" class="mb-2 collapse" style="">
+            <div class="card card-body bg-transparent border-0 py-0 ps-4">
+              <ul class="list-unstyled mb-0">
+                <li class="py-1 mb-2 ps-4 position-relative"><a href="accusonus.html" title="Opens accusonus' project page" class="smaller-3 noUnderline stretched-link ps-2">accusonus</a></li>
+                <li class="py-1 my-2 ps-4 position-relative"><a href="javascript:void(0);" disabled="disabled" title="Opens ContactPigeon's project page" class="smaller-3 noUnderline stretched-link ps-2">ContactPigeon</a><span class="badge bg-secondary text-primary the-border font-weight-normal smaller-4 ms-2 px-1">Soon</span></li>
+                <li class="py-1 my-2 ps-4 position-relative"><a href="javascript:void(0);" title="Opens YouBeHero's project page" class="smaller-3 noUnderline stretched-link ps-2">YouBeHero</a><span class="badge bg-secondary text-primary the-border font-weight-normal smaller-4 ms-2 px-1">Soon</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-10 mx-auto border the-border opacity-50"></div>
+          
+           <ul class="list-unstyled my-2 position-relative">
+            <li class="position-relative py-1 ps-2">
+              <a href="Vasilis-Kolip-Sr-Product-Designer.pdf" title="Opens my résumé in a new tab" target="_blank" class="smaller-3 noUnderline stretched-link">Résumé</a>
+            </li>
+          </ul>
+    
+          <div class="col-10 mx-auto border the-border opacity-50"></div>
+          
+          <ul class="list-unstyled my-2 position-relative">
+            <li class="position-relative py-1 ps-2">
+              <a href="profile.html" title="Find out more about me" class="smaller-3 noUnderline stretched-link">About</a>
+            </li>
+          </ul>
+
+          <div class="col-10 mx-auto border the-border opacity-50"></div>
+
+          <ul class="list-unstyled my-2 position-relative">
+            <li class="position-relative py-1 ps-2">
+              <a href="https://billk1.typeform.com/to/xNOJ6W" title="Click to get in touch" class="smaller-3 noUnderline stretched-link typeform-share button" data-mode="drawer_right" data-submit-close-delay="5">Contact</a>
+            </li>
+          </ul>
+
+          <div class="col-10 mx-auto border the-border opacity-50"></div>
+
+          <ul class="list-unstyled my-2 position-relative">
+            <li class="position-relative py-1 ps-2">
+              <a href="javascript:void(0);" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom" title="Click to view the credits" class="smaller-3 noUnderline stretched-link">Credits</a>
+            </li>
+          </ul>
+
+      </div>
     </div>
   </div>
 
+
+   <div class="row">
+  <div class="col-2 position-relative overflow-y-auto sideMenu px-0 d-none d-xl-block" style="max-width: 260px;">
+    <div class="col-2 px-0 mx-auto overflow-y-auto overflow-x-hidden position-fixed border the-border border-start-0 border-bottom-0 border-top-0" style="height: 100vh; max-width: 260px;">
+        
+        <div class="d-flex my-4 position-relative ps-4">
+          <div style="max-width: 40px;" class="col-12 px-0 mb-2 rounded-circle d-none d-md-block">
+            <img src="img/misc/moi-thumb.png" alt="Vasilis Kolip portrait thumbnail" class="img-fluid">
+          </div>
+          <div class="col-12 col-md-10 ps-1 pe-0">
+            <div class="row">
+              <p class="mb-0 lh-1"><a class="smaller-1 font-weight-bold noUnderline stretched-link" href="index.html" title="Homepage">Vasilis Kolip</a></p>
+              <p class="mb-0 smaller-2">Product designer</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row border the-border opacity-50"></div>
+        
+        <ul class="list-unstyled mb-2 mt-4 position-relative ps-4 pe-3">
+          <li class="position-relative py-1 ps-2">
+            <button class="btn text-primary workAccordion smaller-3 noUnderline stretched-link p-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSelectedWork" aria-expanded="true" aria-controls="collapseSelectedWork">
+              <svg xmlns="http://www.w3.org/2000/svg" class="mt-n2" height="12" viewBox="0 0 320 512" style="transform: rotate(90deg);"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"></path></svg><span class="ps-3">Selected work</span>
+            </button>
+          </li>
+        </ul>
+        
+        <div class="mb-2 collapse show" id="collapseSelectedWork">
+          <div class="card card-body bg-transparent border-0 py-0 ps-4">
+            <ul class="list-unstyled mb-0">
+              <li class="py-1 mb-2 ps-4 position-relative"><a href="voicemod.html" title="Opens Voicemod's project page" class="smaller-3 noUnderline stretched-link ps-2">Voicemod</a></li>
+              <li class="py-1 my-2 ps-4 position-relative"><a href="meta.html" title="Opens Meta's project page" class="smaller-3 noUnderline stretched-link ps-2">Meta</a></li>
+              <li class=" py-1 my-2 ps-4 position-relative active"><a href="microsoft.html" title="Opens Microsoft's project page" class="smaller-3 noUnderline stretched-link ps-2">Microsoft</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-10 mx-auto border the-border opacity-50"></div>
+
+        <ul class="list-unstyled my-2 position-relative ps-4 pe-3">
+          <li class="position-relative py-1 ps-2">
+            <button class="btn text-primary workAccordion smaller-3 noUnderline stretched-link p-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAdditionalWork" aria-expanded="false" aria-controls="collapseAdditionalWork">
+              <svg xmlns="http://www.w3.org/2000/svg" class="mt-n2" height="12" viewBox="0 0 320 512"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"></path></svg><span class="ps-3">Additional work</span>
+            </button>           
+          </li>
+        </ul>
+
+        <div id="collapseAdditionalWork" class="mb-2 collapse">
+          <div class="card card-body bg-transparent border-0 py-0 ps-4">
+            <ul class="list-unstyled mb-0">
+              <li class="py-1 mb-2 ps-4 position-relative"><a href="accusonus.html" title="Opens accusonus' project page" class="smaller-3 noUnderline stretched-link ps-2">accusonus</a></li>
+              <li class="py-1 my-2 ps-4 position-relative"><a href="javascript:void(0);" disabled="disabled" title="Opens ContactPigeon's project page" class="smaller-3 noUnderline stretched-link ps-2">ContactPigeon</a><span class="badge bg-secondary text-primary the-border font-weight-normal smaller-4 ms-2 px-1">Soon</span></li>
+              <li class="py-1 my-2 ps-4 position-relative"><a href="javascript:void(0);" title="Opens YouBeHero's project page" class="smaller-3 noUnderline stretched-link ps-2">YouBeHero</a><span class="badge bg-secondary text-primary the-border font-weight-normal smaller-4 ms-2 px-1">Soon</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-10 mx-auto border the-border opacity-50"></div>
+        
+         <ul class="list-unstyled my-2 position-relative ps-4 pe-3">
+          <li class="position-relative py-1 ps-2">
+            <a href="Vasilis-Kolip-Sr-Product-Designer.pdf" title="Opens my résumé in a new tab" target="_blank" class="smaller-3 noUnderline stretched-link">Résumé</a>
+          </li>
+        </ul>
+  
+        <div class="col-10 mx-auto border the-border opacity-50"></div>
+        
+        <ul class="list-unstyled my-2 position-relative ps-4 pe-3">
+          <li class="position-relative py-1 ps-2">
+            <a href="profile.html" title="Find out more about me" class="smaller-3 noUnderline stretched-link">About</a>
+          </li>
+        </ul>
+
+        <div class="col-10 mx-auto border the-border opacity-50"></div>
+
+        <ul class="list-unstyled my-2 position-relative ps-4 pe-3">
+          <li class="position-relative py-1 ps-2">
+            <a href="https://billk1.typeform.com/to/xNOJ6W" title="Click to get in touch" class="smaller-3 noUnderline stretched-link typeform-share button" data-mode="drawer_right" data-submit-close-delay="5">Contact</a>             
+          </li>
+        </ul>
+
+        <div class="col-10 mx-auto border the-border opacity-50"></div>
+
+        <ul class="list-unstyled my-2 position-relative ps-4 pe-3">
+          <li class="position-relative py-1 ps-2">
+            <a href="javascript:void(0);" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom" title="Click to view the credits" class="smaller-3 noUnderline stretched-link">Credits</a>
+          </li>
+        </ul>
+
+      </div><div class="row">
+      
+    </div>
+  </div>
+
+  <div class="col-12 col-xl-9 mx-auto ps-xl-0 position-relative z-3">
+
     
     <section>
-      <div class="row-fluid mt-xl-5 pt-5">
-        <div class="container mt-5 pt-4">
+      <div class="row-fluid mt-5">
+        <div class="container-fluid mt-5 mt-xl-0">
           <div class="row">
             <div class="col-12 mb-4 anim01">
               <img src="img/misc/logos/msft-logo-card.svg" alt="Microsoft logo" class="img-fluid" style="max-width: 228px">
               <img src="img/misc/logos/power-automate-logo.svg" alt="Power Automate logo" class="img-fluid ms-3" style="max-width: 113px">
             </div>
-            <div class="col-12 col-xl-5 mb-xl-5 anim02">
+            <div class="col-12 anim02">
               <h1 class="lh-base mt-3">Reimagined interface unleashes the power of <mark>simplicity and usability!</mark></h1>
             </div>
 
-            <div class="col-12 col-xl-6 offset-xl-1 mt-xl-3 pt-3 pt-xl-0 anim03">
-              <p class="mt-2">Witness a remarkable transformation as I unveil the revamped UI/UX of WinAutomation into Power Automate Desktop, elevating user-friendliness and visual appeal to unprecedented heights. Bid farewell to the outdated design and embrace a sleek, modern interface that effortlessly captivates and simplifies people’s experience.</p>
+            <div class="col-12 mt-3 anim03">
+              <p class="mt-2 bigger-1">Witness a remarkable transformation as I unveil the revamped UI/UX of WinAutomation into Power Automate Desktop, elevating user-friendliness and visual appeal to unprecedented heights. Bid farewell to the outdated design and embrace a sleek, modern interface that effortlessly captivates and simplifies people’s experience.</p>
             </div>
 
           </div>
@@ -201,17 +302,17 @@
 
     <section>
       <div class="row-fluid mt-5">
-        <div class="container mt-5 pt-5">
+        <div class="container-fluid mt-5 pt-5">
           <div class="row">
             
             <div class="col-12 col-md-6 col-lg-4 mb-4">
               <p class="mb-2 font-weight-bold text-uppercase">Role</p>
-              <p>Senior designer (full-time)</p>
+              <p class="smaller-2">Senior designer (full-time)</p>
             </div>
 
             <div class="col-12 col-md-6 col-lg-4 mb-4">
               <p class="mb-2 font-weight-bold text-uppercase">Employer</p>
-              <p><a href="https://web.archive.org/web/20190219031930/https://www.softomotive.com/ " target="_blank" class="text-info" title="Opens in a new tab" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="112x32" data-bs-custom-class="custom-tooltip">Softomotive</a>, acquired by <a href="https://powerautomate.microsoft.com/en-us/robotic-process-automation/" target="_blank" class="text-info" title="Opens Power Automat Desktop's website on a new tab" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="89x32" data-bs-custom-class="custom-tooltip">Microsoft</a>, Athens (hybrid)</p>
+              <p class="smaller-2"><a href="https://web.archive.org/web/20190219031930/https://www.softomotive.com/ " target="_blank" class="text-info" title="Opens in a new tab" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="112x32" data-bs-custom-class="custom-tooltip">Softomotive</a>, acquired by <a href="https://powerautomate.microsoft.com/en-us/robotic-process-automation/" target="_blank" class="text-info" title="Opens Power Automat Desktop's website on a new tab" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="89x32" data-bs-custom-class="custom-tooltip">Microsoft</a>, Athens (hybrid)</p>
             </div>
 
             <div class="col-12 col-md-6 col-lg-4 mb-4">
@@ -234,46 +335,46 @@
 
            <div class="col-12 col-md-6 col-lg-4 mb-4">
               <p class="mb-2 font-weight-bold text-uppercase">Year</p>
-              <p><span class="badge bg-secondary the-border text-primary font-weight-normal smaller-1">2019</span> <span class="badge bg-secondary the-border text-primary font-weight-normal smaller-1">2020</span> <span class="badge bg-secondary the-border text-primary font-weight-normal smaller-1">2021</span></p>
+              <p><span class="badge bg-secondary the-border text-primary font-weight-normal smaller-2 p-1">2019</span> <span class="badge bg-secondary the-border text-primary font-weight-normal smaller-2 p-1">2020</span> <span class="badge bg-secondary the-border text-primary font-weight-normal smaller-2 p-1">2021</span></p>
             </div>
 
              <div class="col-12 col-md-6 col-lg-4 mb-4">
               <p class="mb-2 font-weight-bold text-uppercase">Tools</p>
-              <p>Adobe Suite, Sketch, Figma & Axure RP</p>
+              <p class="smaller-2">Adobe Suite, Sketch, Figma & Axure RP</p>
             </div>
 
              <div class="col-12 col-md-6 col-lg-4 mb-4">
               <p class="mb-2 font-weight-bold text-uppercase">Skills</p>
 
-                <button type="button" class="btn btn-outline-secondary py-2 mb-2 me-1 text-primary bg-secondary the-border smaller-2">
+                <button type="button" class="btn btn-outline-secondary py-1 mb-2 me-1 text-primary bg-secondary the-border smaller-3">
                   <span class="badge bg-petrol rounded-circle text-petrol smaller-6">1</span> Iconography
                 </button>
 
-               <button type="button" class="btn btn-outline-secondary py-2 mb-2 me-1 text-primary bg-secondary the-border smaller-2">
+               <button type="button" class="btn btn-outline-secondary py-1 mb-2 me-1 text-primary bg-secondary the-border smaller-3">
                   <span class="badge bg-green rounded-circle text-green smaller-6">1</span> User journeys 
                 </button>
 
-                <button type="button" class="btn btn-outline-secondary py-2 mb-2 me-1 text-primary bg-secondary the-border smaller-2">
+                <button type="button" class="btn btn-outline-secondary py-1 mb-2 me-1 text-primary bg-secondary the-border smaller-3">
                   <span class="badge bg-light-blue rounded-circle text-light-blue smaller-6">1</span> Wireframes 
                 </button>
 
-                <button type="button" class="btn btn-outline-secondary py-2 mb-2 me-1 text-primary bg-secondary the-border smaller-2">
+                <button type="button" class="btn btn-outline-secondary py-1 mb-2 me-1 text-primary bg-secondary the-border smaller-3">
                   <span class="badge bg-danger rounded-circle text-danger smaller-6">1</span> Mockups 
                 </button>
 
-                <button type="button" class="btn btn-outline-secondary py-2 mb-2 me-1 text-primary bg-secondary the-border smaller-2">
+                <button type="button" class="btn btn-outline-secondary py-1 mb-2 me-1 text-primary bg-secondary the-border smaller-3">
                   <span class="badge bg-oranje rounded-circle text-oranje smaller-6">1</span> Prototyping
                 </button>
 
-                <button type="button" class="btn btn-outline-secondary py-2 mb-2 me-1 text-primary bg-secondary the-border smaller-2">
+                <button type="button" class="btn btn-outline-secondary py-1 mb-2 me-1 text-primary bg-secondary the-border smaller-3">
                   <span class="badge bg-light-purple rounded-circle text-light-purple smaller-6">1</span> User research
                 </button>
 
-                <button type="button" class="btn btn-outline-secondary py-2 mb-2 me-1 text-primary bg-secondary the-border smaller-2">
+                <button type="button" class="btn btn-outline-secondary py-1 mb-2 me-1 text-primary bg-secondary the-border smaller-3">
                   <span class="badge bg-mustard rounded-circle text-mustard smaller-6">1</span> <span class="2" style="">Competitive analysis</span>
                 </button>              
 
-                <button type="button" class="btn btn-outline-secondary py-2 mb-2 me-1 text-primary bg-secondary the-border smaller-2">
+                <button type="button" class="btn btn-outline-secondary py-1 mb-2 me-1 text-primary bg-secondary the-border smaller-3">
                   <span class="badge bg-primary rounded-circle text-primary smaller-6">1</span> Principal designer
                 </button>
 
@@ -292,23 +393,23 @@
 
     <section>
       <div class="row-fluid mt-5 pt-1">
-        <div class="container mt-5">
+        <div class="container-fluid mt-5">
             <div class="row">
               
-              <div class="col-12 col-xl-9 pe-lg-0" data-bs-spy="scroll" data-bs-target="#voicemodScrollspy" data-bs-smooth-scroll="true" tabindex="0">
+              <div class="col-12 col-xl-9" data-bs-spy="scroll" data-bs-target="#voicemodScrollspy" data-bs-smooth-scroll="true" tabindex="0">
 
                 <div id="summary" class="row mb-5 pb-5">
                   <div class="col-12">
                     <div class="col-12 bg-secondary border border-start-0 border-bottom-0 border-end-0 border-info border-5 p-4">
                       <h2 class="section-title mt-2">Summary</h2>
                       <ul class="mt-4">
-                        <li class="my-3">Principal designer for Power Automate Desktop (Windows 11)</li>
-                        <li class="my-3">Collaborated with stakeholders to define clear design goals</li>
-                        <li class="my-3">Redesigned UI and improved UX through iterative design and usability testing</li>
-                        <li class="my-3">Addressed dated design, user-unfriendly UI and accessibility issues</li>
-                        <li class="my-3">Prioritized accessibility with high-contrast and screen reader enhancements</li>
-                        <li class="my-3">Enhanced iconography and overall design system</li>
-                        <li class="my-3">Result: successful project launch with impressive reviews</li>
+                        <li class="my-2 smaller-2">Principal designer for Power Automate Desktop (Windows 11)</li>
+                        <li class="my-2 smaller-2">Collaborated with stakeholders to define clear design goals</li>
+                        <li class="my-2 smaller-2">Redesigned UI and improved UX through iterative design and usability testing</li>
+                        <li class="my-2 smaller-2">Addressed dated design, user-unfriendly UI and accessibility issues</li>
+                        <li class="my-2 smaller-2">Prioritized accessibility with high-contrast and screen reader enhancements</li>
+                        <li class="my-2 smaller-2">Enhanced iconography and overall design system</li>
+                        <li class="my-2 smaller-2">Result: successful project launch with impressive reviews</li>
                       </ul>
                     </div>                    
                   </div>
@@ -338,7 +439,7 @@
                               </div>
                             </div>
 
-                            <div class="col-12">
+                            <div class="col-12 my-4">
                               <div class="col-12 bg-secondary the-border large-shadow border-radius py-3 px-5 position-relative">
                                 <p class="ms-n1 position-absolute top-50 start-0 translate-middle"><span class="badge text-bg-background the-border rounded-circle text-center p-3" style="min-width: 45px">2</span></p>
                                 <p class="mb-0 lh-base py-lg-2">Enhances productivity</p>
@@ -385,7 +486,7 @@
                         <div class="col-12 bg-secondary the-border large-shadow border-radius p-4">
                           <p class="mt-3"><span class="badge text-bg-background the-border rounded-circle text-center p-3" style="min-width: 45px">1</span></p>
                           <p class="font-weight-bold bigger-1">It was dated</p>
-                          <p>A visually outdated and disconnected design was observed by everyone</p>
+                          <p class="smaller-2">A visually outdated and disconnected design was observed by everyone</p>
                         </div>
                       </div>
 
@@ -393,15 +494,15 @@
                         <div class="col-12 bg-secondary the-border large-shadow border-radius p-4">
                           <p class="mt-3"><span class="badge text-bg-background the-border rounded-circle text-center p-3" style="min-width: 45px">2</span></p>
                           <p class="font-weight-bold bigger-1">It was hard to use</p>
-                          <p>A shift towards simplified user journeys for a wider user base was needed</p>
+                          <p class="smaller-2">A shift towards simplified user journeys for a wider user base was needed</p>
                         </div>
                       </div>
 
                       <div class="col-12 col-lg mb-3">
                         <div class="col-12 bg-secondary the-border large-shadow border-radius p-4">
                           <p class="mt-3"><span class="badge text-bg-background the-border rounded-circle text-center p-3" style="min-width: 45px">3</span></p>
-                          <p class="font-weight-bold bigger-1">It was not accessible</p>
-                          <p>Inclusive design is paramount for users with various limitations</p>
+                          <p class="font-weight-bold bigger-1">It was inaccessible</p>
+                          <p class="smaller-2">Inclusive design is paramount for users with various limitations</p>
                         </div>
                       </div>
 
@@ -414,14 +515,14 @@
               <div class="minHeight20vh d-block d-lg-none"></div>
 
 
-              <div id="opportunity" class="row opporunityAfter">
+              <div id="opportunity" class="row">
                 
                 <div class="col-12 position-relative">
 
-                  <div class="col-12 py-5 position-relative opportunityHeight" style="z-index: 1022;">
+                  <div class="col-12 py-5 position-relative" style="z-index: 1022;">
                     <div class="py-5">
-                      <h2 class="section-title text-background">Opportunity</h2>
-                      <p class="mt-4 mb-0 display-5 text-background lh-lg">"How can we streamline and simplify automation support for a broad audience?"</p>
+                      <h2 class="section-title">Opportunity</h2>
+                      <p class="mt-4 mb-0 display-5 lh-lg">"How can we streamline and simplify automation support for a broad audience?"</p>
                     </div>
                   </div>
 
@@ -473,7 +574,8 @@
                             <video width="100%" height="100%" autoplay loop muted style="object-fit: cover;" class="border-radius large-shadow the-border">
                               <source src="video/msft-persona.mp4" type="video/mp4">
                               Your browser does not support the video tag.
-                            </video>                          
+                            </video>      
+                            <p class="smaller-3 mt-1 text-center">User persona</p>                    
                           </div>
 
                           <div class="col-12 mt-lg-5 pt-4">
@@ -535,19 +637,19 @@
 
                       <ul class="list-group smaller-2 lh-base">
                         <li class="list-group-item bg-background border-0 ps-0">
-                          <input class="form-check-input me-1 bg-accent border-0" type="checkbox" id="footageImportSelection" checked style="transform: scale(1.3);">
+                          <input class="form-check-input me-1 border-0" type="checkbox" id="footageImportSelection" checked style="transform: scale(1.3);">
                           <label class="form-check-label ms-2" for="footageImportSelection">Color scheme</label>
                         </li>
                         <li class="list-group-item bg-background border-0 ps-0">
-                          <input class="form-check-input me-1 bg-accent border-0" type="checkbox" id="clipSelection" checked style="transform: scale(1.3);">
+                          <input class="form-check-input me-1 border-0" type="checkbox" id="clipSelection" checked style="transform: scale(1.3);">
                           <label class="form-check-label ms-2" for="clipSelection">Iconography</label>
                         </li>
                         <li class="list-group-item bg-background border-0 ps-0">
-                          <input class="form-check-input me-1 bg-accent border-0" type="checkbox" id="sceneSelection" checked style="transform: scale(1.3);">
+                          <input class="form-check-input me-1 border-0" type="checkbox" id="sceneSelection" checked style="transform: scale(1.3);">
                           <label class="form-check-label ms-2" for="sceneSelection">Illustrations</label>
                         </li>
                         <li class="list-group-item bg-background border-0 ps-0">
-                          <input class="form-check-input me-1 bg-accent border-0" type="checkbox" id="layoutSelection" checked style="transform: scale(1.3);">
+                          <input class="form-check-input me-1 border-0" type="checkbox" id="layoutSelection" checked style="transform: scale(1.3);">
                           <label class="form-check-label ms-2" for="layoutSelection">Overall layout</label>
                         </li>
 
@@ -560,15 +662,15 @@
 
                       <ul class="list-group smaller-2 lh-base">
                         <li class="list-group-item bg-background border-0 ps-0">
-                          <input class="form-check-input me-1 bg-accent border-0" type="checkbox" id="experienceSelection" checked style="transform: scale(1.3);">
+                          <input class="form-check-input me-1 border-0" type="checkbox" id="experienceSelection" checked style="transform: scale(1.3);">
                           <label class="form-check-label ms-2" for="experienceSelection">Overall user experience</label>
                         </li>
                         <li class="list-group-item bg-background border-0 ps-0">
-                          <input class="form-check-input me-1 bg-accent border-0" type="checkbox" id="usabilitySelection" checked style="transform: scale(1.3);">
+                          <input class="form-check-input me-1 border-0" type="checkbox" id="usabilitySelection" checked style="transform: scale(1.3);">
                           <label class="form-check-label ms-2" for="usabilitySelection">Optimized usability</label>
                         </li>
                         <li class="list-group-item bg-background border-0 ps-0">
-                          <input class="form-check-input me-1 bg-accent border-0" type="checkbox" id="streamliningSelection" checked style="transform: scale(1.3);">
+                          <input class="form-check-input me-1 border-0" type="checkbox" id="streamliningSelection" checked style="transform: scale(1.3);">
                           <label class="form-check-label ms-2" for="streamliningSelection">Streamlining processes </label>
                         </li>
                       </ul>
@@ -580,15 +682,15 @@
 
                       <ul class="list-group smaller-2 lh-base">
                         <li class="list-group-item bg-background border-0 ps-0">
-                          <input class="form-check-input me-1 bg-accent border-0" type="checkbox" id="navigationSelection" checked style="transform: scale(1.3);">
+                          <input class="form-check-input me-1 border-0" type="checkbox" id="navigationSelection" checked style="transform: scale(1.3);">
                           <label class="form-check-label ms-2" for="navigationSelection">Keyboard navigation</label>
                         </li>
                         <li class="list-group-item bg-background border-0 ps-0">
-                          <input class="form-check-input me-1 bg-accent border-0" type="checkbox" id="compatibilitySelection" checked style="transform: scale(1.3);">
+                          <input class="form-check-input me-1 border-0" type="checkbox" id="compatibilitySelection" checked style="transform: scale(1.3);">
                           <label class="form-check-label ms-2" for="compatibilitySelection">Screen reader compatibility</label>
                         </li>
                         <li class="list-group-item bg-background border-0 ps-0">
-                          <input class="form-check-input me-1 bg-accent border-0" type="checkbox" id="contrastSelection" checked style="transform: scale(1.3);">
+                          <input class="form-check-input me-1 border-0" type="checkbox" id="contrastSelection" checked style="transform: scale(1.3);">
                           <label class="form-check-label ms-2" for="contrastSelection">Color contrast options</label>
                         </li>
                       </ul>
@@ -600,19 +702,19 @@
 
                       <ul class="list-group smaller-2 lh-base">
                         <li class="list-group-item bg-background border-0 ps-0">
-                          <input class="form-check-input me-1 bg-accent border-0" type="checkbox" id="researchSelection" checked style="transform: scale(1.3);">
+                          <input class="form-check-input me-1 border-0" type="checkbox" id="researchSelection" checked style="transform: scale(1.3);">
                           <label class="form-check-label ms-2" for="researchSelection">Research & analyze</label>
                         </li>
                         <li class="list-group-item bg-background border-0 ps-0">
-                          <input class="form-check-input me-1 bg-accent border-0" type="checkbox" id="principleselection" checked style="transform: scale(1.3);">
+                          <input class="form-check-input me-1 border-0" type="checkbox" id="principleselection" checked style="transform: scale(1.3);">
                           <label class="form-check-label ms-2" for="principleselection">Define principles</label>
                         </li>
                         <li class="list-group-item bg-background border-0 ps-0">
-                          <input class="form-check-input me-1 bg-accent border-0" type="checkbox" id="inventorySelection" checked style="transform: scale(1.3);">
+                          <input class="form-check-input me-1 border-0" type="checkbox" id="inventorySelection" checked style="transform: scale(1.3);">
                           <label class="form-check-label ms-2" for="inventorySelection">Create inventory</label>
                         </li>
                         <li class="list-group-item bg-background border-0 ps-0">
-                          <input class="form-check-input me-1 bg-accent border-0" type="checkbox" id="componentSelection" checked style="transform: scale(1.3);">
+                          <input class="form-check-input me-1 border-0" type="checkbox" id="componentSelection" checked style="transform: scale(1.3);">
                           <label class="form-check-label ms-2" for="componentSelection">Componentize</label>
                         </li>
                       </ul>
@@ -628,7 +730,7 @@
 
               
 
-              <div id="uiRedesign" class="row mt-lg-4 pt-lg-4 dotted-bg">
+              <div id="uiRedesign" class="row mt-lg-4 pt-lg-4">
                 <div class="py-5">
                   <div class="col-12">
                     <h2 class="section-title">UI redesign</h2>
@@ -785,37 +887,37 @@
                       <div class="col-10 col-lg-5 mx-3 mb-5 bg-secondary border-radius the-border large-shadow p-4 minHeight5vh">
                         <img src="img/misc/icons/icons8-team-64.png" alt="Users icon" class="img-fluid mt-3" style="width: 64px;" />
                         <p class="font-weight-bold mt-5">User research</p>
-                        <p>I conducted user research to gain insights</p>
+                        <p class="smaller-2">I conducted user research to gain insights</p>
                       </div>
 
                       <div class="col-10 col-lg-5 mx-3 mb-5 bg-secondary border-radius the-border large-shadow p-4 minHeight5vh">
                         <img src="img/misc/icons/icons8-diamond-64.png" alt="Diamond icon" class="img-fluid mt-3" style="width: 64px;" />
                         <p class="font-weight-bold mt-5">Defined objectives</p>
-                        <p>I clearly defined the objectives of the UX & UI improvements based on feedback and business priorities</p>
+                        <p class="smaller-2">I clearly defined the objectives of the UX & UI improvements based on feedback and business priorities</p>
                       </div>
 
                       <div class="col-10 col-lg-5 mx-3 mb-5 bg-secondary border-radius the-border large-shadow p-4 minHeight5vh">
                         <img src="img/misc/icons/icons8-ascending-sorting-64.png" alt="Ascending and sorting icon" class="img-fluid mt-3" style="width: 64px;" />
                         <p class="font-weight-bold mt-5">Information architecture</p>
-                        <p>I assessed the app's UX flows and identified opportunities to simplify them</p>
+                        <p class="smaller-2">I assessed the app's UX flows and identified opportunities to simplify them</p>
                       </div>
 
                       <div class="col-10 col-lg-5 mx-3 mb-5 bg-secondary border-radius the-border large-shadow p-4 minHeight5vh">
                         <img src="img/misc/icons/icons8-tools-64.png" alt="Tools icon" class="img-fluid mt-3" style="width: 64px;" />
                         <p class="font-weight-bold mt-5">Wireframing & prototyping</p>
-                        <p>I created wireframes and interactive mockups to validate design ideas, with feedback from stakeholders</p>
+                        <p class="smaller-2">I created wireframes and interactive mockups to validate design ideas, with feedback from stakeholders</p>
                       </div>
 
                       <div class="col-10 col-lg-5 mx-3 mb-5 bg-secondary border-radius the-border large-shadow p-4 minHeight5vh">
                         <img src="img/misc/icons/icons8-build-64.png" alt="Build icon" class="img-fluid mt-3" style="width: 64px;" />
                         <p class="font-weight-bold mt-5">Iterative design</p>
-                        <p>Incorporating feedback I iterated on the mockups and prototypes</p>
+                        <p class="smaller-2">Incorporating feedback I iterated on the mockups and prototypes</p>
                       </div>
 
                       <div class="col-10 col-lg-5 mx-3 mb-5 bg-secondary border-radius the-border large-shadow p-4 minHeight5vh">
                         <img src="img/misc/icons/icons8-magnifier-64.png" alt="Magnifier icon" class="img-fluid mt-3" style="width: 64px;" />
                         <p class="font-weight-bold mt-5">Usability testing</p>
-                        <p>I conducted usability testing sessions to identify further areas for refinement</p>
+                        <p class="smaller-2">I conducted usability testing sessions to identify further areas for refinement</p>
                       </div>
 
                   </div>
@@ -1256,7 +1358,7 @@
                       <div class="col-12 col-lg-7">
                         <p class="font-weight-bold mb-2">Microsoft acquires Softomotive to expand low-code robotic process automation</p>
 
-                        <p>"During his Build keynote, Microsoft CEO Satya Nadella today confirmed that the company has acquired Softomotive, a software robotic automation platform." —TechCrunch</p>
+                        <p class="smaller-3">"During his Build keynote, Microsoft CEO Satya Nadella today confirmed that the company has acquired Softomotive, a software robotic automation platform." —TechCrunch</p>
 
                         <a href="https://techcrunch.com/2020/05/19/microsoft-acquires-robotic-process-automation-platform-softomotive/" class="btn btn-outline-primary py-2 px-3 bg-background text-primary rounded-pill mt-3" title="Opens the TechCrunch article in a new tab">Read article<img src="img/misc/shapes/diagonal-arrow.svg" alt="Diagonal arrow" class="img-fluid ms-2 mb-1"/></a>                        
                       </div>
@@ -1277,7 +1379,7 @@
                       <div class="col-12 col-lg-7">
                         <p class="font-weight-bold mb-2">Real world automation stories with Microsoft Power Automate</p>
 
-                        <p>This post contains a set of automation stories curated by the Power CAT team with a focus on robotics process automation (RPA) in Power Automate. —Microsoft</p>
+                        <p class="smaller-3">This post contains a set of automation stories curated by the Power CAT team with a focus on robotics process automation (RPA) in Power Automate. —Microsoft</p>
 
                         <a href="https://powerautomate.microsoft.com/en-us/blog/real-world-automation-stories-with-microsoft-power-automate/" class="btn btn-outline-primary py-2 px-3 bg-background text-primary rounded-pill mt-3" title="Opens the Microsoft article in a new tab">Read article<img src="img/misc/shapes/diagonal-arrow.svg" alt="Diagonal arrow" class="img-fluid ms-2 mb-1"/></a>
                         
@@ -1300,7 +1402,7 @@
 
 
           </div>
-          <div class="col-3 col-xl-2 ms-auto d-none d-xl-block">
+          <div class="col-3 col-xl-2 ps-lg-0 ms-auto d-none d-xl-block">
             <div class="sticky-top top60px">
               <p class="smaller-3 pb-2 border border-top-0 border-start-0 border-end-0 border-the-border">On this page</p>
               <nav id="voicemodScrollspy" class="h-100 flex-column align-items-stretch mt-2">
@@ -1338,8 +1440,39 @@
 
   <section>
     <div class="row-fluid mt-5">
-      <div class="container mt-5 pt-5">
-        <div class="row">
+      <div class="container-fluid mt-5 pt-5">
+
+
+
+        <div class="row d-block d-lg-none">
+            <div class="col-12 mb-5">
+              <div class="grid">
+                <div class="g-col-6 bg-secondary large-shadow border-radius the-border p-4 position-relative">
+                  <p class="smaller-2 mb-0">
+                    <svg viewBox="0 0 16 16" version="1.1" aria-labelledby="title" style="width: 16px;transform: rotate(-90deg);" class="icon icon--close icon--green-gradient me-1">
+                    <path d="M8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 19V1H7V19H9Z" fill="#3A2D52" style="fill: rgb(58, 45, 82);"></path>
+                    </svg>
+                    Previous
+                  </p>
+                  <p class="bigger-2 mb-0 lh-sm"><a href="meta.html" class="stretched-link noUnderline" title="Opens Meta's project page">Meta</a></p>
+                </div>
+                <div class="g-col-6 bg-secondary large-shadow border-radius the-border p-4 position-relative">
+                  <p class="smaller-2 mb-0">
+                    Up next
+                    <svg viewBox="0 0 16 16" version="1.1" aria-labelledby="title" style="width: 16px;transform: rotate(90deg);" class="icon icon--close icon--green-gradient ms-1">
+                    <path d="M8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 19V1H7V19H9Z" fill="#3A2D52" style="fill: rgb(58, 45, 82);"></path>
+                    </svg>
+                  </p>
+                  <p class="bigger-2 mb-0 lh-sm"><a href="accusonus.html" class="stretched-link noUnderline" title="Opens accusonus' project page">accusonus</a></p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+          
+          <div class="row d-none d-lg-block">
           <div class="col-12">
             <h2 class="section-title">Next project</h2>
           </div>
@@ -1351,8 +1484,8 @@
                   <img src="img/misc/logos/accusonus-logo.svg" alt="accusonus logo" class="img-fluid" style="height: 48px;">
                   <p class="font-weight-bold pt-2">Senior UX designer (full-time) <span class="badge bg-background the-border text-primary font-weight-normal smaller-4 ms-1">2021</span> <span class="badge bg-background the-border text-primary font-weight-normal smaller-4">2022</span>
                   </p>
-                  <p class="mt-4">With OgmaCast you can make online calls better with Spotify and voice tweaks.</p>
-                  <p>Check this out to find out how I led this greenfield project and designed a new product from scratch!</p>
+                  <p class="mt-4 smaller-2">With OgmaCast you can make online calls better with Spotify and voice tweaks.</p>
+                  <p class="smaller-2">Check this out to find out how I led this greenfield project and designed a new product from scratch!</p>
                   <p class="mt-5">
                     <a href="accusonus.html" class="btn btn-primary rounded-pill py-2 px-3 btn-lg" title="Click to view project page">View project
                     </a>
@@ -1416,69 +1549,12 @@
 
     <footer>
       <div class="row-fluid">
-        <div class="container">
-          <div class="col-12 bg-secondary border-radius position-relative py-4 px-5">
-            
-            <div class="row">
-              
-              <div class="col-7 col-lg-3 position-relative">
-                <p class="font-weight-bold mb-0 bigger-2"><a class="text-primary font-weight-bold noUnderline stretched-link" href="index.html" title="Homepage">Vasilis Kolip</a></p>
-                <p class="mb-0 mt-n2">UX/Product designer</p>
-              </div>
+        <div class="container-fluid">
+          <div class="col-12 bg-secondary the-border large-shadow border-radius position-relative py-4 px-5">
 
-              <div class="col-5 ms-auto mt-2 text-end px-0 d-block d-xl-none">
-                <a href="https://www.figma.com/file/KvZro6YLHayaTX4nbXqdSc/Portfolio?type=design&amp;node-id=0%3A1&amp;mode=design&amp;t=vbcbdwRVd69vZjJI-1" target="_blank" title="Opens portfolio's Figma file in a new tab" class="noUnderline">
-                  <img src="img/misc/icons/figma-footer.svg" alt="Figma icon" class="img-fluid" style="max-width: 28px">
-                </a>
-
-                <a href="https://github.com/uxkolip/portfolio" target="_blank" title="Opens this portfolio's repo at GitHub in a new tab" class="noUnderline px-3">
-                  <img src="img/misc/icons/icons8-github-64.png" alt="GitHub icon" class="img-fluid" style="max-width: 28px">
-                </a>
-
-                <a href="https://linkedin.com/in/VasilisKolip" target="_blank" title="Opens my LinkedIn profile in a new tab" class="noUnderline">
-                  <img src="img/misc/icons/linkedin-64.png" alt="LinkedIn icon" class="img-fluid" style="max-width: 28px">
-                </a>
-              </div>
-
-              <div class="col-9 col-xl-7 offset-xl-1 offset-xxl-2 d-none d-xl-block">
-                <div class="container">
-                  <div class="col-12 d-flex justify-content-between">
-                    <div>
-                      <p class="font-weight-bold">Selected work</p>
-                      <ul class="list-unstyled mb-0">
-                        <li class="mb-3"><a href="voicemod.html" class="text-info" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="92x32" data-bs-custom-class="custom-tooltip">Voicemod</a></li>
-                        <li class="mb-3"><a href="meta.html" class="text-info" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="52x32" data-bs-custom-class="custom-tooltip">Meta</a></li>
-                        <li class="mb-3 ps-1" title="You are here">Microsoft</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <p class="font-weight-bold">Additional work</p>
-                      <ul class="list-unstyled mb-0">
-                        <li class="mb-3"><a href="accusonus.html" class="text-info" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="101x24" data-bs-custom-class="custom-tooltip">accusonus</a></li>
-                        <li class="mb-3">ContactPigeon <span class="badge bg-background text-primary the-border font-weight-normal smaller-3 ms-1">Soon</span></li>
-                        <li class="mb-3">YouBeHero <span class="badge bg-background text-primary the-border font-weight-normal smaller-3 ms-1">Soon</span></li>
-                      </ul>
-                    </div>
-                    <div>
-                      <p class="font-weight-bold">Moreover</p>
-                      <ul class="list-unstyled mb-0">
-                        <li class="mb-3"><a href="profile.html" class="text-info" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="60x32" data-bs-custom-class="custom-tooltip">About</a></li>
-                        <li class="mb-3"><a href="Vasilis-Kolip-Sr-Product-Designer.pdf" target="_blank" class="text-info" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="32x32" data-bs-custom-class="custom-tooltip">CV</a></li>
-                        <li class="mb-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"><a href="javascript:void(0);" class="text-info" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="90x32" data-bs-custom-class="custom-tooltip">Credits</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          
-            <div class="row my-4 pt-3 d-none d-xl-flex">
-              <div class="col-12 border border-the-border"></div>
-            </div>
-
-            <div class="row d-none d-xl-flex">
-              <div class="col-8 px-0">
-                <p class="smaller-3 mb-0">This page is distributed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" class="text-info" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="205x25" data-bs-custom-class="custom-tooltip">Creative Commons</a> license.</p>
+            <div class="row d-flex">
+              <div class="col-7 px-0">
+                <p class="smaller-3 mb-0">Page distributed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" class="text-info" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="205x25" data-bs-custom-class="custom-tooltip">Creative Commons</a>.</p>
               </div>
               <div class="col ms-auto text-end px-0">
                 <a href="https://www.figma.com/file/KvZro6YLHayaTX4nbXqdSc/Portfolio?type=design&amp;node-id=0%3A1&amp;mode=design&amp;t=vbcbdwRVd69vZjJI-1" target="_blank" title="Opens portfolio's Figma file in a new tab" class="noUnderline">
@@ -1500,6 +1576,8 @@
       </div>
     </footer>
 
+  </div>
+
     <!-- Offcanvas bottom -->
     <div class="offcanvas offcanvas-bottom bg-background" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
       <div class="row-fluid">
@@ -1513,10 +1591,10 @@
               <div class="offcanvas-body small">
                 <div class="row">
                   <div class="col-4">
-                    <p>This page was made possible by using many technologies which are either open source, or free to use. The least I could do, is to give credits to all the contributors for making our world open. THANK YOU.</p>
+                    <p class="smaller-2">This page was made possible by using many technologies which are either open source, or free to use. The least I could do, is to give credits to all the contributors for making our world open. THANK YOU.</p>
                   </div>
                   <div class="col-4">
-                    <p>
+                    <p class="smaller-2">
                       <a href="https://www.figma.com/?ref=kolip.design" target="_blank" class="text-info" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="60x32" data-bs-custom-class="custom-tooltip">Figma</a>, 
                       <a href="https://getbootstrap.com/?ref=kolip.design" target="_blank" class="text-info" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="93x32" data-bs-custom-class="custom-tooltip">Bootstrap</a>, 
                       <a href="https://github.com/?ref=kolip.design" target="_blank" class="text-info" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="69x32" data-bs-custom-class="custom-tooltip">GitHub</a>, 
@@ -1531,7 +1609,7 @@
                     </p>
                   </div>
                   <div class="col-4">
-                    <p>Local dev environment set on 
+                    <p class="smaller-2">Local dev environment set on 
                       <a href="https://nodejs.org/?ref=kolip.design" target="_blank" class="text-info" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="72x32" data-bs-custom-class="custom-tooltip">Node.js</a> & 
                     <a href="https://gulpjs.com/?ref=kolip.design" target="_blank" class="text-info" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="48x32" data-bs-custom-class="custom-tooltip">Gulp</a>. The font I use is GT America and the icons are from 
                     <a href="https://icons8.com/icons/?ref=kolip.design" target="_blank" class="text-info" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="76x32" data-bs-custom-class="custom-tooltip">ICONS8</a> collection named Dusk. Finally, the Notion-style illustrations are from 

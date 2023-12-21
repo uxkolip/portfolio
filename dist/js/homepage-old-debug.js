@@ -205,6 +205,20 @@ panels.forEach((panel, index) => {
 // homepage selected work gsock end
 
 
+// checks if elem is in view
+function isScrolledIntoView(elem)
+{
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
+// checks if elem is in view end
+
+
 //homepage design process gsock
 const cards = document.querySelectorAll(".design-card");
 
@@ -275,8 +289,24 @@ horizontalSections.forEach(function (sec, i) {
 //homepage testimonials end
 
 
+//voiceflow
+(function(d, t) {
+  var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+  v.onload = function() {
+    window.voiceflow.chat.load({
+      verify: { projectID: '64f776b3d0a6dd00073f976a' },
+      url: 'https://general-runtime.voiceflow.com',
+      versionID: 'production'
+    });
+  }
+  v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; 
+  v.type = "text/javascript"; 
+  s.parentNode.insertBefore(v, s);
+})(document, 'script');
+//voiceflow end
+
 //homepage animations
-/*if ($(window).scrollTop() === 0) {
+if ($(window).scrollTop() === 0) {
   gsap.set(".anim01, .anim02, .anim03, .anim04", { opacity: "0" });
   //console.log("Window is at the top.");
 } else {
@@ -290,7 +320,7 @@ timeline
   .add(gsap.to(".anim01", { delay: 1, duration: 1, opacity: 1 }))
   .add(gsap.to(".anim02", { duration: 1, opacity: 1 }), "-=0.3")
   .add(gsap.to(".anim03", { duration: 1, opacity: 1 }), "-=0.3")
-  .add(gsap.to(".anim04", { duration: 1, opacity: 1 }), "-=0.3");*/
+  .add(gsap.to(".anim04", { duration: 1, opacity: 1 }), "-=0.3");
 //homepage animations end
 
 
@@ -324,12 +354,40 @@ function changingH1s() {
 //h1 text randomizer
 
 
-//sidemenu accordionWorks
-$('.workAccordion').click(function() {
-  if ($(this).attr('aria-expanded') === 'true') {
-    $(this).find('svg').css('transform', 'rotate(90deg)');
-  } else {
-    $(this).find('svg').css('transform', 'none');
+//navbar dropdown show on hover
+let trigger = document.getElementById('worksDropdown');
+
+document.getElementById('worksDropdown').addEventListener("mouseover", ()=>{
+    if (!$(trigger).hasClass('show')) {
+      bootstrap.Dropdown.getOrCreateInstance(trigger).toggle()
+    }
+});
+
+document.getElementById('dropdown-menu').addEventListener("mouseleave", ()=>{
+    bootstrap.Dropdown.getOrCreateInstance(trigger).toggle()
+    if (!$(trigger).hasClass('show')) {
+      $("#ddImgContainer").attr("src", "img/misc/illustrations/spying.svg");
+      $("#ddImgContainer").attr("alt", "Spying illustration");
+    }
+});
+
+$(".ddLink").on("mouseover", function () {
+  var className = $(this).attr("class").split(" ")[1]; // Get the second class name
+  switch (className) {
+    case "voicemodDD":
+      $("#ddImgContainer").attr("src", "img/misc/logos/voicemod-logo-card.svg");
+      $("#ddImgContainer").attr("alt", "Voicemod logo");
+      break;
+    case "metaDD":
+      $("#ddImgContainer").attr("src", "img/misc/logos/meta-logo-card.svg");
+      $("#ddImgContainer").attr("alt", "Meta logo");
+      break;
+    case "msftDD":
+      $("#ddImgContainer").attr("src", "img/misc/logos/msft-logo-card.svg");
+      $("#ddImgContainer").attr("alt", "Microsoft logo");
+      break;
+    default:
+      break;
   }
 });
-//sidemenu accordionWorks end
+//navbar dropdown show on hover end
