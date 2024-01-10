@@ -12749,7 +12749,7 @@ footer .text-info:after {
   .main-navbar--scrolled {
     height: 40px; }
 
-.sideMenu li:hover {
+.sideMenu li:not(.notthis):hover {
   background-color: #FDF3E7;
   border-radius: 8px; }
 
@@ -12861,6 +12861,9 @@ footer .text-info:after {
   pointer-events: none;
   transition: translate .3s linear;
   transform-origin: 1em 1em;
+  transform: rotate(-90deg); }
+
+.accordion-button::after {
   transform: rotate(-90deg); }
 
 .noUnderline {

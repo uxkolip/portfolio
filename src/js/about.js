@@ -364,3 +364,10 @@ $('.workAccordion').click(function() {
   }
 });
 //sidemenu accordionWorks end
+
+//sidemenu show more removal
+$(document).on('click', '#collapseAdditionalWork', function(){
+  $('.thisGoes').remove();
+  $('#collapseAdditionalWork').removeClass('d-none');
+});
+//sidemenu show more removal end

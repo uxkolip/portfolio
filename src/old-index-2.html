@@ -95,37 +95,48 @@
       <h5 class="offcanvas-title bigger-2" id="offcanvasNavbarLabel">Μenu</h5>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
-    <div class="offcanvas-body">
+    <div class="offcanvas-body ">
           <div class="col-12 position-relative sideMenu px-0">
 
-            <ul class="list-unstyled mt-1 mb-2 position-relative pe-3">
-              <li class="position-relative py-1 ps-2 active">
-                <a href="index.html" title="Homepage" class="smaller-3 noUnderline stretched-link">Start here</a>
-              </li>
-            </ul>
-
-          <div class="col-12 mx-auto border the-border opacity-50"></div>
-
-           <ul class="list-unstyled mb-0 mt-2 position-relative pe-3">
-            <li class="position-relative py-1 ps-2 smaller-3 notthis">
-              Selected work
+          <ul class="list-unstyled position-relative mb-2">
+            <li class="position-relative py-1 ps-2">
+              <button class="btn text-primary workAccordion smaller-3 noUnderline stretched-link p-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSelectedWork" aria-expanded="false" aria-controls="collapseSelectedWork">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mt-n2" height="12" viewBox="0 0 320 512"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"></path></svg><span class="ps-3">Selected work</span>
+              </button>
             </li>
           </ul>
           
-          <div class="mb-2 collapse show" id="collapseSelectedWork">
-            <div class="card card-body bg-transparent border-0 py-0">
-              <ul class="mb-0 ps-3">
-                <li class="py-1 my-2 position-relative"><a href="voicemod.html" title="Opens Voicemod's project page" class="smaller-3 noUnderline stretched-link ps-2">Voicemod</a></li>
-                <li class="py-1 my-2 position-relative"><a href="meta.html" title="Opens Meta's project page" class="smaller-3 noUnderline stretched-link ps-2">Meta</a></li>
-                <li class="py-1 my-2 position-relative"><a href="microsoft.html" title="Opens Microsoft's project page" class="smaller-3 noUnderline stretched-link ps-2">Microsoft</a></li>
-                <li class="py-1 my-2 position-relative"><a href="accusonus.html" title="Opens accusonus' project page" class="smaller-3 noUnderline stretched-link ps-2">accusonus</a></li>
-                <li class="py-1 my-2 position-relative"><a href="javascript:void(0);" disabled="disabled" title="Opens ContactPigeon's project page" class="smaller-3 noUnderline stretched-link ps-2">ContactPigeon</a><span class="badge bg-secondary text-primary the-border font-weight-normal smaller-4 ms-2 px-1">Soon</span></li>
-                <li class="py-1 my-2 position-relative"><a href="javascript:void(0);" title="Opens YouBeHero's project page" class="smaller-3 noUnderline stretched-link ps-2">YouBeHero</a><span class="badge bg-secondary text-primary the-border font-weight-normal smaller-4 ms-2 px-1">Soon</span></li>
+          <div class="mb-2 collapse" id="collapseSelectedWork">
+            <div class="card card-body bg-transparent border-0 py-0 ps-4">
+              <ul class="list-unstyled mb-0">
+                <li class="py-1 mb-2 ps-4 position-relative"><a href="voicemod.html" title="Opens Voicemod's project page" class="smaller-3 noUnderline stretched-link ps-2">Voicemod</a></li>
+                <li class="py-1 my-2 ps-4 position-relative"><a href="meta.html" title="Opens Meta's project page" class="smaller-3 noUnderline stretched-link ps-2">Meta</a></li>
+                <li class=" py-1 my-2 ps-4 position-relative"><a href="microsoft.html" title="Opens Microsoft's project page" class="smaller-3 noUnderline stretched-link ps-2">Microsoft</a></li>
               </ul>
             </div>
           </div>
 
-          <div class="col-12 mx-auto border the-border opacity-50"></div>
+          <div class="col-10 mx-auto border the-border opacity-50"></div>
+
+          <ul class="list-unstyled my-2 position-relative">
+            <li class="position-relative py-1 ps-2">
+              <button class="btn text-primary workAccordion smaller-3 noUnderline stretched-link p-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAdditionalWork" aria-expanded="false" aria-controls="collapseAdditionalWork">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mt-n2" height="12" viewBox="0 0 320 512" style="transform: none;"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"></path></svg><span class="ps-3">Additional work</span>
+              </button>           
+            </li>
+          </ul>
+
+          <div id="collapseAdditionalWork" class="mb-2 collapse" style="">
+            <div class="card card-body bg-transparent border-0 py-0 ps-4">
+              <ul class="list-unstyled mb-0">
+                <li class="py-1 mb-2 ps-4 position-relative"><a href="accusonus.html" title="Opens accusonus' project page" class="smaller-3 noUnderline stretched-link ps-2">accusonus</a></li>
+                <li class="py-1 my-2 ps-4 position-relative"><a href="javascript:void(0);" disabled="disabled" title="Opens ContactPigeon's project page" class="smaller-3 noUnderline stretched-link ps-2">ContactPigeon</a><span class="badge bg-secondary text-primary the-border font-weight-normal smaller-4 ms-2 px-1">Soon</span></li>
+                <li class="py-1 my-2 ps-4 position-relative"><a href="javascript:void(0);" title="Opens YouBeHero's project page" class="smaller-3 noUnderline stretched-link ps-2">YouBeHero</a><span class="badge bg-secondary text-primary the-border font-weight-normal smaller-4 ms-2 px-1">Soon</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-10 mx-auto border the-border opacity-50"></div>
           
            <ul class="list-unstyled my-2 position-relative">
             <li class="position-relative py-1 ps-2">
@@ -133,7 +144,7 @@
             </li>
           </ul>
     
-          <div class="col-12 mx-auto border the-border opacity-50"></div>
+          <div class="col-10 mx-auto border the-border opacity-50"></div>
           
           <ul class="list-unstyled my-2 position-relative">
             <li class="position-relative py-1 ps-2">
@@ -141,7 +152,7 @@
             </li>
           </ul>
 
-          <div class="col-12 mx-auto border the-border opacity-50"></div>
+          <div class="col-10 mx-auto border the-border opacity-50"></div>
 
           <ul class="list-unstyled my-2 position-relative">
             <li class="position-relative py-1 ps-2">
@@ -149,7 +160,7 @@
             </li>
           </ul>
 
-          <div class="col-12 mx-auto border the-border opacity-50"></div>
+          <div class="col-10 mx-auto border the-border opacity-50"></div>
 
           <ul class="list-unstyled my-2 position-relative">
             <li class="position-relative py-1 ps-2">
@@ -189,41 +200,45 @@
 
           <div class="col-10 mx-auto border the-border opacity-50"></div>
           
-          <ul class="list-unstyled mb-0 mt-2 position-relative ps-4 pe-3">
-            <li class="position-relative py-1 ps-2 smaller-3 notthis">
-              Selected work
-            </li>
-          </ul>
-          
-          <div class="collapse show" id="collapseSelectedWork">
-            <div class="card card-body bg-transparent border-0 py-0 ps-3">
-              <ul class="mb-0">
-                <li class="py-1 my-2 position-relative"><a href="voicemod.html" title="Opens Voicemod's project page" class="smaller-3 noUnderline stretched-link ps-2">Voicemod</a></li>
-                <li class="py-1 my-2 position-relative"><a href="meta.html" title="Opens Meta's project page" class="smaller-3 noUnderline stretched-link ps-2">Meta</a></li>
-                <li class="py-1 my-2 position-relative"><a href="microsoft.html" title="Opens Microsoft's project page" class="smaller-3 noUnderline stretched-link ps-2">Microsoft</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <ul class="list-unstyled my-1 position-relative ps-4 pe-3 thisGoes">
-            <li class="position-relative pb-1 ps-2">
-              <button id="collapseAdditionalWork" class="btn text-primary workAccordion smaller-3 noUnderline stretched-link p-0" type="button">
-                <svg xmlns="http://www.w3.org/2000/svg" class="mt-n2" height="12" viewBox="0 0 320 512"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"></path></svg><span class="ps-3">Show more</span>
+          <ul class="list-unstyled mb-2 mt-2 position-relative ps-4 pe-3">
+            <li class="position-relative py-1 ps-2">
+              <button class="btn text-primary workAccordion smaller-3 noUnderline stretched-link p-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSelectedWork" aria-expanded="false" aria-controls="collapseSelectedWork">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mt-n2" height="12" viewBox="0 0 320 512"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"></path></svg><span class="ps-3">Selected work</span>
               </button>
             </li>
           </ul>
-
-          <div id="collapseAdditionalWork" class="mb-2 d-none">
-            <div class="card card-body bg-transparent border-0 py-0 ps-3">
-              <ul class="mb-0">
-                <li class="pb-1 my-2 position-relative"><a href="accusonus.html" title="Opens accusonus' project page" class="smaller-3 noUnderline stretched-link ps-2">accusonus</a></li>
-                <li class="py-1 my-2 position-relative"><a href="javascript:void(0);" disabled="disabled" title="Opens ContactPigeon's project page" class="smaller-3 noUnderline stretched-link ps-2">ContactPigeon</a><span class="badge bg-secondary text-primary the-border font-weight-normal smaller-4 ms-2 px-1">Soon</span></li>
-                <li class="py-1 my-2 position-relative"><a href="javascript:void(0);" title="Opens YouBeHero's project page" class="smaller-3 noUnderline stretched-link ps-2">YouBeHero</a><span class="badge bg-secondary text-primary the-border font-weight-normal smaller-4 ms-2 px-1">Soon</span></li>
+          
+          <div class="mb-2 collapse" id="collapseSelectedWork">
+            <div class="card card-body bg-transparent border-0 py-0 ps-4">
+              <ul class="list-unstyled mb-0">
+                <li class="py-1 mb-2 ps-4 position-relative"><a href="voicemod.html" title="Opens Voicemod's project page" class="smaller-3 noUnderline stretched-link ps-2">Voicemod</a></li>
+                <li class="py-1 my-2 ps-4 position-relative"><a href="meta.html" title="Opens Meta's project page" class="smaller-3 noUnderline stretched-link ps-2">Meta</a></li>
+                <li class=" py-1 my-2 ps-4 position-relative"><a href="microsoft.html" title="Opens Microsoft's project page" class="smaller-3 noUnderline stretched-link ps-2">Microsoft</a></li>
               </ul>
             </div>
           </div>
 
-          <div class="col-10 mx-auto border the-border opacity-50 mt-1"></div>
+          <div class="col-10 mx-auto border the-border opacity-50"></div>
+
+          <ul class="list-unstyled my-2 position-relative ps-4 pe-3">
+            <li class="position-relative py-1 ps-2">
+              <button class="btn text-primary workAccordion smaller-3 noUnderline stretched-link p-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAdditionalWork" aria-expanded="false" aria-controls="collapseAdditionalWork">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mt-n2" height="12" viewBox="0 0 320 512"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"></path></svg><span class="ps-3">Additional work</span>
+              </button>           
+            </li>
+          </ul>
+
+          <div id="collapseAdditionalWork" class="mb-2 collapse">
+            <div class="card card-body bg-transparent border-0 py-0 ps-4">
+              <ul class="list-unstyled mb-0">
+                <li class="py-1 mb-2 ps-4 position-relative"><a href="accusonus.html" title="Opens accusonus' project page" class="smaller-3 noUnderline stretched-link ps-2">accusonus</a></li>
+                <li class="py-1 my-2 ps-4 position-relative"><a href="javascript:void(0);" disabled="disabled" title="Opens ContactPigeon's project page" class="smaller-3 noUnderline stretched-link ps-2">ContactPigeon</a><span class="badge bg-secondary text-primary the-border font-weight-normal smaller-4 ms-2 px-1">Soon</span></li>
+                <li class="py-1 my-2 ps-4 position-relative"><a href="javascript:void(0);" title="Opens YouBeHero's project page" class="smaller-3 noUnderline stretched-link ps-2">YouBeHero</a><span class="badge bg-secondary text-primary the-border font-weight-normal smaller-4 ms-2 px-1">Soon</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-10 mx-auto border the-border opacity-50"></div>
           
            <ul class="list-unstyled my-2 position-relative ps-4 pe-3">
             <li class="position-relative py-1 ps-2">
