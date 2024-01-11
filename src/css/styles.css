@@ -12561,18 +12561,18 @@ strong {
   /* 32.48px */ }
 
 .section-title {
-  font-family: 'gt_america_extended_bold';
+  /*font-family:'gt_america_extended_bold';*/
   font-size: 1.5rem;
   font-style: normal;
-  font-weight: 700;
+  /*font-weight: 700;*/
   line-height: normal;
-  text-transform: uppercase; }
+  /*text-transform: uppercase;*/ }
 
 .semi-title {
-  font-family: 'gt_america_extended_bold';
+  /*font-family:'gt_america_extended_bold';*/
   font-size: 1.25rem;
   font-style: normal;
-  font-weight: 700;
+  /*font-weight: 700;*/
   line-height: 203%;
   /* 2.5375rem */ }
 
@@ -12865,6 +12865,9 @@ footer .text-info:after {
 
 .accordion-button::after {
   transform: rotate(-90deg); }
+
+.accordion-button:not(.collapsed)::after {
+  transform: rotate(0deg); }
 
 .noUnderline {
   text-decoration: none !important; }

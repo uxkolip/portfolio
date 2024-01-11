@@ -264,7 +264,7 @@ function isScrolledIntoView(elem)
 
 
 //homepage testimonials
-const horizontalSections = gsap.utils.toArray('section.horizontal')
+/*const horizontalSections = gsap.utils.toArray('section.horizontal')
 
 horizontalSections.forEach(function (sec, i) {  
 
@@ -286,7 +286,7 @@ horizontalSections.forEach(function (sec, i) {
         }
     }); 
 
-}); 
+}); */
 //homepage testimonials end
 
 
