@@ -12705,7 +12705,7 @@ a:hover, button:hover, .pointer, button:not(:disabled), [type="button"]:not(:dis
   left: 1px;
   margin-left: -3px;
 }*/
-footer .text-info:after {
+/*footer .text-info:after {
   content: "";
   display: block;
   width: calc(100% + 3px);
@@ -12719,8 +12719,8 @@ footer .text-info:after {
   opacity: 0;
   transition: .3s all;
   left: -1px;
-  margin-left: -1px; }
-
+  margin-left: -1px;
+}*/
 .text-info:hover:before, .text-info:hover:after {
   opacity: 1; }
 
