@@ -125,11 +125,17 @@ setTimeout(function() {
 // homepage selected work gsock
 // Select the panels and set their initial position and opacity
 const panels = document.querySelectorAll('.panel');
-panels.forEach((panel, index) => {
+
+function positionPanels() {
+    panels.forEach((panel, index) => {
         gsap.set(panel, {
-        y: index * panel.offsetHeight, // Add some vertical space between the panels
+            y: index * window.innerHeight // Each panel is offset by 1x viewport height
+        });
     });
-});
+}
+
+window.addEventListener('resize', positionPanels);
+positionPanels();
 
 // Create a timeline for the panel animations
 const panelTimeline = gsap.timeline({
