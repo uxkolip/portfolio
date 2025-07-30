@@ -1,5 +1,6 @@
 jobs:
   deploy:
+    on: push
     runs-on: ubuntu-latest
     environment:
       name: github-pages
