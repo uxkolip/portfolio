@@ -1,8 +1,8 @@
 {
-  "name": "projectwire",
+  "name": "portfolio",
   "version": "1.0.0",
   "private": true,
-  "description": "voice optimizer",
+  "description": "vasilis kolip",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
