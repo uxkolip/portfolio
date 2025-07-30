@@ -1,10 +1,8 @@
-# Optimized workflow for deploying static content to GitHub Pages using v4 artifacts
 name: Deploy static content to Pages
 
 on:
   push:
-    branches: ["main"]  # Changed from master to main as GitHub's default
-
+    branches: ["main"]
   workflow_dispatch:
 
 permissions:
@@ -26,21 +24,22 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Recommended for better Git history
+          fetch-depth: 0
 
       - name: Setup Pages
-        uses: actions/configure-pages@v4
-      
-      - name: Build step (example - add your actual build commands here)
+        uses: actions/configure-pages@v5
+
+      - name: Build project
         run: |
           npm install
           npm run build
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+      - name: Upload Pages artifact
+        id: artifact
+        uses: actions/upload-pages-artifact@v3
         with:
           path: './dist'
-          retention-days: 3  # Added retention policy as recommended
+          retention-days: 3
 
       - name: Deploy to GitHub Pages
         id: deployment
