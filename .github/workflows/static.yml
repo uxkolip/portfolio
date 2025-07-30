@@ -1,8 +1,8 @@
-name: Deploy static content to Pages
+name: deploy static content to pages
 
 on:
   push:
-    branches: ["main"]
+    branches: ["master"]
   workflow_dispatch:
 
 permissions:
@@ -16,33 +16,34 @@ concurrency:
 
 jobs:
   deploy:
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repository
+      - name: checkout
         uses: actions/checkout@v4
+
+      - name: setup node
+        uses: actions/setup-node@v4
         with:
-          fetch-depth: 0
+          node-version: 18
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
+      - name: install dependencies
+        run: npm install
 
-      - name: Build project
-        run: |
-          npm install --legacy-peer-deps
-          npm run build
+      - name: build site
+        run: npx gulp build
 
-      - name: Upload Pages artifact
-        id: artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: setup pages
+        uses: actions/configure-pages@v4
+
+      - name: upload artifact
+        uses: actions/upload-pages-artifact@v2
         with:
-          path: './dist'
-          retention-days: 3
+          path: dist
 
-      - name: Deploy to GitHub Pages
+      - name: deploy to github pages
         id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
